@@ -1,0 +1,122 @@
+--Pet Heroes
+
+local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))()
+local w = library:CreateWindow("Pet Heroes")
+local Af = w:CreateFolder("Auto Farm")
+
+    Af:Button("Start",function()
+        getgenv().on = true
+        getgenv().max = 200
+        getgenv().min = 1
+        while getgenv().on == true do
+        for i , v in pairs(game:GetService("Workspace").Worlds:GetDescendants()) do
+            if v.Parent ~= nil and v.Parent:FindFirstChild("Health") ~= nil and v.Name == 'MaxHealth' and v.Value <= getgenv().max and v.Parent.Health.Value >= getgenv().min and getgenv().on == true and v.Parent:FindFirstChild("Head") ~= nil then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.Head.CFrame
+                wait(1)
+                for i,e in pairs(game.Players.LocalPlayer.Pets:GetChildren()) do
+                    for i , r in pairs(v.Parent.Attackers:GetChildren()) do
+                        if r.Value == nil then
+                            game:GetService("ReplicatedStorage").Remote.SendPet:FireServer(e.Value, v.Parent, tonumber(r.Name))
+                        end;
+                    end;
+                end;
+        
+                repeat
+                    
+                    game:GetService("RunService").Heartbeat:wait();
+                    if not v.Parent or v.Parent:FindFirstChild("Head") == nil then
+                        break;
+                    end;
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.Head.CFrame
+                    for i,e in pairs(game.Players.LocalPlayer.Pets:GetChildren()) do
+                        game:GetService("ReplicatedStorage").Remote.PetAbility:FireServer(e.Value)
+        
+        
+                        game:GetService("ReplicatedStorage").Remote.PetAttack:FireServer(e.Value)
+                    end;
+                until not v.Parent or v.Parent:FindFirstChild("Head") == nil or v.Parent.Health.Value == 0 or getgenv().on == false
+            end;
+        end;
+        end;
+    end)
+
+    Af:Button("STOP",function()
+		local TeleportService = game:GetService("TeleportService")
+		local PlaceId = game.PlaceId
+		local player = game.Players.LocalPlayer
+		if player then
+		TeleportService:Teleport(PlaceId, player)
+		end
+    end)
+
+    Af:Label("STOP = WILL RESTART GAME",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
+
+local b = w:CreateFolder("Fonction")
+
+    b:Button("Equip Inf. Pet",function()
+        getgenv().count = -1;
+
+        local mt = getrawmetatable(game);
+        setreadonly(mt,false);
+        local nam = mt.__namecall;
+
+        mt.__namecall = newcclosure(function(self,...)
+            local args = {...}
+            if args[2] == 'Equip' then
+                args[3] = getgenv().count;
+                getgenv().count = getgenv().count - 1
+            end;
+            return nam(self,unpack(args));
+        end);
+    end)
+local PLR = w:CreateFolder("Player")
+
+	PLR:Box("Speed Hack","number",function(value)
+	    print(value)
+	    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+	end)
+
+	PLR:Box("Jump Hack","number",function(value)
+	    print(value)
+	    game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
+	end)
+
+	PLR:Button("No Clip (Press N)",function()
+		noclip = false
+		game:GetService('RunService').Stepped:connect(function()
+			if noclip then
+				game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+			end
+		end)
+		local plr = game.Players.LocalPlayer
+		local mouse = plr:GetMouse()
+		mouse.KeyDown:connect(function(key)
+			if key == "n" then
+				noclip = not noclip
+				game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+			end
+		end)
+	end)
+
+	PLR:Button("Fly (Press E)",function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/G1yWQbeU", true))()
+	end)
+
+local MISC = w:CreateFolder("Misc")
+
+	MISC:Button("Rejoin",function()
+		local TeleportService = game:GetService("TeleportService")
+		local PlaceId = game.PlaceId
+		local player = game.Players.LocalPlayer
+		if player then
+		TeleportService:Teleport(PlaceId, player)
+		end
+	end)
+
+	MISC:GuiSettings()
+
+local CS = w:CreateFolder("Credits")
+
+	CS:Label("Script: Catix Hub",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
+	CS:Label("GUI: Catix Hub",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
+	CS:DestroyGUI()
