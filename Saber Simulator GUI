@@ -411,7 +411,7 @@ end
 end)
 
 local w2 = w2:CreateFolder("Eggs")
-	w2:Dropdown("Choose Eggs",{"spawn1","spawn2","spawn3","spawn4","Island1","Island2","Island3","Island4","Island5","Island6","Island7","Island8","Island9","Island10","Island11","Island12","Island13","Island14","Island16","Island17","Island18","Island19","Island20","Island21","Island22","Island23","Island24","Island25","Island26","Island27","Island28","Island29","Island31","Island32","Island33","Island34","Island35","Island36","Island37","Island38","Island39","Island40","Island41","Island42","Island43","Island44","Island45","Island46","Island47","Island48","Island49","Island50","Island51","Island52","Island53","Island55","Island56","Island57","Island58","Island59","Island60","Island61","Island62","Island63","Island64","Island65","Island66"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w2:Dropdown("Choose Eggs",{"spawn1","spawn2","spawn3","spawn4","Island1","Island2","Island3","Island4","Island5","Island6","Island7","Island8","Island9","Island10","Island11","Island12","Island13","Island14","Island16","Island17","Island18","Island19","Island20","Island21","Island22","Island23","Island24","Island25","Island26","Island27","Island28","Island29","Island31","Island32","Island33","Island34","Island35","Island36","Island37","Island38","Island39","Island40","Island41","Island42","Island43","Island44","Island45","Island46","Island47","Island48","Island49","Island50","Island51","Island52","Island53","Island55","Island56","Island57","Island58","Island59","Island60","Island61","Island62","Island63","Island64","Island65","Island66","Island67","Island68","Island69"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.BossSelected = mob
 	end)
 
@@ -912,6 +912,27 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+elseif _G.BossSelected == "Island67" then
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["I Egg"],
+    [2] = 9999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+elseif _G.BossSelected == "Island68" then
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["J Egg"],
+    [2] = 9999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
+elseif _G.BossSelected == "Island69" then
+local args = {
+    [1] = game:GetService("ReplicatedStorage").Eggs["K Egg"],
+    [2] = 9999,
+}
+
+game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
 
 			end
 		end
@@ -965,6 +986,12 @@ local w22 = w5:CreateFolder("Teleporters")
 w22:Label("MIAOU",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
 
 w22:Button("Tp To All Islands",function()
+  game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(635.743958, 223507.063, -198.920929) --68
+wait(1)
+  game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(629.44519, 220079.406, -221.873245) --68
+wait(1)
+  game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(633.049988, 216608.234, -208.06076) --67
+wait(1)
   game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(632.413513, 255097.563, -226.424744)
 wait(1)
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(640.958679, 248002.531, -204.051392)
@@ -1123,13 +1150,13 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(793.6090
 end)
 
 	w22:Toggle("Auto Flags wait 24",function(bool)
-		shared.tp1 = bool
+		shared.toggle1 = bool
 	end)
 	
 	
 	spawn(function()
 		while wait(24) do
-	      if shared.tp1 then
+	   
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(640, 221, 144)
 wait(24)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(713, 173, 465)
@@ -1151,9 +1178,9 @@ wait(24)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(602, 5404, -138)
 wait(24)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(665, 6320, -149)
+wait(24)
 
 
-end
 
 end
 end)
