@@ -1,0 +1,845 @@
+-- By Altix And I Am Cat
+--
+local CatixHub = Instance.new("ScreenGui")
+local Frame = Instance.new("ImageLabel")
+local Main = Instance.new("ImageLabel")
+local Close = Instance.new("ImageLabel")
+local TextButton = Instance.new("TextButton")
+local GameList = Instance.new("ImageLabel")
+local List = Instance.new("ScrollingFrame")
+local _0GameList = Instance.new("TextLabel")
+local games = Instance.new("TextLabel")
+local UIListLayout = Instance.new("UIListLayout")
+local games_2 = Instance.new("TextLabel")
+local Tittle = Instance.new("TextLabel")
+local UpdateCredit = Instance.new("ImageLabel")
+local _1 = Instance.new("TextLabel")
+local LastUpdate = Instance.new("TextLabel")
+local UpdateGame1 = Instance.new("TextLabel")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local UpdateGame2 = Instance.new("TextLabel")
+local UpdateGame4 = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local AutoDetect = Instance.new("ImageLabel")
+local TextButton_2 = Instance.new("TextButton")
+local DISCORDSERVER = Instance.new("ImageLabel")
+local Main_2 = Instance.new("ImageLabel")
+local TextButton_3 = Instance.new("TextButton")
+local DISCORDSERVER_2 = Instance.new("ImageLabel")
+local Main_3 = Instance.new("ImageLabel")
+local TextButton_4 = Instance.new("TextButton")
+--3
+--Properties:
+
+CatixHub.Name = "Catix Hub"
+CatixHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Frame.Name = "Frame"
+Frame.Parent = CatixHub
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(0.174471438, 0, 0.205964804, 0)
+Frame.Size = UDim2.new(0, 420, 0, 263)
+Frame.Image = "rbxassetid://3570695787"
+Frame.ImageColor3 = Color3.fromRGB(38, 38, 38)
+Frame.ScaleType = Enum.ScaleType.Slice
+Frame.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame.SliceScale = 0.167
+
+Main.Name = "Main"
+Main.Parent = Frame
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BackgroundTransparency = 1.000
+Main.BorderColor3 = Color3.fromRGB(54, 57, 67)
+Main.Position = UDim2.new(0.0123216016, 0, 0.0209077429, 0)
+Main.Size = UDim2.new(0, 408, 0, 250)
+Main.ZIndex = 2
+Main.Image = "rbxassetid://3570695787"
+Main.ImageColor3 = Color3.fromRGB(48, 50, 59)
+Main.ScaleType = Enum.ScaleType.Slice
+Main.SliceCenter = Rect.new(100, 100, 100, 100)
+Main.SliceScale = 0.167
+
+Close.Name = "Close"
+Close.Parent = Main
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.BorderColor3 = Color3.fromRGB(54, 57, 67)
+Close.Position = UDim2.new(0.857909858, 0, 0.0329077132, 0)
+Close.Size = UDim2.new(0, 45, 0, 23)
+Close.ZIndex = 2
+Close.Image = "rbxassetid://3570695787"
+Close.ImageColor3 = Color3.fromRGB(38, 38, 38)
+Close.ScaleType = Enum.ScaleType.Slice
+Close.SliceCenter = Rect.new(100, 100, 100, 100)
+Close.SliceScale = 0.167
+
+TextButton.Parent = Close
+TextButton.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+TextButton.BackgroundTransparency = 1.000
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0, 0, -0.0434782617, 0)
+TextButton.Size = UDim2.new(0, 44, 0, 23)
+TextButton.ZIndex = 3
+TextButton.Font = Enum.Font.Cartoon
+TextButton.Text = "x"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 25.000
+TextButton.TextWrapped = true
+
+GameList.Name = "GameList"
+GameList.Parent = Main
+GameList.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GameList.BackgroundTransparency = 1.000
+GameList.BorderColor3 = Color3.fromRGB(54, 57, 67)
+GameList.Position = UDim2.new(0.0245765243, 0, 0.164907709, 0)
+GameList.Size = UDim2.new(0, 207, 0, 198)
+GameList.ZIndex = 2
+GameList.Image = "rbxassetid://3570695787"
+GameList.ImageColor3 = Color3.fromRGB(38, 38, 38)
+GameList.ScaleType = Enum.ScaleType.Slice
+GameList.SliceCenter = Rect.new(100, 100, 100, 100)
+GameList.SliceScale = 0.167
+
+List.Name = "List"
+List.Parent = GameList
+List.Active = true
+List.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+List.BackgroundTransparency = 1.000
+List.Position = UDim2.new(0.0289855078, 0, 0.0303030312, 0)
+List.Size = UDim2.new(0, 201, 0, 186)
+List.ZIndex = 3
+List.CanvasSize = UDim2.new(0, 0, 22, 0)
+List.MidImage = "rbxgameasset://Images/instagram logo"
+
+_0GameList.Name = "0GameList"
+_0GameList.Parent = List
+_0GameList.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_0GameList.BackgroundTransparency = 1.000
+_0GameList.Size = UDim2.new(0, 195, 0, 29)
+_0GameList.ZIndex = 3
+_0GameList.Font = Enum.Font.Cartoon
+_0GameList.Text = "\\\\ Game List //"
+_0GameList.TextColor3 = Color3.fromRGB(255, 255, 255)
+_0GameList.TextSize = 25.000
+_0GameList.TextWrapped = true
+
+games.Name = "games"
+games.Parent = List
+games.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+games.BackgroundTransparency = 1.000
+games.Position = UDim2.new(0, 0, 0.279569894, 0)
+games.Size = UDim2.new(0, 195, 0, 4304)
+games.ZIndex = 3
+games.Font = Enum.Font.Cartoon
+games.Text = "ega-Coins-Simulator-2\\nuff-Simulator\\now-Simulator\\nackflip-Simulator\\nanning-Simulator\\nlade-Champions\\noss-Fighting-Simulator\\nulle-Musculation-Simulator\\nake-Delivery-Simulator\\nCandyCollecting Simulator\\nClicker Story\\nClicking Simulato\\nCoin Collection Simulator\\nCombo Clickers\\nCookie Simulator\\nCotton Candy Simulator\\nCrushing Simulator\\nDr. Seuss\\nDummy Simulator\\nEating Simulator 2\\nEgg Simulator X\\nFairy Legends\\nFish Mania\\nFollower Simulator\\nGladiator Simulator\\nCoin Simulator 2\\nGorilla Simulator \\nHarvesting Simulator\\nJumping Simulator\\nLaptop Simulator\\nLUCKY BLOCKS Battlegrounds\\nMunching Master\\nMythical Legens\\nNinja Clicker imulator\\nPet Hatching Simulator 4\\nPirate Legends\\nPlanet Lifting Simulator!\\nBPotion Simulator\\nRunning Simulator\\nSlaying Simulator\\nBSpellblade Legends\\nSprinting Heroes\\nSuper Power Fighting Simulator\\nSword Simulator 3\\nElemental Sword Simulator\\nTapping Champions\\nSoda Simulato\\nTitan Simulator\\nUltimate Lifting Simulator\\nViking Simulator\\nWhacking Simulator\\nYummy Simulator\\nBrawling Simulator\\nDuck Simulator\\nEnergy Legends\\nKilling Simulator\\nLegend Hunt\\nLightsaber Simulator\\nLumber Simulator\\nMelee Champions\\nMelee Simulator\\nSword Legends other game\\nSword Legends\\nToy Simulator\\nFruit Collecting Simulator\\nChicken Simulator 2\\nCLICKING LEGENDS\\nHuman Evolution Simulator\\nToilet Paper Simulator\\nSlashing Masters\\nSpeedRun Simullator\\nTeddie Simulator\\nEgg Simulat\\nFood Masters\\nGem Clicke\\nClicking Chaos\\nCastle Clickes\\nOrange Simulator\\nTapping Heroes\\nBest Fish Friends\\nClicking Champions\\nCandy Simulator 2\\nCoin Collector Simulator\\nLifting Simulator\\nSoda Shaking Simulator 2\\nPunching Clicker Simulator\\nMilkShakes Legends\\nRuneblade Simulator\\nBlade Throwing Simulator\\nClicker Legends\\nTap Tap Simulator\\nDonut Simulator\\nClicker Frenzy(Clicker Madness)\\nRebirths Maler 2.0\\nRPG WORLD\\n2RPG Simulator\\nCrystal licker\\nChampions Simulator\\nMining Champions\\nHyper Clicker\\nTapping Mania\\nSlaming Simulator\\nPepper Clicker\\nOofing Legends\\nSaber Simulator\\nCoffee Simulator\\nDominus Legends\\nPew Pew Simulator\\nNoggin Cracking Simulator\\nPickaxe Simulator\\nWorkout Islands\\nUltimate Clicker\\nBlox Fruit\\nFitness Simulator\\nGiant Simulator\\nSaitama One Punch Man Destiny\\nBoxing Simulator\\nGiant Survival\\nBanning Simulator 2\\nBox Simulator\\nLumberJack legends\\nBoxing Legends\\nRolling Simulator\\nGerm Simulator\\nBlade Simulator\\nClicking Fantasy\\nZombie Adventure\\nMagnet Simulator\\nHatching Simulator X\\nBlack Hole Simulator\\nCool Obby 2\\npg World \\nClicking Gods\\nLegend Of Creshendo\\nCat Simulato\\nMagic Simulator\\nSimulateur de légende muscler\\nChopping Tree Simulator\\nSword Master Simulator\\nEnergy Simulator\\nPet ZOO\\nPet Hatching Simulator 5\\nTree-Harvest-Simulator\\nKey Champions\\nAlien Clicker SImulator\\nClicker Mania\\nViking Clicker\\nBrookHaven RP\\nAnimal Simulator\\nBusiness Legends\\nTapping Horror\\nTapping Heroes Other Game\\nClicker Legacy\\nCoins Hero Simulator\\nLegend Of Speed\\nTapping Legacy\\nClicker Life\\nFire Breathin Simulator\\nLightning Legend\\nViking Simulator Other Game\\nArmor Simulato Resurgence\\nBan Hammer Simulator\\nSoda Legends\\nChristmas Tapping\\nTapping Realms\\nSmacking Simulator\\nSmacking Simulator\\nSmacking Simulator\\nSmacking Simulator\\nSmacking Simulator\\nSmacking Simulator\\nSmacking Simulator\\nSmacking Simulator\\nSmacking Simulator\\nSmacking Simulator\\nSmacking Simulator\\nSmacking Simulator\\nSmacking Simulator\\nSmacking Simulator\\nSmacking Simulator\\nSmacking Simulator\\nSmacking Simulator\\nSmacking Simulator\\nSmacking Simulator\\nSmacking Simulator\\nSmacking Simulator\\nSmacking Simulator\\nSmacking Simulator\\nSword Simulator 2\\nTower Of Dreads\\nAssassin!\\nBad Business\\nSword legends other game 2"
+games.TextColor3 = Color3.fromRGB(255, 255, 255)
+games.TextSize = 20.000
+games.TextWrapped = true
+
+UIListLayout.Parent = List
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+games_2.Name = "games"
+games_2.Parent = List
+games_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+games_2.BackgroundTransparency = 1.000
+games_2.Position = UDim2.new(0, 0, 0.876344144, 0)
+games_2.Size = UDim2.new(0, 195, 0, 27)
+games_2.ZIndex = 3
+games_2.Font = Enum.Font.Cartoon
+games_2.Text = "Total: 192+"
+games_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+games_2.TextSize = 20.000
+games_2.TextWrapped = true
+
+Tittle.Name = "Tittle"
+Tittle.Parent = Main
+Tittle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tittle.BackgroundTransparency = 1.000
+Tittle.Position = UDim2.new(0, 58, 0, 0)
+Tittle.Size = UDim2.new(0, 292, 0, 41)
+Tittle.ZIndex = 2
+Tittle.Font = Enum.Font.Cartoon
+Tittle.Text = "Catix Hub"
+Tittle.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tittle.TextSize = 30.000
+Tittle.TextWrapped = true
+
+UpdateCredit.Name = "Update&Credit"
+UpdateCredit.Parent = Main
+UpdateCredit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UpdateCredit.BackgroundTransparency = 1.000
+UpdateCredit.BorderColor3 = Color3.fromRGB(54, 57, 67)
+UpdateCredit.Position = UDim2.new(0.561341226, 0, 0.396907717, 0)
+UpdateCredit.Size = UDim2.new(0, 169, 0, 138)
+UpdateCredit.ZIndex = 2
+UpdateCredit.Image = "rbxassetid://3570695787"
+UpdateCredit.ImageColor3 = Color3.fromRGB(38, 38, 38)
+UpdateCredit.ScaleType = Enum.ScaleType.Slice
+UpdateCredit.SliceCenter = Rect.new(100, 100, 100, 100)
+UpdateCredit.SliceScale = 0.167
+
+_1.Name = "1"
+_1.Parent = UpdateCredit
+_1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_1.BackgroundTransparency = 1.000
+_1.Size = UDim2.new(0, 167, 0, 6)
+_1.ZIndex = 3
+_1.Font = Enum.Font.Cartoon
+_1.Text = ""
+_1.TextColor3 = Color3.fromRGB(255, 255, 255)
+_1.TextSize = 16.000
+_1.TextWrapped = true
+
+LastUpdate.Name = "LastUpdate"
+LastUpdate.Parent = UpdateCredit
+LastUpdate.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LastUpdate.BackgroundTransparency = 1.000
+LastUpdate.Position = UDim2.new(0, 1, 0, 24)
+LastUpdate.Size = UDim2.new(0, 167, 0, 23)
+LastUpdate.ZIndex = 3
+LastUpdate.Font = Enum.Font.Cartoon
+LastUpdate.Text = "\\\\ Last Update 2.0 //"
+LastUpdate.TextColor3 = Color3.fromRGB(255, 255, 255)
+LastUpdate.TextSize = 16.000
+LastUpdate.TextWrapped = true
+
+UpdateGame1.Name = "UpdateGame1"
+UpdateGame1.Parent = UpdateCredit
+UpdateGame1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UpdateGame1.BackgroundTransparency = 1.000
+UpdateGame1.Position = UDim2.new(0, 1, 0, 47)
+UpdateGame1.Size = UDim2.new(0, 166, 0, 23)
+UpdateGame1.ZIndex = 3
+UpdateGame1.Font = Enum.Font.Cartoon
+UpdateGame1.Text = "NEW TITTLE"
+UpdateGame1.TextColor3 = Color3.fromRGB(255, 255, 255)
+UpdateGame1.TextSize = 12.000
+UpdateGame1.TextWrapped = true
+
+UIListLayout_2.Parent = UpdateCredit
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+
+UpdateGame2.Name = "UpdateGame2"
+UpdateGame2.Parent = UpdateCredit
+UpdateGame2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UpdateGame2.BackgroundTransparency = 1.000
+UpdateGame2.Position = UDim2.new(0, 0, 0, 52)
+UpdateGame2.Size = UDim2.new(0, 166, 0, 30)
+UpdateGame2.ZIndex = 3
+UpdateGame2.Font = Enum.Font.Cartoon
+UpdateGame2.Text = "HUB 2.0"
+UpdateGame2.TextColor3 = Color3.fromRGB(255, 255, 255)
+UpdateGame2.TextSize = 12.000
+UpdateGame2.TextWrapped = true
+
+UpdateGame4.Name = "UpdateGame4"
+UpdateGame4.Parent = UpdateCredit
+UpdateGame4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UpdateGame4.BackgroundTransparency = 1.000
+UpdateGame4.Position = UDim2.new(0, 1, 0, 47)
+UpdateGame4.Size = UDim2.new(0, 166, 0, 23)
+UpdateGame4.ZIndex = 3
+UpdateGame4.Font = Enum.Font.Cartoon
+UpdateGame4.Text = "if u have any problem please contact me on discord"
+UpdateGame4.TextColor3 = Color3.fromRGB(255, 255, 255)
+UpdateGame4.TextScaled = true
+UpdateGame4.TextSize = 16.000
+UpdateGame4.TextWrapped = true
+
+TextLabel.Name = "."
+TextLabel.Parent = UpdateCredit
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0, 0, 0, 121)
+TextLabel.Size = UDim2.new(0, 166, 0, 17)
+TextLabel.ZIndex = 3
+TextLabel.Font = Enum.Font.Cartoon
+TextLabel.Text = "By Altix#3395"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 12.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Name = "."
+TextLabel_2.Parent = UpdateCredit
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0, 0, 0, 121)
+TextLabel_2.Size = UDim2.new(0, 166, 0, 17)
+TextLabel_2.ZIndex = 3
+TextLabel_2.Font = Enum.Font.Cartoon
+TextLabel_2.Text = "By Im A Cat#7202"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 12.000
+TextLabel_2.TextWrapped = true
+
+AutoDetect.Name = "AutoDetect"
+AutoDetect.Parent = Main
+AutoDetect.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AutoDetect.BackgroundTransparency = 1.000
+AutoDetect.BorderColor3 = Color3.fromRGB(54, 57, 67)
+AutoDetect.Position = UDim2.new(0.561341226, 0, 0.164907709, 0)
+AutoDetect.Size = UDim2.new(0, 169, 0, 46)
+AutoDetect.ZIndex = 2
+AutoDetect.Image = "rbxassetid://3570695787"
+AutoDetect.ImageColor3 = Color3.fromRGB(38, 38, 38)
+AutoDetect.ScaleType = Enum.ScaleType.Slice
+AutoDetect.SliceCenter = Rect.new(100, 100, 100, 100)
+AutoDetect.SliceScale = 0.167
+
+TextButton_2.Parent = AutoDetect
+TextButton_2.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+TextButton_2.BackgroundTransparency = 1.000
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Size = UDim2.new(0, 169, 0, 46)
+TextButton_2.ZIndex = 3
+TextButton_2.Font = Enum.Font.Cartoon
+TextButton_2.Text = "Auto Detect"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextSize = 25.000
+TextButton_2.TextWrapped = true
+
+DISCORDSERVER.Name = "DISCORD SERVER"
+DISCORDSERVER.Parent = Frame
+DISCORDSERVER.AnchorPoint = Vector2.new(0.5, 0.5)
+DISCORDSERVER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DISCORDSERVER.BackgroundTransparency = 1.000
+DISCORDSERVER.Position = UDim2.new(0.756756723, 0, 1.10485601, 0)
+DISCORDSERVER.Size = UDim2.new(0, 204, 0, 42)
+DISCORDSERVER.Image = "rbxassetid://3570695787"
+DISCORDSERVER.ImageColor3 = Color3.fromRGB(38, 38, 38)
+DISCORDSERVER.ScaleType = Enum.ScaleType.Slice
+DISCORDSERVER.SliceCenter = Rect.new(100, 100, 100, 100)
+DISCORDSERVER.SliceScale = 0.167
+
+Main_2.Name = "Main"
+Main_2.Parent = DISCORDSERVER
+Main_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main_2.BackgroundTransparency = 1.000
+Main_2.BorderColor3 = Color3.fromRGB(54, 57, 67)
+Main_2.Position = UDim2.new(0.032518059, 0, 0.126046121, 0)
+Main_2.Size = UDim2.new(0, 190, 0, 32)
+Main_2.ZIndex = 2
+Main_2.Image = "rbxassetid://3570695787"
+Main_2.ImageColor3 = Color3.fromRGB(48, 50, 59)
+Main_2.ScaleType = Enum.ScaleType.Slice
+Main_2.SliceCenter = Rect.new(100, 100, 100, 100)
+Main_2.SliceScale = 0.167
+
+TextButton_3.Parent = Main_2
+TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.BackgroundTransparency = 1.000
+TextButton_3.Size = UDim2.new(0, 189, 0, 32)
+TextButton_3.ZIndex = 2
+TextButton_3.Font = Enum.Font.Cartoon
+TextButton_3.Text = "Discord Server"
+TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.TextSize = 18.000
+TextButton_3.TextWrapped = true
+
+DISCORDSERVER_2.Name = "DISCORD SERVER"
+DISCORDSERVER_2.Parent = Frame
+DISCORDSERVER_2.AnchorPoint = Vector2.new(0.5, 0.5)
+DISCORDSERVER_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DISCORDSERVER_2.BackgroundTransparency = 1.000
+DISCORDSERVER_2.Position = UDim2.new(0.24247098, 0, 1.10485601, 0)
+DISCORDSERVER_2.Size = UDim2.new(0, 204, 0, 42)
+DISCORDSERVER_2.Image = "rbxassetid://3570695787"
+DISCORDSERVER_2.ImageColor3 = Color3.fromRGB(38, 38, 38)
+DISCORDSERVER_2.ScaleType = Enum.ScaleType.Slice
+DISCORDSERVER_2.SliceCenter = Rect.new(100, 100, 100, 100)
+DISCORDSERVER_2.SliceScale = 0.167
+
+Main_3.Name = "Main"
+Main_3.Parent = DISCORDSERVER_2
+Main_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main_3.BackgroundTransparency = 1.000
+Main_3.BorderColor3 = Color3.fromRGB(54, 57, 67)
+Main_3.Position = UDim2.new(0.032518059, 0, 0.126046121, 0)
+Main_3.Size = UDim2.new(0, 190, 0, 32)
+Main_3.ZIndex = 2
+Main_3.Image = "rbxassetid://3570695787"
+Main_3.ImageColor3 = Color3.fromRGB(48, 50, 59)
+Main_3.ScaleType = Enum.ScaleType.Slice
+Main_3.SliceCenter = Rect.new(100, 100, 100, 100)
+Main_3.SliceScale = 0.167
+
+TextButton_4.Parent = Main_3
+TextButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.BackgroundTransparency = 1.000
+TextButton_4.Size = UDim2.new(0, 189, 0, 32)
+TextButton_4.ZIndex = 2
+TextButton_4.Font = Enum.Font.Cartoon
+TextButton_4.Text = "Our Game"
+TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.TextSize = 18.000
+TextButton_4.TextWrapped = true
+
+-- Scripts:
+
+local function RQCLL_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Parent.Parent:TweenPosition(UDim2.new(0.5, 0,-0.5, 0), "Out", "Quad", 2)
+		wait(2)
+		script.Parent.Parent.Parent.Parent.Parent:Destroy()
+	end)
+end
+coroutine.wrap(RQCLL_fake_script)()
+local function RGVFF_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Text = "Loading"
+		wait(0.1)
+		script.Parent.Text = "Loading."
+		wait(0.1)
+		script.Parent.Text = "Loading.."
+		wait(0.1)
+		script.Parent.Text = "Loading..."
+		wait(0.1)
+		script.Parent.Text = "Game detected"
+		wait(0.1)
+		script.Parent.Text = "Auto Detect"
+		print("click")
+		FoundGame()
+		wait(1)
+		script.Parent.Parent.Parent.Parent:TweenPosition(UDim2.new(0.5, 0,-0.5, 0), "Out", "Quad", 2)
+	end)
+	
+	function FoundGame()
+		local place = game.PlaceId
+		if place == 5227802348 then -- GAME LINK1
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Mega%20Coin%20Simulator%202"))()
+		elseif place == 4840737956 then -- GAME LINK2
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Buff%20Simulator%20GUI"))()
+		elseif place == 4502746301 then -- GAME LINK3
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Bow%20Simulator%20GUI"))()
+		elseif place == 3923754109 then -- GAME LINK4
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Backflip%20Simulator%20GUI"))()
+		elseif place == 3025124489 then -- GAME LINK5
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Banning%20Simulator%20GUI"))()
+		elseif place == 4466798016 then -- GAME LINK6
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Blade%20Champions"))()
+		elseif place == 4246487209 then -- GAME LINK7
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Boss%20Fighting%20Simulator%20GUI"))()
+		elseif place == 4686272305 then -- GAME LINK8
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Bulle%20Musculation%20Simulator%20GUI"))()
+		elseif place == 3011348948 then -- GAME LINK9
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Cake%20Delivery%20Simulator%20GUI"))()
+		elseif place == 3963432370 then -- GAME LINK10
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Candy%20Collecting%20Simulator%20GUI"))()
+		elseif place == 4859936288 then -- GAME LINK11
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Clicker%20Story%20GUI"))()
+		elseif place == 3462993756 then -- GAME LINK12
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Clicking%20Simulator%20GUI"))()
+		elseif place == 5093293793 then -- GAME LINK13
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Coin%20Collection%20Simulator%20GUI"))()
+		elseif place == 5266363557 then -- GAME LINK14
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Combo%20Clicker%20GUI"))()
+		elseif place == 2953670286 then -- GAME LINK15
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Cookie%20Simulator%20GUI"))()
+		elseif place == 3290249490 then -- GAME LINK16
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Cotton%20Candy%20Simulator%20GUI"))()
+		elseif place == 3984040937 then -- GAME LINK17
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Crushing%20Simulator%20GUI"))()
+		elseif place == 3788547128 then -- GAME LINK18
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Dr%20Seuss%20GUI"))()
+		elseif place == 5087932411 then -- GAME LINK19
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Dummy%20SImulator%20GUI"))()
+		elseif place == 5158017550 then -- GAME LINK20
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Eating%20Simulator%20GUI"))()
+		elseif place == 4571493251 then -- GAME LINK21
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Egg%20Simulator%20%20X%20GUI"))()
+		elseif place == 4613228940 then -- GAME LINK22
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Fairy%20Legends%20GUI"))()
+		elseif place == 3661241323 then -- GAME LINK23
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Fish%20Mania%20GUI"))()
+		elseif place == 4794548479 then -- GAME LINK24
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Follower%20Simulator%20GUI"))()
+		elseif place == 4958515691 then -- GAME LINK25
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Gladiator%20Simulator%20GUI"))()
+		elseif place == 3312021728 then -- GAME LINK26
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Yummy%20Simulator%20GUI"))()
+		elseif place == 1378712700 then -- GAME LINK27
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Gorrila%20Simulator%20GUI"))()
+		elseif place == 2110185000 then -- GAME LINK28
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Harvesting%20Simulator%20GUI"))()
+		elseif place == 4900725627 then -- GAME LINK29
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Jumping%20Simulator%20GUI"))()
+		elseif place == 4829409972 then -- GAME LINK30
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Laptop%20Simulator%20GUI"))()
+		elseif place == 662417684 then -- GAME LINK31
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Lucky%20Block%20Battleround%20GUI"))()
+		elseif place == 3859039810 then -- GAME LINK32
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Munching%20Master%20GUI"))()
+		elseif place == 4699158002 then -- GAME LINK33
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Mythical%20Legends%20GUI"))()
+		elseif place == 5265888165 then -- GAME LINK34
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Ninja%20Clicker%20GUI"))()
+		elseif place == 5065520928 then -- GAME LINK35
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Pet%20Hatching%20Simulator%204%20GUI"))()
+		elseif place == 4946394167 then -- GAME LINK36
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Pirate%20Legends%20GUI"))()
+		elseif place == 2692178444 then -- GAME LINK37
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Planet%20Lifting%20SImulator%20GUI"))()
+		elseif place == 4369222337 then -- GAME LINK38
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Potion%20Simulator%20GUI"))()
+		elseif place == 3182399976 then -- GAME LINK39
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Running%20Simulator%20GUI"))()
+		elseif place == 2616498302 then -- GAME LINK40
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Slaying%20Simulator%20GUI"))()
+		elseif place == 4489411976 then -- GAME LINK41
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Spellblade%20Legends%20GUI"))()
+		elseif place == 4546789281 then -- GAME LINK42
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Sprinting%20Heroes%20GUI"))()
+		elseif place == 2619187362 then -- GAME LINK43
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Super%20Power%20Fighting%20Simulator%20GUI"))()
+		elseif place == 5123763375 then -- GAME LINK44
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Sword%20Simulator%203%20GUI"))()
+		elseif place == 5186756186 then -- GAME LINK45
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Sword%20Simulator%20GUI"))()
+		elseif place == 5380617411 then -- GAME LINK46
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Tapping%20Champions"))()
+		elseif place == 5281022480 then -- GAME LINK47
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Soda%20Simulator%20GUI"))()
+		elseif place == 1122519450 then -- GAME LINK48
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Titans%20Simulator%20GUI"))()
+		elseif place == 2472820296 then -- GAME LINK49
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Ultimate%20Lifting%20Simulator%20GUI"))()
+		elseif place == 4330397559 then -- GAME LINK50
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Viking%20Simulator%20GUI"))()
+		elseif place == 4815306039 then -- GAME LINK51
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Whacking%20Simulator%20GUI"))()
+		elseif place == 3877211022 then -- GAME LINK52
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Yummy%20Simulator%20GUI"))()
+		elseif place == 5253409107 then -- GAME LINK53
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Brawling%20Simulator%20GUI"))()
+		elseif place == 2791730398 then -- GAME LINK54
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Duck%20Simulator%20GUI"))()
+		elseif place == 5016053113 then -- GAME LINK55
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Energy%20Legends%20GUI"))()
+		elseif place == 2929627388 then -- GAME LINK56
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Killing%20Simulator%20GUI"))()
+		elseif place == 3135436676 then -- GAME LINK57
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Legend%20Hunt%20GUI"))()
+		elseif place == 4727475305 then -- GAME LINK58
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Lightsaber%20Simulator%20GUI"))()
+		elseif place == 4452743080 then -- GAME LINK59
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Lumber%20Simulator%20GUI"))()
+		elseif place == 4807709647 then -- GAME LINK60
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Melee%20Champions%20GUI"))()
+		elseif place == 4505230637 then -- GAME LINK61
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Melee%20Simulator%20GUI"))()
+		elseif place == 3458440153 then -- GAME LINK62
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Sword%20Legends%20GUI%20other%20game"))()
+		elseif place == 4408587791 then -- GAME LINK63
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Sword%20Legends"))()
+		elseif place == 2683386222 then -- GAME LINK64
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Toy%20Simulator%20GUI"))()
+		elseif place == 4934958405 then -- GAME LINK65
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Fruit%20Collecting%20Simulator"))()
+		elseif place == 2897574045 then -- GAME LINK66
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Chicken%20Simulator%202%20GUI"))()
+		elseif place == 5416606558 then -- GAME LINK67
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Clicking%20Legends%20GUI"))()
+		elseif place == 3466353165 then -- GAME LINK68
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Human%20Evolution%20SImulator%20GUI"))()
+		elseif place == 4825861420 then -- GAME LINK69
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Toilet%20paper%20Simulator%20GUI"))()
+		elseif place == 4359012847 then -- GAME LINK70
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Slashing%20Masters%20GUI"))()
+		elseif place == 5293755937 then -- GAME LINK71
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Speed%20Run%20Simulator%20GUI"))()
+		elseif place == 5372450078 then -- GAME LINK72
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Teddie%20Simulator%20GUI"))()
+		elseif place == 2743063577 then -- GAME LINK73
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Egg%20Simulator%20GUI"))()
+		elseif place == 4858201613 then -- GAME LINK74
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Food%20Masters%20GUI"))()
+		elseif place == 5305282088 then -- GAME LINK75
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Gem%20Clicker%20GUI"))()
+		elseif place == 5531544242 then -- GAME LINK76
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Clicking%20Chaos%20GUI"))()
+		elseif place == 5514871679 then -- GAME LINK77
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Castle%20Clicker%20GUI"))()
+		elseif place == 4838817687 then -- GAME LINK78
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Orange%20Simulator%20GUI"))()
+		elseif place == 5512825420 then -- GAME LINK79
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Tapping%20Heroes"))()
+		elseif place == 3854461548 then -- GAME LINK80
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Best%20Fish%20Friends%20GUI"))()
+		elseif place == 5373489830 then -- GAME LINK81
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Clicking%20CHampions%20GUI"))()
+		elseif place == 5525364160 then -- GAME LINK82
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Candy%20Simulator%202%20GUI"))()
+		elseif place == 3956799149 then -- GAME LINK83
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Coin%20Collector%20Simulator%20GUI"))()
+		elseif place == 3652625463 then -- GAME LINK84
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Lifting%20Simulator%20GUI"))()
+		elseif place == 5245876019 then -- GAME LINK85
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Soda%20Shaking%20Simulator%202%20GUI"))()
+		elseif place == 5477964646 then -- GAME LINK86
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Punch%20Clicker%20Simulator%20GUI"))()
+		elseif place == 5454936056 then -- GAME LINK87
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/MilkShakes%20Legends"))()
+		elseif place == 5415903736 then -- GAME LINK88
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Shurikens%20Simulator"))()
+		elseif place == 4704006941 then -- GAME LINK89
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Blade%20ThrowinG%20GUI"))()
+		elseif place == 5314195576 then -- GAME LINK90
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Clicker%20Legends%20GUI"))()
+		elseif place == 5420697005 then -- GAME LINK91
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Tap%20Tap%20Simulator%20GUI"))()
+		elseif place == 2927161509 then -- GAME LINK92
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Donut%20Simulator%20GUI"))()
+		elseif place == 5490351219 then -- GAME LINK93
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Clicker%20Frenzy%20GUI"))()
+		elseif place == 5055942264 then -- GAME LINK94
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Rebirth%20Maker%202.0"))()
+		elseif place == 2928055432 then -- GAME LINK95
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Rpg%20World%20GUI"))()
+		elseif place == 454409260 then -- GAME LINK952
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Rpg%20Simulator%20GUI"))()
+		elseif place == 5629916497 then -- GAME LINK96
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Crystal%20Clickers%20GUI"))()
+		elseif place == 4254575069 then -- GAME LINK97
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Champions%20Simulator%20GUI"))()
+		elseif place == 5516928515 then -- GAME LINK98
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Mining%20Champions%20GUI"))()
+		elseif place == 5636466220 then -- GAME LINK99
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/HYPER%20CLICKER%20GUI"))()
+		elseif place == 5535087806 then -- GAME LINK100
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Tapping%20Mania%20GUI"))()
+		elseif place == 5043740115 then -- GAME LINK101
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Slaming%20Simulator%20GUI"))()
+		elseif place == 4634780456 then -- GAME LINK102
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Pepper%20Clicker%20GUI"))()
+		elseif place == 5603696999 then -- GAME LINK103
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Oofing%20Legends%20GUI"))()
+		elseif place == 3823781113 then -- GAME LINK104
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Saber%20Simulator%20GUI"))()
+		elseif place == 5351136799 then -- GAME LINK105
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Coffee%20Simulator%20GUI"))()
+		elseif place == 5193596327 then -- GAME LINK106
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Dominus%20Legends%20GUI"))()
+		elseif place == 2930126565 then -- GAME LINK107
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Pew%20Pew%20Simulator%20GUI"))()
+		elseif place == 5650523443 then -- GAME LINK108
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Noggin%20Cracking%20Simulator%20GUI"))()
+		elseif place == 4186060228 then -- GAME LINK109
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Pickaxe%20Simulator%20GUI"))()
+		elseif place == 4032944086 then -- GAME LINK110
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Workout%20Islands%20GUI"))()
+		elseif place == 5642899405 then -- GAME LINK111
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Ultimate%20Clicker%20GUI"))()
+		elseif place == 2753915549 then -- GAME LINK112
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Blox%20Fruit%20GUI"))()
+		elseif place == 4520536611 then -- GAME LINK113
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Fitness%20Simulator%20GUI"))()
+		elseif place == 2986677229 then -- GAME LINK114
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Giant%20Simulator%20GUI"))()
+		elseif place == 5483517179 then -- GAME LINK115
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Saitama%20One%20Punch%20man%20Simulator%20GUI"))()
+		elseif place == 4058282580 then -- GAME LINK116
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Boxing%20Simulator%20GUI"))()
+		elseif place == 4003872968 then -- GAME LINK117
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/giant%20survival%20GUI"))()
+		elseif place == 4221615296 then -- GAME LINK118
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Banning%20Simulator%202%20GUI"))()
+		elseif place == 4367831274 then -- GAME LINK119
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Box%20Simulator%20GUI"))()
+		elseif place == 2565450271 then -- GAME LINK120 not in hub
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/scp%20027%20area%20GUI"))()
+		elseif place == 4379619839 then -- GAME LINK120 
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/LumberJack%20Legends%20GUI"))()
+		elseif place == 3775649046 then -- GAME LINK121
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Boxing%20Legends%20GUI"))()
+		elseif place == 5268766951 then -- GAME LINK122
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Rolling%20Simulator%20GUI"))()
+		elseif place == 3263098820 then -- GAME LINK123
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Germ%20Simulator%20GUI"))()
+		elseif place == 4458733955 then -- GAME LINK124
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Blade%20Simulator%20GUI"))()
+		elseif place == 5641449689 then -- GAME LINK125
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Clicking%20Fantasy%20GUI%202"))()
+		elseif place == 4952840577 then -- GAME LINK126
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Zombie%20Adventures%20GUI"))()
+		elseif place == 3486025575 then -- GAME LINK127
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Magnet%20Simulator%20GUI"))()
+		elseif place == 5329202758 then -- GAME LINK128
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Hatching%20Simulator%20X%20GUI"))()
+		elseif place == 2933728926 then -- GAME LINK129
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Black%20Hole%20Simulator%20GUI"))()
+		elseif place == 4927387 then -- GAME LINK130
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Cool%20Obby%202%20GUI"))()
+		elseif place == 5672312028 then -- GAME LINK131
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Rpg%20World%20%202%20GUI"))()
+		elseif place == 5474824366 then -- GAME LINK132
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Clicking%20Gods%20GUI"))()
+		elseif place == 480273117 then -- GAME LINK133
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Legend%20Of%20Creshendo%20GUI"))()
+		elseif place == 2801991836 then -- GAME LINK134
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Cat%20Simulator%20GUI"))()
+		elseif place == 2410398108 then -- GAME LINK135
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Magic%20Simulator%20GUI"))()
+		elseif place == 5709572883 then -- GAME 136
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Simulateur%20De%20Legend%20Muscler%20GUI"))()
+		elseif place == 3206773017 then -- GAME 137
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Chopping-Tree-Simulator%20GUI"))()
+		elseif place == 5447655350 then -- GAME 138
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Sword%20Master%20Simulator%20GUI"))()
+		elseif place == 4233071973 then -- GAME 139
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Energy%20Simulator%20GUI"))()
+		elseif place == 4902872857 then -- GAME 140
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/PET%20ZOO%20GUI"))()
+		elseif place == 5306101736 then -- GAME 141
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Pet%20Hatching%20Simulator%205%20GUI"))()
+		elseif place == 5604707810 then -- GAME 142
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Tree%20Harvest%20Simulator%20GUI"))()
+		elseif place == 5461749397 then -- GAME 143
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Key%20Champions%20GUI"))()
+		elseif place == 5696949618 then -- GAME 144
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Alien%20Clicker%20Simulator%20%20GUI"))()
+		elseif place == 5658257666 then -- GAME 145
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Clicker%20Mania%20GUI"))()
+		elseif place == 5444465912 then -- GAME 146
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Viking%20Clickers%20GUI"))()
+		elseif place == 4924922222 then -- GAME 147
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Brookhaven%20RP"))()
+		elseif place == 5712833750 then -- GAME 148
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Animal%20Simulator%20GUI"))()
+		elseif place == 5551657553 then -- GAME 149
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Business%20Legend%20GUI"))()
+		elseif place == 5644352013 then -- GAME 150
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Tapping%20Horror%20GUI"))()
+		elseif place == 5486962185 then -- GAME 151
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Tapping%20Heroes%20Other%20Game"))()
+		elseif place == 5687346438 then -- GAME 152
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Clicker%20Legacy%20GUI"))()
+		elseif place == 5827078246 then -- GAME 153
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Coin%20Hero%20Simulator%20GUI"))()
+		elseif place == 5817322596 then -- GAME 154
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Legend%20Of%20Speed%20GUI"))()
+		elseif place == 5840952016 then -- GAME 155
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Tapping%20Legacy"))()
+		elseif place == 5869481172 then -- GAME 156
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Clicker%20lIfe%20GUI"))()
+		elseif place == 5006110264 then -- GAME 157
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Fire%20Breathing%20Simulator%20GUI"))()
+		elseif place == 5546336501 then -- GAME 158
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Lightning%20Legends%20GUI"))()
+		elseif place == 5699730977 then -- GAME 159
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Viking%20Simulator%20other%20Game%20GUI"))()
+		elseif place == 4139326889 then -- GAME 160
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Armor%20Simulator%3A%20Resurgence%20GUI"))()
+		elseif place == 1929140975 then -- GAME 161
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Ban%20Hammer%20Simulator%20GUI"))()
+		elseif place == 5817229607 then -- GAME 162
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Soda%20Legend%20GUI"))()
+		elseif place == 5856707355 then -- GAME 163
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Christmas%20%20Tapping%20GUI"))()
+		elseif place == 5940836435 then -- GAME 164
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Tapping%20Realms%20GUI"))()
+		elseif place == 5025324461 then -- GAME 165
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Smacking%20Simulator%20GUI"))()
+		elseif place == 4746492207 then -- GAME 166
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Minion%20Simulator%20GUI"))()
+		elseif place == 5083731857 then -- GAME 167
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Saitama%20Simulator%20GUI"))()
+		elseif place == 4961974633 then -- GAME 168
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Ramen%20Simulator%20GUI"))()
+		elseif place == 1478636977 then -- GAME 169
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Monster%20Battle%20GUI"))()
+		elseif place == 1240123653 then -- GAME 170
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Zombie%20Attack%20GUI"))()
+		elseif place == 2870343637 then -- GAME 171
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Titan%20God%20Simulator%20GUI"))()
+		elseif place == 3601201039 then -- GAME 172
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Farmlands"))()
+		elseif place == 4893679160 then -- GAME 173
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Big%20Brain%20Simulator%20GUI"))()
+		elseif place == 4919350725 then -- GAME 174
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Duckie%20Simulator%20GUI"))()
+		elseif place == 2673595672 then -- GAME 175
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Dashing%20Simulator%20GUI"))()
+		elseif place == 3376584594 then -- GAME 176
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Flight%20Simulator%20GUI"))()
+		elseif place == 4963056405 then -- GAME 177
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Hatching%20Simulator%202%20GUI"))()
+		elseif place == 4857069142 then -- GAME 178
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Clicking%20Simulator%202.0%20GUI"))()
+		elseif place == 205224386 then -- GAME 179
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Hide%20And%20Seek%20Extreme%20GUI"))()
+		elseif place == 4828705676 then -- GAME 180
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Reaper%20Simulator%202%20GUI"))()
+		elseif place == 2302091358 then -- GAME 181
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Cookie%20Clicker%20GUI"))()
+		elseif place == 5118093154 then -- GAME 182
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Super%20Clicker%20X%20GUI"))()
+		elseif place == 4866225258 then -- GAME 183
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Wizard%20Champions%20GUI"))()
+		elseif place == 4237861040 then -- GAME 184
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Treacherous%20Tower%20GUI"))()
+		elseif place == 4646477729 then -- GAME 185
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Tower%20OF%20Heroes%20GUI"))()
+		elseif place == 4565874973 then -- GAME 186
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Robot%20Simulator%20GUI"))()
+		elseif place == 914010731 then -- GAME 187
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Ro%20Ghoul%20GUI"))()
+		elseif place == 4652867186 then -- GAME 188
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Sword%20Simulator%202%20GUI"))()
+		elseif place == 4815910662 then -- GAME 189
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Tower%20OF%20Dreads"))()
+		elseif place == 379614936 then -- GAME 190
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Assassin!%20GUI"))()
+		elseif place == 3233893879 then -- GAME 191
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Bad%20Businees%20GUI"))()
+		elseif place == 4680735230 then -- GAME 192
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Sword%20Legends%20other%20game%202%20GUI"))()
+		else
+			loadstring(game:HttpGet("https://pastebin.com/raw/40ffKHf8", true))()
+		end
+	end
+	
+end
+coroutine.wrap(RGVFF_fake_script)()
+local function IMGN_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	script.Parent.Parent.Parent = game:GetService("Players").LocalPlayer.PlayerGui
+	
+	--Animation Gui
+		script.Parent.Active = true
+		script.Parent.Draggable = true
+		script.Parent.Position = UDim2.new(0.5, 0,-0.5, 0)
+		wait()
+		script.Parent:TweenPosition(UDim2.new(0.5, 0,0.5, 0), "Out", "Quad", 2)
+end
+coroutine.wrap(IMGN_fake_script)()
+local function TERSFG_fake_script() -- TextButton_3.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_3)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		setclipboard("https://discord.gg/x2hM4M5xWj")
+		script.Parent.Text = "LINK COPIED"
+		wait(1.5)
+		script.Parent.Text = "Discord Server"
+	end)
+end
+coroutine.wrap(TERSFG_fake_script)()
+local function WHACX_fake_script() -- TextButton_4.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_4)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		setclipboard("https://www.roblox.com/games/5973366909/")
+		script.Parent.Text = "LINK COPIED"
+		wait(1.5)
+		script.Parent.Text = "Our Game"
+	end)
+end
+coroutine.wrap(WHACX_fake_script)()
