@@ -3063,7 +3063,7 @@ CatixHub.TextButton_4.TextWrapped = true
 
 -- Scripts:
 
-local function KRAVSHA_fake_script() -- CatixHub.TextButton.LocalScript 
+local function TUWQFZL_fake_script() -- CatixHub.TextButton.LocalScript 
 	local script = Instance.new('LocalScript', CatixHub.TextButton)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -3072,8 +3072,8 @@ local function KRAVSHA_fake_script() -- CatixHub.TextButton.LocalScript
 		script.Parent.Parent.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(KRAVSHA_fake_script)()
-local function QKOCL_fake_script() -- CatixHub.TextButton_2.LocalScript 
+coroutine.wrap(TUWQFZL_fake_script)()
+local function YNZDOT_fake_script() -- CatixHub.TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', CatixHub.TextButton_2)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -3484,14 +3484,15 @@ local function QKOCL_fake_script() -- CatixHub.TextButton_2.LocalScript
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Bad%20Businees%20GUI"))()
 		elseif place == 4680735230 then -- GAME 192
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Sword%20Legends%20other%20game%202%20GUI"))()
+		elseif place == 5151156182 then -- GAME 192
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Pet%20Heroes%20Simulator"))()	
 		else
 			loadstring(game:HttpGet("https://pastebin.com/raw/40ffKHf8", true))()
 		end
 	end
-	
 end
-coroutine.wrap(QKOCL_fake_script)()
-local function LTTJO_fake_script() -- CatixHub.Frame.LocalScript 
+coroutine.wrap(YNZDOT_fake_script)()
+local function MRTNWH_fake_script() -- CatixHub.Frame.LocalScript 
 	local script = Instance.new('LocalScript', CatixHub.Frame)
 
 	script.Parent.Parent.Parent = game:GetService("Players").LocalPlayer.PlayerGui
@@ -3503,8 +3504,8 @@ local function LTTJO_fake_script() -- CatixHub.Frame.LocalScript
 		wait()
 		script.Parent:TweenPosition(UDim2.new(0.5, 0,0.5, 0), "Out", "Quad", 2)
 end
-coroutine.wrap(LTTJO_fake_script)()
-local function OAMP_fake_script() -- CatixHub.TextButton_3.LocalScript 
+coroutine.wrap(MRTNWH_fake_script)()
+local function BAMC_fake_script() -- CatixHub.TextButton_3.LocalScript 
 	local script = Instance.new('LocalScript', CatixHub.TextButton_3)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -3514,8 +3515,8 @@ local function OAMP_fake_script() -- CatixHub.TextButton_3.LocalScript
 		script.Parent.Text = "Discord Server"
 	end)
 end
-coroutine.wrap(OAMP_fake_script)()
-local function SNMBHVI_fake_script() -- CatixHub.TextButton_4.LocalScript 
+coroutine.wrap(BAMC_fake_script)()
+local function GSIGI_fake_script() -- CatixHub.TextButton_4.LocalScript 
 	local script = Instance.new('LocalScript', CatixHub.TextButton_4)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -3525,4 +3526,4 @@ local function SNMBHVI_fake_script() -- CatixHub.TextButton_4.LocalScript
 		script.Parent.Text = "Our Game"
 	end)
 end
-coroutine.wrap(SNMBHVI_fake_script)()
+coroutine.wrap(GSIGI_fake_script)()
