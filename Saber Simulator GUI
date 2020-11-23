@@ -921,14 +921,14 @@ local args = {
 game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
 elseif _G.BossSelected == "Island68" then
 local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["J Egg"],
+    [1] = game:GetService("ReplicatedStorage").Eggs["O Egg"],
     [2] = 9999,
 }
 
 game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
 elseif _G.BossSelected == "Island69" then
 local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["K Egg"],
+    [1] = game:GetService("ReplicatedStorage").Eggs["P Egg"],
     [2] = 9999,
 }
 
