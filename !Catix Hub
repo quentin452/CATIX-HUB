@@ -13,7 +13,7 @@ local CatixHub = {
 	List = Instance.new("ScrollingFrame"),
 	_0GameList = Instance.new("TextLabel"),
 	UIListLayout = Instance.new("UIListLayout"),
-	_1 = Instance.new("TextLabel"),
+	_99 = Instance.new("TextLabel"),
 	_10 = Instance.new("TextLabel"),
 	_100 = Instance.new("TextLabel"),
 	_101 = Instance.new("TextLabel"),
@@ -48,7 +48,7 @@ local CatixHub = {
 	_128 = Instance.new("TextLabel"),
 	_129 = Instance.new("TextLabel"),
 	_13 = Instance.new("TextLabel"),
-	_130 = Instance.new("TextLabel"),
+	_129_2 = Instance.new("TextLabel"),
 	_131 = Instance.new("TextLabel"),
 	_132 = Instance.new("TextLabel"),
 	_133 = Instance.new("TextLabel"),
@@ -206,11 +206,10 @@ local CatixHub = {
 	_96 = Instance.new("TextLabel"),
 	_97 = Instance.new("TextLabel"),
 	_98 = Instance.new("TextLabel"),
-	_99 = Instance.new("TextLabel"),
 	Tittle = Instance.new("TextLabel"),
 	games = Instance.new("TextLabel"),
 	UpdateCredit = Instance.new("ImageLabel"),
-	_1_2 = Instance.new("TextLabel"),
+	_1 = Instance.new("TextLabel"),
 	LastUpdate = Instance.new("TextLabel"),
 	UIListLayout_2 = Instance.new("UIListLayout"),
 	UpdateGame4 = Instance.new("TextLabel"),
@@ -307,7 +306,6 @@ CatixHub.List.BackgroundTransparency = 1.000
 CatixHub.List.Position = UDim2.new(0, 0, 0.0303030312, 0)
 CatixHub.List.Size = UDim2.new(0, 207, 0, 186)
 CatixHub.List.ZIndex = 3
-CatixHub.List.CanvasPosition = Vector2.new(0, 5100)
 CatixHub.List.CanvasSize = UDim2.new(0, 0, 50, 0)
 CatixHub.List.MidImage = "rbxgameasset://Images/instagram logo"
 CatixHub.List.ScrollBarThickness = 1
@@ -327,6 +325,19 @@ CatixHub._0GameList.TextWrapped = true
 
 CatixHub.UIListLayout.Parent = CatixHub.List
 CatixHub.UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+CatixHub._99.Name = "99"
+CatixHub._99.Parent = CatixHub.List
+CatixHub._99.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CatixHub._99.BackgroundTransparency = 1.000
+CatixHub._99.Position = UDim2.new(0, 0, 0.876344025, 0)
+CatixHub._99.Size = UDim2.new(0, 207, 0, 27)
+CatixHub._99.ZIndex = 3
+CatixHub._99.Font = Enum.Font.Cartoon
+CatixHub._99.Text = "Hyper Clicker"
+CatixHub._99.TextColor3 = Color3.fromRGB(255, 184, 17)
+CatixHub._99.TextSize = 20.000
+CatixHub._99.TextWrapped = true
 
 CatixHub._10.Name = "10"
 CatixHub._10.Parent = CatixHub.List
@@ -349,7 +360,7 @@ CatixHub._100.Position = UDim2.new(0, 0, 0.876344025, 0)
 CatixHub._100.Size = UDim2.new(0, 207, 0, 27)
 CatixHub._100.ZIndex = 3
 CatixHub._100.Font = Enum.Font.Cartoon
-CatixHub._100.Text = "Tapping Mania"
+CatixHub._100.Text = "Tapping Mania(BAN RISK)"
 CatixHub._100.TextColor3 = Color3.fromRGB(255, 184, 17)
 CatixHub._100.TextSize = 20.000
 CatixHub._100.TextWrapped = true
@@ -453,7 +464,7 @@ CatixHub._108.Position = UDim2.new(0, 0, 0.876344025, 0)
 CatixHub._108.Size = UDim2.new(0, 207, 0, 27)
 CatixHub._108.ZIndex = 3
 CatixHub._108.Font = Enum.Font.Cartoon
-CatixHub._108.Text = "Noggin Cracking Simulator"
+CatixHub._108.Text = "Brainiac Simulator"
 CatixHub._108.TextColor3 = Color3.fromRGB(255, 184, 17)
 CatixHub._108.TextSize = 20.000
 CatixHub._108.TextWrapped = true
@@ -770,18 +781,18 @@ CatixHub._13.TextColor3 = Color3.fromRGB(255, 184, 17)
 CatixHub._13.TextSize = 20.000
 CatixHub._13.TextWrapped = true
 
-CatixHub._130.Name = "130"
-CatixHub._130.Parent = CatixHub.List
-CatixHub._130.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub._130.BackgroundTransparency = 1.000
-CatixHub._130.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub._130.Size = UDim2.new(0, 207, 0, 27)
-CatixHub._130.ZIndex = 3
-CatixHub._130.Font = Enum.Font.Cartoon
-CatixHub._130.Text = "Cool Obby 2"
-CatixHub._130.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub._130.TextSize = 20.000
-CatixHub._130.TextWrapped = true
+CatixHub._129_2.Name = "129"
+CatixHub._129_2.Parent = CatixHub.List
+CatixHub._129_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CatixHub._129_2.BackgroundTransparency = 1.000
+CatixHub._129_2.Position = UDim2.new(0, 0, 0.876344025, 0)
+CatixHub._129_2.Size = UDim2.new(0, 207, 0, 27)
+CatixHub._129_2.ZIndex = 3
+CatixHub._129_2.Font = Enum.Font.Cartoon
+CatixHub._129_2.Text = "Cool Obby 2"
+CatixHub._129_2.TextColor3 = Color3.fromRGB(255, 184, 17)
+CatixHub._129_2.TextSize = 20.000
+CatixHub._129_2.TextWrapped = true
 
 CatixHub._131.Name = "131"
 CatixHub._131.Parent = CatixHub.List
@@ -1363,7 +1374,7 @@ CatixHub._171.Position = UDim2.new(0, 0, 0.876344025, 0)
 CatixHub._171.Size = UDim2.new(0, 207, 0, 27)
 CatixHub._171.ZIndex = 3
 CatixHub._171.Font = Enum.Font.Cartoon
-CatixHub._171.Text = "Titan God Simulator"
+CatixHub._171.Text = "Titan God (ban risk)"
 CatixHub._171.TextColor3 = Color3.fromRGB(255, 184, 17)
 CatixHub._171.TextSize = 20.000
 CatixHub._171.TextWrapped = true
@@ -2824,19 +2835,6 @@ CatixHub._98.TextColor3 = Color3.fromRGB(255, 184, 17)
 CatixHub._98.TextSize = 20.000
 CatixHub._98.TextWrapped = true
 
-CatixHub._99.Name = "99"
-CatixHub._99.Parent = CatixHub.List
-CatixHub._99.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub._99.BackgroundTransparency = 1.000
-CatixHub._99.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub._99.Size = UDim2.new(0, 207, 0, 27)
-CatixHub._99.ZIndex = 3
-CatixHub._99.Font = Enum.Font.Cartoon
-CatixHub._99.Text = "Hyper Clicker"
-CatixHub._99.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub._99.TextSize = 20.000
-CatixHub._99.TextWrapped = true
-
 CatixHub.Tittle.Name = "Tittle"
 CatixHub.Tittle.Parent = CatixHub.Main
 CatixHub.Tittle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -2877,17 +2875,17 @@ CatixHub.UpdateCredit.ScaleType = Enum.ScaleType.Slice
 CatixHub.UpdateCredit.SliceCenter = Rect.new(100, 100, 100, 100)
 CatixHub.UpdateCredit.SliceScale = 0.167
 
-CatixHub._1_2.Name = "1"
-CatixHub._1_2.Parent = CatixHub.UpdateCredit
-CatixHub._1_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub._1_2.BackgroundTransparency = 1.000
-CatixHub._1_2.Size = UDim2.new(0, 167, 0, 6)
-CatixHub._1_2.ZIndex = 3
-CatixHub._1_2.Font = Enum.Font.Cartoon
-CatixHub._1_2.Text = ""
-CatixHub._1_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub._1_2.TextSize = 16.000
-CatixHub._1_2.TextWrapped = true
+CatixHub._1.Name = "1"
+CatixHub._1.Parent = CatixHub.UpdateCredit
+CatixHub._1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CatixHub._1.BackgroundTransparency = 1.000
+CatixHub._1.Size = UDim2.new(0, 167, 0, 6)
+CatixHub._1.ZIndex = 3
+CatixHub._1.Font = Enum.Font.Cartoon
+CatixHub._1.Text = ""
+CatixHub._1.TextColor3 = Color3.fromRGB(255, 255, 255)
+CatixHub._1.TextSize = 16.000
+CatixHub._1.TextWrapped = true
 
 CatixHub.LastUpdate.Name = "LastUpdate"
 CatixHub.LastUpdate.Parent = CatixHub.UpdateCredit
@@ -3050,7 +3048,7 @@ CatixHub.TextButton_4.TextWrapped = true
 
 -- Scripts:
 
-local function TUWQFZL_fake_script() -- CatixHub.TextButton.LocalScript 
+local function NXEUETV_fake_script() -- CatixHub.TextButton.LocalScript 
 	local script = Instance.new('LocalScript', CatixHub.TextButton)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -3059,8 +3057,8 @@ local function TUWQFZL_fake_script() -- CatixHub.TextButton.LocalScript
 		script.Parent.Parent.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(TUWQFZL_fake_script)()
-local function YNZDOT_fake_script() -- CatixHub.TextButton_2.LocalScript 
+coroutine.wrap(NXEUETV_fake_script)()
+local function MKXX_fake_script() -- CatixHub.TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', CatixHub.TextButton_2)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -3083,7 +3081,9 @@ local function YNZDOT_fake_script() -- CatixHub.TextButton_2.LocalScript
 	
 	function FoundGame()
 		local place = game.PlaceId
-		if place == 4840737956 then -- GAME LINK2
+		if place == 5227802348 then -- GAME LINK1
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Mega%20Coin%20Simulator%202"))()
+		elseif place == 4840737956 then -- GAME LINK2
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Buff%20Simulator%20GUI"))()
 		elseif place == 4502746301 then -- GAME LINK3
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Bow%20Simulator%20GUI"))()
@@ -3476,8 +3476,8 @@ local function YNZDOT_fake_script() -- CatixHub.TextButton_2.LocalScript
 		end
 	end
 end
-coroutine.wrap(YNZDOT_fake_script)()
-local function MRTNWH_fake_script() -- CatixHub.Frame.LocalScript 
+coroutine.wrap(MKXX_fake_script)()
+local function LQXQ_fake_script() -- CatixHub.Frame.LocalScript 
 	local script = Instance.new('LocalScript', CatixHub.Frame)
 
 	script.Parent.Parent.Parent = game:GetService("Players").LocalPlayer.PlayerGui
@@ -3489,8 +3489,8 @@ local function MRTNWH_fake_script() -- CatixHub.Frame.LocalScript
 		wait()
 		script.Parent:TweenPosition(UDim2.new(0.5, 0,0.5, 0), "Out", "Quad", 2)
 end
-coroutine.wrap(MRTNWH_fake_script)()
-local function BAMC_fake_script() -- CatixHub.TextButton_3.LocalScript 
+coroutine.wrap(LQXQ_fake_script)()
+local function ISULLRJ_fake_script() -- CatixHub.TextButton_3.LocalScript 
 	local script = Instance.new('LocalScript', CatixHub.TextButton_3)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -3500,8 +3500,8 @@ local function BAMC_fake_script() -- CatixHub.TextButton_3.LocalScript
 		script.Parent.Text = "Discord Server"
 	end)
 end
-coroutine.wrap(BAMC_fake_script)()
-local function GSIGI_fake_script() -- CatixHub.TextButton_4.LocalScript 
+coroutine.wrap(ISULLRJ_fake_script)()
+local function PBYSIX_fake_script() -- CatixHub.TextButton_4.LocalScript 
 	local script = Instance.new('LocalScript', CatixHub.TextButton_4)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -3511,4 +3511,4 @@ local function GSIGI_fake_script() -- CatixHub.TextButton_4.LocalScript
 		script.Parent.Text = "Our Game"
 	end)
 end
-coroutine.wrap(GSIGI_fake_script)()
+coroutine.wrap(PBYSIX_fake_script)()
