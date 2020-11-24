@@ -3096,9 +3096,7 @@ local function YNZDOT_fake_script() -- CatixHub.TextButton_2.LocalScript
 	
 	function FoundGame()
 		local place = game.PlaceId
-		if place == 5227802348 then -- GAME LINK1
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Mega%20Coin%20Simulator%202"))()
-		elseif place == 4840737956 then -- GAME LINK2
+		if place == 4840737956 then -- GAME LINK2
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Buff%20Simulator%20GUI"))()
 		elseif place == 4502746301 then -- GAME LINK3
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Bow%20Simulator%20GUI"))()
