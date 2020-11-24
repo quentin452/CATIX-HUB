@@ -328,19 +328,6 @@ CatixHub._0GameList.TextWrapped = true
 CatixHub.UIListLayout.Parent = CatixHub.List
 CatixHub.UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 
-CatixHub._1.Name = "1"
-CatixHub._1.Parent = CatixHub.List
-CatixHub._1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub._1.BackgroundTransparency = 1.000
-CatixHub._1.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub._1.Size = UDim2.new(0, 207, 0, 27)
-CatixHub._1.ZIndex = 3
-CatixHub._1.Font = Enum.Font.Cartoon
-CatixHub._1.Text = "Mega Coin Simulator2"
-CatixHub._1.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub._1.TextSize = 20.000
-CatixHub._1.TextWrapped = true
-
 CatixHub._10.Name = "10"
 CatixHub._10.Parent = CatixHub.List
 CatixHub._10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
