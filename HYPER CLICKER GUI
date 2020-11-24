@@ -172,7 +172,7 @@ end
 end)
 
 local w2 = w2:CreateFolder("Eggs X3")
-	w2:Dropdown("Choose Eggs",{"1K","100 Gems","3B","25T","5Qa","3Sx","Hell","Atlantis","500K(event)","Galaxy","Graveyard","Crystal","2.5M(event)","Wizard","Rainbow","Halloween","Energy","5M","Mine","Candy","Halloween","Radioactive","Blacksmith","Ninja","Sahara"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w2:Dropdown("Choose Eggs",{"1K","100 Gems","3B","25T","5Qa","3Sx","Hell","Atlantis","500K(event)","Galaxy","Graveyard","Crystal","2.5M(event)","Wizard","Rainbow","Halloween","Energy","5M","Mine","Candy","Halloween","Radioactive","Blacksmith","Ninja","Sahara","China"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.BossSelected = mob
 	end)
 
@@ -328,6 +328,12 @@ elseif _G.BossSelected == "Sahara" then
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Sahara","Triple")
 local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Eggs.Sahara.UIanchor
+
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+elseif _G.BossSelected == "China" then
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("China","Triple")
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Eggs.China.UIanchor
 
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 			end
