@@ -467,7 +467,7 @@ Theme.TextWrapped = true
 
 -- Scripts:
 
-local function KHBIYMF_fake_script() -- TextButton.LocalScript 
+local function ZCMTFP_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -476,8 +476,8 @@ local function KHBIYMF_fake_script() -- TextButton.LocalScript
 		script.Parent.Parent.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(KHBIYMF_fake_script)()
-local function HEQUDG_fake_script() -- List.LocalScript 
+coroutine.wrap(ZCMTFP_fake_script)()
+local function BCPSYAF_fake_script() -- List.LocalScript 
 	local script = Instance.new('LocalScript', List)
 
 	local Games = {
@@ -691,8 +691,8 @@ local function HEQUDG_fake_script() -- List.LocalScript
 	
 	script.Parent.CanvasSize = UDim2.new(0,0,0.137*totalgames,0)
 end
-coroutine.wrap(HEQUDG_fake_script)()
-local function BQSZUXJ_fake_script() -- List_2.LocalScript 
+coroutine.wrap(BCPSYAF_fake_script)()
+local function MXAFCND_fake_script() -- List_2.LocalScript 
 	local script = Instance.new('LocalScript', List_2)
 
 	local Update = {
@@ -723,8 +723,8 @@ local function BQSZUXJ_fake_script() -- List_2.LocalScript
 	
 	script.Parent.CanvasSize = UDim2.new(0,0,0.165*TotalUpdate,0)
 end
-coroutine.wrap(BQSZUXJ_fake_script)()
-local function ITUPS_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(MXAFCND_fake_script)()
+local function DXLM_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	
@@ -1142,8 +1142,8 @@ local function ITUPS_fake_script() -- TextButton_2.LocalScript
 		end
 	end
 end
-coroutine.wrap(ITUPS_fake_script)()
-local function LEPS_fake_script() -- TextButton_3.LocalScript 
+coroutine.wrap(DXLM_fake_script)()
+local function SSWVUI_fake_script() -- TextButton_3.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_3)
 
 	script.Parent.Parent.Parent.Parent.Settings.Visible = false
@@ -1158,8 +1158,8 @@ local function LEPS_fake_script() -- TextButton_3.LocalScript
 		end
 	end)
 end
-coroutine.wrap(LEPS_fake_script)()
-local function ABDS_fake_script() -- Frame.LocalScript 
+coroutine.wrap(SSWVUI_fake_script)()
+local function GOKMT_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	script.Parent.Parent.Parent = game:GetService("Players").LocalPlayer.PlayerGui
@@ -1171,8 +1171,8 @@ local function ABDS_fake_script() -- Frame.LocalScript
 		wait()
 		script.Parent:TweenPosition(UDim2.new(0.5, 0,0.5, 0), "Out", "Quad", 2)
 end
-coroutine.wrap(ABDS_fake_script)()
-local function GRBKN_fake_script() -- TextButton_4.LocalScript 
+coroutine.wrap(GOKMT_fake_script)()
+local function UXCVW_fake_script() -- TextButton_4.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_4)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -1182,8 +1182,8 @@ local function GRBKN_fake_script() -- TextButton_4.LocalScript
 		script.Parent.Text = "Discord Server"
 	end)
 end
-coroutine.wrap(GRBKN_fake_script)()
-local function ZDQFA_fake_script() -- TextButton_5.LocalScript 
+coroutine.wrap(UXCVW_fake_script)()
+local function ZFYNGIN_fake_script() -- TextButton_5.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_5)
 
 	script.Parent.MouseButton1Down:Connect(function()
@@ -1193,8 +1193,8 @@ local function ZDQFA_fake_script() -- TextButton_5.LocalScript
 		script.Parent.Text = "Our Game"
 	end)
 end
-coroutine.wrap(ZDQFA_fake_script)()
-local function YHVHY_fake_script() -- DarkMode.LocalScript 
+coroutine.wrap(ZFYNGIN_fake_script)()
+local function UAHFWV_fake_script() -- DarkMode.LocalScript 
 	local script = Instance.new('LocalScript', DarkMode)
 
 	local DarkMode = false
@@ -1310,30 +1310,11 @@ local function YHVHY_fake_script() -- DarkMode.LocalScript
 		script.Parent.Text = "Dark Mode"
 	end
 	
-	
-	--[[
-	38, 38, 38 foncer .TextColor3 = Color3.fromRGB(38, 38, 38)
-	
-	48, 50, 59 foncer clair .TextColor3 = Color3.fromRGB(48, 50, 59)
-	
-	255, 255, 255 blanc .TextColor3 = Color3.fromRGB(255, 255, 255)
-	
-	
-	
-	FOR RAINBOW MODE
-	
-		function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
-		counter = 0
-	
-		while wait(0.1) do
-			script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
-			counter = counter + 0.1
-		end
-	
-	--]]
+	CatixHub.Frame.Main["Update&Credit"].List.ScrollBarImageColor3 =  Color3.fromRGB(19, 255, 66)
+	CatixHub.Frame.Main.GameList.List.ScrollBarImageColor3 =  Color3.fromRGB(6, 118, 223)
 end
-coroutine.wrap(YHVHY_fake_script)()
-local function GJJQW_fake_script() -- RainbowMode.LocalScript 
+coroutine.wrap(UAHFWV_fake_script)()
+local function SKTX_fake_script() -- RainbowMode.LocalScript 
 	local script = Instance.new('LocalScript', RainbowMode)
 
 	local RainbowMode = false
@@ -1461,4 +1442,4 @@ local function GJJQW_fake_script() -- RainbowMode.LocalScript
 			counter = counter + 0.1
 		end
 end
-coroutine.wrap(GJJQW_fake_script)()
+coroutine.wrap(SKTX_fake_script)()
