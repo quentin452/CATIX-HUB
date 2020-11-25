@@ -109,6 +109,41 @@ local Af = w:CreateFolder("Auto Farm")
         end;
         end;
    end)
+   Af:Button("Auto Boss 450 Healths",function()
+        getgenv().on = true
+        getgenv().max = 450
+        getgenv().min = 450
+        while getgenv().on == true do
+        for i , v in pairs(game:GetService("Workspace").Worlds:GetDescendants()) do
+            if v.Parent ~= nil and v.Parent:FindFirstChild("Health") ~= nil and v.Name == 'MaxHealth' and v.Value <= getgenv().max and v.Parent.Health.Value >= getgenv().min and getgenv().on == true and v.Parent:FindFirstChild("Head") ~= nil then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.Head.CFrame
+                wait(1)
+                for i,e in pairs(game.Players.LocalPlayer.Pets:GetChildren()) do
+                    for i , r in pairs(v.Parent.Attackers:GetChildren()) do
+                        if r.Value == nil then
+                            game:GetService("ReplicatedStorage").Remote.SendPet:FireServer(e.Value, v.Parent, tonumber(r.Name))
+                        end;
+                    end;
+                end;
+        
+                repeat
+                    
+                    game:GetService("RunService").Heartbeat:wait();
+                    if not v.Parent or v.Parent:FindFirstChild("Head") == nil then
+                        break;
+                    end;
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.Head.CFrame
+                    for i,e in pairs(game.Players.LocalPlayer.Pets:GetChildren()) do
+                        game:GetService("ReplicatedStorage").Remote.PetAbility:FireServer(e.Value)
+        
+        
+                        game:GetService("ReplicatedStorage").Remote.PetAttack:FireServer(e.Value)
+                    end;
+                until not v.Parent or v.Parent:FindFirstChild("Head") == nil or v.Parent.Health.Value == 0 or getgenv().on == false
+            end;
+        end;
+        end;
+   end)
     Af:Button("Auto Boss 1000 Healths",function()
         getgenv().on = true
         getgenv().max = 1000
