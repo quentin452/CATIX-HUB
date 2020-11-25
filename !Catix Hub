@@ -3,3168 +3,472 @@
 
 -- Instances:
 
-local CatixHub202 = {
-	CatixHub202 = Instance.new("ScreenGui"),
-	Frame = Instance.new("ImageLabel"),
-	Main = Instance.new("ImageLabel"),
-	Close = Instance.new("ImageLabel"),
-	TextButton = Instance.new("TextButton"),
-	GameList = Instance.new("ImageLabel"),
-	List = Instance.new("ScrollingFrame"),
-	_0GameList = Instance.new("TextLabel"),
-	UIListLayout = Instance.new("UIListLayout"),
-	_99 = Instance.new("TextLabel"),
-	_10 = Instance.new("TextLabel"),
-	_100 = Instance.new("TextLabel"),
-	_101 = Instance.new("TextLabel"),
-	_102 = Instance.new("TextLabel"),
-	_103 = Instance.new("TextLabel"),
-	_104 = Instance.new("TextLabel"),
-	_105 = Instance.new("TextLabel"),
-	_106 = Instance.new("TextLabel"),
-	_107 = Instance.new("TextLabel"),
-	_108 = Instance.new("TextLabel"),
-	_109 = Instance.new("TextLabel"),
-	_11 = Instance.new("TextLabel"),
-	_110 = Instance.new("TextLabel"),
-	_111 = Instance.new("TextLabel"),
-	_112 = Instance.new("TextLabel"),
-	_113 = Instance.new("TextLabel"),
-	_114 = Instance.new("TextLabel"),
-	_115 = Instance.new("TextLabel"),
-	_116 = Instance.new("TextLabel"),
-	_117 = Instance.new("TextLabel"),
-	_118 = Instance.new("TextLabel"),
-	_119 = Instance.new("TextLabel"),
-	_12 = Instance.new("TextLabel"),
-	_120 = Instance.new("TextLabel"),
-	_121 = Instance.new("TextLabel"),
-	_122 = Instance.new("TextLabel"),
-	_123 = Instance.new("TextLabel"),
-	_124 = Instance.new("TextLabel"),
-	_125 = Instance.new("TextLabel"),
-	_126 = Instance.new("TextLabel"),
-	_127 = Instance.new("TextLabel"),
-	_128 = Instance.new("TextLabel"),
-	_129 = Instance.new("TextLabel"),
-	_13 = Instance.new("TextLabel"),
-	_129_2 = Instance.new("TextLabel"),
-	_131 = Instance.new("TextLabel"),
-	_132 = Instance.new("TextLabel"),
-	_133 = Instance.new("TextLabel"),
-	_134 = Instance.new("TextLabel"),
-	_135 = Instance.new("TextLabel"),
-	_136 = Instance.new("TextLabel"),
-	_137 = Instance.new("TextLabel"),
-	_138 = Instance.new("TextLabel"),
-	_139 = Instance.new("TextLabel"),
-	_14 = Instance.new("TextLabel"),
-	_140 = Instance.new("TextLabel"),
-	_141 = Instance.new("TextLabel"),
-	_142 = Instance.new("TextLabel"),
-	_143 = Instance.new("TextLabel"),
-	_144 = Instance.new("TextLabel"),
-	_145 = Instance.new("TextLabel"),
-	_146 = Instance.new("TextLabel"),
-	_147 = Instance.new("TextLabel"),
-	_148 = Instance.new("TextLabel"),
-	_149 = Instance.new("TextLabel"),
-	_15 = Instance.new("TextLabel"),
-	_150 = Instance.new("TextLabel"),
-	_151 = Instance.new("TextLabel"),
-	_152 = Instance.new("TextLabel"),
-	_153 = Instance.new("TextLabel"),
-	_154 = Instance.new("TextLabel"),
-	_155 = Instance.new("TextLabel"),
-	_156 = Instance.new("TextLabel"),
-	_157 = Instance.new("TextLabel"),
-	_158 = Instance.new("TextLabel"),
-	_159 = Instance.new("TextLabel"),
-	_16 = Instance.new("TextLabel"),
-	_160 = Instance.new("TextLabel"),
-	_161 = Instance.new("TextLabel"),
-	_162 = Instance.new("TextLabel"),
-	_163 = Instance.new("TextLabel"),
-	_164 = Instance.new("TextLabel"),
-	_165 = Instance.new("TextLabel"),
-	_166 = Instance.new("TextLabel"),
-	_167 = Instance.new("TextLabel"),
-	_168 = Instance.new("TextLabel"),
-	_169 = Instance.new("TextLabel"),
-	_17 = Instance.new("TextLabel"),
-	_170 = Instance.new("TextLabel"),
-	_171 = Instance.new("TextLabel"),
-	_172 = Instance.new("TextLabel"),
-	_173 = Instance.new("TextLabel"),
-	_174 = Instance.new("TextLabel"),
-	_175 = Instance.new("TextLabel"),
-	_176 = Instance.new("TextLabel"),
-	_177 = Instance.new("TextLabel"),
-	_178 = Instance.new("TextLabel"),
-	_179 = Instance.new("TextLabel"),
-	_18 = Instance.new("TextLabel"),
-	_180 = Instance.new("TextLabel"),
-	_181 = Instance.new("TextLabel"),
-	_182 = Instance.new("TextLabel"),
-	_183 = Instance.new("TextLabel"),
-	_184 = Instance.new("TextLabel"),
-	_185 = Instance.new("TextLabel"),
-	_186 = Instance.new("TextLabel"),
-	_187 = Instance.new("TextLabel"),
-	_188 = Instance.new("TextLabel"),
-	_189 = Instance.new("TextLabel"),
-	_19 = Instance.new("TextLabel"),
-	_190 = Instance.new("TextLabel"),
-	_191 = Instance.new("TextLabel"),
-	_192 = Instance.new("TextLabel"),
-	_193 = Instance.new("TextLabel"),
-	_2 = Instance.new("TextLabel"),
-	_20 = Instance.new("TextLabel"),
-	_21 = Instance.new("TextLabel"),
-	_22 = Instance.new("TextLabel"),
-	_23 = Instance.new("TextLabel"),
-	_24 = Instance.new("TextLabel"),
-	_25 = Instance.new("TextLabel"),
-	_26 = Instance.new("TextLabel"),
-	_27 = Instance.new("TextLabel"),
-	_28 = Instance.new("TextLabel"),
-	_29 = Instance.new("TextLabel"),
-	_3 = Instance.new("TextLabel"),
-	_30 = Instance.new("TextLabel"),
-	_31 = Instance.new("TextLabel"),
-	_32 = Instance.new("TextLabel"),
-	_33 = Instance.new("TextLabel"),
-	_34 = Instance.new("TextLabel"),
-	_35 = Instance.new("TextLabel"),
-	_36 = Instance.new("TextLabel"),
-	_37 = Instance.new("TextLabel"),
-	_38 = Instance.new("TextLabel"),
-	_39 = Instance.new("TextLabel"),
-	_4 = Instance.new("TextLabel"),
-	_40 = Instance.new("TextLabel"),
-	_41 = Instance.new("TextLabel"),
-	_42 = Instance.new("TextLabel"),
-	_43 = Instance.new("TextLabel"),
-	_44 = Instance.new("TextLabel"),
-	_45 = Instance.new("TextLabel"),
-	_46 = Instance.new("TextLabel"),
-	_47 = Instance.new("TextLabel"),
-	_48 = Instance.new("TextLabel"),
-	_49 = Instance.new("TextLabel"),
-	_5 = Instance.new("TextLabel"),
-	_50 = Instance.new("TextLabel"),
-	_51 = Instance.new("TextLabel"),
-	_52 = Instance.new("TextLabel"),
-	_53 = Instance.new("TextLabel"),
-	_54 = Instance.new("TextLabel"),
-	_55 = Instance.new("TextLabel"),
-	_56 = Instance.new("TextLabel"),
-	_57 = Instance.new("TextLabel"),
-	_58 = Instance.new("TextLabel"),
-	_59 = Instance.new("TextLabel"),
-	_6 = Instance.new("TextLabel"),
-	_60 = Instance.new("TextLabel"),
-	_61 = Instance.new("TextLabel"),
-	_62 = Instance.new("TextLabel"),
-	_63 = Instance.new("TextLabel"),
-	_64 = Instance.new("TextLabel"),
-	_65 = Instance.new("TextLabel"),
-	_66 = Instance.new("TextLabel"),
-	_67 = Instance.new("TextLabel"),
-	_68 = Instance.new("TextLabel"),
-	_69 = Instance.new("TextLabel"),
-	_7 = Instance.new("TextLabel"),
-	_70 = Instance.new("TextLabel"),
-	_71 = Instance.new("TextLabel"),
-	_72 = Instance.new("TextLabel"),
-	_73 = Instance.new("TextLabel"),
-	_74 = Instance.new("TextLabel"),
-	_75 = Instance.new("TextLabel"),
-	_76 = Instance.new("TextLabel"),
-	_77 = Instance.new("TextLabel"),
-	_78 = Instance.new("TextLabel"),
-	_79 = Instance.new("TextLabel"),
-	_8 = Instance.new("TextLabel"),
-	_80 = Instance.new("TextLabel"),
-	_81 = Instance.new("TextLabel"),
-	_82 = Instance.new("TextLabel"),
-	_83 = Instance.new("TextLabel"),
-	_84 = Instance.new("TextLabel"),
-	_85 = Instance.new("TextLabel"),
-	_86 = Instance.new("TextLabel"),
-	_87 = Instance.new("TextLabel"),
-	_88 = Instance.new("TextLabel"),
-	_89 = Instance.new("TextLabel"),
-	_9 = Instance.new("TextLabel"),
-	_90 = Instance.new("TextLabel"),
-	_91 = Instance.new("TextLabel"),
-	_92 = Instance.new("TextLabel"),
-	_93 = Instance.new("TextLabel"),
-	_94 = Instance.new("TextLabel"),
-	_95 = Instance.new("TextLabel"),
-	_952 = Instance.new("TextLabel"),
-	_96 = Instance.new("TextLabel"),
-	_97 = Instance.new("TextLabel"),
-	_98 = Instance.new("TextLabel"),
-	Tittle = Instance.new("TextLabel"),
-	UpdateCredit = Instance.new("ImageLabel"),
-	_1 = Instance.new("TextLabel"),
-	LastUpdate = Instance.new("TextLabel"),
-	UpdateGame = Instance.new("TextLabel"),
-	TextLabel = Instance.new("TextLabel"),
-	LastUpdateII = Instance.new("TextLabel"),
-	UpdateGame_2 = Instance.new("TextLabel"),
-	AutoDetect = Instance.new("ImageLabel"),
-	TextButton_2 = Instance.new("TextButton"),
-	Settingbutton = Instance.new("ImageLabel"),
-	TextButton_3 = Instance.new("TextButton"),
-	games = Instance.new("TextLabel"),
-	DISCORDSERVER = Instance.new("ImageLabel"),
-	Main_2 = Instance.new("ImageLabel"),
-	TextButton_4 = Instance.new("TextButton"),
-	OURGAME = Instance.new("ImageLabel"),
-	Main_3 = Instance.new("ImageLabel"),
-	TextButton_5 = Instance.new("TextButton"),
-	Settings = Instance.new("ImageLabel"),
-	Main_4 = Instance.new("ImageLabel"),
-	Tittle_2 = Instance.new("TextLabel"),
-	DarkMode = Instance.new("TextButton"),
-	RainbowMode = Instance.new("TextButton"),
-}
+local CatixHub203 = Instance.new("ScreenGui")
+local Frame = Instance.new("ImageLabel")
+local Main = Instance.new("ImageLabel")
+local Close = Instance.new("ImageLabel")
+local TextButton = Instance.new("TextButton")
+local GameList = Instance.new("ImageLabel")
+local listexemple = Instance.new("Frame")
+local exemple = Instance.new("TextLabel")
+local List = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local _0GameList = Instance.new("TextLabel")
+local TotalGames = Instance.new("TextLabel")
+local Tittle = Instance.new("TextLabel")
+local UpdateCredit = Instance.new("ImageLabel")
+local LastUpdate = Instance.new("TextLabel")
+local listexemple_2 = Instance.new("Frame")
+local exemple_2 = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
+local List_2 = Instance.new("ScrollingFrame")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local AutoDetect = Instance.new("ImageLabel")
+local TextButton_2 = Instance.new("TextButton")
+local Settingbutton = Instance.new("ImageLabel")
+local TextButton_3 = Instance.new("TextButton")
+local DISCORDSERVER = Instance.new("ImageLabel")
+local Main_2 = Instance.new("ImageLabel")
+local TextButton_4 = Instance.new("TextButton")
+local OURGAME = Instance.new("ImageLabel")
+local Main_3 = Instance.new("ImageLabel")
+local TextButton_5 = Instance.new("TextButton")
+local Settings = Instance.new("ImageLabel")
+local Main_4 = Instance.new("ImageLabel")
+local Tittle_2 = Instance.new("TextLabel")
+local DarkMode = Instance.new("TextButton")
+local RainbowMode = Instance.new("TextButton")
+local Theme = Instance.new("TextLabel")
 
 --Properties:
 
-CatixHub202.CatixHub202.Name = "Catix Hub 2.0.2"
-CatixHub202.CatixHub202.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-
-CatixHub202.Frame.Name = "Frame"
-CatixHub202.Frame.Parent = CatixHub202.CatixHub202
-CatixHub202.Frame.AnchorPoint = Vector2.new(0.5, 0.5)
-CatixHub202.Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.Frame.BackgroundTransparency = 1.000
-CatixHub202.Frame.Position = UDim2.new(0.499811172, 0, 0.499654114, 0)
-CatixHub202.Frame.Size = UDim2.new(0, 420, 0, 263)
-CatixHub202.Frame.Image = "rbxassetid://3570695787"
-CatixHub202.Frame.ImageColor3 = Color3.fromRGB(38, 173, 29)
-CatixHub202.Frame.ScaleType = Enum.ScaleType.Slice
-CatixHub202.Frame.SliceCenter = Rect.new(100, 100, 100, 100)
-CatixHub202.Frame.SliceScale = 0.167
-
-CatixHub202.Main.Name = "Main"
-CatixHub202.Main.Parent = CatixHub202.Frame
-CatixHub202.Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.Main.BackgroundTransparency = 1.000
-CatixHub202.Main.BorderColor3 = Color3.fromRGB(26, 67, 15)
-CatixHub202.Main.Position = UDim2.new(0.0123216016, 0, 0.0209077429, 0)
-CatixHub202.Main.Size = UDim2.new(0, 408, 0, 250)
-CatixHub202.Main.ZIndex = 2
-CatixHub202.Main.Image = "rbxassetid://3570695787"
-CatixHub202.Main.ImageColor3 = Color3.fromRGB(5, 59, 38)
-CatixHub202.Main.ScaleType = Enum.ScaleType.Slice
-CatixHub202.Main.SliceCenter = Rect.new(100, 100, 100, 100)
-CatixHub202.Main.SliceScale = 0.167
-
-CatixHub202.Close.Name = "Close"
-CatixHub202.Close.Parent = CatixHub202.Main
-CatixHub202.Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.Close.BackgroundTransparency = 1.000
-CatixHub202.Close.BorderColor3 = Color3.fromRGB(54, 57, 67)
-CatixHub202.Close.Position = UDim2.new(0.857909858, 0, 0.0329077132, 0)
-CatixHub202.Close.Size = UDim2.new(0, 45, 0, 23)
-CatixHub202.Close.ZIndex = 2
-CatixHub202.Close.Image = "rbxassetid://3570695787"
-CatixHub202.Close.ImageColor3 = Color3.fromRGB(73, 207, 82)
-CatixHub202.Close.ScaleType = Enum.ScaleType.Slice
-CatixHub202.Close.SliceCenter = Rect.new(100, 100, 100, 100)
-CatixHub202.Close.SliceScale = 0.167
-
-CatixHub202.TextButton.Parent = CatixHub202.Close
-CatixHub202.TextButton.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
-CatixHub202.TextButton.BackgroundTransparency = 1.000
-CatixHub202.TextButton.BorderSizePixel = 0
-CatixHub202.TextButton.Position = UDim2.new(0, 0, 0.0790657401, 0)
-CatixHub202.TextButton.Size = UDim2.new(0, 45, 0, 21)
-CatixHub202.TextButton.ZIndex = 3
-CatixHub202.TextButton.Font = Enum.Font.Cartoon
-CatixHub202.TextButton.Text = "x"
-CatixHub202.TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
-CatixHub202.TextButton.TextSize = 25.000
-CatixHub202.TextButton.TextWrapped = true
-
-CatixHub202.GameList.Name = "GameList"
-CatixHub202.GameList.Parent = CatixHub202.Main
-CatixHub202.GameList.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.GameList.BackgroundTransparency = 1.000
-CatixHub202.GameList.BorderColor3 = Color3.fromRGB(54, 57, 67)
-CatixHub202.GameList.Position = UDim2.new(0.0245765243, 0, 0.164907709, 0)
-CatixHub202.GameList.Size = UDim2.new(0, 207, 0, 198)
-CatixHub202.GameList.ZIndex = 2
-CatixHub202.GameList.Image = "rbxassetid://3570695787"
-CatixHub202.GameList.ImageColor3 = Color3.fromRGB(38, 38, 38)
-CatixHub202.GameList.ScaleType = Enum.ScaleType.Slice
-CatixHub202.GameList.SliceCenter = Rect.new(100, 100, 100, 100)
-CatixHub202.GameList.SliceScale = 0.167
-
-CatixHub202.List.Name = "List"
-CatixHub202.List.Parent = CatixHub202.GameList
-CatixHub202.List.Active = true
-CatixHub202.List.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.List.BackgroundTransparency = 1.000
-CatixHub202.List.Position = UDim2.new(0, 0, 0.0303030312, 0)
-CatixHub202.List.Size = UDim2.new(0, 207, 0, 186)
-CatixHub202.List.ZIndex = 3
-CatixHub202.List.CanvasSize = UDim2.new(0, 0, 50, 0)
-CatixHub202.List.MidImage = "rbxgameasset://Images/instagram logo"
-CatixHub202.List.ScrollBarThickness = 1
-
-CatixHub202._0GameList.Name = "0GameList"
-CatixHub202._0GameList.Parent = CatixHub202.List
-CatixHub202._0GameList.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._0GameList.BackgroundTransparency = 1.000
-CatixHub202._0GameList.Position = UDim2.new(0, 0, -1.312584e-06, 0)
-CatixHub202._0GameList.Size = UDim2.new(0, 207, 0, 25)
-CatixHub202._0GameList.ZIndex = 3
-CatixHub202._0GameList.Font = Enum.Font.Cartoon
-CatixHub202._0GameList.Text = "\\\\ Game List //"
-CatixHub202._0GameList.TextColor3 = Color3.fromRGB(6, 118, 223)
-CatixHub202._0GameList.TextSize = 25.000
-CatixHub202._0GameList.TextWrapped = true
-
-CatixHub202.UIListLayout.Parent = CatixHub202.List
-CatixHub202.UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-
-CatixHub202._99.Name = "99"
-CatixHub202._99.Parent = CatixHub202.List
-CatixHub202._99.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._99.BackgroundTransparency = 1.000
-CatixHub202._99.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._99.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._99.ZIndex = 3
-CatixHub202._99.Font = Enum.Font.Cartoon
-CatixHub202._99.Text = "Hyper Clicker"
-CatixHub202._99.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._99.TextSize = 20.000
-CatixHub202._99.TextWrapped = true
-
-CatixHub202._10.Name = "10"
-CatixHub202._10.Parent = CatixHub202.List
-CatixHub202._10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._10.BackgroundTransparency = 1.000
-CatixHub202._10.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._10.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._10.ZIndex = 3
-CatixHub202._10.Font = Enum.Font.Cartoon
-CatixHub202._10.Text = "Candy Collecting Simulator"
-CatixHub202._10.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._10.TextSize = 20.000
-CatixHub202._10.TextWrapped = true
-
-CatixHub202._100.Name = "100"
-CatixHub202._100.Parent = CatixHub202.List
-CatixHub202._100.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._100.BackgroundTransparency = 1.000
-CatixHub202._100.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._100.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._100.ZIndex = 3
-CatixHub202._100.Font = Enum.Font.Cartoon
-CatixHub202._100.Text = "Tapping Mania(BAN RISK)"
-CatixHub202._100.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._100.TextSize = 20.000
-CatixHub202._100.TextWrapped = true
-
-CatixHub202._101.Name = "101"
-CatixHub202._101.Parent = CatixHub202.List
-CatixHub202._101.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._101.BackgroundTransparency = 1.000
-CatixHub202._101.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._101.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._101.ZIndex = 3
-CatixHub202._101.Font = Enum.Font.Cartoon
-CatixHub202._101.Text = "Slaming Simulator"
-CatixHub202._101.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._101.TextSize = 20.000
-CatixHub202._101.TextWrapped = true
-
-CatixHub202._102.Name = "102"
-CatixHub202._102.Parent = CatixHub202.List
-CatixHub202._102.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._102.BackgroundTransparency = 1.000
-CatixHub202._102.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._102.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._102.ZIndex = 3
-CatixHub202._102.Font = Enum.Font.Cartoon
-CatixHub202._102.Text = "Pepper Clicker"
-CatixHub202._102.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._102.TextSize = 20.000
-CatixHub202._102.TextWrapped = true
-
-CatixHub202._103.Name = "103"
-CatixHub202._103.Parent = CatixHub202.List
-CatixHub202._103.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._103.BackgroundTransparency = 1.000
-CatixHub202._103.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._103.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._103.ZIndex = 3
-CatixHub202._103.Font = Enum.Font.Cartoon
-CatixHub202._103.Text = "Oofing Legends"
-CatixHub202._103.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._103.TextSize = 20.000
-CatixHub202._103.TextWrapped = true
-
-CatixHub202._104.Name = "104"
-CatixHub202._104.Parent = CatixHub202.List
-CatixHub202._104.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._104.BackgroundTransparency = 1.000
-CatixHub202._104.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._104.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._104.ZIndex = 3
-CatixHub202._104.Font = Enum.Font.Cartoon
-CatixHub202._104.Text = "Saber Simulator"
-CatixHub202._104.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._104.TextSize = 20.000
-CatixHub202._104.TextWrapped = true
-
-CatixHub202._105.Name = "105"
-CatixHub202._105.Parent = CatixHub202.List
-CatixHub202._105.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._105.BackgroundTransparency = 1.000
-CatixHub202._105.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._105.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._105.ZIndex = 3
-CatixHub202._105.Font = Enum.Font.Cartoon
-CatixHub202._105.Text = "Coffee Simulator"
-CatixHub202._105.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._105.TextSize = 20.000
-CatixHub202._105.TextWrapped = true
-
-CatixHub202._106.Name = "106"
-CatixHub202._106.Parent = CatixHub202.List
-CatixHub202._106.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._106.BackgroundTransparency = 1.000
-CatixHub202._106.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._106.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._106.ZIndex = 3
-CatixHub202._106.Font = Enum.Font.Cartoon
-CatixHub202._106.Text = "Dominus Legends"
-CatixHub202._106.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._106.TextSize = 20.000
-CatixHub202._106.TextWrapped = true
-
-CatixHub202._107.Name = "107"
-CatixHub202._107.Parent = CatixHub202.List
-CatixHub202._107.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._107.BackgroundTransparency = 1.000
-CatixHub202._107.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._107.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._107.ZIndex = 3
-CatixHub202._107.Font = Enum.Font.Cartoon
-CatixHub202._107.Text = "Pew Pew Simulator"
-CatixHub202._107.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._107.TextSize = 20.000
-CatixHub202._107.TextWrapped = true
-
-CatixHub202._108.Name = "108"
-CatixHub202._108.Parent = CatixHub202.List
-CatixHub202._108.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._108.BackgroundTransparency = 1.000
-CatixHub202._108.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._108.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._108.ZIndex = 3
-CatixHub202._108.Font = Enum.Font.Cartoon
-CatixHub202._108.Text = "Brainiac Simulator"
-CatixHub202._108.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._108.TextSize = 20.000
-CatixHub202._108.TextWrapped = true
-
-CatixHub202._109.Name = "109"
-CatixHub202._109.Parent = CatixHub202.List
-CatixHub202._109.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._109.BackgroundTransparency = 1.000
-CatixHub202._109.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._109.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._109.ZIndex = 3
-CatixHub202._109.Font = Enum.Font.Cartoon
-CatixHub202._109.Text = "Pickaxe Simulator"
-CatixHub202._109.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._109.TextSize = 20.000
-CatixHub202._109.TextWrapped = true
-
-CatixHub202._11.Name = "11"
-CatixHub202._11.Parent = CatixHub202.List
-CatixHub202._11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._11.BackgroundTransparency = 1.000
-CatixHub202._11.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._11.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._11.ZIndex = 3
-CatixHub202._11.Font = Enum.Font.Cartoon
-CatixHub202._11.Text = "Clicker Story"
-CatixHub202._11.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._11.TextSize = 20.000
-CatixHub202._11.TextWrapped = true
-
-CatixHub202._110.Name = "110"
-CatixHub202._110.Parent = CatixHub202.List
-CatixHub202._110.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._110.BackgroundTransparency = 1.000
-CatixHub202._110.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._110.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._110.ZIndex = 3
-CatixHub202._110.Font = Enum.Font.Cartoon
-CatixHub202._110.Text = "Workout Islands"
-CatixHub202._110.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._110.TextSize = 20.000
-CatixHub202._110.TextWrapped = true
-
-CatixHub202._111.Name = "111"
-CatixHub202._111.Parent = CatixHub202.List
-CatixHub202._111.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._111.BackgroundTransparency = 1.000
-CatixHub202._111.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._111.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._111.ZIndex = 3
-CatixHub202._111.Font = Enum.Font.Cartoon
-CatixHub202._111.Text = "Ultimate-Clickers Simulator"
-CatixHub202._111.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._111.TextSize = 20.000
-CatixHub202._111.TextWrapped = true
-
-CatixHub202._112.Name = "112"
-CatixHub202._112.Parent = CatixHub202.List
-CatixHub202._112.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._112.BackgroundTransparency = 1.000
-CatixHub202._112.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._112.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._112.ZIndex = 3
-CatixHub202._112.Font = Enum.Font.Cartoon
-CatixHub202._112.Text = "Blox Fruit"
-CatixHub202._112.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._112.TextSize = 20.000
-CatixHub202._112.TextWrapped = true
-
-CatixHub202._113.Name = "113"
-CatixHub202._113.Parent = CatixHub202.List
-CatixHub202._113.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._113.BackgroundTransparency = 1.000
-CatixHub202._113.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._113.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._113.ZIndex = 3
-CatixHub202._113.Font = Enum.Font.Cartoon
-CatixHub202._113.Text = "Fitness Simulator"
-CatixHub202._113.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._113.TextSize = 20.000
-CatixHub202._113.TextWrapped = true
-
-CatixHub202._114.Name = "114"
-CatixHub202._114.Parent = CatixHub202.List
-CatixHub202._114.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._114.BackgroundTransparency = 1.000
-CatixHub202._114.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._114.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._114.ZIndex = 3
-CatixHub202._114.Font = Enum.Font.Cartoon
-CatixHub202._114.Text = "Giant Simulator"
-CatixHub202._114.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._114.TextSize = 20.000
-CatixHub202._114.TextWrapped = true
-
-CatixHub202._115.Name = "115"
-CatixHub202._115.Parent = CatixHub202.List
-CatixHub202._115.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._115.BackgroundTransparency = 1.000
-CatixHub202._115.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._115.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._115.ZIndex = 3
-CatixHub202._115.Font = Enum.Font.Cartoon
-CatixHub202._115.Text = "Saitama One Punch Man-Destiny"
-CatixHub202._115.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._115.TextSize = 20.000
-CatixHub202._115.TextWrapped = true
-
-CatixHub202._116.Name = "116"
-CatixHub202._116.Parent = CatixHub202.List
-CatixHub202._116.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._116.BackgroundTransparency = 1.000
-CatixHub202._116.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._116.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._116.ZIndex = 3
-CatixHub202._116.Font = Enum.Font.Cartoon
-CatixHub202._116.Text = "Boxing Simulator"
-CatixHub202._116.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._116.TextSize = 20.000
-CatixHub202._116.TextWrapped = true
-
-CatixHub202._117.Name = "117"
-CatixHub202._117.Parent = CatixHub202.List
-CatixHub202._117.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._117.BackgroundTransparency = 1.000
-CatixHub202._117.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._117.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._117.ZIndex = 3
-CatixHub202._117.Font = Enum.Font.Cartoon
-CatixHub202._117.Text = "Giant Survival"
-CatixHub202._117.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._117.TextSize = 20.000
-CatixHub202._117.TextWrapped = true
-
-CatixHub202._118.Name = "118"
-CatixHub202._118.Parent = CatixHub202.List
-CatixHub202._118.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._118.BackgroundTransparency = 1.000
-CatixHub202._118.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._118.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._118.ZIndex = 3
-CatixHub202._118.Font = Enum.Font.Cartoon
-CatixHub202._118.Text = "Banning Simulator 2"
-CatixHub202._118.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._118.TextSize = 20.000
-CatixHub202._118.TextWrapped = true
-
-CatixHub202._119.Name = "119"
-CatixHub202._119.Parent = CatixHub202.List
-CatixHub202._119.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._119.BackgroundTransparency = 1.000
-CatixHub202._119.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._119.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._119.ZIndex = 3
-CatixHub202._119.Font = Enum.Font.Cartoon
-CatixHub202._119.Text = "Box Simulator"
-CatixHub202._119.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._119.TextSize = 20.000
-CatixHub202._119.TextWrapped = true
-
-CatixHub202._12.Name = "12"
-CatixHub202._12.Parent = CatixHub202.List
-CatixHub202._12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._12.BackgroundTransparency = 1.000
-CatixHub202._12.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._12.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._12.ZIndex = 3
-CatixHub202._12.Font = Enum.Font.Cartoon
-CatixHub202._12.Text = "Clicking Simulator"
-CatixHub202._12.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._12.TextSize = 20.000
-CatixHub202._12.TextWrapped = true
-
-CatixHub202._120.Name = "120"
-CatixHub202._120.Parent = CatixHub202.List
-CatixHub202._120.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._120.BackgroundTransparency = 1.000
-CatixHub202._120.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._120.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._120.ZIndex = 3
-CatixHub202._120.Font = Enum.Font.Cartoon
-CatixHub202._120.Text = "Lumberjack legends"
-CatixHub202._120.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._120.TextSize = 20.000
-CatixHub202._120.TextWrapped = true
-
-CatixHub202._121.Name = "121"
-CatixHub202._121.Parent = CatixHub202.List
-CatixHub202._121.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._121.BackgroundTransparency = 1.000
-CatixHub202._121.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._121.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._121.ZIndex = 3
-CatixHub202._121.Font = Enum.Font.Cartoon
-CatixHub202._121.Text = "Boxinx Legends"
-CatixHub202._121.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._121.TextSize = 20.000
-CatixHub202._121.TextWrapped = true
-
-CatixHub202._122.Name = "122"
-CatixHub202._122.Parent = CatixHub202.List
-CatixHub202._122.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._122.BackgroundTransparency = 1.000
-CatixHub202._122.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._122.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._122.ZIndex = 3
-CatixHub202._122.Font = Enum.Font.Cartoon
-CatixHub202._122.Text = "Rolling Simulator"
-CatixHub202._122.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._122.TextSize = 20.000
-CatixHub202._122.TextWrapped = true
-
-CatixHub202._123.Name = "123"
-CatixHub202._123.Parent = CatixHub202.List
-CatixHub202._123.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._123.BackgroundTransparency = 1.000
-CatixHub202._123.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._123.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._123.ZIndex = 3
-CatixHub202._123.Font = Enum.Font.Cartoon
-CatixHub202._123.Text = "Germ Simulator"
-CatixHub202._123.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._123.TextSize = 20.000
-CatixHub202._123.TextWrapped = true
-
-CatixHub202._124.Name = "124"
-CatixHub202._124.Parent = CatixHub202.List
-CatixHub202._124.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._124.BackgroundTransparency = 1.000
-CatixHub202._124.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._124.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._124.ZIndex = 3
-CatixHub202._124.Font = Enum.Font.Cartoon
-CatixHub202._124.Text = "Blade Simulator"
-CatixHub202._124.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._124.TextSize = 20.000
-CatixHub202._124.TextWrapped = true
-
-CatixHub202._125.Name = "125"
-CatixHub202._125.Parent = CatixHub202.List
-CatixHub202._125.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._125.BackgroundTransparency = 1.000
-CatixHub202._125.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._125.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._125.ZIndex = 3
-CatixHub202._125.Font = Enum.Font.Cartoon
-CatixHub202._125.Text = "Clicking Fantasy"
-CatixHub202._125.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._125.TextSize = 20.000
-CatixHub202._125.TextWrapped = true
-
-CatixHub202._126.Name = "126"
-CatixHub202._126.Parent = CatixHub202.List
-CatixHub202._126.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._126.BackgroundTransparency = 1.000
-CatixHub202._126.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._126.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._126.ZIndex = 3
-CatixHub202._126.Font = Enum.Font.Cartoon
-CatixHub202._126.Text = "Zombie Adventure"
-CatixHub202._126.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._126.TextSize = 20.000
-CatixHub202._126.TextWrapped = true
-
-CatixHub202._127.Name = "127"
-CatixHub202._127.Parent = CatixHub202.List
-CatixHub202._127.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._127.BackgroundTransparency = 1.000
-CatixHub202._127.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._127.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._127.ZIndex = 3
-CatixHub202._127.Font = Enum.Font.Cartoon
-CatixHub202._127.Text = "Magnet Simulator"
-CatixHub202._127.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._127.TextSize = 20.000
-CatixHub202._127.TextWrapped = true
-
-CatixHub202._128.Name = "128"
-CatixHub202._128.Parent = CatixHub202.List
-CatixHub202._128.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._128.BackgroundTransparency = 1.000
-CatixHub202._128.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._128.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._128.ZIndex = 3
-CatixHub202._128.Font = Enum.Font.Cartoon
-CatixHub202._128.Text = "Hatching Simulator X"
-CatixHub202._128.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._128.TextSize = 20.000
-CatixHub202._128.TextWrapped = true
-
-CatixHub202._129.Name = "129"
-CatixHub202._129.Parent = CatixHub202.List
-CatixHub202._129.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._129.BackgroundTransparency = 1.000
-CatixHub202._129.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._129.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._129.ZIndex = 3
-CatixHub202._129.Font = Enum.Font.Cartoon
-CatixHub202._129.Text = "Black Hole Simulator"
-CatixHub202._129.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._129.TextSize = 20.000
-CatixHub202._129.TextWrapped = true
-
-CatixHub202._13.Name = "13"
-CatixHub202._13.Parent = CatixHub202.List
-CatixHub202._13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._13.BackgroundTransparency = 1.000
-CatixHub202._13.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._13.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._13.ZIndex = 3
-CatixHub202._13.Font = Enum.Font.Cartoon
-CatixHub202._13.Text = "Coin Colect Simulator"
-CatixHub202._13.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._13.TextSize = 20.000
-CatixHub202._13.TextWrapped = true
-
-CatixHub202._129_2.Name = "129"
-CatixHub202._129_2.Parent = CatixHub202.List
-CatixHub202._129_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._129_2.BackgroundTransparency = 1.000
-CatixHub202._129_2.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._129_2.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._129_2.ZIndex = 3
-CatixHub202._129_2.Font = Enum.Font.Cartoon
-CatixHub202._129_2.Text = "Cool Obby 2"
-CatixHub202._129_2.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._129_2.TextSize = 20.000
-CatixHub202._129_2.TextWrapped = true
-
-CatixHub202._131.Name = "131"
-CatixHub202._131.Parent = CatixHub202.List
-CatixHub202._131.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._131.BackgroundTransparency = 1.000
-CatixHub202._131.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._131.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._131.ZIndex = 3
-CatixHub202._131.Font = Enum.Font.Cartoon
-CatixHub202._131.Text = "Rpg World 2"
-CatixHub202._131.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._131.TextSize = 20.000
-CatixHub202._131.TextWrapped = true
-
-CatixHub202._132.Name = "132"
-CatixHub202._132.Parent = CatixHub202.List
-CatixHub202._132.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._132.BackgroundTransparency = 1.000
-CatixHub202._132.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._132.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._132.ZIndex = 3
-CatixHub202._132.Font = Enum.Font.Cartoon
-CatixHub202._132.Text = "Clicking Gods"
-CatixHub202._132.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._132.TextSize = 20.000
-CatixHub202._132.TextWrapped = true
-
-CatixHub202._133.Name = "133"
-CatixHub202._133.Parent = CatixHub202.List
-CatixHub202._133.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._133.BackgroundTransparency = 1.000
-CatixHub202._133.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._133.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._133.ZIndex = 3
-CatixHub202._133.Font = Enum.Font.Cartoon
-CatixHub202._133.Text = "Legend Of Creshendo"
-CatixHub202._133.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._133.TextSize = 20.000
-CatixHub202._133.TextWrapped = true
-
-CatixHub202._134.Name = "134"
-CatixHub202._134.Parent = CatixHub202.List
-CatixHub202._134.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._134.BackgroundTransparency = 1.000
-CatixHub202._134.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._134.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._134.ZIndex = 3
-CatixHub202._134.Font = Enum.Font.Cartoon
-CatixHub202._134.Text = "Cat Simulator"
-CatixHub202._134.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._134.TextSize = 20.000
-CatixHub202._134.TextWrapped = true
-
-CatixHub202._135.Name = "135"
-CatixHub202._135.Parent = CatixHub202.List
-CatixHub202._135.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._135.BackgroundTransparency = 1.000
-CatixHub202._135.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._135.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._135.ZIndex = 3
-CatixHub202._135.Font = Enum.Font.Cartoon
-CatixHub202._135.Text = "Magic Simulator"
-CatixHub202._135.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._135.TextSize = 20.000
-CatixHub202._135.TextWrapped = true
-
-CatixHub202._136.Name = "136"
-CatixHub202._136.Parent = CatixHub202.List
-CatixHub202._136.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._136.BackgroundTransparency = 1.000
-CatixHub202._136.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._136.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._136.ZIndex = 3
-CatixHub202._136.Font = Enum.Font.Cartoon
-CatixHub202._136.Text = "légende muscler"
-CatixHub202._136.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._136.TextSize = 20.000
-CatixHub202._136.TextWrapped = true
-
-CatixHub202._137.Name = "137"
-CatixHub202._137.Parent = CatixHub202.List
-CatixHub202._137.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._137.BackgroundTransparency = 1.000
-CatixHub202._137.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._137.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._137.ZIndex = 3
-CatixHub202._137.Font = Enum.Font.Cartoon
-CatixHub202._137.Text = "Chopping Tree Simulator"
-CatixHub202._137.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._137.TextSize = 20.000
-CatixHub202._137.TextWrapped = true
-
-CatixHub202._138.Name = "138"
-CatixHub202._138.Parent = CatixHub202.List
-CatixHub202._138.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._138.BackgroundTransparency = 1.000
-CatixHub202._138.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._138.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._138.ZIndex = 3
-CatixHub202._138.Font = Enum.Font.Cartoon
-CatixHub202._138.Text = "Sword Master Simulator"
-CatixHub202._138.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._138.TextSize = 20.000
-CatixHub202._138.TextWrapped = true
-
-CatixHub202._139.Name = "139"
-CatixHub202._139.Parent = CatixHub202.List
-CatixHub202._139.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._139.BackgroundTransparency = 1.000
-CatixHub202._139.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._139.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._139.ZIndex = 3
-CatixHub202._139.Font = Enum.Font.Cartoon
-CatixHub202._139.Text = "Energy Simulator"
-CatixHub202._139.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._139.TextSize = 20.000
-CatixHub202._139.TextWrapped = true
-
-CatixHub202._14.Name = "14"
-CatixHub202._14.Parent = CatixHub202.List
-CatixHub202._14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._14.BackgroundTransparency = 1.000
-CatixHub202._14.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._14.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._14.ZIndex = 3
-CatixHub202._14.Font = Enum.Font.Cartoon
-CatixHub202._14.Text = "Combo Clicker"
-CatixHub202._14.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._14.TextSize = 20.000
-CatixHub202._14.TextWrapped = true
-
-CatixHub202._140.Name = "140"
-CatixHub202._140.Parent = CatixHub202.List
-CatixHub202._140.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._140.BackgroundTransparency = 1.000
-CatixHub202._140.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._140.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._140.ZIndex = 3
-CatixHub202._140.Font = Enum.Font.Cartoon
-CatixHub202._140.Text = "Pet Zoo"
-CatixHub202._140.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._140.TextSize = 20.000
-CatixHub202._140.TextWrapped = true
-
-CatixHub202._141.Name = "141"
-CatixHub202._141.Parent = CatixHub202.List
-CatixHub202._141.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._141.BackgroundTransparency = 1.000
-CatixHub202._141.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._141.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._141.ZIndex = 3
-CatixHub202._141.Font = Enum.Font.Cartoon
-CatixHub202._141.Text = "Pet Hatching Simulator 5"
-CatixHub202._141.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._141.TextSize = 20.000
-CatixHub202._141.TextWrapped = true
-
-CatixHub202._142.Name = "142"
-CatixHub202._142.Parent = CatixHub202.List
-CatixHub202._142.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._142.BackgroundTransparency = 1.000
-CatixHub202._142.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._142.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._142.ZIndex = 3
-CatixHub202._142.Font = Enum.Font.Cartoon
-CatixHub202._142.Text = "Tree Harvest Simulator"
-CatixHub202._142.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._142.TextSize = 20.000
-CatixHub202._142.TextWrapped = true
-
-CatixHub202._143.Name = "143"
-CatixHub202._143.Parent = CatixHub202.List
-CatixHub202._143.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._143.BackgroundTransparency = 1.000
-CatixHub202._143.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._143.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._143.ZIndex = 3
-CatixHub202._143.Font = Enum.Font.Cartoon
-CatixHub202._143.Text = "Key Champions"
-CatixHub202._143.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._143.TextSize = 20.000
-CatixHub202._143.TextWrapped = true
-
-CatixHub202._144.Name = "144"
-CatixHub202._144.Parent = CatixHub202.List
-CatixHub202._144.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._144.BackgroundTransparency = 1.000
-CatixHub202._144.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._144.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._144.ZIndex = 3
-CatixHub202._144.Font = Enum.Font.Cartoon
-CatixHub202._144.Text = "Alien Clicker Simulator Alien-Clicker-SImulator"
-CatixHub202._144.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._144.TextSize = 20.000
-CatixHub202._144.TextWrapped = true
-
-CatixHub202._145.Name = "145"
-CatixHub202._145.Parent = CatixHub202.List
-CatixHub202._145.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._145.BackgroundTransparency = 1.000
-CatixHub202._145.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._145.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._145.ZIndex = 3
-CatixHub202._145.Font = Enum.Font.Cartoon
-CatixHub202._145.Text = "Clicker Mania"
-CatixHub202._145.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._145.TextSize = 20.000
-CatixHub202._145.TextWrapped = true
-
-CatixHub202._146.Name = "146"
-CatixHub202._146.Parent = CatixHub202.List
-CatixHub202._146.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._146.BackgroundTransparency = 1.000
-CatixHub202._146.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._146.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._146.ZIndex = 3
-CatixHub202._146.Font = Enum.Font.Cartoon
-CatixHub202._146.Text = "Viking Clicker"
-CatixHub202._146.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._146.TextSize = 20.000
-CatixHub202._146.TextWrapped = true
-
-CatixHub202._147.Name = "147"
-CatixHub202._147.Parent = CatixHub202.List
-CatixHub202._147.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._147.BackgroundTransparency = 1.000
-CatixHub202._147.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._147.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._147.ZIndex = 3
-CatixHub202._147.Font = Enum.Font.Cartoon
-CatixHub202._147.Text = "Brookhaven Rp"
-CatixHub202._147.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._147.TextSize = 20.000
-CatixHub202._147.TextWrapped = true
-
-CatixHub202._148.Name = "148"
-CatixHub202._148.Parent = CatixHub202.List
-CatixHub202._148.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._148.BackgroundTransparency = 1.000
-CatixHub202._148.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._148.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._148.ZIndex = 3
-CatixHub202._148.Font = Enum.Font.Cartoon
-CatixHub202._148.Text = "Animal Simulator"
-CatixHub202._148.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._148.TextSize = 20.000
-CatixHub202._148.TextWrapped = true
-
-CatixHub202._149.Name = "149"
-CatixHub202._149.Parent = CatixHub202.List
-CatixHub202._149.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._149.BackgroundTransparency = 1.000
-CatixHub202._149.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._149.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._149.ZIndex = 3
-CatixHub202._149.Font = Enum.Font.Cartoon
-CatixHub202._149.Text = "Business Legends"
-CatixHub202._149.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._149.TextSize = 20.000
-CatixHub202._149.TextWrapped = true
-
-CatixHub202._15.Name = "15"
-CatixHub202._15.Parent = CatixHub202.List
-CatixHub202._15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._15.BackgroundTransparency = 1.000
-CatixHub202._15.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._15.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._15.ZIndex = 3
-CatixHub202._15.Font = Enum.Font.Cartoon
-CatixHub202._15.Text = "Cookie Simulator"
-CatixHub202._15.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._15.TextSize = 20.000
-CatixHub202._15.TextWrapped = true
-
-CatixHub202._150.Name = "150"
-CatixHub202._150.Parent = CatixHub202.List
-CatixHub202._150.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._150.BackgroundTransparency = 1.000
-CatixHub202._150.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._150.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._150.ZIndex = 3
-CatixHub202._150.Font = Enum.Font.Cartoon
-CatixHub202._150.Text = "Tapping Horror"
-CatixHub202._150.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._150.TextSize = 20.000
-CatixHub202._150.TextWrapped = true
-
-CatixHub202._151.Name = "151"
-CatixHub202._151.Parent = CatixHub202.List
-CatixHub202._151.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._151.BackgroundTransparency = 1.000
-CatixHub202._151.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._151.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._151.ZIndex = 3
-CatixHub202._151.Font = Enum.Font.Cartoon
-CatixHub202._151.Text = "Tapping Heroes [1]"
-CatixHub202._151.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._151.TextSize = 20.000
-CatixHub202._151.TextWrapped = true
-
-CatixHub202._152.Name = "152"
-CatixHub202._152.Parent = CatixHub202.List
-CatixHub202._152.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._152.BackgroundTransparency = 1.000
-CatixHub202._152.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._152.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._152.ZIndex = 3
-CatixHub202._152.Font = Enum.Font.Cartoon
-CatixHub202._152.Text = "Clicker Legacy"
-CatixHub202._152.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._152.TextSize = 20.000
-CatixHub202._152.TextWrapped = true
-
-CatixHub202._153.Name = "153"
-CatixHub202._153.Parent = CatixHub202.List
-CatixHub202._153.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._153.BackgroundTransparency = 1.000
-CatixHub202._153.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._153.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._153.ZIndex = 3
-CatixHub202._153.Font = Enum.Font.Cartoon
-CatixHub202._153.Text = "Coins Hero Simulator"
-CatixHub202._153.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._153.TextSize = 20.000
-CatixHub202._153.TextWrapped = true
-
-CatixHub202._154.Name = "154"
-CatixHub202._154.Parent = CatixHub202.List
-CatixHub202._154.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._154.BackgroundTransparency = 1.000
-CatixHub202._154.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._154.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._154.ZIndex = 3
-CatixHub202._154.Font = Enum.Font.Cartoon
-CatixHub202._154.Text = "Legend Of Speed"
-CatixHub202._154.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._154.TextSize = 20.000
-CatixHub202._154.TextWrapped = true
-
-CatixHub202._155.Name = "155"
-CatixHub202._155.Parent = CatixHub202.List
-CatixHub202._155.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._155.BackgroundTransparency = 1.000
-CatixHub202._155.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._155.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._155.ZIndex = 3
-CatixHub202._155.Font = Enum.Font.Cartoon
-CatixHub202._155.Text = "Tapping Legacy"
-CatixHub202._155.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._155.TextSize = 20.000
-CatixHub202._155.TextWrapped = true
-
-CatixHub202._156.Name = "156"
-CatixHub202._156.Parent = CatixHub202.List
-CatixHub202._156.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._156.BackgroundTransparency = 1.000
-CatixHub202._156.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._156.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._156.ZIndex = 3
-CatixHub202._156.Font = Enum.Font.Cartoon
-CatixHub202._156.Text = "Clicker Life"
-CatixHub202._156.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._156.TextSize = 20.000
-CatixHub202._156.TextWrapped = true
-
-CatixHub202._157.Name = "157"
-CatixHub202._157.Parent = CatixHub202.List
-CatixHub202._157.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._157.BackgroundTransparency = 1.000
-CatixHub202._157.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._157.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._157.ZIndex = 3
-CatixHub202._157.Font = Enum.Font.Cartoon
-CatixHub202._157.Text = "Fire Breathing Simulator"
-CatixHub202._157.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._157.TextSize = 20.000
-CatixHub202._157.TextWrapped = true
-
-CatixHub202._158.Name = "158"
-CatixHub202._158.Parent = CatixHub202.List
-CatixHub202._158.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._158.BackgroundTransparency = 1.000
-CatixHub202._158.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._158.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._158.ZIndex = 3
-CatixHub202._158.Font = Enum.Font.Cartoon
-CatixHub202._158.Text = "Lightning Legend"
-CatixHub202._158.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._158.TextSize = 20.000
-CatixHub202._158.TextWrapped = true
-
-CatixHub202._159.Name = "159"
-CatixHub202._159.Parent = CatixHub202.List
-CatixHub202._159.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._159.BackgroundTransparency = 1.000
-CatixHub202._159.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._159.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._159.ZIndex = 3
-CatixHub202._159.Font = Enum.Font.Cartoon
-CatixHub202._159.Text = "Viking Simulator [1]"
-CatixHub202._159.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._159.TextSize = 20.000
-CatixHub202._159.TextWrapped = true
-
-CatixHub202._16.Name = "16"
-CatixHub202._16.Parent = CatixHub202.List
-CatixHub202._16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._16.BackgroundTransparency = 1.000
-CatixHub202._16.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._16.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._16.ZIndex = 3
-CatixHub202._16.Font = Enum.Font.Cartoon
-CatixHub202._16.Text = "Cotton Candy Simulator"
-CatixHub202._16.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._16.TextSize = 20.000
-CatixHub202._16.TextWrapped = true
-
-CatixHub202._160.Name = "160"
-CatixHub202._160.Parent = CatixHub202.List
-CatixHub202._160.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._160.BackgroundTransparency = 1.000
-CatixHub202._160.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._160.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._160.ZIndex = 3
-CatixHub202._160.Font = Enum.Font.Cartoon
-CatixHub202._160.Text = "Armor Simulator  Resurgence"
-CatixHub202._160.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._160.TextSize = 20.000
-CatixHub202._160.TextWrapped = true
-
-CatixHub202._161.Name = "161"
-CatixHub202._161.Parent = CatixHub202.List
-CatixHub202._161.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._161.BackgroundTransparency = 1.000
-CatixHub202._161.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._161.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._161.ZIndex = 3
-CatixHub202._161.Font = Enum.Font.Cartoon
-CatixHub202._161.Text = "Ban Hammer Simulator"
-CatixHub202._161.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._161.TextSize = 20.000
-CatixHub202._161.TextWrapped = true
-
-CatixHub202._162.Name = "162"
-CatixHub202._162.Parent = CatixHub202.List
-CatixHub202._162.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._162.BackgroundTransparency = 1.000
-CatixHub202._162.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._162.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._162.ZIndex = 3
-CatixHub202._162.Font = Enum.Font.Cartoon
-CatixHub202._162.Text = "Soda Legends"
-CatixHub202._162.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._162.TextSize = 20.000
-CatixHub202._162.TextWrapped = true
-
-CatixHub202._163.Name = "163"
-CatixHub202._163.Parent = CatixHub202.List
-CatixHub202._163.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._163.BackgroundTransparency = 1.000
-CatixHub202._163.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._163.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._163.ZIndex = 3
-CatixHub202._163.Font = Enum.Font.Cartoon
-CatixHub202._163.Text = "Christmas Tapping"
-CatixHub202._163.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._163.TextSize = 20.000
-CatixHub202._163.TextWrapped = true
-
-CatixHub202._164.Name = "164"
-CatixHub202._164.Parent = CatixHub202.List
-CatixHub202._164.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._164.BackgroundTransparency = 1.000
-CatixHub202._164.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._164.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._164.ZIndex = 3
-CatixHub202._164.Font = Enum.Font.Cartoon
-CatixHub202._164.Text = "Tapping Realms"
-CatixHub202._164.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._164.TextSize = 20.000
-CatixHub202._164.TextWrapped = true
-
-CatixHub202._165.Name = "165"
-CatixHub202._165.Parent = CatixHub202.List
-CatixHub202._165.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._165.BackgroundTransparency = 1.000
-CatixHub202._165.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._165.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._165.ZIndex = 3
-CatixHub202._165.Font = Enum.Font.Cartoon
-CatixHub202._165.Text = "Smacking Simulator"
-CatixHub202._165.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._165.TextSize = 20.000
-CatixHub202._165.TextWrapped = true
-
-CatixHub202._166.Name = "166"
-CatixHub202._166.Parent = CatixHub202.List
-CatixHub202._166.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._166.BackgroundTransparency = 1.000
-CatixHub202._166.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._166.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._166.ZIndex = 3
-CatixHub202._166.Font = Enum.Font.Cartoon
-CatixHub202._166.Text = "Minion Simulator"
-CatixHub202._166.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._166.TextSize = 20.000
-CatixHub202._166.TextWrapped = true
-
-CatixHub202._167.Name = "167"
-CatixHub202._167.Parent = CatixHub202.List
-CatixHub202._167.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._167.BackgroundTransparency = 1.000
-CatixHub202._167.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._167.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._167.ZIndex = 3
-CatixHub202._167.Font = Enum.Font.Cartoon
-CatixHub202._167.Text = "Saitama Simulator"
-CatixHub202._167.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._167.TextSize = 20.000
-CatixHub202._167.TextWrapped = true
-
-CatixHub202._168.Name = "168"
-CatixHub202._168.Parent = CatixHub202.List
-CatixHub202._168.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._168.BackgroundTransparency = 1.000
-CatixHub202._168.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._168.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._168.ZIndex = 3
-CatixHub202._168.Font = Enum.Font.Cartoon
-CatixHub202._168.Text = "Ramen Simulator"
-CatixHub202._168.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._168.TextSize = 20.000
-CatixHub202._168.TextWrapped = true
-
-CatixHub202._169.Name = "169"
-CatixHub202._169.Parent = CatixHub202.List
-CatixHub202._169.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._169.BackgroundTransparency = 1.000
-CatixHub202._169.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._169.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._169.ZIndex = 3
-CatixHub202._169.Font = Enum.Font.Cartoon
-CatixHub202._169.Text = "Monster Battle"
-CatixHub202._169.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._169.TextSize = 20.000
-CatixHub202._169.TextWrapped = true
-
-CatixHub202._17.Name = "17"
-CatixHub202._17.Parent = CatixHub202.List
-CatixHub202._17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._17.BackgroundTransparency = 1.000
-CatixHub202._17.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._17.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._17.ZIndex = 3
-CatixHub202._17.Font = Enum.Font.Cartoon
-CatixHub202._17.Text = "Crushing Simulator"
-CatixHub202._17.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._17.TextSize = 20.000
-CatixHub202._17.TextWrapped = true
-
-CatixHub202._170.Name = "170"
-CatixHub202._170.Parent = CatixHub202.List
-CatixHub202._170.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._170.BackgroundTransparency = 1.000
-CatixHub202._170.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._170.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._170.ZIndex = 3
-CatixHub202._170.Font = Enum.Font.Cartoon
-CatixHub202._170.Text = "Zombie Attack"
-CatixHub202._170.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._170.TextSize = 20.000
-CatixHub202._170.TextWrapped = true
-
-CatixHub202._171.Name = "171"
-CatixHub202._171.Parent = CatixHub202.List
-CatixHub202._171.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._171.BackgroundTransparency = 1.000
-CatixHub202._171.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._171.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._171.ZIndex = 3
-CatixHub202._171.Font = Enum.Font.Cartoon
-CatixHub202._171.Text = "Titan God (ban risk)"
-CatixHub202._171.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._171.TextSize = 20.000
-CatixHub202._171.TextWrapped = true
-
-CatixHub202._172.Name = "172"
-CatixHub202._172.Parent = CatixHub202.List
-CatixHub202._172.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._172.BackgroundTransparency = 1.000
-CatixHub202._172.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._172.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._172.ZIndex = 3
-CatixHub202._172.Font = Enum.Font.Cartoon
-CatixHub202._172.Text = "Farmlands"
-CatixHub202._172.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._172.TextSize = 20.000
-CatixHub202._172.TextWrapped = true
-
-CatixHub202._173.Name = "173"
-CatixHub202._173.Parent = CatixHub202.List
-CatixHub202._173.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._173.BackgroundTransparency = 1.000
-CatixHub202._173.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._173.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._173.ZIndex = 3
-CatixHub202._173.Font = Enum.Font.Cartoon
-CatixHub202._173.Text = "Big Brain Simulator"
-CatixHub202._173.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._173.TextSize = 20.000
-CatixHub202._173.TextWrapped = true
-
-CatixHub202._174.Name = "174"
-CatixHub202._174.Parent = CatixHub202.List
-CatixHub202._174.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._174.BackgroundTransparency = 1.000
-CatixHub202._174.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._174.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._174.ZIndex = 3
-CatixHub202._174.Font = Enum.Font.Cartoon
-CatixHub202._174.Text = "Duckie Simulator"
-CatixHub202._174.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._174.TextSize = 20.000
-CatixHub202._174.TextWrapped = true
-
-CatixHub202._175.Name = "175"
-CatixHub202._175.Parent = CatixHub202.List
-CatixHub202._175.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._175.BackgroundTransparency = 1.000
-CatixHub202._175.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._175.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._175.ZIndex = 3
-CatixHub202._175.Font = Enum.Font.Cartoon
-CatixHub202._175.Text = "Dashing Simulator"
-CatixHub202._175.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._175.TextSize = 20.000
-CatixHub202._175.TextWrapped = true
-
-CatixHub202._176.Name = "176"
-CatixHub202._176.Parent = CatixHub202.List
-CatixHub202._176.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._176.BackgroundTransparency = 1.000
-CatixHub202._176.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._176.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._176.ZIndex = 3
-CatixHub202._176.Font = Enum.Font.Cartoon
-CatixHub202._176.Text = "Flight Simulator"
-CatixHub202._176.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._176.TextSize = 20.000
-CatixHub202._176.TextWrapped = true
-
-CatixHub202._177.Name = "177"
-CatixHub202._177.Parent = CatixHub202.List
-CatixHub202._177.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._177.BackgroundTransparency = 1.000
-CatixHub202._177.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._177.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._177.ZIndex = 3
-CatixHub202._177.Font = Enum.Font.Cartoon
-CatixHub202._177.Text = "Hatching Simulator 2"
-CatixHub202._177.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._177.TextSize = 20.000
-CatixHub202._177.TextWrapped = true
-
-CatixHub202._178.Name = "178"
-CatixHub202._178.Parent = CatixHub202.List
-CatixHub202._178.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._178.BackgroundTransparency = 1.000
-CatixHub202._178.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._178.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._178.ZIndex = 3
-CatixHub202._178.Font = Enum.Font.Cartoon
-CatixHub202._178.Text = "Clicking Simulator 2.0"
-CatixHub202._178.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._178.TextSize = 20.000
-CatixHub202._178.TextWrapped = true
-
-CatixHub202._179.Name = "179"
-CatixHub202._179.Parent = CatixHub202.List
-CatixHub202._179.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._179.BackgroundTransparency = 1.000
-CatixHub202._179.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._179.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._179.ZIndex = 3
-CatixHub202._179.Font = Enum.Font.Cartoon
-CatixHub202._179.Text = "Hide And Seek Extreme"
-CatixHub202._179.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._179.TextSize = 20.000
-CatixHub202._179.TextWrapped = true
-
-CatixHub202._18.Name = "18"
-CatixHub202._18.Parent = CatixHub202.List
-CatixHub202._18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._18.BackgroundTransparency = 1.000
-CatixHub202._18.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._18.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._18.ZIndex = 3
-CatixHub202._18.Font = Enum.Font.Cartoon
-CatixHub202._18.Text = "Dr.Seuss"
-CatixHub202._18.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._18.TextSize = 20.000
-CatixHub202._18.TextWrapped = true
-
-CatixHub202._180.Name = "180"
-CatixHub202._180.Parent = CatixHub202.List
-CatixHub202._180.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._180.BackgroundTransparency = 1.000
-CatixHub202._180.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._180.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._180.ZIndex = 3
-CatixHub202._180.Font = Enum.Font.Cartoon
-CatixHub202._180.Text = "Reaper Simulator 2"
-CatixHub202._180.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._180.TextSize = 20.000
-CatixHub202._180.TextWrapped = true
-
-CatixHub202._181.Name = "181"
-CatixHub202._181.Parent = CatixHub202.List
-CatixHub202._181.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._181.BackgroundTransparency = 1.000
-CatixHub202._181.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._181.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._181.ZIndex = 3
-CatixHub202._181.Font = Enum.Font.Cartoon
-CatixHub202._181.Text = "Cookie Clicker"
-CatixHub202._181.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._181.TextSize = 20.000
-CatixHub202._181.TextWrapped = true
-
-CatixHub202._182.Name = "182"
-CatixHub202._182.Parent = CatixHub202.List
-CatixHub202._182.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._182.BackgroundTransparency = 1.000
-CatixHub202._182.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._182.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._182.ZIndex = 3
-CatixHub202._182.Font = Enum.Font.Cartoon
-CatixHub202._182.Text = "Super Clicker 2"
-CatixHub202._182.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._182.TextSize = 20.000
-CatixHub202._182.TextWrapped = true
-
-CatixHub202._183.Name = "183"
-CatixHub202._183.Parent = CatixHub202.List
-CatixHub202._183.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._183.BackgroundTransparency = 1.000
-CatixHub202._183.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._183.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._183.ZIndex = 3
-CatixHub202._183.Font = Enum.Font.Cartoon
-CatixHub202._183.Text = "Wizard Champions"
-CatixHub202._183.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._183.TextSize = 20.000
-CatixHub202._183.TextWrapped = true
-
-CatixHub202._184.Name = "184"
-CatixHub202._184.Parent = CatixHub202.List
-CatixHub202._184.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._184.BackgroundTransparency = 1.000
-CatixHub202._184.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._184.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._184.ZIndex = 3
-CatixHub202._184.Font = Enum.Font.Cartoon
-CatixHub202._184.Text = "Treacherous Tower"
-CatixHub202._184.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._184.TextSize = 20.000
-CatixHub202._184.TextWrapped = true
-
-CatixHub202._185.Name = "185"
-CatixHub202._185.Parent = CatixHub202.List
-CatixHub202._185.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._185.BackgroundTransparency = 1.000
-CatixHub202._185.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._185.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._185.ZIndex = 3
-CatixHub202._185.Font = Enum.Font.Cartoon
-CatixHub202._185.Text = "Tower Of Heroes"
-CatixHub202._185.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._185.TextSize = 20.000
-CatixHub202._185.TextWrapped = true
-
-CatixHub202._186.Name = "186"
-CatixHub202._186.Parent = CatixHub202.List
-CatixHub202._186.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._186.BackgroundTransparency = 1.000
-CatixHub202._186.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._186.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._186.ZIndex = 3
-CatixHub202._186.Font = Enum.Font.Cartoon
-CatixHub202._186.Text = "Robot Simulator"
-CatixHub202._186.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._186.TextSize = 20.000
-CatixHub202._186.TextWrapped = true
-
-CatixHub202._187.Name = "187"
-CatixHub202._187.Parent = CatixHub202.List
-CatixHub202._187.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._187.BackgroundTransparency = 1.000
-CatixHub202._187.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._187.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._187.ZIndex = 3
-CatixHub202._187.Font = Enum.Font.Cartoon
-CatixHub202._187.Text = "Ro Ghoul"
-CatixHub202._187.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._187.TextSize = 20.000
-CatixHub202._187.TextWrapped = true
-
-CatixHub202._188.Name = "188"
-CatixHub202._188.Parent = CatixHub202.List
-CatixHub202._188.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._188.BackgroundTransparency = 1.000
-CatixHub202._188.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._188.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._188.ZIndex = 3
-CatixHub202._188.Font = Enum.Font.Cartoon
-CatixHub202._188.Text = "Sword Simulator 2"
-CatixHub202._188.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._188.TextSize = 20.000
-CatixHub202._188.TextWrapped = true
-
-CatixHub202._189.Name = "189"
-CatixHub202._189.Parent = CatixHub202.List
-CatixHub202._189.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._189.BackgroundTransparency = 1.000
-CatixHub202._189.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._189.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._189.ZIndex = 3
-CatixHub202._189.Font = Enum.Font.Cartoon
-CatixHub202._189.Text = "Tower Of Dreads"
-CatixHub202._189.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._189.TextSize = 20.000
-CatixHub202._189.TextWrapped = true
-
-CatixHub202._19.Name = "19"
-CatixHub202._19.Parent = CatixHub202.List
-CatixHub202._19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._19.BackgroundTransparency = 1.000
-CatixHub202._19.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._19.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._19.ZIndex = 3
-CatixHub202._19.Font = Enum.Font.Cartoon
-CatixHub202._19.Text = "Dummy-Simulator"
-CatixHub202._19.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._19.TextSize = 20.000
-CatixHub202._19.TextWrapped = true
-
-CatixHub202._190.Name = "190"
-CatixHub202._190.Parent = CatixHub202.List
-CatixHub202._190.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._190.BackgroundTransparency = 1.000
-CatixHub202._190.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._190.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._190.ZIndex = 3
-CatixHub202._190.Font = Enum.Font.Cartoon
-CatixHub202._190.Text = "Assassin!"
-CatixHub202._190.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._190.TextSize = 20.000
-CatixHub202._190.TextWrapped = true
-
-CatixHub202._191.Name = "191"
-CatixHub202._191.Parent = CatixHub202.List
-CatixHub202._191.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._191.BackgroundTransparency = 1.000
-CatixHub202._191.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._191.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._191.ZIndex = 3
-CatixHub202._191.Font = Enum.Font.Cartoon
-CatixHub202._191.Text = "Bad Business"
-CatixHub202._191.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._191.TextSize = 20.000
-CatixHub202._191.TextWrapped = true
-
-CatixHub202._192.Name = "192"
-CatixHub202._192.Parent = CatixHub202.List
-CatixHub202._192.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._192.BackgroundTransparency = 1.000
-CatixHub202._192.Position = UDim2.new(0.0434782617, 0, 0.909791172, 0)
-CatixHub202._192.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._192.ZIndex = 3
-CatixHub202._192.Font = Enum.Font.Cartoon
-CatixHub202._192.Text = "Sword legends [2]"
-CatixHub202._192.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._192.TextSize = 20.000
-CatixHub202._192.TextWrapped = true
-
-CatixHub202._193.Name = "193"
-CatixHub202._193.Parent = CatixHub202.List
-CatixHub202._193.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._193.BackgroundTransparency = 1.000
-CatixHub202._193.Position = UDim2.new(0.0434782617, 0, 0.909791172, 0)
-CatixHub202._193.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._193.ZIndex = 3
-CatixHub202._193.Font = Enum.Font.Cartoon
-CatixHub202._193.Text = "Pet Heroes"
-CatixHub202._193.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._193.TextSize = 20.000
-CatixHub202._193.TextWrapped = true
-
-CatixHub202._2.Name = "2"
-CatixHub202._2.Parent = CatixHub202.List
-CatixHub202._2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._2.BackgroundTransparency = 1.000
-CatixHub202._2.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._2.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._2.ZIndex = 3
-CatixHub202._2.Font = Enum.Font.Cartoon
-CatixHub202._2.Text = "Buff Simulator"
-CatixHub202._2.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._2.TextSize = 20.000
-CatixHub202._2.TextWrapped = true
-
-CatixHub202._20.Name = "20"
-CatixHub202._20.Parent = CatixHub202.List
-CatixHub202._20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._20.BackgroundTransparency = 1.000
-CatixHub202._20.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._20.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._20.ZIndex = 3
-CatixHub202._20.Font = Enum.Font.Cartoon
-CatixHub202._20.Text = "Eating Simulator 2"
-CatixHub202._20.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._20.TextSize = 20.000
-CatixHub202._20.TextWrapped = true
-
-CatixHub202._21.Name = "21"
-CatixHub202._21.Parent = CatixHub202.List
-CatixHub202._21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._21.BackgroundTransparency = 1.000
-CatixHub202._21.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._21.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._21.ZIndex = 3
-CatixHub202._21.Font = Enum.Font.Cartoon
-CatixHub202._21.Text = "Egg Simulator X"
-CatixHub202._21.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._21.TextSize = 20.000
-CatixHub202._21.TextWrapped = true
-
-CatixHub202._22.Name = "22"
-CatixHub202._22.Parent = CatixHub202.List
-CatixHub202._22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._22.BackgroundTransparency = 1.000
-CatixHub202._22.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._22.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._22.ZIndex = 3
-CatixHub202._22.Font = Enum.Font.Cartoon
-CatixHub202._22.Text = "Fairy Legends"
-CatixHub202._22.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._22.TextSize = 20.000
-CatixHub202._22.TextWrapped = true
-
-CatixHub202._23.Name = "23"
-CatixHub202._23.Parent = CatixHub202.List
-CatixHub202._23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._23.BackgroundTransparency = 1.000
-CatixHub202._23.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._23.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._23.ZIndex = 3
-CatixHub202._23.Font = Enum.Font.Cartoon
-CatixHub202._23.Text = "Fish Mania"
-CatixHub202._23.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._23.TextSize = 20.000
-CatixHub202._23.TextWrapped = true
-
-CatixHub202._24.Name = "24"
-CatixHub202._24.Parent = CatixHub202.List
-CatixHub202._24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._24.BackgroundTransparency = 1.000
-CatixHub202._24.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._24.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._24.ZIndex = 3
-CatixHub202._24.Font = Enum.Font.Cartoon
-CatixHub202._24.Text = "Follower Simulator"
-CatixHub202._24.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._24.TextSize = 20.000
-CatixHub202._24.TextWrapped = true
-
-CatixHub202._25.Name = "25"
-CatixHub202._25.Parent = CatixHub202.List
-CatixHub202._25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._25.BackgroundTransparency = 1.000
-CatixHub202._25.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._25.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._25.ZIndex = 3
-CatixHub202._25.Font = Enum.Font.Cartoon
-CatixHub202._25.Text = "Gladiator Simulator"
-CatixHub202._25.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._25.TextSize = 20.000
-CatixHub202._25.TextWrapped = true
-
-CatixHub202._26.Name = "26"
-CatixHub202._26.Parent = CatixHub202.List
-CatixHub202._26.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._26.BackgroundTransparency = 1.000
-CatixHub202._26.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._26.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._26.ZIndex = 3
-CatixHub202._26.Font = Enum.Font.Cartoon
-CatixHub202._26.Text = "Coin Simulator 2"
-CatixHub202._26.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._26.TextSize = 20.000
-CatixHub202._26.TextWrapped = true
-
-CatixHub202._27.Name = "27"
-CatixHub202._27.Parent = CatixHub202.List
-CatixHub202._27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._27.BackgroundTransparency = 1.000
-CatixHub202._27.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._27.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._27.ZIndex = 3
-CatixHub202._27.Font = Enum.Font.Cartoon
-CatixHub202._27.Text = "Gorilla Simulator 2"
-CatixHub202._27.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._27.TextSize = 20.000
-CatixHub202._27.TextWrapped = true
-
-CatixHub202._28.Name = "28"
-CatixHub202._28.Parent = CatixHub202.List
-CatixHub202._28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._28.BackgroundTransparency = 1.000
-CatixHub202._28.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._28.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._28.ZIndex = 3
-CatixHub202._28.Font = Enum.Font.Cartoon
-CatixHub202._28.Text = "Harvesting Simulator"
-CatixHub202._28.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._28.TextSize = 20.000
-CatixHub202._28.TextWrapped = true
-
-CatixHub202._29.Name = "29"
-CatixHub202._29.Parent = CatixHub202.List
-CatixHub202._29.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._29.BackgroundTransparency = 1.000
-CatixHub202._29.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._29.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._29.ZIndex = 3
-CatixHub202._29.Font = Enum.Font.Cartoon
-CatixHub202._29.Text = "Jumping Simulator"
-CatixHub202._29.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._29.TextSize = 20.000
-CatixHub202._29.TextWrapped = true
-
-CatixHub202._3.Name = "3"
-CatixHub202._3.Parent = CatixHub202.List
-CatixHub202._3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._3.BackgroundTransparency = 1.000
-CatixHub202._3.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._3.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._3.ZIndex = 3
-CatixHub202._3.Font = Enum.Font.Cartoon
-CatixHub202._3.Text = "Bow Simulator"
-CatixHub202._3.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._3.TextSize = 20.000
-CatixHub202._3.TextWrapped = true
-
-CatixHub202._30.Name = "30"
-CatixHub202._30.Parent = CatixHub202.List
-CatixHub202._30.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._30.BackgroundTransparency = 1.000
-CatixHub202._30.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._30.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._30.ZIndex = 3
-CatixHub202._30.Font = Enum.Font.Cartoon
-CatixHub202._30.Text = "Laptop Simulator"
-CatixHub202._30.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._30.TextSize = 20.000
-CatixHub202._30.TextWrapped = true
-
-CatixHub202._31.Name = "31"
-CatixHub202._31.Parent = CatixHub202.List
-CatixHub202._31.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._31.BackgroundTransparency = 1.000
-CatixHub202._31.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._31.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._31.ZIndex = 3
-CatixHub202._31.Font = Enum.Font.Cartoon
-CatixHub202._31.Text = "Lucky Block Battleground"
-CatixHub202._31.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._31.TextSize = 20.000
-CatixHub202._31.TextWrapped = true
-
-CatixHub202._32.Name = "32"
-CatixHub202._32.Parent = CatixHub202.List
-CatixHub202._32.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._32.BackgroundTransparency = 1.000
-CatixHub202._32.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._32.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._32.ZIndex = 3
-CatixHub202._32.Font = Enum.Font.Cartoon
-CatixHub202._32.Text = "Munching Masters"
-CatixHub202._32.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._32.TextSize = 20.000
-CatixHub202._32.TextWrapped = true
-
-CatixHub202._33.Name = "33"
-CatixHub202._33.Parent = CatixHub202.List
-CatixHub202._33.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._33.BackgroundTransparency = 1.000
-CatixHub202._33.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._33.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._33.ZIndex = 3
-CatixHub202._33.Font = Enum.Font.Cartoon
-CatixHub202._33.Text = "Mythical Legends"
-CatixHub202._33.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._33.TextSize = 20.000
-CatixHub202._33.TextWrapped = true
-
-CatixHub202._34.Name = "34"
-CatixHub202._34.Parent = CatixHub202.List
-CatixHub202._34.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._34.BackgroundTransparency = 1.000
-CatixHub202._34.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._34.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._34.ZIndex = 3
-CatixHub202._34.Font = Enum.Font.Cartoon
-CatixHub202._34.Text = "Ninja Clicker Simulator"
-CatixHub202._34.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._34.TextSize = 20.000
-CatixHub202._34.TextWrapped = true
-
-CatixHub202._35.Name = "35"
-CatixHub202._35.Parent = CatixHub202.List
-CatixHub202._35.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._35.BackgroundTransparency = 1.000
-CatixHub202._35.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._35.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._35.ZIndex = 3
-CatixHub202._35.Font = Enum.Font.Cartoon
-CatixHub202._35.Text = "Pet Hatching Simulator 4"
-CatixHub202._35.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._35.TextSize = 20.000
-CatixHub202._35.TextWrapped = true
-
-CatixHub202._36.Name = "36"
-CatixHub202._36.Parent = CatixHub202.List
-CatixHub202._36.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._36.BackgroundTransparency = 1.000
-CatixHub202._36.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._36.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._36.ZIndex = 3
-CatixHub202._36.Font = Enum.Font.Cartoon
-CatixHub202._36.Text = "Pirate Legends"
-CatixHub202._36.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._36.TextSize = 20.000
-CatixHub202._36.TextWrapped = true
-
-CatixHub202._37.Name = "37"
-CatixHub202._37.Parent = CatixHub202.List
-CatixHub202._37.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._37.BackgroundTransparency = 1.000
-CatixHub202._37.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._37.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._37.ZIndex = 3
-CatixHub202._37.Font = Enum.Font.Cartoon
-CatixHub202._37.Text = "Planet Lifting Simulator"
-CatixHub202._37.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._37.TextSize = 20.000
-CatixHub202._37.TextWrapped = true
-
-CatixHub202._38.Name = "38"
-CatixHub202._38.Parent = CatixHub202.List
-CatixHub202._38.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._38.BackgroundTransparency = 1.000
-CatixHub202._38.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._38.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._38.ZIndex = 3
-CatixHub202._38.Font = Enum.Font.Cartoon
-CatixHub202._38.Text = "Potion Simulator"
-CatixHub202._38.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._38.TextSize = 20.000
-CatixHub202._38.TextWrapped = true
-
-CatixHub202._39.Name = "39"
-CatixHub202._39.Parent = CatixHub202.List
-CatixHub202._39.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._39.BackgroundTransparency = 1.000
-CatixHub202._39.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._39.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._39.ZIndex = 3
-CatixHub202._39.Font = Enum.Font.Cartoon
-CatixHub202._39.Text = "Running Simulator"
-CatixHub202._39.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._39.TextSize = 20.000
-CatixHub202._39.TextWrapped = true
-
-CatixHub202._4.Name = "4"
-CatixHub202._4.Parent = CatixHub202.List
-CatixHub202._4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._4.BackgroundTransparency = 1.000
-CatixHub202._4.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._4.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._4.ZIndex = 3
-CatixHub202._4.Font = Enum.Font.Cartoon
-CatixHub202._4.Text = "Backflip Simulator"
-CatixHub202._4.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._4.TextSize = 20.000
-CatixHub202._4.TextWrapped = true
-
-CatixHub202._40.Name = "40"
-CatixHub202._40.Parent = CatixHub202.List
-CatixHub202._40.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._40.BackgroundTransparency = 1.000
-CatixHub202._40.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._40.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._40.ZIndex = 3
-CatixHub202._40.Font = Enum.Font.Cartoon
-CatixHub202._40.Text = "Slaying Simulator"
-CatixHub202._40.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._40.TextSize = 20.000
-CatixHub202._40.TextWrapped = true
-
-CatixHub202._41.Name = "41"
-CatixHub202._41.Parent = CatixHub202.List
-CatixHub202._41.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._41.BackgroundTransparency = 1.000
-CatixHub202._41.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._41.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._41.ZIndex = 3
-CatixHub202._41.Font = Enum.Font.Cartoon
-CatixHub202._41.Text = "Spellblade Legends"
-CatixHub202._41.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._41.TextSize = 20.000
-CatixHub202._41.TextWrapped = true
-
-CatixHub202._42.Name = "42"
-CatixHub202._42.Parent = CatixHub202.List
-CatixHub202._42.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._42.BackgroundTransparency = 1.000
-CatixHub202._42.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._42.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._42.ZIndex = 3
-CatixHub202._42.Font = Enum.Font.Cartoon
-CatixHub202._42.Text = "Sprinting Heroes"
-CatixHub202._42.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._42.TextSize = 20.000
-CatixHub202._42.TextWrapped = true
-
-CatixHub202._43.Name = "43"
-CatixHub202._43.Parent = CatixHub202.List
-CatixHub202._43.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._43.BackgroundTransparency = 1.000
-CatixHub202._43.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._43.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._43.ZIndex = 3
-CatixHub202._43.Font = Enum.Font.Cartoon
-CatixHub202._43.Text = "Super Power Fighting Simulator"
-CatixHub202._43.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._43.TextSize = 20.000
-CatixHub202._43.TextWrapped = true
-
-CatixHub202._44.Name = "44"
-CatixHub202._44.Parent = CatixHub202.List
-CatixHub202._44.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._44.BackgroundTransparency = 1.000
-CatixHub202._44.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._44.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._44.ZIndex = 3
-CatixHub202._44.Font = Enum.Font.Cartoon
-CatixHub202._44.Text = "Sword Simulator 3"
-CatixHub202._44.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._44.TextSize = 20.000
-CatixHub202._44.TextWrapped = true
-
-CatixHub202._45.Name = "45"
-CatixHub202._45.Parent = CatixHub202.List
-CatixHub202._45.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._45.BackgroundTransparency = 1.000
-CatixHub202._45.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._45.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._45.ZIndex = 3
-CatixHub202._45.Font = Enum.Font.Cartoon
-CatixHub202._45.Text = "Elemental Sword  Sword-Simulator"
-CatixHub202._45.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._45.TextSize = 20.000
-CatixHub202._45.TextWrapped = true
-
-CatixHub202._46.Name = "46"
-CatixHub202._46.Parent = CatixHub202.List
-CatixHub202._46.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._46.BackgroundTransparency = 1.000
-CatixHub202._46.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._46.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._46.ZIndex = 3
-CatixHub202._46.Font = Enum.Font.Cartoon
-CatixHub202._46.Text = "Tapping Champions"
-CatixHub202._46.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._46.TextSize = 20.000
-CatixHub202._46.TextWrapped = true
-
-CatixHub202._47.Name = "47"
-CatixHub202._47.Parent = CatixHub202.List
-CatixHub202._47.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._47.BackgroundTransparency = 1.000
-CatixHub202._47.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._47.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._47.ZIndex = 3
-CatixHub202._47.Font = Enum.Font.Cartoon
-CatixHub202._47.Text = "Soda Simulator"
-CatixHub202._47.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._47.TextSize = 20.000
-CatixHub202._47.TextWrapped = true
-
-CatixHub202._48.Name = "48"
-CatixHub202._48.Parent = CatixHub202.List
-CatixHub202._48.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._48.BackgroundTransparency = 1.000
-CatixHub202._48.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._48.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._48.ZIndex = 3
-CatixHub202._48.Font = Enum.Font.Cartoon
-CatixHub202._48.Text = "Titan Simulator"
-CatixHub202._48.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._48.TextSize = 20.000
-CatixHub202._48.TextWrapped = true
-
-CatixHub202._49.Name = "49"
-CatixHub202._49.Parent = CatixHub202.List
-CatixHub202._49.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._49.BackgroundTransparency = 1.000
-CatixHub202._49.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._49.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._49.ZIndex = 3
-CatixHub202._49.Font = Enum.Font.Cartoon
-CatixHub202._49.Text = "Ultimate Lifting Simulator"
-CatixHub202._49.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._49.TextSize = 20.000
-CatixHub202._49.TextWrapped = true
-
-CatixHub202._5.Name = "5"
-CatixHub202._5.Parent = CatixHub202.List
-CatixHub202._5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._5.BackgroundTransparency = 1.000
-CatixHub202._5.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._5.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._5.ZIndex = 3
-CatixHub202._5.Font = Enum.Font.Cartoon
-CatixHub202._5.Text = "Banning Simulator"
-CatixHub202._5.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._5.TextSize = 20.000
-CatixHub202._5.TextWrapped = true
-
-CatixHub202._50.Name = "50"
-CatixHub202._50.Parent = CatixHub202.List
-CatixHub202._50.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._50.BackgroundTransparency = 1.000
-CatixHub202._50.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._50.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._50.ZIndex = 3
-CatixHub202._50.Font = Enum.Font.Cartoon
-CatixHub202._50.Text = "Viking Simulator"
-CatixHub202._50.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._50.TextSize = 20.000
-CatixHub202._50.TextWrapped = true
-
-CatixHub202._51.Name = "51"
-CatixHub202._51.Parent = CatixHub202.List
-CatixHub202._51.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._51.BackgroundTransparency = 1.000
-CatixHub202._51.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._51.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._51.ZIndex = 3
-CatixHub202._51.Font = Enum.Font.Cartoon
-CatixHub202._51.Text = "Whacking Simulator"
-CatixHub202._51.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._51.TextSize = 20.000
-CatixHub202._51.TextWrapped = true
-
-CatixHub202._52.Name = "52"
-CatixHub202._52.Parent = CatixHub202.List
-CatixHub202._52.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._52.BackgroundTransparency = 1.000
-CatixHub202._52.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._52.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._52.ZIndex = 3
-CatixHub202._52.Font = Enum.Font.Cartoon
-CatixHub202._52.Text = "Yummy Simulator"
-CatixHub202._52.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._52.TextSize = 20.000
-CatixHub202._52.TextWrapped = true
-
-CatixHub202._53.Name = "53"
-CatixHub202._53.Parent = CatixHub202.List
-CatixHub202._53.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._53.BackgroundTransparency = 1.000
-CatixHub202._53.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._53.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._53.ZIndex = 3
-CatixHub202._53.Font = Enum.Font.Cartoon
-CatixHub202._53.Text = "Brawling Simulator"
-CatixHub202._53.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._53.TextSize = 20.000
-CatixHub202._53.TextWrapped = true
-
-CatixHub202._54.Name = "54"
-CatixHub202._54.Parent = CatixHub202.List
-CatixHub202._54.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._54.BackgroundTransparency = 1.000
-CatixHub202._54.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._54.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._54.ZIndex = 3
-CatixHub202._54.Font = Enum.Font.Cartoon
-CatixHub202._54.Text = "Duck Simulator"
-CatixHub202._54.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._54.TextSize = 20.000
-CatixHub202._54.TextWrapped = true
-
-CatixHub202._55.Name = "55"
-CatixHub202._55.Parent = CatixHub202.List
-CatixHub202._55.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._55.BackgroundTransparency = 1.000
-CatixHub202._55.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._55.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._55.ZIndex = 3
-CatixHub202._55.Font = Enum.Font.Cartoon
-CatixHub202._55.Text = "Energy Legends"
-CatixHub202._55.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._55.TextSize = 20.000
-CatixHub202._55.TextWrapped = true
-
-CatixHub202._56.Name = "56"
-CatixHub202._56.Parent = CatixHub202.List
-CatixHub202._56.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._56.BackgroundTransparency = 1.000
-CatixHub202._56.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._56.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._56.ZIndex = 3
-CatixHub202._56.Font = Enum.Font.Cartoon
-CatixHub202._56.Text = "Killing Simulator"
-CatixHub202._56.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._56.TextSize = 20.000
-CatixHub202._56.TextWrapped = true
-
-CatixHub202._57.Name = "57"
-CatixHub202._57.Parent = CatixHub202.List
-CatixHub202._57.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._57.BackgroundTransparency = 1.000
-CatixHub202._57.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._57.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._57.ZIndex = 3
-CatixHub202._57.Font = Enum.Font.Cartoon
-CatixHub202._57.Text = "Legend Hunt"
-CatixHub202._57.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._57.TextSize = 20.000
-CatixHub202._57.TextWrapped = true
-
-CatixHub202._58.Name = "58"
-CatixHub202._58.Parent = CatixHub202.List
-CatixHub202._58.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._58.BackgroundTransparency = 1.000
-CatixHub202._58.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._58.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._58.ZIndex = 3
-CatixHub202._58.Font = Enum.Font.Cartoon
-CatixHub202._58.Text = "Lightsaber Simulator"
-CatixHub202._58.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._58.TextSize = 20.000
-CatixHub202._58.TextWrapped = true
-
-CatixHub202._59.Name = "59"
-CatixHub202._59.Parent = CatixHub202.List
-CatixHub202._59.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._59.BackgroundTransparency = 1.000
-CatixHub202._59.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._59.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._59.ZIndex = 3
-CatixHub202._59.Font = Enum.Font.Cartoon
-CatixHub202._59.Text = "Lumber Simulator"
-CatixHub202._59.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._59.TextSize = 20.000
-CatixHub202._59.TextWrapped = true
-
-CatixHub202._6.Name = "6"
-CatixHub202._6.Parent = CatixHub202.List
-CatixHub202._6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._6.BackgroundTransparency = 1.000
-CatixHub202._6.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._6.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._6.ZIndex = 3
-CatixHub202._6.Font = Enum.Font.Cartoon
-CatixHub202._6.Text = "Blade Champions"
-CatixHub202._6.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._6.TextSize = 20.000
-CatixHub202._6.TextWrapped = true
-
-CatixHub202._60.Name = "60"
-CatixHub202._60.Parent = CatixHub202.List
-CatixHub202._60.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._60.BackgroundTransparency = 1.000
-CatixHub202._60.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._60.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._60.ZIndex = 3
-CatixHub202._60.Font = Enum.Font.Cartoon
-CatixHub202._60.Text = "Melee Champions"
-CatixHub202._60.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._60.TextSize = 20.000
-CatixHub202._60.TextWrapped = true
-
-CatixHub202._61.Name = "61"
-CatixHub202._61.Parent = CatixHub202.List
-CatixHub202._61.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._61.BackgroundTransparency = 1.000
-CatixHub202._61.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._61.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._61.ZIndex = 3
-CatixHub202._61.Font = Enum.Font.Cartoon
-CatixHub202._61.Text = "Melee Simulator"
-CatixHub202._61.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._61.TextSize = 20.000
-CatixHub202._61.TextWrapped = true
-
-CatixHub202._62.Name = "62"
-CatixHub202._62.Parent = CatixHub202.List
-CatixHub202._62.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._62.BackgroundTransparency = 1.000
-CatixHub202._62.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._62.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._62.ZIndex = 3
-CatixHub202._62.Font = Enum.Font.Cartoon
-CatixHub202._62.Text = "Sword Legends [1]"
-CatixHub202._62.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._62.TextSize = 20.000
-CatixHub202._62.TextWrapped = true
-
-CatixHub202._63.Name = "63"
-CatixHub202._63.Parent = CatixHub202.List
-CatixHub202._63.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._63.BackgroundTransparency = 1.000
-CatixHub202._63.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._63.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._63.ZIndex = 3
-CatixHub202._63.Font = Enum.Font.Cartoon
-CatixHub202._63.Text = "Sword Legends "
-CatixHub202._63.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._63.TextSize = 20.000
-CatixHub202._63.TextWrapped = true
-
-CatixHub202._64.Name = "64"
-CatixHub202._64.Parent = CatixHub202.List
-CatixHub202._64.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._64.BackgroundTransparency = 1.000
-CatixHub202._64.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._64.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._64.ZIndex = 3
-CatixHub202._64.Font = Enum.Font.Cartoon
-CatixHub202._64.Text = "Toy Simulator"
-CatixHub202._64.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._64.TextSize = 20.000
-CatixHub202._64.TextWrapped = true
-
-CatixHub202._65.Name = "65"
-CatixHub202._65.Parent = CatixHub202.List
-CatixHub202._65.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._65.BackgroundTransparency = 1.000
-CatixHub202._65.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._65.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._65.ZIndex = 3
-CatixHub202._65.Font = Enum.Font.Cartoon
-CatixHub202._65.Text = "Fruit Collecting Simulator"
-CatixHub202._65.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._65.TextSize = 20.000
-CatixHub202._65.TextWrapped = true
-
-CatixHub202._66.Name = "66"
-CatixHub202._66.Parent = CatixHub202.List
-CatixHub202._66.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._66.BackgroundTransparency = 1.000
-CatixHub202._66.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._66.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._66.ZIndex = 3
-CatixHub202._66.Font = Enum.Font.Cartoon
-CatixHub202._66.Text = "Chicken Simulator 2"
-CatixHub202._66.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._66.TextSize = 20.000
-CatixHub202._66.TextWrapped = true
-
-CatixHub202._67.Name = "67"
-CatixHub202._67.Parent = CatixHub202.List
-CatixHub202._67.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._67.BackgroundTransparency = 1.000
-CatixHub202._67.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._67.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._67.ZIndex = 3
-CatixHub202._67.Font = Enum.Font.Cartoon
-CatixHub202._67.Text = "Clicking Legends"
-CatixHub202._67.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._67.TextSize = 20.000
-CatixHub202._67.TextWrapped = true
-
-CatixHub202._68.Name = "68"
-CatixHub202._68.Parent = CatixHub202.List
-CatixHub202._68.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._68.BackgroundTransparency = 1.000
-CatixHub202._68.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._68.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._68.ZIndex = 3
-CatixHub202._68.Font = Enum.Font.Cartoon
-CatixHub202._68.Text = "Human Evolution Evolution-Simulator"
-CatixHub202._68.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._68.TextSize = 20.000
-CatixHub202._68.TextWrapped = true
-
-CatixHub202._69.Name = "69"
-CatixHub202._69.Parent = CatixHub202.List
-CatixHub202._69.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._69.BackgroundTransparency = 1.000
-CatixHub202._69.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._69.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._69.ZIndex = 3
-CatixHub202._69.Font = Enum.Font.Cartoon
-CatixHub202._69.Text = "Toilet Paper Simulator"
-CatixHub202._69.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._69.TextSize = 20.000
-CatixHub202._69.TextWrapped = true
-
-CatixHub202._7.Name = "7"
-CatixHub202._7.Parent = CatixHub202.List
-CatixHub202._7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._7.BackgroundTransparency = 1.000
-CatixHub202._7.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._7.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._7.ZIndex = 3
-CatixHub202._7.Font = Enum.Font.Cartoon
-CatixHub202._7.Text = "Boss Fighting Simulator"
-CatixHub202._7.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._7.TextSize = 20.000
-CatixHub202._7.TextWrapped = true
-
-CatixHub202._70.Name = "70"
-CatixHub202._70.Parent = CatixHub202.List
-CatixHub202._70.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._70.BackgroundTransparency = 1.000
-CatixHub202._70.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._70.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._70.ZIndex = 3
-CatixHub202._70.Font = Enum.Font.Cartoon
-CatixHub202._70.Text = "Slashing Masters"
-CatixHub202._70.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._70.TextSize = 20.000
-CatixHub202._70.TextWrapped = true
-
-CatixHub202._71.Name = "71"
-CatixHub202._71.Parent = CatixHub202.List
-CatixHub202._71.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._71.BackgroundTransparency = 1.000
-CatixHub202._71.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._71.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._71.ZIndex = 3
-CatixHub202._71.Font = Enum.Font.Cartoon
-CatixHub202._71.Text = "Speedrun Simullator"
-CatixHub202._71.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._71.TextSize = 20.000
-CatixHub202._71.TextWrapped = true
-
-CatixHub202._72.Name = "72"
-CatixHub202._72.Parent = CatixHub202.List
-CatixHub202._72.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._72.BackgroundTransparency = 1.000
-CatixHub202._72.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._72.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._72.ZIndex = 3
-CatixHub202._72.Font = Enum.Font.Cartoon
-CatixHub202._72.Text = "Teddie Simulator"
-CatixHub202._72.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._72.TextSize = 20.000
-CatixHub202._72.TextWrapped = true
-
-CatixHub202._73.Name = "73"
-CatixHub202._73.Parent = CatixHub202.List
-CatixHub202._73.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._73.BackgroundTransparency = 1.000
-CatixHub202._73.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._73.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._73.ZIndex = 3
-CatixHub202._73.Font = Enum.Font.Cartoon
-CatixHub202._73.Text = "Egg Simulator"
-CatixHub202._73.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._73.TextSize = 20.000
-CatixHub202._73.TextWrapped = true
-
-CatixHub202._74.Name = "74"
-CatixHub202._74.Parent = CatixHub202.List
-CatixHub202._74.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._74.BackgroundTransparency = 1.000
-CatixHub202._74.Position = UDim2.new(0, 0, 0.87680316, 0)
-CatixHub202._74.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._74.ZIndex = 3
-CatixHub202._74.Font = Enum.Font.Cartoon
-CatixHub202._74.Text = "Food Masters"
-CatixHub202._74.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._74.TextSize = 20.000
-CatixHub202._74.TextWrapped = true
-
-CatixHub202._75.Name = "75"
-CatixHub202._75.Parent = CatixHub202.List
-CatixHub202._75.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._75.BackgroundTransparency = 1.000
-CatixHub202._75.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._75.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._75.ZIndex = 3
-CatixHub202._75.Font = Enum.Font.Cartoon
-CatixHub202._75.Text = "Gem Clicker"
-CatixHub202._75.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._75.TextSize = 20.000
-CatixHub202._75.TextWrapped = true
-
-CatixHub202._76.Name = "76"
-CatixHub202._76.Parent = CatixHub202.List
-CatixHub202._76.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._76.BackgroundTransparency = 1.000
-CatixHub202._76.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._76.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._76.ZIndex = 3
-CatixHub202._76.Font = Enum.Font.Cartoon
-CatixHub202._76.Text = "Clicking Chaos"
-CatixHub202._76.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._76.TextSize = 20.000
-CatixHub202._76.TextWrapped = true
-
-CatixHub202._77.Name = "77"
-CatixHub202._77.Parent = CatixHub202.List
-CatixHub202._77.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._77.BackgroundTransparency = 1.000
-CatixHub202._77.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._77.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._77.ZIndex = 3
-CatixHub202._77.Font = Enum.Font.Cartoon
-CatixHub202._77.Text = "Castle Clickers"
-CatixHub202._77.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._77.TextSize = 20.000
-CatixHub202._77.TextWrapped = true
-
-CatixHub202._78.Name = "78"
-CatixHub202._78.Parent = CatixHub202.List
-CatixHub202._78.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._78.BackgroundTransparency = 1.000
-CatixHub202._78.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._78.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._78.ZIndex = 3
-CatixHub202._78.Font = Enum.Font.Cartoon
-CatixHub202._78.Text = "Orange Simulator"
-CatixHub202._78.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._78.TextSize = 20.000
-CatixHub202._78.TextWrapped = true
-
-CatixHub202._79.Name = "79"
-CatixHub202._79.Parent = CatixHub202.List
-CatixHub202._79.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._79.BackgroundTransparency = 1.000
-CatixHub202._79.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._79.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._79.ZIndex = 3
-CatixHub202._79.Font = Enum.Font.Cartoon
-CatixHub202._79.Text = "Tapping Heroes"
-CatixHub202._79.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._79.TextSize = 20.000
-CatixHub202._79.TextWrapped = true
-
-CatixHub202._8.Name = "8"
-CatixHub202._8.Parent = CatixHub202.List
-CatixHub202._8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._8.BackgroundTransparency = 1.000
-CatixHub202._8.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._8.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._8.ZIndex = 3
-CatixHub202._8.Font = Enum.Font.Cartoon
-CatixHub202._8.Text = "Bulle Musculation Simulator"
-CatixHub202._8.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._8.TextSize = 20.000
-CatixHub202._8.TextWrapped = true
-
-CatixHub202._80.Name = "80"
-CatixHub202._80.Parent = CatixHub202.List
-CatixHub202._80.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._80.BackgroundTransparency = 1.000
-CatixHub202._80.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._80.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._80.ZIndex = 3
-CatixHub202._80.Font = Enum.Font.Cartoon
-CatixHub202._80.Text = "Best Fish Friends"
-CatixHub202._80.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._80.TextSize = 20.000
-CatixHub202._80.TextWrapped = true
-
-CatixHub202._81.Name = "81"
-CatixHub202._81.Parent = CatixHub202.List
-CatixHub202._81.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._81.BackgroundTransparency = 1.000
-CatixHub202._81.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._81.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._81.ZIndex = 3
-CatixHub202._81.Font = Enum.Font.Cartoon
-CatixHub202._81.Text = "Clicking Champions"
-CatixHub202._81.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._81.TextSize = 20.000
-CatixHub202._81.TextWrapped = true
-
-CatixHub202._82.Name = "82"
-CatixHub202._82.Parent = CatixHub202.List
-CatixHub202._82.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._82.BackgroundTransparency = 1.000
-CatixHub202._82.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._82.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._82.ZIndex = 3
-CatixHub202._82.Font = Enum.Font.Cartoon
-CatixHub202._82.Text = "Candy Simulator 2"
-CatixHub202._82.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._82.TextSize = 20.000
-CatixHub202._82.TextWrapped = true
-
-CatixHub202._83.Name = "83"
-CatixHub202._83.Parent = CatixHub202.List
-CatixHub202._83.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._83.BackgroundTransparency = 1.000
-CatixHub202._83.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._83.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._83.ZIndex = 3
-CatixHub202._83.Font = Enum.Font.Cartoon
-CatixHub202._83.Text = "Coin Collector Simulator"
-CatixHub202._83.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._83.TextSize = 20.000
-CatixHub202._83.TextWrapped = true
-
-CatixHub202._84.Name = "84"
-CatixHub202._84.Parent = CatixHub202.List
-CatixHub202._84.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._84.BackgroundTransparency = 1.000
-CatixHub202._84.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._84.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._84.ZIndex = 3
-CatixHub202._84.Font = Enum.Font.Cartoon
-CatixHub202._84.Text = "Lifting Simulator"
-CatixHub202._84.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._84.TextSize = 20.000
-CatixHub202._84.TextWrapped = true
-
-CatixHub202._85.Name = "85"
-CatixHub202._85.Parent = CatixHub202.List
-CatixHub202._85.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._85.BackgroundTransparency = 1.000
-CatixHub202._85.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._85.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._85.ZIndex = 3
-CatixHub202._85.Font = Enum.Font.Cartoon
-CatixHub202._85.Text = "Soda Shaking 2"
-CatixHub202._85.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._85.TextSize = 20.000
-CatixHub202._85.TextWrapped = true
-
-CatixHub202._86.Name = "86"
-CatixHub202._86.Parent = CatixHub202.List
-CatixHub202._86.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._86.BackgroundTransparency = 1.000
-CatixHub202._86.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._86.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._86.ZIndex = 3
-CatixHub202._86.Font = Enum.Font.Cartoon
-CatixHub202._86.Text = "Punching Clicker"
-CatixHub202._86.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._86.TextSize = 20.000
-CatixHub202._86.TextWrapped = true
-
-CatixHub202._87.Name = "87"
-CatixHub202._87.Parent = CatixHub202.List
-CatixHub202._87.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._87.BackgroundTransparency = 1.000
-CatixHub202._87.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._87.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._87.ZIndex = 3
-CatixHub202._87.Font = Enum.Font.Cartoon
-CatixHub202._87.Text = "Milkshakes Legends"
-CatixHub202._87.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._87.TextSize = 20.000
-CatixHub202._87.TextWrapped = true
-
-CatixHub202._88.Name = "88"
-CatixHub202._88.Parent = CatixHub202.List
-CatixHub202._88.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._88.BackgroundTransparency = 1.000
-CatixHub202._88.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._88.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._88.ZIndex = 3
-CatixHub202._88.Font = Enum.Font.Cartoon
-CatixHub202._88.Text = "Runeblade Simulator"
-CatixHub202._88.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._88.TextSize = 20.000
-CatixHub202._88.TextWrapped = true
-
-CatixHub202._89.Name = "89"
-CatixHub202._89.Parent = CatixHub202.List
-CatixHub202._89.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._89.BackgroundTransparency = 1.000
-CatixHub202._89.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._89.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._89.ZIndex = 3
-CatixHub202._89.Font = Enum.Font.Cartoon
-CatixHub202._89.Text = "Blade Throwing Simulator"
-CatixHub202._89.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._89.TextSize = 20.000
-CatixHub202._89.TextWrapped = true
-
-CatixHub202._9.Name = "9"
-CatixHub202._9.Parent = CatixHub202.List
-CatixHub202._9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._9.BackgroundTransparency = 1.000
-CatixHub202._9.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._9.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._9.ZIndex = 3
-CatixHub202._9.Font = Enum.Font.Cartoon
-CatixHub202._9.Text = "Cake Delivery Simulator"
-CatixHub202._9.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._9.TextSize = 20.000
-CatixHub202._9.TextWrapped = true
-
-CatixHub202._90.Name = "90"
-CatixHub202._90.Parent = CatixHub202.List
-CatixHub202._90.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._90.BackgroundTransparency = 1.000
-CatixHub202._90.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._90.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._90.ZIndex = 3
-CatixHub202._90.Font = Enum.Font.Cartoon
-CatixHub202._90.Text = "Clicker Legends"
-CatixHub202._90.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._90.TextSize = 20.000
-CatixHub202._90.TextWrapped = true
-
-CatixHub202._91.Name = "91"
-CatixHub202._91.Parent = CatixHub202.List
-CatixHub202._91.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._91.BackgroundTransparency = 1.000
-CatixHub202._91.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._91.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._91.ZIndex = 3
-CatixHub202._91.Font = Enum.Font.Cartoon
-CatixHub202._91.Text = "Tap Tap Simulator"
-CatixHub202._91.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._91.TextSize = 20.000
-CatixHub202._91.TextWrapped = true
-
-CatixHub202._92.Name = "92"
-CatixHub202._92.Parent = CatixHub202.List
-CatixHub202._92.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._92.BackgroundTransparency = 1.000
-CatixHub202._92.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._92.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._92.ZIndex = 3
-CatixHub202._92.Font = Enum.Font.Cartoon
-CatixHub202._92.Text = "Donut Simulator"
-CatixHub202._92.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._92.TextSize = 20.000
-CatixHub202._92.TextWrapped = true
-
-CatixHub202._93.Name = "93"
-CatixHub202._93.Parent = CatixHub202.List
-CatixHub202._93.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._93.BackgroundTransparency = 1.000
-CatixHub202._93.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._93.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._93.ZIndex = 3
-CatixHub202._93.Font = Enum.Font.Cartoon
-CatixHub202._93.Text = "Clicker Madness"
-CatixHub202._93.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._93.TextSize = 20.000
-CatixHub202._93.TextWrapped = true
-
-CatixHub202._94.Name = "94"
-CatixHub202._94.Parent = CatixHub202.List
-CatixHub202._94.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._94.BackgroundTransparency = 1.000
-CatixHub202._94.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._94.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._94.ZIndex = 3
-CatixHub202._94.Font = Enum.Font.Cartoon
-CatixHub202._94.Text = "Rebirth Maker 2.0"
-CatixHub202._94.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._94.TextSize = 20.000
-CatixHub202._94.TextWrapped = true
-
-CatixHub202._95.Name = "95"
-CatixHub202._95.Parent = CatixHub202.List
-CatixHub202._95.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._95.BackgroundTransparency = 1.000
-CatixHub202._95.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._95.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._95.ZIndex = 3
-CatixHub202._95.Font = Enum.Font.Cartoon
-CatixHub202._95.Text = "Rpg World"
-CatixHub202._95.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._95.TextSize = 20.000
-CatixHub202._95.TextWrapped = true
-
-CatixHub202._952.Name = "95(2)"
-CatixHub202._952.Parent = CatixHub202.List
-CatixHub202._952.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._952.BackgroundTransparency = 1.000
-CatixHub202._952.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._952.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._952.ZIndex = 3
-CatixHub202._952.Font = Enum.Font.Cartoon
-CatixHub202._952.Text = "Rpg Simulator"
-CatixHub202._952.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._952.TextSize = 20.000
-CatixHub202._952.TextWrapped = true
-
-CatixHub202._96.Name = "96"
-CatixHub202._96.Parent = CatixHub202.List
-CatixHub202._96.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._96.BackgroundTransparency = 1.000
-CatixHub202._96.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._96.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._96.ZIndex = 3
-CatixHub202._96.Font = Enum.Font.Cartoon
-CatixHub202._96.Text = "Crystal Clicker"
-CatixHub202._96.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._96.TextSize = 20.000
-CatixHub202._96.TextWrapped = true
-
-CatixHub202._97.Name = "97"
-CatixHub202._97.Parent = CatixHub202.List
-CatixHub202._97.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._97.BackgroundTransparency = 1.000
-CatixHub202._97.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._97.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._97.ZIndex = 3
-CatixHub202._97.Font = Enum.Font.Cartoon
-CatixHub202._97.Text = "Champions Simulator"
-CatixHub202._97.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._97.TextSize = 20.000
-CatixHub202._97.TextWrapped = true
-
-CatixHub202._98.Name = "98"
-CatixHub202._98.Parent = CatixHub202.List
-CatixHub202._98.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._98.BackgroundTransparency = 1.000
-CatixHub202._98.Position = UDim2.new(0, 0, 0.876344025, 0)
-CatixHub202._98.Size = UDim2.new(0, 207, 0, 27)
-CatixHub202._98.ZIndex = 3
-CatixHub202._98.Font = Enum.Font.Cartoon
-CatixHub202._98.Text = "Mining Champions"
-CatixHub202._98.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202._98.TextSize = 20.000
-CatixHub202._98.TextWrapped = true
-
-CatixHub202.Tittle.Name = "Tittle"
-CatixHub202.Tittle.Parent = CatixHub202.Main
-CatixHub202.Tittle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.Tittle.BackgroundTransparency = 1.000
-CatixHub202.Tittle.Position = UDim2.new(0, 58, 0, 0)
-CatixHub202.Tittle.Size = UDim2.new(0, 292, 0, 41)
-CatixHub202.Tittle.ZIndex = 2
-CatixHub202.Tittle.Font = Enum.Font.Cartoon
-CatixHub202.Tittle.Text = "\\\\ Catix Hub //"
-CatixHub202.Tittle.TextColor3 = Color3.fromRGB(255, 238, 1)
-CatixHub202.Tittle.TextSize = 30.000
-CatixHub202.Tittle.TextWrapped = true
-
-CatixHub202.UpdateCredit.Name = "Update&Credit"
-CatixHub202.UpdateCredit.Parent = CatixHub202.Main
-CatixHub202.UpdateCredit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.UpdateCredit.BackgroundTransparency = 1.000
-CatixHub202.UpdateCredit.BorderColor3 = Color3.fromRGB(54, 57, 67)
-CatixHub202.UpdateCredit.Position = UDim2.new(0.561341226, 0, 0.396907717, 0)
-CatixHub202.UpdateCredit.Size = UDim2.new(0, 169, 0, 138)
-CatixHub202.UpdateCredit.ZIndex = 2
-CatixHub202.UpdateCredit.Image = "rbxassetid://3570695787"
-CatixHub202.UpdateCredit.ImageColor3 = Color3.fromRGB(38, 38, 38)
-CatixHub202.UpdateCredit.ScaleType = Enum.ScaleType.Slice
-CatixHub202.UpdateCredit.SliceCenter = Rect.new(100, 100, 100, 100)
-CatixHub202.UpdateCredit.SliceScale = 0.167
-
-CatixHub202._1.Name = "1"
-CatixHub202._1.Parent = CatixHub202.UpdateCredit
-CatixHub202._1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._1.BackgroundTransparency = 1.000
-CatixHub202._1.Size = UDim2.new(0, 167, 0, 6)
-CatixHub202._1.ZIndex = 3
-CatixHub202._1.Font = Enum.Font.Cartoon
-CatixHub202._1.Text = ""
-CatixHub202._1.TextColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202._1.TextSize = 16.000
-CatixHub202._1.TextWrapped = true
-
-CatixHub202.LastUpdate.Name = "LastUpdate"
-CatixHub202.LastUpdate.Parent = CatixHub202.UpdateCredit
-CatixHub202.LastUpdate.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.LastUpdate.BackgroundTransparency = 1.000
-CatixHub202.LastUpdate.Position = UDim2.new(0, 0, 0, 3)
-CatixHub202.LastUpdate.Size = UDim2.new(0, 167, 0, 24)
-CatixHub202.LastUpdate.ZIndex = 3
-CatixHub202.LastUpdate.Font = Enum.Font.Cartoon
-CatixHub202.LastUpdate.Text = "\\\\ Last Update 2.0.2 //"
-CatixHub202.LastUpdate.TextColor3 = Color3.fromRGB(19, 255, 66)
-CatixHub202.LastUpdate.TextSize = 16.000
-CatixHub202.LastUpdate.TextWrapped = true
-
-CatixHub202.UpdateGame.Name = "UpdateGame"
-CatixHub202.UpdateGame.Parent = CatixHub202.UpdateCredit
-CatixHub202.UpdateGame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.UpdateGame.BackgroundTransparency = 1.000
-CatixHub202.UpdateGame.Position = UDim2.new(0, 1, 0, 27)
-CatixHub202.UpdateGame.Size = UDim2.new(0, 166, 0, 23)
-CatixHub202.UpdateGame.ZIndex = 3
-CatixHub202.UpdateGame.Font = Enum.Font.Cartoon
-CatixHub202.UpdateGame.Text = "Mega Coins Sim. Removed"
-CatixHub202.UpdateGame.TextColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.UpdateGame.TextScaled = true
-CatixHub202.UpdateGame.TextSize = 16.000
-CatixHub202.UpdateGame.TextWrapped = true
-
-CatixHub202.TextLabel.Name = "."
-CatixHub202.TextLabel.Parent = CatixHub202.UpdateCredit
-CatixHub202.TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.TextLabel.BackgroundTransparency = 1.000
-CatixHub202.TextLabel.Position = UDim2.new(0, 0, 0, 81)
-CatixHub202.TextLabel.Size = UDim2.new(0, 166, 0, 27)
-CatixHub202.TextLabel.ZIndex = 3
-CatixHub202.TextLabel.Font = Enum.Font.Cartoon
-CatixHub202.TextLabel.Text = "if u have any problem please contact on discord"
-CatixHub202.TextLabel.TextColor3 = Color3.fromRGB(52, 255, 222)
-CatixHub202.TextLabel.TextSize = 12.000
-CatixHub202.TextLabel.TextWrapped = true
-
-CatixHub202.LastUpdateII.Name = "LastUpdateII"
-CatixHub202.LastUpdateII.Parent = CatixHub202.UpdateCredit
-CatixHub202.LastUpdateII.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.LastUpdateII.BackgroundTransparency = 1.000
-CatixHub202.LastUpdateII.Position = UDim2.new(0, 0, 0, 108)
-CatixHub202.LastUpdateII.Size = UDim2.new(0, 167, 0, 30)
-CatixHub202.LastUpdateII.ZIndex = 3
-CatixHub202.LastUpdateII.Font = Enum.Font.Cartoon
-CatixHub202.LastUpdateII.Text = "By Altix#3395 And Im A Cat#7202"
-CatixHub202.LastUpdateII.TextColor3 = Color3.fromRGB(154, 154, 154)
-CatixHub202.LastUpdateII.TextScaled = true
-CatixHub202.LastUpdateII.TextSize = 16.000
-CatixHub202.LastUpdateII.TextWrapped = true
-
-CatixHub202.UpdateGame_2.Name = "UpdateGame"
-CatixHub202.UpdateGame_2.Parent = CatixHub202.UpdateCredit
-CatixHub202.UpdateGame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.UpdateGame_2.BackgroundTransparency = 1.000
-CatixHub202.UpdateGame_2.Position = UDim2.new(0, 1, 0, 50)
-CatixHub202.UpdateGame_2.Size = UDim2.new(0, 166, 0, 23)
-CatixHub202.UpdateGame_2.ZIndex = 3
-CatixHub202.UpdateGame_2.Font = Enum.Font.Cartoon
-CatixHub202.UpdateGame_2.Text = "New Settings UI"
-CatixHub202.UpdateGame_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.UpdateGame_2.TextSize = 16.000
-CatixHub202.UpdateGame_2.TextWrapped = true
-
-CatixHub202.AutoDetect.Name = "AutoDetect"
-CatixHub202.AutoDetect.Parent = CatixHub202.Main
-CatixHub202.AutoDetect.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.AutoDetect.BackgroundTransparency = 1.000
-CatixHub202.AutoDetect.BorderColor3 = Color3.fromRGB(54, 57, 67)
-CatixHub202.AutoDetect.Position = UDim2.new(0.561341226, 0, 0.164907709, 0)
-CatixHub202.AutoDetect.Size = UDim2.new(0, 169, 0, 46)
-CatixHub202.AutoDetect.ZIndex = 2
-CatixHub202.AutoDetect.Image = "rbxassetid://3570695787"
-CatixHub202.AutoDetect.ImageColor3 = Color3.fromRGB(38, 38, 38)
-CatixHub202.AutoDetect.ScaleType = Enum.ScaleType.Slice
-CatixHub202.AutoDetect.SliceCenter = Rect.new(100, 100, 100, 100)
-CatixHub202.AutoDetect.SliceScale = 0.167
-
-CatixHub202.TextButton_2.Parent = CatixHub202.AutoDetect
-CatixHub202.TextButton_2.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
-CatixHub202.TextButton_2.BackgroundTransparency = 1.000
-CatixHub202.TextButton_2.BorderSizePixel = 0
-CatixHub202.TextButton_2.Size = UDim2.new(0, 169, 0, 46)
-CatixHub202.TextButton_2.ZIndex = 3
-CatixHub202.TextButton_2.Font = Enum.Font.Cartoon
-CatixHub202.TextButton_2.Text = "Auto Detect"
-CatixHub202.TextButton_2.TextColor3 = Color3.fromRGB(255, 0, 0)
-CatixHub202.TextButton_2.TextSize = 25.000
-CatixHub202.TextButton_2.TextWrapped = true
-
-CatixHub202.Settingbutton.Name = "Settingbutton"
-CatixHub202.Settingbutton.Parent = CatixHub202.Main
-CatixHub202.Settingbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.Settingbutton.BackgroundTransparency = 1.000
-CatixHub202.Settingbutton.BorderColor3 = Color3.fromRGB(54, 57, 67)
-CatixHub202.Settingbutton.Position = UDim2.new(0.0245765448, 0, 0.0369077027, 0)
-CatixHub202.Settingbutton.Size = UDim2.new(0, 45, 0, 23)
-CatixHub202.Settingbutton.ZIndex = 2
-CatixHub202.Settingbutton.Image = "rbxassetid://3570695787"
-CatixHub202.Settingbutton.ImageColor3 = Color3.fromRGB(73, 207, 82)
-CatixHub202.Settingbutton.ScaleType = Enum.ScaleType.Slice
-CatixHub202.Settingbutton.SliceCenter = Rect.new(100, 100, 100, 100)
-CatixHub202.Settingbutton.SliceScale = 0.167
-
-CatixHub202.TextButton_3.Parent = CatixHub202.Settingbutton
-CatixHub202.TextButton_3.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
-CatixHub202.TextButton_3.BackgroundTransparency = 1.000
-CatixHub202.TextButton_3.BorderSizePixel = 0
-CatixHub202.TextButton_3.Position = UDim2.new(0, 0, -0.0434782617, 0)
-CatixHub202.TextButton_3.Size = UDim2.new(0, 44, 0, 23)
-CatixHub202.TextButton_3.ZIndex = 3
-CatixHub202.TextButton_3.Font = Enum.Font.Cartoon
-CatixHub202.TextButton_3.Text = "<"
-CatixHub202.TextButton_3.TextColor3 = Color3.fromRGB(255, 0, 0)
-CatixHub202.TextButton_3.TextSize = 25.000
-CatixHub202.TextButton_3.TextWrapped = true
-
-CatixHub202.games.Name = "games"
-CatixHub202.games.Parent = CatixHub202.Main
-CatixHub202.games.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.games.BackgroundTransparency = 1.000
-CatixHub202.games.Position = UDim2.new(0.0236293562, 0, 0.936907709, 0)
-CatixHub202.games.Size = UDim2.new(0, 56, 0, 17)
-CatixHub202.games.ZIndex = 3
-CatixHub202.games.Font = Enum.Font.Cartoon
-CatixHub202.games.Text = "Total: 193+"
-CatixHub202.games.TextColor3 = Color3.fromRGB(85, 170, 0)
-CatixHub202.games.TextScaled = true
-CatixHub202.games.TextSize = 20.000
-CatixHub202.games.TextWrapped = true
-
-CatixHub202.DISCORDSERVER.Name = "DISCORD SERVER"
-CatixHub202.DISCORDSERVER.Parent = CatixHub202.Frame
-CatixHub202.DISCORDSERVER.AnchorPoint = Vector2.new(0.5, 0.5)
-CatixHub202.DISCORDSERVER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.DISCORDSERVER.BackgroundTransparency = 1.000
-CatixHub202.DISCORDSERVER.Position = UDim2.new(0.756756723, 0, 1.10485601, 0)
-CatixHub202.DISCORDSERVER.Size = UDim2.new(0, 204, 0, 42)
-CatixHub202.DISCORDSERVER.Image = "rbxassetid://3570695787"
-CatixHub202.DISCORDSERVER.ImageColor3 = Color3.fromRGB(38, 173, 29)
-CatixHub202.DISCORDSERVER.ScaleType = Enum.ScaleType.Slice
-CatixHub202.DISCORDSERVER.SliceCenter = Rect.new(100, 100, 100, 100)
-CatixHub202.DISCORDSERVER.SliceScale = 0.167
-
-CatixHub202.Main_2.Name = "Main"
-CatixHub202.Main_2.Parent = CatixHub202.DISCORDSERVER
-CatixHub202.Main_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.Main_2.BackgroundTransparency = 1.000
-CatixHub202.Main_2.BorderColor3 = Color3.fromRGB(54, 57, 67)
-CatixHub202.Main_2.Position = UDim2.new(0.032518059, 0, 0.126046121, 0)
-CatixHub202.Main_2.Size = UDim2.new(0, 190, 0, 32)
-CatixHub202.Main_2.ZIndex = 2
-CatixHub202.Main_2.Image = "rbxassetid://3570695787"
-CatixHub202.Main_2.ImageColor3 = Color3.fromRGB(5, 59, 38)
-CatixHub202.Main_2.ScaleType = Enum.ScaleType.Slice
-CatixHub202.Main_2.SliceCenter = Rect.new(100, 100, 100, 100)
-CatixHub202.Main_2.SliceScale = 0.167
-
-CatixHub202.TextButton_4.Parent = CatixHub202.Main_2
-CatixHub202.TextButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.TextButton_4.BackgroundTransparency = 1.000
-CatixHub202.TextButton_4.Size = UDim2.new(0, 189, 0, 32)
-CatixHub202.TextButton_4.ZIndex = 2
-CatixHub202.TextButton_4.Font = Enum.Font.Cartoon
-CatixHub202.TextButton_4.Text = "Discord Server"
-CatixHub202.TextButton_4.TextColor3 = Color3.fromRGB(255, 0, 0)
-CatixHub202.TextButton_4.TextSize = 18.000
-CatixHub202.TextButton_4.TextStrokeColor3 = Color3.fromRGB(5, 59, 38)
-CatixHub202.TextButton_4.TextWrapped = true
-
-CatixHub202.OURGAME.Name = "OUR GAME"
-CatixHub202.OURGAME.Parent = CatixHub202.Frame
-CatixHub202.OURGAME.AnchorPoint = Vector2.new(0.5, 0.5)
-CatixHub202.OURGAME.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.OURGAME.BackgroundTransparency = 1.000
-CatixHub202.OURGAME.Position = UDim2.new(0.24247098, 0, 1.10485601, 0)
-CatixHub202.OURGAME.Size = UDim2.new(0, 204, 0, 42)
-CatixHub202.OURGAME.Image = "rbxassetid://3570695787"
-CatixHub202.OURGAME.ImageColor3 = Color3.fromRGB(38, 173, 29)
-CatixHub202.OURGAME.ScaleType = Enum.ScaleType.Slice
-CatixHub202.OURGAME.SliceCenter = Rect.new(100, 100, 100, 100)
-CatixHub202.OURGAME.SliceScale = 0.167
-
-CatixHub202.Main_3.Name = "Main"
-CatixHub202.Main_3.Parent = CatixHub202.OURGAME
-CatixHub202.Main_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.Main_3.BackgroundTransparency = 1.000
-CatixHub202.Main_3.BorderColor3 = Color3.fromRGB(54, 57, 67)
-CatixHub202.Main_3.Position = UDim2.new(0.032518059, 0, 0.126046121, 0)
-CatixHub202.Main_3.Size = UDim2.new(0, 190, 0, 32)
-CatixHub202.Main_3.ZIndex = 2
-CatixHub202.Main_3.Image = "rbxassetid://3570695787"
-CatixHub202.Main_3.ImageColor3 = Color3.fromRGB(5, 59, 38)
-CatixHub202.Main_3.ScaleType = Enum.ScaleType.Slice
-CatixHub202.Main_3.SliceCenter = Rect.new(100, 100, 100, 100)
-CatixHub202.Main_3.SliceScale = 0.167
-
-CatixHub202.TextButton_5.Parent = CatixHub202.Main_3
-CatixHub202.TextButton_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.TextButton_5.BackgroundTransparency = 1.000
-CatixHub202.TextButton_5.Size = UDim2.new(0, 189, 0, 32)
-CatixHub202.TextButton_5.ZIndex = 2
-CatixHub202.TextButton_5.Font = Enum.Font.Cartoon
-CatixHub202.TextButton_5.Text = "Our Game"
-CatixHub202.TextButton_5.TextColor3 = Color3.fromRGB(255, 0, 0)
-CatixHub202.TextButton_5.TextSize = 18.000
-CatixHub202.TextButton_5.TextStrokeColor3 = Color3.fromRGB(5, 59, 38)
-CatixHub202.TextButton_5.TextWrapped = true
-
-CatixHub202.Settings.Name = "Settings"
-CatixHub202.Settings.Parent = CatixHub202.Frame
-CatixHub202.Settings.AnchorPoint = Vector2.new(0.5, 0.5)
-CatixHub202.Settings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.Settings.BackgroundTransparency = 1.000
-CatixHub202.Settings.Position = UDim2.new(-0.156338498, 0, 0.496545404, 0)
-CatixHub202.Settings.Size = UDim2.new(0, 115, 0, 262)
-CatixHub202.Settings.Image = "rbxassetid://3570695787"
-CatixHub202.Settings.ImageColor3 = Color3.fromRGB(38, 173, 29)
-CatixHub202.Settings.ScaleType = Enum.ScaleType.Slice
-CatixHub202.Settings.SliceCenter = Rect.new(100, 100, 100, 100)
-CatixHub202.Settings.SliceScale = 0.167
-
-CatixHub202.Main_4.Name = "Main"
-CatixHub202.Main_4.Parent = CatixHub202.Settings
-CatixHub202.Main_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.Main_4.BackgroundTransparency = 1.000
-CatixHub202.Main_4.BorderColor3 = Color3.fromRGB(54, 57, 67)
-CatixHub202.Main_4.Position = UDim2.new(0.0412135907, 0, 0.021711627, 0)
-CatixHub202.Main_4.Size = UDim2.new(0, 105, 0, 249)
-CatixHub202.Main_4.ZIndex = 2
-CatixHub202.Main_4.Image = "rbxassetid://3570695787"
-CatixHub202.Main_4.ImageColor3 = Color3.fromRGB(5, 59, 38)
-CatixHub202.Main_4.ScaleType = Enum.ScaleType.Slice
-CatixHub202.Main_4.SliceCenter = Rect.new(100, 100, 100, 100)
-CatixHub202.Main_4.SliceScale = 0.167
-
-CatixHub202.Tittle_2.Name = "Tittle"
-CatixHub202.Tittle_2.Parent = CatixHub202.Main_4
-CatixHub202.Tittle_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.Tittle_2.BackgroundTransparency = 1.000
-CatixHub202.Tittle_2.Position = UDim2.new(0, 0, 0.0287925452, 0)
-CatixHub202.Tittle_2.Size = UDim2.new(0, 105, 0, 23)
-CatixHub202.Tittle_2.ZIndex = 2
-CatixHub202.Tittle_2.Font = Enum.Font.Cartoon
-CatixHub202.Tittle_2.Text = "\\\\ Settings //"
-CatixHub202.Tittle_2.TextColor3 = Color3.fromRGB(255, 238, 1)
-CatixHub202.Tittle_2.TextSize = 16.000
-CatixHub202.Tittle_2.TextWrapped = true
-
-CatixHub202.DarkMode.Name = "Dark Mode"
-CatixHub202.DarkMode.Parent = CatixHub202.Main_4
-CatixHub202.DarkMode.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.DarkMode.BackgroundTransparency = 1.000
-CatixHub202.DarkMode.Position = UDim2.new(0, 0, 0.12350598, 0)
-CatixHub202.DarkMode.Size = UDim2.new(0, 105, 0, 32)
-CatixHub202.DarkMode.ZIndex = 2
-CatixHub202.DarkMode.Font = Enum.Font.Cartoon
-CatixHub202.DarkMode.Text = "Dark Mode"
-CatixHub202.DarkMode.TextColor3 = Color3.fromRGB(255, 184, 17)
-CatixHub202.DarkMode.TextSize = 15.000
-CatixHub202.DarkMode.TextStrokeColor3 = Color3.fromRGB(5, 59, 38)
-CatixHub202.DarkMode.TextWrapped = true
-
-CatixHub202.RainbowMode.Name = "Rainbow Mode"
-CatixHub202.RainbowMode.Parent = CatixHub202.Main_4
-CatixHub202.RainbowMode.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CatixHub202.RainbowMode.BackgroundTransparency = 1.000
-CatixHub202.RainbowMode.Position = UDim2.new(0, 0, 0.252020031, 0)
-CatixHub202.RainbowMode.Size = UDim2.new(0, 105, 0, 32)
-CatixHub202.RainbowMode.ZIndex = 2
-CatixHub202.RainbowMode.Font = Enum.Font.Cartoon
-CatixHub202.RainbowMode.Text = "RainBow Mode"
-CatixHub202.RainbowMode.TextColor3 = Color3.fromRGB(255, 0, 0)
-CatixHub202.RainbowMode.TextSize = 15.000
-CatixHub202.RainbowMode.TextStrokeColor3 = Color3.fromRGB(5, 59, 38)
-CatixHub202.RainbowMode.TextWrapped = true
+CatixHub203.Name = "Catix Hub 2.0.3"
+CatixHub203.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Frame.Name = "Frame"
+Frame.Parent = CatixHub203
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(0.499811172, 0, 0.499654114, 0)
+Frame.Size = UDim2.new(0, 420, 0, 263)
+Frame.Image = "rbxassetid://3570695787"
+Frame.ImageColor3 = Color3.fromRGB(38, 173, 29)
+Frame.ScaleType = Enum.ScaleType.Slice
+Frame.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame.SliceScale = 0.167
+
+Main.Name = "Main"
+Main.Parent = Frame
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BackgroundTransparency = 1.000
+Main.BorderColor3 = Color3.fromRGB(26, 67, 15)
+Main.Position = UDim2.new(0.0123216016, 0, 0.0209077429, 0)
+Main.Size = UDim2.new(0, 408, 0, 250)
+Main.ZIndex = 2
+Main.Image = "rbxassetid://3570695787"
+Main.ImageColor3 = Color3.fromRGB(5, 59, 38)
+Main.ScaleType = Enum.ScaleType.Slice
+Main.SliceCenter = Rect.new(100, 100, 100, 100)
+Main.SliceScale = 0.167
+
+Close.Name = "Close"
+Close.Parent = Main
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.BorderColor3 = Color3.fromRGB(54, 57, 67)
+Close.Position = UDim2.new(0.857909858, 0, 0.0329077132, 0)
+Close.Size = UDim2.new(0, 45, 0, 23)
+Close.ZIndex = 2
+Close.Image = "rbxassetid://3570695787"
+Close.ImageColor3 = Color3.fromRGB(73, 207, 82)
+Close.ScaleType = Enum.ScaleType.Slice
+Close.SliceCenter = Rect.new(100, 100, 100, 100)
+Close.SliceScale = 0.167
+
+TextButton.Parent = Close
+TextButton.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+TextButton.BackgroundTransparency = 1.000
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0, 0, 0.0790657401, 0)
+TextButton.Size = UDim2.new(0, 45, 0, 21)
+TextButton.ZIndex = 3
+TextButton.Font = Enum.Font.Cartoon
+TextButton.Text = "x"
+TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextButton.TextSize = 25.000
+TextButton.TextWrapped = true
+
+GameList.Name = "GameList"
+GameList.Parent = Main
+GameList.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GameList.BackgroundTransparency = 1.000
+GameList.BorderColor3 = Color3.fromRGB(54, 57, 67)
+GameList.Position = UDim2.new(0.0245765243, 0, 0.164907709, 0)
+GameList.Size = UDim2.new(0, 207, 0, 198)
+GameList.ZIndex = 2
+GameList.Image = "rbxassetid://3570695787"
+GameList.ImageColor3 = Color3.fromRGB(38, 38, 38)
+GameList.ScaleType = Enum.ScaleType.Slice
+GameList.SliceCenter = Rect.new(100, 100, 100, 100)
+GameList.SliceScale = 0.167
+
+listexemple.Name = "listexemple"
+listexemple.Parent = GameList
+listexemple.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+listexemple.Visible = false
+
+exemple.Name = "exemple"
+exemple.Parent = listexemple
+exemple.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+exemple.BackgroundTransparency = 1.000
+exemple.Position = UDim2.new(0, 0, 0.876344025, 0)
+exemple.Size = UDim2.new(0, 207, 0, 27)
+exemple.ZIndex = 3
+exemple.Font = Enum.Font.Cartoon
+exemple.Text = ""
+exemple.TextColor3 = Color3.fromRGB(255, 184, 17)
+exemple.TextSize = 20.000
+exemple.TextWrapped = true
+
+List.Name = "List"
+List.Parent = GameList
+List.Active = true
+List.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+List.BackgroundTransparency = 1.000
+List.Position = UDim2.new(0, 0, 0.136362404, 0)
+List.Size = UDim2.new(0, 207, 0, 150)
+List.ZIndex = 2
+List.CanvasSize = UDim2.new(0, 0, 1, 0)
+
+UIListLayout.Parent = List
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+_0GameList.Name = "0GameList"
+_0GameList.Parent = GameList
+_0GameList.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_0GameList.BackgroundTransparency = 1.000
+_0GameList.Position = UDim2.new(0, 0, -1.31009801e-06, 0)
+_0GameList.Size = UDim2.new(0, 207, 0, 28)
+_0GameList.ZIndex = 3
+_0GameList.Font = Enum.Font.Cartoon
+_0GameList.Text = "\\\\ Game List //"
+_0GameList.TextColor3 = Color3.fromRGB(6, 118, 223)
+_0GameList.TextSize = 25.000
+_0GameList.TextWrapped = true
+
+TotalGames.Name = "Total Games"
+TotalGames.Parent = GameList
+TotalGames.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TotalGames.BackgroundTransparency = 1.000
+TotalGames.Position = UDim2.new(0, 0, 0.920743704, 0)
+TotalGames.Size = UDim2.new(0, 207, 0, 14)
+TotalGames.ZIndex = 3
+TotalGames.Font = Enum.Font.Cartoon
+TotalGames.Text = "Total: 000"
+TotalGames.TextColor3 = Color3.fromRGB(6, 118, 223)
+TotalGames.TextSize = 20.000
+TotalGames.TextWrapped = true
+
+Tittle.Name = "Tittle"
+Tittle.Parent = Main
+Tittle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tittle.BackgroundTransparency = 1.000
+Tittle.Position = UDim2.new(0, 58, 0, 0)
+Tittle.Size = UDim2.new(0, 292, 0, 41)
+Tittle.ZIndex = 2
+Tittle.Font = Enum.Font.Cartoon
+Tittle.Text = "\\\\ Catix Hub //"
+Tittle.TextColor3 = Color3.fromRGB(255, 238, 1)
+Tittle.TextSize = 30.000
+Tittle.TextWrapped = true
+
+UpdateCredit.Name = "Update&Credit"
+UpdateCredit.Parent = Main
+UpdateCredit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UpdateCredit.BackgroundTransparency = 1.000
+UpdateCredit.BorderColor3 = Color3.fromRGB(54, 57, 67)
+UpdateCredit.Position = UDim2.new(0.561341226, 0, 0.396907717, 0)
+UpdateCredit.Size = UDim2.new(0, 169, 0, 140)
+UpdateCredit.ZIndex = 2
+UpdateCredit.Image = "rbxassetid://3570695787"
+UpdateCredit.ImageColor3 = Color3.fromRGB(38, 38, 38)
+UpdateCredit.ScaleType = Enum.ScaleType.Slice
+UpdateCredit.SliceCenter = Rect.new(100, 100, 100, 100)
+UpdateCredit.SliceScale = 0.167
+
+LastUpdate.Name = "LastUpdate"
+LastUpdate.Parent = UpdateCredit
+LastUpdate.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LastUpdate.BackgroundTransparency = 1.000
+LastUpdate.Size = UDim2.new(0, 169, 0, 30)
+LastUpdate.ZIndex = 3
+LastUpdate.Font = Enum.Font.Cartoon
+LastUpdate.Text = "\\\\ Update List //"
+LastUpdate.TextColor3 = Color3.fromRGB(19, 255, 66)
+LastUpdate.TextSize = 16.000
+LastUpdate.TextWrapped = true
+
+listexemple_2.Name = "listexemple"
+listexemple_2.Parent = UpdateCredit
+listexemple_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+listexemple_2.Visible = false
+
+exemple_2.Name = "exemple"
+exemple_2.Parent = listexemple_2
+exemple_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+exemple_2.BackgroundTransparency = 1.000
+exemple_2.Position = UDim2.new(0, 1, 0, 27)
+exemple_2.Size = UDim2.new(0, 166, 0, 23)
+exemple_2.ZIndex = 3
+exemple_2.Font = Enum.Font.Cartoon
+exemple_2.Text = ""
+exemple_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+exemple_2.TextSize = 15.000
+exemple_2.TextWrapped = true
+
+TextLabel.Name = "."
+TextLabel.Parent = UpdateCredit
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0, 0, 0, 113)
+TextLabel.Size = UDim2.new(0, 166, 0, 27)
+TextLabel.ZIndex = 3
+TextLabel.Font = Enum.Font.Cartoon
+TextLabel.Text = "if u have any problem please contact on discord"
+TextLabel.TextColor3 = Color3.fromRGB(52, 255, 222)
+TextLabel.TextSize = 12.000
+TextLabel.TextWrapped = true
+
+List_2.Name = "List"
+List_2.Parent = UpdateCredit
+List_2.Active = true
+List_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+List_2.BackgroundTransparency = 1.000
+List_2.Position = UDim2.new(0, 0, 0.214285716, 0)
+List_2.Size = UDim2.new(0, 166, 0, 83)
+List_2.ZIndex = 2
+List_2.CanvasSize = UDim2.new(0, 0, 1, 0)
+
+UIListLayout_2.Parent = List_2
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+
+AutoDetect.Name = "AutoDetect"
+AutoDetect.Parent = Main
+AutoDetect.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AutoDetect.BackgroundTransparency = 1.000
+AutoDetect.BorderColor3 = Color3.fromRGB(54, 57, 67)
+AutoDetect.Position = UDim2.new(0.561341226, 0, 0.164907709, 0)
+AutoDetect.Size = UDim2.new(0, 169, 0, 46)
+AutoDetect.ZIndex = 2
+AutoDetect.Image = "rbxassetid://3570695787"
+AutoDetect.ImageColor3 = Color3.fromRGB(38, 38, 38)
+AutoDetect.ScaleType = Enum.ScaleType.Slice
+AutoDetect.SliceCenter = Rect.new(100, 100, 100, 100)
+AutoDetect.SliceScale = 0.167
+
+TextButton_2.Parent = AutoDetect
+TextButton_2.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+TextButton_2.BackgroundTransparency = 1.000
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Size = UDim2.new(0, 169, 0, 46)
+TextButton_2.ZIndex = 3
+TextButton_2.Font = Enum.Font.Cartoon
+TextButton_2.Text = "Auto Detect"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextButton_2.TextSize = 25.000
+TextButton_2.TextWrapped = true
+
+Settingbutton.Name = "Settingbutton"
+Settingbutton.Parent = Main
+Settingbutton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Settingbutton.BackgroundTransparency = 1.000
+Settingbutton.BorderColor3 = Color3.fromRGB(54, 57, 67)
+Settingbutton.Position = UDim2.new(0.0245765448, 0, 0.0369077027, 0)
+Settingbutton.Size = UDim2.new(0, 45, 0, 23)
+Settingbutton.ZIndex = 2
+Settingbutton.Image = "rbxassetid://3570695787"
+Settingbutton.ImageColor3 = Color3.fromRGB(73, 207, 82)
+Settingbutton.ScaleType = Enum.ScaleType.Slice
+Settingbutton.SliceCenter = Rect.new(100, 100, 100, 100)
+Settingbutton.SliceScale = 0.167
+
+TextButton_3.Parent = Settingbutton
+TextButton_3.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+TextButton_3.BackgroundTransparency = 1.000
+TextButton_3.BorderSizePixel = 0
+TextButton_3.Position = UDim2.new(0, 0, -0.0434782617, 0)
+TextButton_3.Size = UDim2.new(0, 44, 0, 23)
+TextButton_3.ZIndex = 3
+TextButton_3.Font = Enum.Font.Cartoon
+TextButton_3.Text = "<"
+TextButton_3.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextButton_3.TextSize = 25.000
+TextButton_3.TextWrapped = true
+
+DISCORDSERVER.Name = "DISCORD SERVER"
+DISCORDSERVER.Parent = Frame
+DISCORDSERVER.AnchorPoint = Vector2.new(0.5, 0.5)
+DISCORDSERVER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DISCORDSERVER.BackgroundTransparency = 1.000
+DISCORDSERVER.Position = UDim2.new(0.756756723, 0, 1.10485601, 0)
+DISCORDSERVER.Size = UDim2.new(0, 204, 0, 42)
+DISCORDSERVER.Image = "rbxassetid://3570695787"
+DISCORDSERVER.ImageColor3 = Color3.fromRGB(38, 173, 29)
+DISCORDSERVER.ScaleType = Enum.ScaleType.Slice
+DISCORDSERVER.SliceCenter = Rect.new(100, 100, 100, 100)
+DISCORDSERVER.SliceScale = 0.167
+
+Main_2.Name = "Main"
+Main_2.Parent = DISCORDSERVER
+Main_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main_2.BackgroundTransparency = 1.000
+Main_2.BorderColor3 = Color3.fromRGB(54, 57, 67)
+Main_2.Position = UDim2.new(0.032518059, 0, 0.126046121, 0)
+Main_2.Size = UDim2.new(0, 190, 0, 32)
+Main_2.ZIndex = 2
+Main_2.Image = "rbxassetid://3570695787"
+Main_2.ImageColor3 = Color3.fromRGB(5, 59, 38)
+Main_2.ScaleType = Enum.ScaleType.Slice
+Main_2.SliceCenter = Rect.new(100, 100, 100, 100)
+Main_2.SliceScale = 0.167
+
+TextButton_4.Parent = Main_2
+TextButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.BackgroundTransparency = 1.000
+TextButton_4.Size = UDim2.new(0, 189, 0, 32)
+TextButton_4.ZIndex = 2
+TextButton_4.Font = Enum.Font.Cartoon
+TextButton_4.Text = "Discord Server"
+TextButton_4.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextButton_4.TextSize = 18.000
+TextButton_4.TextStrokeColor3 = Color3.fromRGB(5, 59, 38)
+TextButton_4.TextWrapped = true
+
+OURGAME.Name = "OUR GAME"
+OURGAME.Parent = Frame
+OURGAME.AnchorPoint = Vector2.new(0.5, 0.5)
+OURGAME.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OURGAME.BackgroundTransparency = 1.000
+OURGAME.Position = UDim2.new(0.24247098, 0, 1.10485601, 0)
+OURGAME.Size = UDim2.new(0, 204, 0, 42)
+OURGAME.Image = "rbxassetid://3570695787"
+OURGAME.ImageColor3 = Color3.fromRGB(38, 173, 29)
+OURGAME.ScaleType = Enum.ScaleType.Slice
+OURGAME.SliceCenter = Rect.new(100, 100, 100, 100)
+OURGAME.SliceScale = 0.167
+
+Main_3.Name = "Main"
+Main_3.Parent = OURGAME
+Main_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main_3.BackgroundTransparency = 1.000
+Main_3.BorderColor3 = Color3.fromRGB(54, 57, 67)
+Main_3.Position = UDim2.new(0.032518059, 0, 0.126046121, 0)
+Main_3.Size = UDim2.new(0, 190, 0, 32)
+Main_3.ZIndex = 2
+Main_3.Image = "rbxassetid://3570695787"
+Main_3.ImageColor3 = Color3.fromRGB(5, 59, 38)
+Main_3.ScaleType = Enum.ScaleType.Slice
+Main_3.SliceCenter = Rect.new(100, 100, 100, 100)
+Main_3.SliceScale = 0.167
+
+TextButton_5.Parent = Main_3
+TextButton_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_5.BackgroundTransparency = 1.000
+TextButton_5.Size = UDim2.new(0, 189, 0, 32)
+TextButton_5.ZIndex = 2
+TextButton_5.Font = Enum.Font.Cartoon
+TextButton_5.Text = "Our Game"
+TextButton_5.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextButton_5.TextSize = 18.000
+TextButton_5.TextStrokeColor3 = Color3.fromRGB(5, 59, 38)
+TextButton_5.TextWrapped = true
+
+Settings.Name = "Settings"
+Settings.Parent = Frame
+Settings.AnchorPoint = Vector2.new(0.5, 0.5)
+Settings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Settings.BackgroundTransparency = 1.000
+Settings.Position = UDim2.new(-0.156338498, 0, 0.496545404, 0)
+Settings.Size = UDim2.new(0, 115, 0, 262)
+Settings.Image = "rbxassetid://3570695787"
+Settings.ImageColor3 = Color3.fromRGB(38, 173, 29)
+Settings.ScaleType = Enum.ScaleType.Slice
+Settings.SliceCenter = Rect.new(100, 100, 100, 100)
+Settings.SliceScale = 0.167
+
+Main_4.Name = "Main"
+Main_4.Parent = Settings
+Main_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main_4.BackgroundTransparency = 1.000
+Main_4.BorderColor3 = Color3.fromRGB(54, 57, 67)
+Main_4.Position = UDim2.new(0.0412135907, 0, 0.021711627, 0)
+Main_4.Size = UDim2.new(0, 105, 0, 249)
+Main_4.ZIndex = 2
+Main_4.Image = "rbxassetid://3570695787"
+Main_4.ImageColor3 = Color3.fromRGB(5, 59, 38)
+Main_4.ScaleType = Enum.ScaleType.Slice
+Main_4.SliceCenter = Rect.new(100, 100, 100, 100)
+Main_4.SliceScale = 0.167
+
+Tittle_2.Name = "Tittle"
+Tittle_2.Parent = Main_4
+Tittle_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tittle_2.BackgroundTransparency = 1.000
+Tittle_2.Position = UDim2.new(0, 0, 0.0287925452, 0)
+Tittle_2.Size = UDim2.new(0, 105, 0, 23)
+Tittle_2.ZIndex = 2
+Tittle_2.Font = Enum.Font.Cartoon
+Tittle_2.Text = "\\\\ Settings //"
+Tittle_2.TextColor3 = Color3.fromRGB(255, 238, 1)
+Tittle_2.TextSize = 16.000
+Tittle_2.TextWrapped = true
+
+DarkMode.Name = "Dark Mode"
+DarkMode.Parent = Main_4
+DarkMode.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DarkMode.BackgroundTransparency = 1.000
+DarkMode.Position = UDim2.new(0, 0, 0.802220881, 0)
+DarkMode.Size = UDim2.new(0, 105, 0, 25)
+DarkMode.ZIndex = 2
+DarkMode.Font = Enum.Font.Cartoon
+DarkMode.Text = "Dark Mode"
+DarkMode.TextColor3 = Color3.fromRGB(255, 184, 17)
+DarkMode.TextSize = 15.000
+DarkMode.TextStrokeColor3 = Color3.fromRGB(5, 59, 38)
+DarkMode.TextWrapped = true
+
+RainbowMode.Name = "Rainbow Mode"
+RainbowMode.Parent = Main_4
+RainbowMode.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RainbowMode.BackgroundTransparency = 1.000
+RainbowMode.Position = UDim2.new(0, 0, 0.898606598, 0)
+RainbowMode.Size = UDim2.new(0, 105, 0, 25)
+RainbowMode.ZIndex = 2
+RainbowMode.Font = Enum.Font.Cartoon
+RainbowMode.Text = "RainBow Mode"
+RainbowMode.TextColor3 = Color3.fromRGB(255, 0, 0)
+RainbowMode.TextSize = 15.000
+RainbowMode.TextStrokeColor3 = Color3.fromRGB(5, 59, 38)
+RainbowMode.TextWrapped = true
+
+Theme.Name = "Theme"
+Theme.Parent = Main_4
+Theme.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Theme.BackgroundTransparency = 1.000
+Theme.Position = UDim2.new(0, 0, 0.711523473, 0)
+Theme.Size = UDim2.new(0, 105, 0, 23)
+Theme.ZIndex = 2
+Theme.Font = Enum.Font.Cartoon
+Theme.Text = "\\\\ theme //"
+Theme.TextColor3 = Color3.fromRGB(255, 238, 1)
+Theme.TextSize = 16.000
+Theme.TextWrapped = true
 
 -- Scripts:
 
-local function MXPDSR_fake_script() -- CatixHub202.TextButton.LocalScript 
-	local script = Instance.new('LocalScript', CatixHub202.TextButton)
+local function KHBIYMF_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Down:Connect(function()
 		script.Parent.Parent.Parent.Parent:TweenPosition(UDim2.new(0.5, 0,-0.5, 0), "Out", "Quad", 2)
@@ -3172,9 +476,256 @@ local function MXPDSR_fake_script() -- CatixHub202.TextButton.LocalScript
 		script.Parent.Parent.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(MXPDSR_fake_script)()
-local function GRXPR_fake_script() -- CatixHub202.TextButton_2.LocalScript 
-	local script = Instance.new('LocalScript', CatixHub202.TextButton_2)
+coroutine.wrap(KHBIYMF_fake_script)()
+local function HEQUDG_fake_script() -- List.LocalScript 
+	local script = Instance.new('LocalScript', List)
+
+	local Games = {
+		"Buff Simulator",
+		"Bow Simulator",
+		"Backflip Simulator",
+		"Banning Simulator",
+		"Blade Champions",
+		"Boss Fighting Simulator",
+		"Bulle Musculation Simulator",
+		"Cake Delivery Simulator",
+		"CandyCollecting Simulator",
+		"Clicker Story",
+		"Clicking Simulator",
+		"Coin Collection Simulator",
+		"Combo Clickers",
+		"Cookie Simulator",
+		"Cotton Candy Simulator",
+		"Crushing Simulator",
+		"Dr.Seuss",
+		"Dummy Simulator",
+		"Eating Simulator 2",
+		"Egg Simulator X",
+		"Fairy Legends",
+		"Fish Mania",
+		"Follower Simulator",
+		"Gladiator Simulator",
+		"Coin Simulator 2",
+		"Gorilla Simulator 2",
+		"Harvesting Simulator",
+		"Jumping Simulator",
+		"Laptop Simulator",
+		"LUCKY BLOCKS Battlegrounds",
+		"Munching Masters",
+		"Mythical Legends",
+		"Ninja Clicker Simulator",
+		"Pet Hatching Simulator 4",
+		"Pirate Legends",
+		"Planet Lifting Simulator",
+		"Potion Simulator",
+		"Running Simulator",
+		"Slaying Simulator",
+		"Spellblade Legends",
+		"Sprinting Heroes",
+		"Super Power Fighting Simulator",
+		"Sword Simulator 3",
+		"Elemental Sword Simulator",
+		"Tapping Champions",
+		"Soda Simulator",
+		"Titan Simulator",
+		"Ultimate Lifting Simulator",
+		"Viking Simulator",
+		"Whacking Simulator",
+		"Yummy Simulator",
+		"Brawling Simulator",
+		"Duck Simulator",
+		"Energy Legends",
+		"Killing Simulator",
+		"Legend Hunt",
+		"Lightsaber Simulator",
+		"Lumber Simulator",
+		"Melee Champions",
+		"Melee Simulator",
+		"Sword Legends[1]",
+		"Sword Legends",
+		"Toy Simulator",
+		"Fruit Collecting Simulator",
+		"Chicken Simulator 2",
+		"CLICKING LEGENDS",
+		"Human Evolution Simulator",
+		"Toilet Paper Simulator",
+		"Slashing Masters",
+		"SpeedRun Simullator",
+		"Teddie Simulator",
+		"Egg Simulator",
+		"Food Masters",
+		"Gem Clicker",
+		"Clicking Chaos",
+		"Castle Clickers",
+		"Orange Simulator",
+		"Tapping Heroes",
+		"Best Fish Friends",
+		"Clicking Champions",
+		"Candy Simulator 2",
+		"Coin Collector Simulator",
+		"Lifting Simulator",
+		"Soda Shaking Simulator 2",
+		"Punching Clicker Simulator",
+		"MilkShakes Legends",
+		"Runeblade Simulator",
+		"Blade Throwing Simulator",
+		"Clicker Legends",
+		"Tap Tap Simulator",
+		"Donut Simulator",
+		"Clicker Madness",
+		"Rebirth Maker 2.0",
+		"RPG WORLD",
+		"(2)RPG Simulator",
+		"Crystal Clicker",
+		"Champions Simulator",
+		"Mining Champions",
+		"Hyper Clicker",
+		"Tapping Mania",
+		"Slaming Simulator",
+		"Pepper Clicker",
+		"Oofing Legends",
+		"Saber Simulator",
+		"Coffee Simulator",
+		"Dominus Legends",
+		"Pew Pew Simulator",
+		"Brainiac Simulator",
+		"Pickaxe Simulator",
+		"Workout Islands",
+		"Ultimate Clickers",
+		"Blox Fruit",
+		"Fitness Simulator",
+		"Giant Simulator",
+		"Saitama One Punch Man Destiny",
+		"Boxing Simulator",
+		"Giant Survival",
+		"Banning Simulator 2",
+		"Box Simulator",
+		"LumberJack legends",
+		"Boxing Legends",
+		"Rolling Simulator",
+		"Germ Simulator",
+		"Blade Simulator",
+		"Clicking Fantasy",
+		"Zombie Adventure",
+		"Magnet Simulator",
+		"Hatching Simulator X",
+		"Black Hole Simulator",
+		"Cool Obby 2",
+		"Rpg World 2",
+		"Clicking Gods",
+		"Legend Of Creshendo",
+		"Cat Simulator",
+		"Magic Simulator",
+		"Simulateur de légende muscler",
+		"Chopping Tree Simulator",
+		"Sword Master Simulator",
+		"Energy Simulator",
+		"Pet ZOO",
+		"Pet Hatching Simulator 5",
+		"Tree Harvest Simulator",
+		"Key Champions",
+		"Alien Clicker SImulator",
+		"Clicker Mania",
+		"Viking Clicker",
+		"BrookHaven RP",
+		"Animal Simulator",
+		"Business Legends",
+		"Tapping Horror",
+		"Tapping Heroes[1]",
+		"Clicker Legacy",
+		"Coins Hero Simulator",
+		"Legend Of Speed",
+		"Tapping Legacy",
+		"Clicker Life",
+		"Fire Breathing Simulator",
+		"Lightning Legend",
+		"Viking Simulator[1]",
+		"Armor Simulator: Resurgence",
+		"Ban Hammer Simulator",
+		"Soda Legends",
+		"Christmas Tapping",
+		"Tapping Realms",
+		"Smacking Simulator",
+		"Minion Simulator",
+		"Saitama Simulator",
+		"Ramen Simulator",
+		"Monster Battle",
+		"Zombie Attack",
+		"Titan God Simulator",
+		"Farmlands",
+		"Big Brain Simulator",
+		"Duckie Simulator",
+		"Dashing Simulator",
+		"Flight Simulator",
+		"Hatching Simulator 2",
+		"Clicking Simulator 2.0",
+		"Hide And Seek Extreme",
+		"Reaper Simulator 2",
+		"Cookie Clicker",
+		"Super Clicker 2",
+		"Wizard Champions",
+		"Treacherous Tower",
+		"Tower OF Heroes",
+		"Robot Simulator",
+		"Ro Ghoul",
+		"Sword Simulator 2",
+		"Tower Of Dreads",
+		"Assassin!",
+		"Bad Business",
+		"Sword legends 2",
+		"Pet Heroes",
+	}
+	
+	for i, v in next, Games do
+		print(v)
+		cb = script.Parent.Parent.listexemple.exemple:Clone()
+		cb.Parent = script.Parent
+		cb.Text = v
+		cb.Name = i..". "..v
+		totalgames = i
+	end
+	
+	
+	local totalg = script.Parent.Parent["Total Games"]
+	totalg.Text = "Total: "..totalgames
+	
+	script.Parent.CanvasSize = UDim2.new(0,0,0.137*totalgames,0)
+end
+coroutine.wrap(HEQUDG_fake_script)()
+local function BQSZUXJ_fake_script() -- List_2.LocalScript 
+	local script = Instance.new('LocalScript', List_2)
+
+	local Update = {
+		"**Last Update 2.0.3**",
+		"Settings UI Added",
+		"scroll bar added",
+		"",
+		"**Update 2.0.2**",
+		"Dark Mode Added",
+		"Rainbow Mode Added",
+		"",
+		"**Update 2.0.1**",
+		"Pet Heroes Added",
+		"",
+		"**Update 2.0.0**",
+		"New Ui - New Script",
+		"Hub Merged",
+	}
+	
+	for i, v in next, Update do
+		print(v)
+		cb = script.Parent.Parent.listexemple.exemple:Clone()
+		cb.Parent = script.Parent
+		cb.Text = v
+		cb.Name = i..". "..v
+		TotalUpdate = i
+	end
+	
+	script.Parent.CanvasSize = UDim2.new(0,0,0.165*TotalUpdate,0)
+end
+coroutine.wrap(BQSZUXJ_fake_script)()
+local function ITUPS_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
 
 	
 	script.Parent.MouseButton1Down:Connect(function()
@@ -3591,9 +1142,9 @@ local function GRXPR_fake_script() -- CatixHub202.TextButton_2.LocalScript
 		end
 	end
 end
-coroutine.wrap(GRXPR_fake_script)()
-local function PZDDYM_fake_script() -- CatixHub202.TextButton_3.LocalScript 
-	local script = Instance.new('LocalScript', CatixHub202.TextButton_3)
+coroutine.wrap(ITUPS_fake_script)()
+local function LEPS_fake_script() -- TextButton_3.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_3)
 
 	script.Parent.Parent.Parent.Parent.Settings.Visible = false
 	
@@ -3607,9 +1158,9 @@ local function PZDDYM_fake_script() -- CatixHub202.TextButton_3.LocalScript
 		end
 	end)
 end
-coroutine.wrap(PZDDYM_fake_script)()
-local function RPRBBC_fake_script() -- CatixHub202.Frame.LocalScript 
-	local script = Instance.new('LocalScript', CatixHub202.Frame)
+coroutine.wrap(LEPS_fake_script)()
+local function ABDS_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
 
 	script.Parent.Parent.Parent = game:GetService("Players").LocalPlayer.PlayerGui
 	
@@ -3620,9 +1171,9 @@ local function RPRBBC_fake_script() -- CatixHub202.Frame.LocalScript
 		wait()
 		script.Parent:TweenPosition(UDim2.new(0.5, 0,0.5, 0), "Out", "Quad", 2)
 end
-coroutine.wrap(RPRBBC_fake_script)()
-local function MTLQV_fake_script() -- CatixHub202.TextButton_4.LocalScript 
-	local script = Instance.new('LocalScript', CatixHub202.TextButton_4)
+coroutine.wrap(ABDS_fake_script)()
+local function GRBKN_fake_script() -- TextButton_4.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_4)
 
 	script.Parent.MouseButton1Down:Connect(function()
 		setclipboard("https://discord.gg/x2hM4M5xWj")
@@ -3631,9 +1182,9 @@ local function MTLQV_fake_script() -- CatixHub202.TextButton_4.LocalScript
 		script.Parent.Text = "Discord Server"
 	end)
 end
-coroutine.wrap(MTLQV_fake_script)()
-local function RPBZ_fake_script() -- CatixHub202.TextButton_5.LocalScript 
-	local script = Instance.new('LocalScript', CatixHub202.TextButton_5)
+coroutine.wrap(GRBKN_fake_script)()
+local function ZDQFA_fake_script() -- TextButton_5.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_5)
 
 	script.Parent.MouseButton1Down:Connect(function()
 		setclipboard("https://www.roblox.com/games/5973366909/")
@@ -3642,9 +1193,9 @@ local function RPBZ_fake_script() -- CatixHub202.TextButton_5.LocalScript
 		script.Parent.Text = "Our Game"
 	end)
 end
-coroutine.wrap(RPBZ_fake_script)()
-local function CIISH_fake_script() -- CatixHub202.DarkMode.LocalScript 
-	local script = Instance.new('LocalScript', CatixHub202.DarkMode)
+coroutine.wrap(ZDQFA_fake_script)()
+local function YHVHY_fake_script() -- DarkMode.LocalScript 
+	local script = Instance.new('LocalScript', DarkMode)
 
 	local DarkMode = false
 	local CatixHub = script.Parent.Parent.Parent.Parent.Parent
@@ -3669,11 +1220,11 @@ local function CIISH_fake_script() -- CatixHub202.DarkMode.LocalScript
 		
 		CatixHub.Frame.Main.AutoDetect.TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 		CatixHub.Frame.Main.Tittle.TextColor3 = Color3.fromRGB(255, 255, 255)
-		CatixHub.Frame.Main.games.TextColor3 = Color3.fromRGB(255, 255, 255)
 		
 		CatixHub.Frame.Settings.ImageColor3 = Color3.fromRGB(38, 38, 38)
 		CatixHub.Frame.Settings.Main.ImageColor3 = Color3.fromRGB(48, 50, 59)
 		CatixHub.Frame.Settings.Main.Tittle.TextColor3 = Color3.fromRGB(255, 255, 255)
+		CatixHub.Frame.Settings.Main.Theme.TextColor3 = Color3.fromRGB(255, 255, 255)
 		CatixHub.Frame.Settings.Main["Dark Mode"].TextColor3 = Color3.fromRGB(255, 255, 255)
 		
 		CatixHub.Frame["DISCORD SERVER"].ImageColor3 = Color3.fromRGB(38, 38, 38)
@@ -3683,14 +1234,28 @@ local function CIISH_fake_script() -- CatixHub202.DarkMode.LocalScript
 		CatixHub.Frame["OUR GAME"].ImageColor3 = Color3.fromRGB(38, 38, 38)
 		CatixHub.Frame["OUR GAME"].Main.ImageColor3 = Color3.fromRGB(48, 50, 59)
 		CatixHub.Frame["OUR GAME"].Main.TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+	
+		CatixHub.Frame.Main.GameList["0GameList"].TextColor3 = Color3.fromRGB(255, 255, 255)
+		CatixHub.Frame.Main.GameList["Total Games"].TextColor3 = Color3.fromRGB(255, 255, 255)
+		CatixHub.Frame.Main.GameList.List.ScrollBarImageColor3 =  Color3.fromRGB(255, 255, 255)
+	
 		for i,v in pairs(CatixHub.Frame.Main.GameList.List:GetChildren()) do
-			if v.Name == "UIListLayout" then
+			if v.Name == "UIListLayout" or v.Name == "LocalScript" then
 			else
 				v.TextColor3 = Color3.fromRGB(255, 255, 255)
 			end
 		end
 		for i,v in pairs(CatixHub.Frame.Main["Update&Credit"]:GetChildren()) do
-			if v.Name == "UIListLayout" then
+			if v.Name == "List" or v.Name == "listexemple" then
+				if v.Name == "List" then
+					v.ScrollBarImageColor3 = Color3.fromRGB(255, 255, 255)
+				end
+			else
+				v.TextColor3 = Color3.fromRGB(255, 255, 255)
+			end
+		end
+		for i,v in pairs(CatixHub.Frame.Main["Update&Credit"].List:GetChildren()) do
+			if v.Name == "UIListLayout" or v.Name == "LocalScript" then
 			else
 				v.TextColor3 = Color3.fromRGB(255, 255, 255)
 			end
@@ -3712,11 +1277,11 @@ local function CIISH_fake_script() -- CatixHub202.DarkMode.LocalScript
 	
 		CatixHub.Frame.Main.AutoDetect.TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
 		CatixHub.Frame.Main.Tittle.TextColor3 = Color3.fromRGB(255, 238, 1)
-		CatixHub.Frame.Main.games.TextColor3 = Color3.fromRGB(85, 170, 0)
 	
 		CatixHub.Frame.Settings.ImageColor3 = Color3.fromRGB(38, 173, 29)
 		CatixHub.Frame.Settings.Main.ImageColor3 = Color3.fromRGB(5, 59, 38)
 		CatixHub.Frame.Settings.Main.Tittle.TextColor3 = Color3.fromRGB(255, 238, 1)
+		CatixHub.Frame.Settings.Main.Theme.TextColor3 = Color3.fromRGB(255, 238, 1)
 		CatixHub.Frame.Settings.Main["Dark Mode"].TextColor3 = Color3.fromRGB(255, 184, 17)
 	
 		CatixHub.Frame["DISCORD SERVER"].ImageColor3 = Color3.fromRGB(38, 173, 29)
@@ -3727,18 +1292,18 @@ local function CIISH_fake_script() -- CatixHub202.DarkMode.LocalScript
 		CatixHub.Frame["OUR GAME"].Main.ImageColor3 = Color3.fromRGB(5, 59, 38)
 		CatixHub.Frame["OUR GAME"].Main.TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
 		for i,v in pairs(CatixHub.Frame.Main.GameList.List:GetChildren()) do
-			if v.Name == "UIListLayout" then
+			if v.Name == "UIListLayout" or v.Name == "LocalScript" then
 			else
 				v.TextColor3 = Color3.fromRGB(255, 184, 17)
 			end
 		end
-		CatixHub.Frame.Main.GameList.List["0GameList"].TextColor3 = Color3.fromRGB(6, 118, 223)
+		CatixHub.Frame.Main.GameList["0GameList"].TextColor3 = Color3.fromRGB(6, 118, 223)
+		CatixHub.Frame.Main.GameList["Total Games"].TextColor3 = Color3.fromRGB(6, 118, 223)	
+		CatixHub.Frame.Main.GameList.List.ScrollBarImageColor3 =  Color3.fromRGB(6, 118, 223)
 		
 		CatixHub.Frame.Main["Update&Credit"]["."].TextColor3 = Color3.fromRGB(52, 255, 222)
-		CatixHub.Frame.Main["Update&Credit"]["1"].TextColor3 = Color3.fromRGB(255, 255, 255)
 		CatixHub.Frame.Main["Update&Credit"].LastUpdate.TextColor3 = Color3.fromRGB(19, 255, 66)
-		CatixHub.Frame.Main["Update&Credit"].LastUpdateII.TextColor3 = Color3.fromRGB(154, 154, 154)
-		CatixHub.Frame.Main["Update&Credit"].UpdateGame.TextColor3 = Color3.fromRGB(255, 255, 255)
+		CatixHub.Frame.Main["Update&Credit"].List.ScrollBarImageColor3 =  Color3.fromRGB(19, 255, 66)
 	
 		script.Parent.Text = "Desactived !"
 		wait(1.5)
@@ -3767,9 +1332,9 @@ local function CIISH_fake_script() -- CatixHub202.DarkMode.LocalScript
 	
 	--]]
 end
-coroutine.wrap(CIISH_fake_script)()
-local function ZGXO_fake_script() -- CatixHub202.RainbowMode.LocalScript 
-	local script = Instance.new('LocalScript', CatixHub202.RainbowMode)
+coroutine.wrap(YHVHY_fake_script)()
+local function GJJQW_fake_script() -- RainbowMode.LocalScript 
+	local script = Instance.new('LocalScript', RainbowMode)
 
 	local RainbowMode = false
 	local CatixHub = script.Parent.Parent.Parent.Parent.Parent
@@ -3795,22 +1360,34 @@ local function ZGXO_fake_script() -- CatixHub202.RainbowMode.LocalScript
 	
 				CatixHub.Frame.Main.AutoDetect.TextButton.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
 				CatixHub.Frame.Main.Tittle.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
-				CatixHub.Frame.Main.games.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
 	
 				CatixHub.Frame.Settings.Main.Tittle.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+				CatixHub.Frame.Settings.Main.Theme.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
 				CatixHub.Frame.Settings.Main["Dark Mode"].TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
 	
 				CatixHub.Frame["DISCORD SERVER"].Main.TextButton.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
 	
 				CatixHub.Frame["OUR GAME"].Main.TextButton.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+				CatixHub.Frame.Main.GameList["0GameList"].TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+				CatixHub.Frame.Main.GameList.List.ScrollBarImageColor3 =  Color3.fromHSV(zigzag(counter),1,1)
+				CatixHub.Frame.Main.GameList["Total Games"].TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
 				for i,v in pairs(CatixHub.Frame.Main.GameList.List:GetChildren()) do
-					if v.Name == "UIListLayout" then
+					if v.Name == "UIListLayout" or v.Name == "LocalScript" then
 					else
 						v.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
 					end
 				end
 				for i,v in pairs(CatixHub.Frame.Main["Update&Credit"]:GetChildren()) do
-					if v.Name == "UIListLayout" then
+					if v.Name == "List" or v.Name == "listexemple" then
+						if v.Name == "List" then
+							v.ScrollBarImageColor3 =  Color3.fromHSV(zigzag(counter),1,1)
+						end
+					else
+						v.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+					end
+				end
+				for i,v in pairs(CatixHub.Frame.Main["Update&Credit"].List:GetChildren()) do
+					if v.Name == "UIListLayout" or v.Name == "LocalScript" then
 					else
 						v.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
 					end
@@ -3835,11 +1412,11 @@ local function ZGXO_fake_script() -- CatixHub202.RainbowMode.LocalScript
 	
 		CatixHub.Frame.Main.AutoDetect.TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
 		CatixHub.Frame.Main.Tittle.TextColor3 = Color3.fromRGB(255, 238, 1)
-		CatixHub.Frame.Main.games.TextColor3 = Color3.fromRGB(85, 170, 0)
 	
 		CatixHub.Frame.Settings.ImageColor3 = Color3.fromRGB(38, 173, 29)
 		CatixHub.Frame.Settings.Main.ImageColor3 = Color3.fromRGB(5, 59, 38)
 		CatixHub.Frame.Settings.Main.Tittle.TextColor3 = Color3.fromRGB(255, 238, 1)
+		CatixHub.Frame.Settings.Main.Theme.TextColor3 = Color3.fromRGB(255, 238, 1)
 		CatixHub.Frame.Settings.Main["Dark Mode"].TextColor3 = Color3.fromRGB(255, 184, 17)
 	
 		CatixHub.Frame["DISCORD SERVER"].ImageColor3 = Color3.fromRGB(38, 173, 29)
@@ -3850,18 +1427,24 @@ local function ZGXO_fake_script() -- CatixHub202.RainbowMode.LocalScript
 		CatixHub.Frame["OUR GAME"].Main.ImageColor3 = Color3.fromRGB(5, 59, 38)
 		CatixHub.Frame["OUR GAME"].Main.TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
 		for i,v in pairs(CatixHub.Frame.Main.GameList.List:GetChildren()) do
-			if v.Name == "UIListLayout" then
+			if v.Name == "UIListLayout" or v.Name == "LocalScript" then
 			else
 				v.TextColor3 = Color3.fromRGB(255, 184, 17)
 			end
 		end
-		CatixHub.Frame.Main.GameList.List["0GameList"].TextColor3 = Color3.fromRGB(6, 118, 223)
-	
+		for i,v in pairs(CatixHub.Frame.Main["Update&Credit"].List:GetChildren()) do
+			if v.Name == "UIListLayout" or v.Name == "LocalScript" then
+			else
+				v.TextColor3 = Color3.fromRGB(255, 255, 255)
+			end
+		end
+		CatixHub.Frame.Main.GameList["0GameList"].TextColor3 = Color3.fromRGB(6, 118, 223)
+		CatixHub.Frame.Main.GameList["Total Games"].TextColor3 = Color3.fromRGB(6, 118, 223)
+		CatixHub.Frame.Main.GameList.List.ScrollBarImageColor3 =  Color3.fromRGB(6, 118, 223)
+		
 		CatixHub.Frame.Main["Update&Credit"]["."].TextColor3 = Color3.fromRGB(52, 255, 222)
-		CatixHub.Frame.Main["Update&Credit"]["1"].TextColor3 = Color3.fromRGB(255, 255, 255)
 		CatixHub.Frame.Main["Update&Credit"].LastUpdate.TextColor3 = Color3.fromRGB(19, 255, 66)
-		CatixHub.Frame.Main["Update&Credit"].LastUpdateII.TextColor3 = Color3.fromRGB(154, 154, 154)
-		CatixHub.Frame.Main["Update&Credit"].UpdateGame.TextColor3 = Color3.fromRGB(255, 255, 255)
+		CatixHub.Frame.Main["Update&Credit"].List.ScrollBarImageColor3 =  Color3.fromRGB(19, 255, 66)
 	
 		script.Parent.Text = "Desactived !"
 		wait(1.5)
@@ -3878,4 +1461,4 @@ local function ZGXO_fake_script() -- CatixHub202.RainbowMode.LocalScript
 			counter = counter + 0.1
 		end
 end
-coroutine.wrap(ZGXO_fake_script)()
+coroutine.wrap(GJJQW_fake_script)()
