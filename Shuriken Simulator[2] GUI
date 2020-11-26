@@ -7,9 +7,7 @@ local w3 = library:CreateWindow("Shuriken-Simulator GUI")
 --================== Model =======================--
 local w = w3:CreateFolder("Things")
 
-
-
-    w:Label("do not make a mistake with shuriken otherwise restart game",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
+    w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
 
         w:Dropdown("Choose Shuriken",{
             "Wood Shuriken",
@@ -56,14 +54,17 @@ local w = w3:CreateFolder("Things")
         spawn(function()
             while wait(0.25) do
                 if shared.toggleAC then
-                    local tool1 = game.Players.LocalPlayer.Backpack:FindFirstChild(_G.SelectShuriken)  or game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectShuriken)
-                    game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool1)
-                    local args = {
-                        [1] = Vector3.new(0,0,0),
-                        [2] = game:GetService("Players").LocalPlayer.Character[_G.SelectShuriken]
-                    }
-                    game:GetService("ReplicatedStorage").Resources.RemoteEvents.FireEvent:FireServer(unpack(args))
-                    print(miaou)
+                    if game.Players.LocalPlayer.Backpack:FindFirstChild(_G.SelectShuriken) or game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectShuriken) then
+                        local tool1 = game.Players.LocalPlayer.Backpack:FindFirstChild(_G.SelectShuriken) or game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectShuriken)
+                        game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool1)
+                        local args = {
+                            [1] = Vector3.new(0,0,0),
+                            [2] = game:GetService("Players").LocalPlayer.Character[_G.SelectShuriken]
+                        }
+                        game:GetService("ReplicatedStorage").Resources.RemoteEvents.FireEvent:FireServer(unpack(args))
+                    else
+                        warn("You have chosen the wrong shuriken, please select the correct shuriken")
+                    end
                 end
             end
         end)
