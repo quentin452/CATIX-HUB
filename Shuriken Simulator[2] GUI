@@ -7,79 +7,131 @@ local w3 = library:CreateWindow("Shuriken-Simulator GUI")
 --================== Model =======================--
 local w = w3:CreateFolder("Things")
 
-w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
-		w:Toggle("Auto Sell",function(bool)
-		shared.toggle2 = bool
-end) 
-	w:Toggle("Auto Rebirths",function(bool)
-		shared.toggle3 = bool
-end) 
-	w:Toggle("Claim Quests",function(bool)
-		shared.toggle4 = bool
-end) 
+
+
+    w:Label("do not make a mistake with shuriken otherwise restart game",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
+
+        w:Dropdown("Choose Shuriken",{
+            "Wood Shuriken",
+            "Stone Shuriken",
+            "Copper Shuriken",
+            "Tin Shuriken",
+            "Silver Shuriken",
+            "Iron Shuriken",
+            "Gold Shuriken",
+            "Crimson Shuriken",
+            "Ultra Shuriken",
+            "Wind Shuriken",
+            "Electro Shuriken",
+            "Fire Shuriken",
+            "Toxic Shuriken",
+            "Corrupted Shuriken",
+            "Infernal Shuriken",
+            "Lightning Shuriken",
+            "Elemental Shuriken",
+            "Mythical Shuriken",
+            "Immortal Shuriken",
+            "Legends Shuriken",
+            "Explosive Legends Shuriken",
+            "Explosive Dragon Shuriken",
+            "Explosive Corrupt Shuriken",
+            "Explosive Hypersonic Shuriken",
+            "Explosive Eternal Shuriken",
+            "Double Lightning Shuriken",
+            "Double Elemental Shuriken",
+            "Double Mythical Shuriken",
+            "Double Immortal Shuriken",
+            "Double Legends Shuriken",
+            "Double Explosive Legends Shuriken",
+            "Supreme Shuriken",
+        },true,function(mob)
+            print(mob)
+            _G.SelectShuriken = mob
+        end)
+    
+        w:Toggle("Auto Click",function(bool)
+            shared.toggleAC = bool
+        end)
+    
+        spawn(function()
+            while wait(0.25) do
+                if shared.toggleAC then
+                    local tool1 = game.Players.LocalPlayer.Backpack:FindFirstChild(_G.SelectShuriken)  or game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectShuriken)
+                    game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool1)
+                    local args = {
+                        [1] = Vector3.new(0,0,0),
+                        [2] = game:GetService("Players").LocalPlayer.Character[_G.SelectShuriken]
+                    }
+                    game:GetService("ReplicatedStorage").Resources.RemoteEvents.FireEvent:FireServer(unpack(args))
+                    print(miaou)
+                end
+            end
+        end)
+
+    w:Toggle("Auto Sell",function(bool)
+            shared.toggle2 = bool
+    end) 
+        w:Toggle("Auto Rebirths",function(bool)
+            shared.toggle3 = bool
+    end) 
+        w:Toggle("Claim Quests",function(bool)
+            shared.toggle4 = bool
+    end) 
 	spawn(function()
 		while wait() do
-	if shared.toggle2 then
-	game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(860.391663, 61.8452072, -226.635971)
-wait(0)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(858.105347, 62.6317749, -211.858139)
-end
-	if shared.toggle3 then
-game:GetService("ReplicatedStorage").Resources.RemoteFunctions.Rebirth:InvokeServer()
-end
-	if shared.toggle4 then
-
-game:GetService("ReplicatedStorage").Resources.RemoteEvents.ClaimReward:FireServer("Balls")
-game:GetService("ReplicatedStorage").Resources.RemoteEvents.ClaimReward:FireServer("BuyEggs")
-game:GetService("ReplicatedStorage").Resources.RemoteEvents.ClaimReward:FireServer("CollectCoins")
-end
-end
-end)
+            if shared.toggle2 then
+                game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(860.391663, 61.8452072, -226.635971)
+                wait(0)
+                game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(858.105347, 62.6317749, -211.858139)
+            end
+	        if shared.toggle3 then
+                game:GetService("ReplicatedStorage").Resources.RemoteFunctions.Rebirth:InvokeServer()
+            end
+	        if shared.toggle4 then
+                game:GetService("ReplicatedStorage").Resources.RemoteEvents.ClaimReward:FireServer("Balls")
+                game:GetService("ReplicatedStorage").Resources.RemoteEvents.ClaimReward:FireServer("BuyEggs")
+                game:GetService("ReplicatedStorage").Resources.RemoteEvents.ClaimReward:FireServer("CollectCoins")
+            end
+        end
+    end)
 
 --================== Player Settings =======================--
 
 --(alot not by me )--
 local PLR = w3:CreateFolder("Player")
 
-	
-	
 	PLR:Slider("Jump Hack",10,250,true,function(value)
 	    game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
 	end)
-	PLR:Button("Speed Hack (press G)",function(bool)
-	    
-local walkspeedplayer = game:GetService("Players").LocalPlayer
-local walkspeedmouse = walkspeedplayer:GetMouse()
+	    PLR:Button("Speed Hack (press G)",function(bool)
+            local walkspeedplayer = game:GetService("Players").LocalPlayer
+            local walkspeedmouse = walkspeedplayer:GetMouse()
+            local walkspeedenabled = false
 
-local walkspeedenabled = false
+            function x_walkspeed(key)
+                if (key == "g") then
+                    if walkspeedenabled == false then
+                        _G.WS = 200;
+                        local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+                        Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+                        Humanoid.WalkSpeed = _G.WS;
+                    end)
+                    Humanoid.WalkSpeed = _G.WS;
+                    walkspeedenabled = true
+                elseif walkspeedenabled == true then
+                    _G.WS = 20;
+                    local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+                    Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+                        Humanoid.WalkSpeed = _G.WS;
+                    end)
+                    Humanoid.WalkSpeed = _G.WS;
+                    walkspeedenabled = false
+                end
+            end
+        end
+        walkspeedmouse.KeyDown:connect(x_walkspeed)
+    end)
 
-function x_walkspeed(key)
-if (key == "g") then
-if walkspeedenabled == false then
-_G.WS = 200;
-local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
-Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
-Humanoid.WalkSpeed = _G.WS;
-end)
-Humanoid.WalkSpeed = _G.WS;
-
-walkspeedenabled = true
-elseif walkspeedenabled == true then
-_G.WS = 20;
-local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
-Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
-Humanoid.WalkSpeed = _G.WS;
-end)
-Humanoid.WalkSpeed = _G.WS;
-
-walkspeedenabled = false
-end
-end
-end
-
-walkspeedmouse.KeyDown:connect(x_walkspeed)
-
-end)
 	PLR:Button("No Clip (Press V)",function()
 		noclip = false
 		game:GetService('RunService').Stepped:connect(function()
@@ -99,135 +151,131 @@ end)
 
 
 
-	PLR:Button("Inf Jump",function()
-	game:GetService("UserInputService").JumpRequest:connect(function()
-    game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
-end)
-end)
+    PLR:Button("Inf Jump",function()
+        game:GetService("UserInputService").JumpRequest:connect(function()
+            game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
+        end)
+    end)
 
-	PLR:Button("Crl + Click = TP",function()
-local Plr = game:GetService("Players").LocalPlayer
-local Mouse = Plr:GetMouse()
+    PLR:Button("Crl + Click = TP",function()
+        local Plr = game:GetService("Players").LocalPlayer
+        local Mouse = Plr:GetMouse()
 
-Mouse.Button1Down:connect(function()
-if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
-if not Mouse.Target then return end
-Plr.Character:MoveTo(Mouse.Hit.p)
-end)
-end)
+        Mouse.Button1Down:connect(function()
+            if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
+            if not Mouse.Target then return end
+            Plr.Character:MoveTo(Mouse.Hit.p)
+        end)
+    end)
 	PLR:Button("Extreme Light",function()
-	local s = Instance.new("PointLight", game.Players.LocalPlayer.Character.Head)
-s.Brightness = 0.3
-s.Range = 100
-game.Lighting.Changed:connect(function()
-game.Lighting.TimeOfDay = "14:00:00"
-game.Lighting.FogEnd = 300
-game.Lighting.Brightness = 10
-game.Lighting.ColorCorrection.Brightness = 0.1
-game.Lighting.ColorCorrection.Saturation = 0.1
-game.Lighting.Bloom.Intensity = 0.1
-end)
-end)
+        local s = Instance.new("PointLight", game.Players.LocalPlayer.Character.Head)
+        s.Brightness = 0.3
+        s.Range = 100
+        game.Lighting.Changed:connect(function()
+            game.Lighting.TimeOfDay = "14:00:00"
+            game.Lighting.FogEnd = 300
+            game.Lighting.Brightness = 10
+            game.Lighting.ColorCorrection.Brightness = 0.1
+            game.Lighting.ColorCorrection.Saturation = 0.1
+            game.Lighting.Bloom.Intensity = 0.1
+        end)
+    end)
 
 
 	PLR:Button("Btools",function()
-game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
-for index, child in pairs(game:GetService("Workspace"):GetChildren()) do
-  if child.ClassName == "Part" then
-      child.Locked = false
-  end
-  if child.ClassName == "MeshPart" then
-      child.Locked = false
-  end
-  if child.ClassName == "UnionOperation" then
-      child.Locked = false
-  end
-  if child.ClassName == "Model" then
-      for index, chil in pairs(child:GetChildren()) do
-          if chil.ClassName == "Part" then
-              chil.Locked = false
-          end
-          if chil.ClassName == "MeshPart" then
-              chil.Locked = false
-          end
-          if chil.ClassName == "UnionOperation" then
-              chil.Locked = false
-          end
-          if chil.ClassName == "Model" then
-              for index, childe in pairs(chil:GetChildren()) do
-                  if childe.ClassName == "Part" then
-                      childe.Locked = false
-                  end
-                  if childe.ClassName == "MeshPart" then
-                      childe.Locked = false
-                  end
-                  if childe.ClassName == "UnionOperation" then
-                      childe.Locked = false
-                  end
-                  if childe.ClassName == "Model" then
-                      for index, childeo in pairs(childe:GetChildren()) do
-                          if childeo.ClassName == "Part" then
-                              childeo.Locked = false
-                          end
-                          if childeo.ClassName == "MeshPart" then
-                              childeo.Locked = false
-                          end
-                          if childeo.ClassName == "UnionOperation" then
-                              childeo.Locked = false
-                          end
-                          if childeo.ClassName == "Model" then
-                          end
-                      end
-                  end
-              end
-          end
-      end
-  end
- 
-end
-c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
-c.BinType = Enum.BinType.Hammer
-c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
-c.BinType = Enum.BinType.Clone
-c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
-c.BinType = Enum.BinType.Grab
-
-
-end)
+        game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+        for index, child in pairs(game:GetService("Workspace"):GetChildren()) do
+            if child.ClassName == "Part" then
+                child.Locked = false
+            end
+            if child.ClassName == "MeshPart" then
+                child.Locked = false
+            end
+            if child.ClassName == "UnionOperation" then
+                child.Locked = false
+            end
+            if child.ClassName == "Model" then
+                for index, chil in pairs(child:GetChildren()) do
+                    if chil.ClassName == "Part" then
+                        chil.Locked = false
+                    end
+                    if chil.ClassName == "MeshPart" then
+                        chil.Locked = false
+                    end
+                    if chil.ClassName == "UnionOperation" then
+                          chil.Locked = false
+                     end
+                    if chil.ClassName == "Model" then
+                        for index, childe in pairs(chil:GetChildren()) do
+                            if childe.ClassName == "Part" then
+                                childe.Locked = false
+                            end
+                            if childe.ClassName == "MeshPart" then
+                                childe.Locked = false
+                            end
+                            if childe.ClassName == "UnionOperation" then
+                                childe.Locked = false
+                            end
+                            if childe.ClassName == "Model" then
+                                for index, childeo in pairs(childe:GetChildren()) do
+                                    if childeo.ClassName == "Part" then
+                                        childeo.Locked = false
+                                    end
+                                    if childeo.ClassName == "MeshPart" then
+                                        childeo.Locked = false
+                                    end
+                                    if childeo.ClassName == "UnionOperation" then
+                                        childeo.Locked = false
+                                    end
+                                    if childeo.ClassName == "Model" then
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+        c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
+        c.BinType = Enum.BinType.Hammer
+        c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
+        c.BinType = Enum.BinType.Clone
+        c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
+        c.BinType = Enum.BinType.Grab
+    end)
 
 	PLR:Button("ESP UNIVERSAL",function()
-for i,v in pairs(game.Workspace:GetDescendants()) do
-if v.ClassName == "TouchTransmitter" then
--- if v.ClassName == "TouchTransmitter" and v.Parent.Name == "Handle" then
-local BillboardGui = Instance.new("BillboardGui")
-local TextLabel = Instance.new("TextLabel")
+        for i,v in pairs(game.Workspace:GetDescendants()) do
+            if v.ClassName == "TouchTransmitter" then
+                -- if v.ClassName == "TouchTransmitter" and v.Parent.Name == "Handle" then
+                local BillboardGui = Instance.new("BillboardGui")
+                local TextLabel = Instance.new("TextLabel")
+                BillboardGui.Parent = v.Parent
+                BillboardGui.AlwaysOnTop = true
+                BillboardGui.LightInfluence = 1
+                BillboardGui.Size = UDim2.new(0, 100, 0, 100)
+                BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
 
-BillboardGui.Parent = v.Parent
-BillboardGui.AlwaysOnTop = true
-BillboardGui.LightInfluence = 1
-BillboardGui.Size = UDim2.new(0, 100, 0, 100)
-BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
-
-TextLabel.Parent = BillboardGui
-TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
-TextLabel.BackgroundTransparency = 1
-TextLabel.Size = UDim2.new(1, 0, 1, 0)
-TextLabel.Text = v.Parent.Parent.Name
-TextLabel.TextColor3 = Color3.new(1, 0, 0)
-TextLabel.TextScaled = true
-end
-end
-end)
+                TextLabel.Parent = BillboardGui
+                TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+                TextLabel.BackgroundTransparency = 1
+                TextLabel.Size = UDim2.new(1, 0, 1, 0)
+                TextLabel.Text = v.Parent.Parent.Name
+                TextLabel.TextColor3 = Color3.new(1, 0, 0)
+                TextLabel.TextScaled = true
+            end
+        end
+    end)
 
 	PLR:Button("Dark Dex",function()
-loadstring(game:HttpGetAsync("https://pastebin.com/raw/fPP8bZ8Z"))()
-end)
+        loadstring(game:HttpGetAsync("https://pastebin.com/raw/fPP8bZ8Z"))()
+    end)
 
-PLR:Label("Work Whit Paid,KRNL AND SONA Exploit",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
+    PLR:Label("Work Whit Paid,KRNL AND SONA Exploit",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
 
 	PLR:Button("Remote Spy Universal GAME",function()
-loadstring(game:HttpGet("https://pastebin.com/raw/BDhSQqUU", true))()
-end)
+        loadstring(game:HttpGet("https://pastebin.com/raw/BDhSQqUU", true))()
+    end)
 
 
 --================== Misc =======================--
@@ -257,9 +305,9 @@ local CS = w3:CreateFolder("Credits")
 		setclipboard("https://discord.gg/PKWXQae")
 	end)
 
-CS:Button("Helped by: Altix#3395",function()
-		setclipboard("Altix#3395")
-end)
+    CS:Button("Helped by: Altix#3395",function()
+        setclipboard("Altix#3395")
+    end)
 
 	CS:DestroyGUI()
 
@@ -267,10 +315,10 @@ end)
 
 
 --| Anti Ban |
-setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
-setfflag("DFIntCrashUploadToBacktracePercentage", "0")
-setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
-setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
+    setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
+    setfflag("DFIntCrashUploadToBacktracePercentage", "0")
+    setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
+    setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
 
 
 --| Anti AFK | By Altix#3395
@@ -292,12 +340,12 @@ wait(10)
             FontSize = Enum.FontSize.Size24 
         }
     )
-while wait(30) do
-local VirtualUser=game:service'VirtualUser'
-game:service'Players'.LocalPlayer.Idled:connect(function()
-VirtualUser:CaptureController()
-VirtualUser:ClickButton2(Vector2.new())
-end)
+    while wait(30) do
+        local VirtualUser=game:service'VirtualUser'
+        game:service'Players'.LocalPlayer.Idled:connect(function()
+        VirtualUser:CaptureController()
+        VirtualUser:ClickButton2(Vector2.new())
+    end)
 end
 
 --| Anti Chat Logs |
