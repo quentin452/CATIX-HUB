@@ -105,7 +105,7 @@ game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:Inv
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3390.26807, -112.779236, -5424.91016)
 elseif _G.BossSelected == "Candy" then
 game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Candy Egg","Buy1")
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2275.3396, -338.143524, 2510.53223)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3352.53027, -166.389847, 1639.83105)
 elseif _G.BossSelected == "Guardian" then
 game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Guardian Egg","Buy1")
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3356.05981, -163.00705, 1661.54895, 0.961658239, -0.0237404089, -0.273221254, 0.0273818169, 0.999579728, 0.0095216576, 0.272880375, -0.0166378766, 0.961904109)
