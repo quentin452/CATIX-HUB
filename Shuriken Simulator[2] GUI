@@ -52,7 +52,7 @@ local w = w3:CreateFolder("Things")
         end)
     
         spawn(function()
-            while wait(0.25) do
+            while wait(0.5) do
                 if shared.toggleAC then
                     if game.Players.LocalPlayer.Backpack:FindFirstChild(_G.SelectShuriken) or game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectShuriken) then
                         local tool1 = game.Players.LocalPlayer.Backpack:FindFirstChild(_G.SelectShuriken) or game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectShuriken)
@@ -70,13 +70,32 @@ local w = w3:CreateFolder("Things")
         end)
 
     w:Toggle("Auto Sell",function(bool)
-            shared.toggle2 = bool
+        shared.toggle2 = bool
     end) 
-        w:Toggle("Auto Rebirths",function(bool)
-            shared.toggle3 = bool
+    w:Toggle("Auto Rebirths",function(bool)
+        shared.toggle3 = bool
     end) 
-        w:Toggle("Claim Quests",function(bool)
-            shared.toggle4 = bool
+    w:Toggle("Claim Quests",function(bool)
+        shared.toggle4 = bool
+    end) 
+    w:Button("Claim All Codes",function()
+        local Codes = {
+            "RussoPlays",
+            "JeffBlox",
+            "Tofuu",
+            "EmpireBlox",
+            "ErikCarr",
+            "Release",
+            "UPDATE1",
+            "UPDATE2",
+        }
+    
+        for i, v in next, Codes do
+            local args = {
+                [1] = v
+            }
+            game:GetService("ReplicatedStorage").Resources.RemoteFunctions.TwitterCode:InvokeServer(unpack(args))
+        end     
     end) 
 	spawn(function()
 		while wait() do
@@ -96,7 +115,143 @@ local w = w3:CreateFolder("Things")
         end
     end)
 
+local AB = w3:CreateFolder("Auto Buy")
+
+    local Shuriken = {
+        "Wood Shuriken",
+        "Stone Shuriken",
+        "Copper Shuriken",
+        "Tin Shuriken",
+        "Silver Shuriken",
+        "Iron Shuriken",
+        "Gold Shuriken",
+        "Crimson Shuriken",
+        "Ultra Shuriken",
+        "Wind Shuriken",
+        "Electro Shuriken",
+        "Fire Shuriken",
+        "Toxic Shuriken",
+        "Corrupted Shuriken",
+        "Infernal Shuriken",
+        "Lightning Shuriken",
+        "Elemental Shuriken",
+        "Mythical Shuriken",
+        "Immortal Shuriken",
+        "Legends Shuriken",
+        "Explosive Legends Shuriken",
+        "Explosive Dragon Shuriken",
+        "Explosive Corrupt Shuriken",
+        "Explosive Hypersonic Shuriken",
+        "Explosive Eternal Shuriken",
+        "Double Lightning Shuriken",
+        "Double Elemental Shuriken",
+        "Double Mythical Shuriken",
+        "Double Immortal Shuriken",
+        "Double Legends Shuriken",
+        "Double Explosive Legends Shuriken",
+    }
+    
+    AB:Toggle("Auto Buy Shuriken",function(bool)
+        shared.toggleABS = bool
+    end) 
+
+	spawn(function()
+		while wait(0.5) do
+            if shared.toggleABS then
+                for i, v in next, Shuriken do
+                    local args = {
+                        [1] = v,
+                        [2] = "Papers"
+                    }
+                    game:GetService("ReplicatedStorage").Resources.RemoteFunctions.Buy:InvokeServer(unpack(args))
+                end 
+            end
+        end
+    end)
+
+    local Backpacks = {
+        "Normal Backpack",
+        "Large Backpack",
+        "Camping Backpack",
+        "Bird Backpack",
+        "Super Backpack",
+        "Ultra Backpack",
+        "Spider Backpack",
+        "Black Widow Backpack",
+        "Octopus Backpack",
+        "Crow Backpack",
+        "Demon Backpack",
+        "Angel Backpack",
+        "Kraken Backpack",
+        "Megalodon Backpack",
+        "Mechanical backpack",
+        "Mechanical Kraken Backpack",
+        "Phoenix Backpack",
+        "Magical Backpack",
+        "Pegasus Backpack",
+        "Mothra Backpack",
+        "Dragon Backpack",
+        "Hydra Backpack",
+    }
+    
+    AB:Toggle("Auto Buy BackPacks",function(bool)
+        shared.toggleABB = bool
+    end) 
+
+	spawn(function()
+		while wait(0.5) do
+            if shared.toggleABB then
+                for i, v in next, Backpacks do
+                    local args = {
+                        [1] = v,
+                        [2] = "Backpacks"
+                    }
+                    game:GetService("ReplicatedStorage").Resources.RemoteFunctions.Buy:InvokeServer(unpack(args))
+                end 
+            end
+        end
+    end)
+
 --================== Player Settings =======================--
+
+local TP = w3:CreateFolder("Teleport")
+
+	TP:Dropdown("Select Area",{
+        "Spawn",
+		"Butterfly Island",
+		"Rabbit Island",
+		"Fox Island",
+		"Wolf Island",
+		"Camel Island",
+		"Giraffe Island",
+        "Elephant Island",
+        
+    },true,function(mob)
+		SelectArea = mob
+		TpArea()
+		print("Telepored to "..mob)
+    end)
+    
+
+    function TpArea()
+        if SelectArea == "Spawn" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1124, 61, -383)
+        elseif SelectArea == "Butterfly Island" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1045, 69, 104)
+        elseif SelectArea == "Rabbit Island" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1008, 69, 874)
+        elseif SelectArea == "Fox Island" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1024, 72, 1519)
+        elseif SelectArea == "Wolf Island" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1344, 78, 2032)
+        elseif SelectArea == "Camel Island" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1949, 82, 2403)
+        elseif SelectArea == "Giraffe Island" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2552, 83, 2669)
+        elseif SelectArea == "Elephant Island" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3168, 83, 2887)
+        end
+    end
 
 --(alot not by me )--
 local PLR = w3:CreateFolder("Player")
