@@ -14,6 +14,9 @@ w:Toggle("Auto Tp To Tokens",function(bool)
 		shared.toggle1 = bool
 end) 
 
+w:Toggle("Auto Collect SnowFlakes",function(bool)
+		shared.toggle2 = bool
+end) 
 	spawn(function()
 		while wait() do
 		       if shared.toggle1 then
@@ -33,6 +36,19 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(117.2496
 wait(0)
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(15.834034, 35.4709816, 420.835602)
 wait(0)
+end
+     if shared.toggle2 then
+local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'SnowFlake' then
+     v.CFrame = root.CFrame
+       wait()
+   
+  
+        end
+    end
+
 end
 end
 end)
