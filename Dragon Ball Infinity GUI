@@ -11,7 +11,67 @@ w:Label("IF YOU DIE RESTART GAME",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,
 w:Button("ARREST KI",function()
 game:GetService("ReplicatedStorage").Remotes.Training.ChargeFinish:FireServer()
 end)
+w:Button("FARM ALL",function()
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.Stats,
+    [2] = game:GetService("Players").LocalPlayer.Status,
+    [3] = game:GetService("Players").LocalPlayer.Character.Humanoid,
+    [4] = game:GetService("Players").LocalPlayer.Character.RightHand
+}
 
+game:GetService("ReplicatedStorage").Remotes.Training.Defense:InvokeServer(unpack(args))
+
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.Stats,
+    [2] = {
+        ["LeftLowerArm"] = game:GetService("Players").LocalPlayer.Character.LeftLowerArm,
+        ["RightUpperArm"] = game:GetService("Players").LocalPlayer.Character.RightUpperArm,
+        ["LeftFoot"] = game:GetService("Players").LocalPlayer.Character.LeftFoot,
+        ["RightHand"] = game:GetService("Players").LocalPlayer.Character.RightHand,
+        ["RightLowerArm"] = game:GetService("Players").LocalPlayer.Character.RightLowerArm,
+        ["LeftUpperLeg"] = game:GetService("Players").LocalPlayer.Character.LeftUpperLeg,
+        ["LeftUpperArm"] = game:GetService("Players").LocalPlayer.Character.LeftUpperArm,
+        ["Character"] = game:GetService("Players").LocalPlayer.Character,
+        ["LeftHand"] = game:GetService("Players").LocalPlayer.Character.LeftHand,
+        ["RightFoot"] = game:GetService("Players").LocalPlayer.Character.RightFoot,
+        ["Humanoid"] = game:GetService("Players").LocalPlayer.Character.Humanoid,
+        ["RightLowerLeg"] = game:GetService("Players").LocalPlayer.Character.RightLowerLeg,
+        ["RightUpperLeg"] = game:GetService("Players").LocalPlayer.Character.RightUpperLeg,
+        ["LeftLowerLeg"] = game:GetService("Players").LocalPlayer.Character.LeftLowerLeg
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.Training.Combat:InvokeServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.Stats
+}
+
+game:GetService("ReplicatedStorage").Remotes.Training.Agility:FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.Status,
+    [2] = game:GetService("Players").LocalPlayer.Stats,
+    [3] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
+    [4] = game:GetService("Players").LocalPlayer.Character.LeftHand,
+    [5] = game:GetService("Players").LocalPlayer.Character
+}
+
+game:GetService("ReplicatedStorage").Remotes.Training.Blast:InvokeServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.Stats,
+    [2] = game:GetService("Players").LocalPlayer.Status,
+    [3] = game:GetService("Players").LocalPlayer.Character.Humanoid,
+    [4] = game:GetService("Players").LocalPlayer.Character.RightHand
+}
+
+game:GetService("ReplicatedStorage").Remotes.Training.Defense:InvokeServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.Status,
+    [2] = game:GetService("Players").LocalPlayer.Character.UpperTorso,
+    [3] = game:GetService("Players").LocalPlayer.Character.Humanoid
+}
+
+game:GetService("ReplicatedStorage").Remotes.Training.Charge:InvokeServer(unpack(args))
+end)
 	w:Toggle("Auto Combat,Agility",function(bool)
 		shared.toggle1 = bool
 	end)
