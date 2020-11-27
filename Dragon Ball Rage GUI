@@ -7,7 +7,7 @@ local w3 = library:CreateWindow("Dragon Ball Rage")
 local w = w3:CreateFolder("Things")
 
 w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
-w:Button("Auto Ki(use auto click)",function()
+w:Button("Arrest KI",function()
 game:GetService("ReplicatedStorage").Remotes.Training.ChargeFinish:FireServer()
 end)
 	w:Toggle("Auto Ki",function(bool)
