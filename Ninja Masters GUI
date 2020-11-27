@@ -137,7 +137,7 @@ end
 end)
 
 local w2 = w2:CreateFolder("Eggs")
-	w2:Dropdown("Choose Eggs",{"Common","Uncommon","Rare","Epic","Superb","Rebirth","Legend"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w2:Dropdown("Choose Eggs",{"Common","Uncommon","Rare","Epic","Superb","Rebirth","Legend","Dangerous"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.BossSelected = mob
 	end)
 
@@ -162,13 +162,15 @@ game:GetService("ReplicatedStorage").clientEvents.requestOpenEgg:FireServer(work
 game:GetService("ReplicatedStorage").clientEvents.requestOpenEgg:FireServer(workspace.Eggs.Rebirth)
 	elseif _G.BossSelected == "Legend" then
 game:GetService("ReplicatedStorage").clientEvents.requestOpenEgg:FireServer(workspace.Eggs.Legend)
+	elseif _G.BossSelected == "Dangerous" then
+game:GetService("ReplicatedStorage").clientEvents.requestOpenEgg:FireServer(workspace.Eggs.Dangerous)
 			end
 		end
 	end
 end)
 
 local w4 = w4:CreateFolder("ZONE")
-	w4:Dropdown("Choose ZONE",{"Start Area","Autumn","Frostland","Inferno","Voidland","Skyland","Ice","Ruby","ALL WORLD"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w4:Dropdown("Choose ZONE",{"Start Area","Autumn","Frostland","Inferno","Voidland","Skyland","Ice","Ruby","Lavender","ALL WORLD"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.MobsSelected = mob
 	end)
 
@@ -990,7 +992,7 @@ end
 end
 until _G.StopFarming == true
 end
-			elseif _G.MobsSelected == "ALL WORLD" then
+			elseif _G.MobsSelected == "Lavender" then
 if yu == true then
 yu = false
 f6.BackgroundColor3 = Color3.new(0.203922, 0.286275, 0.368627)
@@ -998,14 +1000,15 @@ _G.StopFarming = true
 else
 yu = true
 local Options = {
-["Start Area Back"] = true, -- Starting Area (true if you wanna farm it)
-["Autumn"] = true, -- Autumn Area (true if you wanna farm it)
-["Frostland"] = true, -- Frostland Area (true if you wanna farm it)
-["Inferno"] = true, -- Inferno Zone (true if you wanna farm it)
-["Voidland"] = true,
-["Skyland"] = true,
-["Iceland"] = true,
-["Rubyland"] = true,
+["Start Area Back"] = false, -- Starting Area (true if you wanna farm it)
+["Autumn"] = false, -- Autumn Area (true if you wanna farm it)
+["Frostland"] = false, -- Frostland Area (true if you wanna farm it)
+["Inferno"] = false, -- Inferno Zone (true if you wanna farm it)
+["Voidland"] = false,
+["Skyland"] = false,
+["Iceland"] = false,
+["Rubyland"] = false,
+["Lavenderland"] = true,
 }
 
 local Weapon;
@@ -1052,7 +1055,111 @@ local NotDoneYet = false
 repeat
 wait()
 for i,v in pairs(game.Workspace.NPCs.Spawns:GetChildren()) do
-if v.Name == "Start Area Back" and Options["Start Area Back"] == true or v.Name == "Autumn" and Options["Autumn"] == true or v.Name == "Frostland" and Options["Frostland"] == true or v.Name == "Inferno" and Options["Inferno"] == true or v.Name == "Voidland" and Options["Voidland"] == true or v.Name == "Skyland" and Options["Skyland"] == true or v.Name == "Iceland" and Options["Iceland"] or v.Name == "Rubyland" and Options["Rubyland"] == true then
+if v.Name == "Start Area Back" and Options["Start Area Back"] == true or v.Name == "Autumn" and Options["Autumn"] == true or v.Name == "Frostland" and Options["Frostland"] == true or v.Name == "Inferno" and Options["Inferno"] == true or v.Name == "Voidland" and Options["Voidland"] == true or v.Name == "Skyland" and Options["Skyland"] == true or v.Name == "Iceland" and Options["Iceland"] == true or v.Name == "Rubyland" and Options["Rubyland"] == true or v.Name == "Lavenderland" and Options["Lavenderland"] == true then
+local a = v:GetChildren()
+for i=1,#a do
+if a[i].Name:match("Ninja") then
+if a[i]:FindFirstChild("Humanoid") and a[i].Humanoid.Health > 0 and a[i]:FindFirstChild("HumanoidRootPart") then
+local ItsNil = false
+if _G.StopFarming == false then
+wait(0.6)
+end
+repeat
+wait()
+if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and a[i]:FindFirstChild("HumanoidRootPart") then
+if CheckWeapon() then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = a[i].HumanoidRootPart.CFrame + a[i].HumanoidRootPart.CFrame.lookVector * -3
+wait()
+Weapon:Activate()
+wait()
+Weapon:Deactivate()
+else
+GetWeapon()
+end
+else
+ItsNil = true
+end
+until ItsNil == true or a[i].Humanoid.Health <= 0 or _G.StopFarming == true
+if _G.StopFarming == false then
+wait(0.5)
+else
+wait()
+end
+if _G.StopFarming == true and NotDoneYet == false then
+NotDoneYet = true
+wait(0.5)
+end
+end
+end
+end
+end
+end
+until _G.StopFarming == true
+end
+			elseif _G.MobsSelected == "ALL WORLD" then
+if yu == true then
+yu = false
+f6.BackgroundColor3 = Color3.new(0.203922, 0.286275, 0.368627)
+_G.StopFarming = true
+else
+yu = true
+local Options = {
+["Start Area Back"] = true, -- Starting Area (true if you wanna farm it)
+["Autumn"] = true, -- Autumn Area (true if you wanna farm it)
+["Frostland"] = true, -- Frostland Area (true if you wanna farm it)
+["Inferno"] = true, -- Inferno Zone (true if you wanna farm it)
+["Voidland"] = true,
+["Skyland"] = true,
+["Iceland"] = true,
+["Rubyland"] = true,
+["Lavenderland"] = true,
+}
+
+local Weapon;
+_G.StopFarming = false
+function GetWeapon()
+local Found = false
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if v:IsA("Tool") then
+if v:FindFirstChild("Katana") then
+Weapon = v
+Found = true
+end
+end
+end
+if Found == false then
+for a,b in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+if b:IsA("Tool") then
+if b:FindFirstChild("Katana") then
+b.Parent = game.Players.LocalPlayer.Character
+Weapon = b
+Found = true
+end
+end
+end
+end
+end
+
+GetWeapon()
+
+function CheckWeapon()
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if v:IsA("Tool") then
+if v:FindFirstChild("Katana") then
+Weapon = v
+return true
+else
+return false
+end
+end
+end
+end
+
+local NotDoneYet = false
+repeat
+wait()
+for i,v in pairs(game.Workspace.NPCs.Spawns:GetChildren()) do
+if v.Name == "Start Area Back" and Options["Start Area Back"] == true or v.Name == "Autumn" and Options["Autumn"] == true or v.Name == "Frostland" and Options["Frostland"] == true or v.Name == "Inferno" and Options["Inferno"] == true or v.Name == "Voidland" and Options["Voidland"] == true or v.Name == "Skyland" and Options["Skyland"] == true or v.Name == "Iceland" and Options["Iceland"] or v.Name == "Rubyland" and Options["Rubyland"] == true or v.Name == "Lavenderland" and Options["Lavenderland"] == true then
 local a = v:GetChildren()
 for i=1,#a do
 if a[i].Name:match("Ninja") then
