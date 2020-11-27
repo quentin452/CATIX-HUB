@@ -7,16 +7,13 @@ local w3 = library:CreateWindow("Dragon Ball Rage")
 local w = w3:CreateFolder("Things")
 
 w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
-
+w:Button("Auto Ki(use auto click)",function()
+game:GetService("ReplicatedStorage").Remotes.Training.ChargeFinish:FireServer()
+end)
 	w:Toggle("Auto Ki",function(bool)
 		shared.toggle1 = bool
 	end)
-	
-		w:Toggle("Arrest Ki",function(bool)
-		shared.toggle2 = bool
-end) 
-
-		w:Toggle("Defences,energy",function(bool)
+			w:Toggle("Defences,energy",function(bool)
 		shared.toggle3 = bool
 end) 
 w:Toggle("Attack,agility",function(bool)
@@ -30,10 +27,6 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes.Training.Charge:InvokeServer(unpack(args))
-
-end
-	if shared.toggle2 then
-game:GetService("ReplicatedStorage").Remotes.Training.ChargeFinish:FireServer()
 end
 	if shared.toggle3 then
 local args = {
