@@ -11351,7 +11351,8 @@ local args = {
     [4] = "41265",
 }
 
-game:GetService("ReplicatedStorage")["RF_AddPet"]:InvokeServer(unpack(args))    
+game:GetService("ReplicatedStorage")["RF_AddPet"]:InvokeServer(unpack(args)) 
+game:GetService("ReplicatedStorage").RF_AddPet:InvokeServer("P108Mega",0,1,"82703")   
       
 end)
 AutoTab:CreateButton("ATTENTION PING", function() --the (arg) is if the checkbox is toggled or not
