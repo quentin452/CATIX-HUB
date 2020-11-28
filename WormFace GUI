@@ -31,14 +31,11 @@ end
 	if shared.toggle4 then
 local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
 
-for i, v in next, Workspace:GetDescendants() do
+for i, v in next, Workspace.Items:GetDescendants() do
    if v.Name == 'Part' then
      v.CFrame = root.CFrame
-       wait()
-   
-  
-        end
-    end
+end 
+end 
 end
 end
 end)
