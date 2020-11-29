@@ -11,8 +11,9 @@ local b = w:CreateFolder("Auto Farm")
 	b:Toggle("Auto Collect Coins",function(bool)
 		shared.toggleACC = bool
 	end)
-b:Toggle("lvl Up All heroes",function(bool)
-		shared.toggleACCC = bool
+
+	b:Toggle("Auto Daily Coins",function(bool)
+		shared.toggleACDC = bool
 	end)
 
 	spawn(function()
@@ -42,47 +43,10 @@ b:Toggle("lvl Up All heroes",function(bool)
 		end
 	end)
 
-       spawn(function()
-		while wait() do
-			if shared.toggleACCC then
-			
-					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Twigs",1)
-				wait(0.1)
-					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Lil Mimic",1)
-				wait(0.1)
-					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Heron",1)
-				wait(0.1)
-					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Vix",1)
-				wait(0.1)
-					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Ra",1)
-				wait(0.1)
-					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Avin",1)
-				wait(0.1)
-					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Moby",1)
-				wait(0.1)
-					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Ryujin",1)
-			wait(0.1)
-					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Sheriff Jackson",1)
-				wait(0.1)
-					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Merlin",1)
-				wait(0.1)
-					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Merlin",1)
-				wait(0.1)
-					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Gaston",1)
-		wait(0.1)
-					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Mously",1)
-				wait(0.1)
-					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Diesel Mouse",1)
-			wait(0.1)
-					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Crank",1)
-				wait(0.1)
-					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","FireFighter",1)
-				wait(0.1)
-					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Kin",1)
-				wait(0.1)
-					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Permafrost",1)
-				wait(0.1)
-					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Alexa",1)
+	spawn(function()
+		while wait(5) do
+			if shared.toggleACDC then
+				game:GetService("ReplicatedStorage").RepeatableRewards_Claim:InvokeServer("DailyCoins")
 			end
 		end
 	end)
@@ -117,6 +81,14 @@ local Hrs = w:CreateFolder("Heroes")
 
 	Hrs:Toggle("Auto LvlUp ",function(bool)
 		shared.toggleALU = bool
+	end)
+
+	Hrs:Toggle("lvl Up All heroes",function(bool)
+		shared.toggleAUAH = bool
+	end)
+
+	Hrs:Toggle("Upgrade All Skills",function(bool)
+		shared.toggleUAS = bool
 	end)
 
 	spawn(function()
@@ -164,6 +136,78 @@ local Hrs = w:CreateFolder("Heroes")
 			end
 		end
 	end)
+
+    spawn(function()
+		while wait(0.5) do
+			if shared.toggleUAS then
+				for v = 1,10 do
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplySkill","Twigs",v)
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplySkill","Lil Mimic",v)
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplySkill","Heron",v)
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplySkill","Vix",v)
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplySkill","Ra",v)
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplySkill","Avin",v)
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplySkill","Moby",v)
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplySkill","Ryujin",v)
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplySkill","Sheriff Jackson",v)
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplySkill","Merlin",v)
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplySkill","Merlin",v)
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplySkill","Gaston",v)
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplySkill","Mously",v)
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplySkill","Diesel Mouse",v)
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplySkill","Crank",v)
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplySkill","FireFighter",v)
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplySkill","Kin",v)
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplySkill","Permafrost",v)
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplySkill","Alexa",v)
+				end
+			end
+		end
+	end)
+
+    spawn(function()
+		while wait(0.5) do
+			if shared.toggleAUAH then
+				game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Alexa",1)
+				wait()
+				game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Permafrost",1)
+				wait()
+				game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Kin",1)
+				wait()
+				game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","FireFighter",1)
+				wait()
+				game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Crank",1)
+				wait()
+				game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Diesel Mouse",1)
+				wait()
+				game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Mously",1)
+				wait()
+				game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Gaston",1)
+				wait()
+				game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Merlin",1)
+				wait()
+				game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Sheriff Jackson",1)
+				wait()
+				game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Ryujin",1)
+				wait()
+				game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Moby",1)
+				wait()
+				game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Avin",1)
+				wait()
+				game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Ra",1)
+				wait()
+				game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Vix",1)
+				wait()
+				game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Heron",1)
+				wait()
+				game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Lil Mimic",1)
+				wait()
+				game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Twigs",1)
+				wait()
+			end
+		end
+	end)
+
 
 local PLR = w:CreateFolder("Player")
 
