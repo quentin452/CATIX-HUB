@@ -1,202 +1,130 @@
 -- Anti AFK
 
-	local Virtual = game:service'VirtualUser'
-	game:service'Players'.LocalPlayer.Idled:connect(function()
-		Virtual:CaptureController()
-		Virtual:ClickButton2(Vector2.new())
-		wait(2)
-	end)
-	
+local Virtual = game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+    Virtual:CaptureController()
+    Virtual:ClickButton2(Vector2.new())
+    wait(2)
+end)
+
 local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))() -- It's obfuscated, I won't let you see my ugly coding skills. =)
 
 local w = library:CreateWindow("Saitama Simulator")
 
 local AF = w:CreateFolder("Auto Farm")
 
-	AF:Toggle("Auto Combat",function(bool)
-	    shared.toggleAC = bool
-	end)
+    AF:Toggle("Auto Punch",function(bool)
+        shared.toggleAPunch = bool
+    end)
 
-	AF:Toggle("Auto Pushups",function(bool)
-	    shared.toggleAP = bool
-	end)
+    AF:Toggle("Auto Pushups",function(bool)
+        shared.toggleAP = bool
+    end)
 
-	AF:Toggle("Auto Squats",function(bool)
-	    shared.toggleAS = bool
-	end)
+    AF:Toggle("Auto Squats",function(bool)
+        shared.toggleAS = bool
+    end)
 
-	AF:Toggle("Auto Meditate",function(bool)
-	    shared.toggleAM = bool
-	end)
-
-	AF:Toggle("Auto Huge Weight",function(bool)
-	    shared.toggleAHW = bool
-	end)
-
-	AF:Toggle("Auto Rebirth",function(bool)
-	    shared.toggleAR = bool
-	end)
-
-local TP = w:CreateFolder("Teleport")
-
-	TP:Dropdown("Select Area",{
-		"Safe Zone",
-		"Dummy (1-10M)",
-		"Dummy (500M-1B)",
-		"Dummy (100B-1T)",
-		"Dummy (10T-100T)",
-		"Heroes Assoc..",
-		"Crablante"},true,function(mob)
-
-		SelectArea = mob
-		TpArea()
-		print("Telepored to "..mob)
-	end)
+    AF:Toggle("Auto Rebirth",function(bool)
+        shared.toggleAR = bool
+    end)
 
 local PLR = w:CreateFolder("Player")
 
-	PLR:Box("Speed Hack","number",function(value)
-	    print(value)
-	    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
-	end)
+    PLR:Box("Speed Hack","number",function(value)
+        print(value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+    end)
 
-	PLR:Box("Jump Hack","number",function(value)
-	    print(value)
-	    game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
-	end)
+    PLR:Box("Jump Hack","number",function(value)
+        print(value)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
+    end)
 
-	PLR:Button("No Clip (Press N)",function()
-		noclip = false
-		game:GetService('RunService').Stepped:connect(function()
-			if noclip then
-				game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-			end
-		end)
-		local plr = game.Players.LocalPlayer
-		local mouse = plr:GetMouse()
-		mouse.KeyDown:connect(function(key)
-			if key == "n" then
-				noclip = not noclip
-				game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-			end
-		end)
-	end)
+    PLR:Button("No Clip (Press N)",function()
+        noclip = false
+        game:GetService('RunService').Stepped:connect(function()
+            if noclip then
+                game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+            end
+        end)
+        local plr = game.Players.LocalPlayer
+        local mouse = plr:GetMouse()
+        mouse.KeyDown:connect(function(key)
+            if key == "n" then
+                noclip = not noclip
+                game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+            end
+        end)
+    end)
 
-	PLR:Button("Fly (Press E)",function()
-		loadstring(game:HttpGet("https://pastebin.com/raw/7rXZ9VNc", true))()
-	end)
+    PLR:Button("Fly (Press E)",function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/7rXZ9VNc", true))()
+    end)
 
 local MISC = w:CreateFolder("Misc")
 
-	MISC:Button("Rejoin",function()
-		local TeleportService = game:GetService("TeleportService")
-		local PlaceId = game.PlaceId
-		local player = game.Players.LocalPlayer
-		if player then
-		TeleportService:Teleport(PlaceId, player)
-		end
-	end)
+    MISC:Button("Rejoin",function()
+        local TeleportService = game:GetService("TeleportService")
+        local PlaceId = game.PlaceId
+        local player = game.Players.LocalPlayer
+        if player then
+        TeleportService:Teleport(PlaceId, player)
+        end
+    end)
 
-	MISC:Button("Switch Team",function()
-		if game:GetService("Players").LocalPlayer.RankingFolder.Side.Value == "Hero" then
-			game:GetService("ReplicatedStorage").ChangeSide:FireServer("Villain")
-		else
-			game:GetService("ReplicatedStorage").ChangeSide:FireServer("Hero")
-		end
-	end)
+    MISC:Button("Use All Codes",function()
+        local A1 = "saitama"
+        local Event = game:GetService("Players").LocalPlayer.PlayerGui.Menu.FrameMenu.FrameBords.Frame.Codes.CodesScript.PlayCode
+        Event:FireServer(A1)
+        local A1 = "esper"
+        Event:FireServer(A1)
+        local A1 = "crablante"
+        Event:FireServer(A1)
+        local A1 = "arena"
+        Event:FireServer(A1)
+        local A1 = "6milvisits"
+        Event:FireServer(A1)
+        local A1 = "30kfavs"
+        Event:FireServer(A1)
+    end)
 
-	MISC:Button("Use All Codes",function()
-		local A1 = "saitama"
-		local Event = game:GetService("ReplicatedStorage").RedeemCode
-		Event:InvokeServer(A1)
-		local A1 = "esper"
-		Event:InvokeServer(A1)
-		local A1 = "crablante"
-		Event:InvokeServer(A1)
-		local A1 = "arena"
-		Event:InvokeServer(A1)
-		local A1 = "6milvisits"
-		Event:InvokeServer(A1)
-		local A1 = "30kfavs"
-		Event:InvokeServer(A1)
-	end)
-
-	MISC:GuiSettings()
+    MISC:GuiSettings()
 
 local CS = w:CreateFolder("Credits")
 
-	CS:Label("Script: Altix#5997",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
-	CS:Label("GUI: Altix & Wally",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
-	CS:DestroyGUI()
+    CS:Label("Script: Altix#5997",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
+    CS:Label("GUI: Altix & Wally",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
+    CS:DestroyGUI()
 
 spawn(function()
-	while wait() do
-		if shared.toggleAC then
-			local tool1 = game.Players.LocalPlayer.Backpack:FindFirstChild("Combat")  or game.Players.LocalPlayer.Character:FindFirstChild("Combat")
-			game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool1)
-			tool1:Activate()
-		end
-	end
+    while wait() do
+        if shared.toggleAPunch then
+            local tool1 = game.Players.LocalPlayer.Backpack:FindFirstChild("Punch")  or game.Players.LocalPlayer.Character:FindFirstChild("Punch")
+            game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool1)
+            tool1:Activate()
+        end
+    end
 end)
 spawn(function()
-	while wait() do
-		if shared.toggleAP then
-			local tool2 = game.Players.LocalPlayer.Backpack:FindFirstChild("Pushups")  or game.Players.LocalPlayer.Character:FindFirstChild("Pushups")
-			game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool2)
-			tool2:Activate()
-		end
-	end
+    while wait() do
+        if shared.toggleAP then
+            game:GetService("ReplicatedStorage").Events.GiverPower_Client_Event:FireServer("Pushups")
+        end
+    end
 end)
 spawn(function()
-	while wait() do
-		if shared.toggleAS then
-			local tool3 = game.Players.LocalPlayer.Backpack:FindFirstChild("Squats")  or game.Players.LocalPlayer.Character:FindFirstChild("Squats")
-			game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool3)
-			tool3:Activate()
-		end
-	end
+    while wait() do
+        if shared.toggleAS then
+            game:GetService("ReplicatedStorage").Events.GiverSpeed_Client_Event:FireServer("Squats")
+        end
+    end
 end)
 spawn(function()
-	while wait() do
-		if shared.toggleAM then
-			local tool4 = game.Players.LocalPlayer.Backpack:FindFirstChild("Meditate")  or game.Players.LocalPlayer.Character:FindFirstChild("Meditate")
-			game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool4)
-			tool4:Activate()
-		end
-	end
+    while wait() do
+        if shared.toggleAR then
+            game:GetService("ReplicatedStorage").Rebirth:FireServer()
+            wait(1)
+        end
+    end
 end)
-spawn(function()
-	while wait() do
-		if shared.toggleAHW then
-			local tool5 = game.Players.LocalPlayer.Backpack:FindFirstChild("Huge Weight")  or game.Players.LocalPlayer.Character:FindFirstChild("Huge Weight")
-			game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool5)
-			tool5:Activate()
-		end
-	end
-end)
-spawn(function()
-	while wait() do
-		if shared.toggleAR then
-			game:GetService("ReplicatedStorage").Rebirth:FireServer()
-			wait(1)
-		end
-	end
-end)
-
-function TpArea()
-	if SelectArea == "Safe Zone" then
-		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1077.91, 4.4, -128.981)
-	elseif SelectArea == "Dummy (1-10M)" then
-		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(611.312, 17.13, 1165.72)
-	elseif SelectArea == "Dummy (500M-1B)" then
-		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-212.226, 5.1, -60.9379)
-	elseif SelectArea == "Heroes Assoc.." then
-		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(368.569, 8543.1, 95945.4)
-	elseif SelectArea == "Crablante" then
-		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1099.91, 3.28311, -586.044)
-	elseif SelectArea == "Dummy (100B-1T)" then
-		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-325.228, 4.59999, 1045.22)
-	elseif SelectArea == "Dummy (10T-100T)" then
-		game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-314.101, 1.95, -1150.91)
-	end
-end
