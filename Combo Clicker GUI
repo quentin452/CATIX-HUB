@@ -357,7 +357,7 @@ local c = w3:CreateFolder("Eggs")
 c:Toggle("Buy Eggs",function(bool)
 	    shared.Eggs = bool
 	end)
-	c:Dropdown("Choose Eggs",{"Basic","Spotted","Tropical","Emoji","Carnival","Ancient","Ocean","Alien","Villian","Dragon","Arcade","Russo","Frost","Mystic","Spirit","Music","Abyssal","Minion","Minion 2","Frozen","Pirate","Dragon","11M Event"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	c:Dropdown("Choose Eggs",{"Basic","Spotted","Tropical","Emoji","Carnival","Ancient","Ocean","Alien","Villian","Dragon","Arcade","Russo","Frost","Mystic","Spirit","Music","Abyssal","Minion","Minion 2","Frozen","Pirate","Dragon","11M Event","13M Event"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.EggsSelected = mob
 	end)
 spawn(function()
@@ -1011,6 +1011,11 @@ spawn(function()
             }
             
             game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer(unpack(args))  
+
+            elseif _G.EggsSelected == "13M Event" then
+game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer({["EggType"] = "Egg13M",["UpdateType"] = "Open",["Amount"] = 3})
+game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer({["EggType"] = "Egg13M",["UpdateType"] = "Open",["Amount"] = 3})
+game:GetService("ReplicatedStorage").Functions.EggFunction:InvokeServer({["EggType"] = "Egg13M",["UpdateType"] = "Open",["Amount"] = 3})
 			end
 		end
 	end
@@ -2056,6 +2061,7 @@ setfflag("DFIntCrashUploadToBacktracePercentage", "0")
 setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
 setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
 
+
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
     game:service'Players'.LocalPlayer.Idled:connect(function()
@@ -2063,6 +2069,25 @@ setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
         Virtual:ClickButton2(Vector2.new())
         wait(2)
     end)
+
+
+--| Other Anti AFK |
+wait(10)
+    game.StarterGui:SetCore(
+        "ChatMakeSystemMessage",
+        {
+            Text = "[ANTI AFK] Started !",
+            Font = Enum.Font.SourceSansBold, 
+            FontSize = Enum.FontSize.Size24 
+        }
+    )
+while wait(30) do
+local VirtualUser=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+VirtualUser:CaptureController()
+VirtualUser:ClickButton2(Vector2.new())
+end)
+end
 
 --| Anti Chat Logs |
 local CloneFunction = clonefunction
