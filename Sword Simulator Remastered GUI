@@ -43,7 +43,7 @@ local w2 = w2:CreateFolder("Mobs")
 	    _G.BossSelected = mob
 	end)
 
-	w2:Toggle("Buy Mobs",function(bool)
+	w2:Toggle("Tp To Mobs",function(bool)
 	    shared.Eggs = bool
 	end)
 
