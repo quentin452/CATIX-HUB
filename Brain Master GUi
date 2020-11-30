@@ -16,6 +16,12 @@ w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,Te
 		w:Toggle("Auto Sell X1",function(bool)
 		shared.toggle2 = bool
 end) 
+	w:Toggle("Auto Sell X2",function(bool)
+		shared.toggle22 = bool
+end) 
+	w:Toggle("Auto Sell X3",function(bool)
+		shared.toggle222 = bool
+end) 
 w:Toggle("Auto Buy Potions",function(bool)
 		shared.toggle4 = bool
 end) 
@@ -32,9 +38,22 @@ end)
 		while wait() do
 		       if shared.toggle1 then
 game:GetService("ReplicatedStorage").Replicated.Remotes.drink:FireServer("1")
+game:GetService("ReplicatedStorage").Replicated.Remotes.drink:FireServer("2")
+game:GetService("ReplicatedStorage").Replicated.Remotes.drink:FireServer("3")
+game:GetService("ReplicatedStorage").Replicated.Remotes.drink:FireServer("4")
+game:GetService("ReplicatedStorage").Replicated.Remotes.drink:FireServer("5")
+game:GetService("ReplicatedStorage").Replicated.Remotes.drink:FireServer("6")
+game:GetService("ReplicatedStorage").Replicated.Remotes.drink:FireServer("7")
+game:GetService("ReplicatedStorage").Replicated.Remotes.drink:FireServer("8")
 end
 	if shared.toggle2 then
 game:GetService("Workspace").SellParts.Lobby.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+	if shared.toggle22 then
+game:GetService("Workspace").SellParts.Desert.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+	if shared.toggle222 then
+game:GetService("Workspace").SellParts.Florest.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end
 	if shared.toggle4 then
 game:GetService("ReplicatedStorage").Replicated.Remotes.bb:InvokeServer("2","Buy","Potion")
