@@ -75,18 +75,6 @@ _G.Speed = true
          end
 end)
 
-AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.a = true 
-        while wait(0) and _G.a do
-           local A_1 = game:GetService("Workspace").Players.quentin453["Doom Linked Sword"]  --change by your sword name
-local Event = game:GetService("ReplicatedStorage").Remotes.Power
-Event:FireServer(A_1)
-        end
-    else
-        _G.a = false
-    end
-end)
 
 AutoTab:CreateToggle("Auto Sell", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
@@ -140,7 +128,7 @@ Event:InvokeServer(A_1)
     end
 end)
 
-eggs:CreateToggle("Auto Buy Jade Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+eggs:CreateToggle("Auto Buy Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.f = true 
         while wait(0) and _G.f do
