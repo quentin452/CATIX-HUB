@@ -304,3 +304,22 @@ local CS = w:CreateFolder("Credits")
 
 	CS:Label("Script: Catix Hub",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
 	CS:DestroyGUI()
+
+
+--| Other Anti AFK |
+wait(10)
+    game.StarterGui:SetCore(
+        "ChatMakeSystemMessage",
+        {
+            Text = "[ANTI AFK] Started !",
+            Font = Enum.Font.SourceSansBold, 
+            FontSize = Enum.FontSize.Size24 
+        }
+    )
+while wait(30) do
+local VirtualUser=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+VirtualUser:CaptureController()
+VirtualUser:ClickButton2(Vector2.new())
+end)
+end
