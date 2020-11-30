@@ -74,6 +74,11 @@ local Hrs = w:CreateFolder("Heroes")
 		"Kin",
 		"Permafrost",
 		"Alexa",
+                "Bailiwick",
+                "Cyclopse",
+                "Sun Weaver",
+                "Peridoton",
+                "Zircontops",
 	},true,function(mob)
 		print(mob)
 		_G.SelectHeroes = mob
@@ -132,6 +137,16 @@ local Hrs = w:CreateFolder("Heroes")
 					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Permafrost",1)
 				elseif _G.SelectHeroes == "Alexa" then
 					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Alexa",1)
+                         	elseif _G.SelectHeroes == "Bailiwick" then
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Bailiwick",1)
+                                elseif _G.SelectHeroes == "Cyclopse" then
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Cyclopse",1)
+                                elseif _G.SelectHeroes == "Sun Weaver" then
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Sun Weaver",1)
+                                elseif _G.SelectHeroes == "Peridoton" then
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Peridoton",1)
+                                elseif _G.SelectHeroes == "Zircontops" then
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Zircontops",1)
 				end
 			end
 		end
@@ -179,6 +194,16 @@ local Hrs = w:CreateFolder("Heroes")
 					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplySkill","Permafrost",v)
 					wait(0.1)
 					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplySkill","Alexa",v)
+                                        wait(0.1)
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Bailiwick",v)
+                                        wait(0.1)
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Cyclopse",v)
+                                        wait(0.1)
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Sun Weaver",v)
+                                        wait(0.1)
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Peridoton",v)
+                                        wait(0.1)
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Zircontops",v)
 					wait(0.1)
 				end
 			end
