@@ -23,6 +23,12 @@ w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,Te
 		w:Toggle("Auto Sell X8",function(bool)
 		shared.toggle29 = bool
 end) 
+	w:Toggle("Auto Collect",function(bool)
+		shared.toggle30 = bool
+end) 
+	w:Toggle("Buy Event Shop",function(bool)
+		shared.toggle31 = bool
+end) 
 	spawn(function()
 		while wait() do
 		       if shared.toggle1 then
@@ -35,6 +41,16 @@ end
 	if shared.toggle10 then
 game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
 wait(0.1)
+end
+	if shared.toggle31 then
+game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("Pet1")
+game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("Pet")
+game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("BoostCandy")
+game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("BoostHatch")
+game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("BoostFizz")
+end
+	if shared.toggle30 then
+	game:GetService("Workspace").Event1.PickUpCandy.LargeCandyCanes.CandyCaneStack.Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end
 	if shared.toggle11 then
 game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
@@ -52,7 +68,7 @@ end
 end)
 
 local w2 = w2:CreateFolder("Eggs")
-	w2:Dropdown("Choose Eggs",{"Common","Rare","Party","Winter","Lego","Lava","Candy","Mushroom","Robot","500K"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w2:Dropdown("Choose Eggs",{"Common","Rare","Party","Winter","Lego","Lava","Candy","Mushroom","Robot","500K","Festive","Jolly","Mint"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.BossSelected = mob
 	end)
 
@@ -93,6 +109,15 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(60.22145
 	elseif _G.BossSelected == "500K" then
 game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("500K","Buy1")
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(64.9800873, 1.20399451, -57.4746742)
+	elseif _G.BossSelected == "Festive" then
+game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Festive","Buy1")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(3001.89429, 7.73454952, 113.420349)
+	elseif _G.BossSelected == "Jolly" then
+game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Jolly","Buy1")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2986.88135, 7.73454809, 119.953674)
+	elseif _G.BossSelected == "Mint" then
+game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Mint","Buy1")
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2968.20654, 8.26931095, 128.13591)
 
 			end
 		end
