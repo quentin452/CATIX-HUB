@@ -50,7 +50,16 @@ game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:Fir
 game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("BoostFizz")
 end
 	if shared.toggle30 then
-	game:GetService("Workspace").Event1.PickUpCandy.LargeCandyCanes.CandyCaneStack.Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Head' then
+     v.CFrame = root.CFrame
+       wait()
+   
+  
+        end
+    end
 end
 	if shared.toggle11 then
 game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
