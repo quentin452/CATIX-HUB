@@ -22,15 +22,6 @@ end)
 	w:Toggle("Auto Sell X3",function(bool)
 		shared.toggle222 = bool
 end) 
-w:Toggle("Auto Buy Potions",function(bool)
-		shared.toggle4 = bool
-end) 
-w:Toggle("Auto Buy Brains",function(bool)
-		shared.toggle5 = bool
-end) 
-w:Toggle("Auto Buy Ranks",function(bool)
-		shared.toggle6 = bool
-end) 
 w:Toggle("Auto Upgrades",function(bool)
 		shared.toggle7 = bool
 end) 
