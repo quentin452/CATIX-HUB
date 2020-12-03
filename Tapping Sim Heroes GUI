@@ -125,6 +125,8 @@ local Hrs = w:CreateFolder("Heroes")
 					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Gaston",1)
 				elseif _G.SelectHeroes == "Mously" then
 					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Mously",1)
+	                        elseif _G.SelectHeroes == "Sir Bubbly" then
+					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Sir Bubbly",1)
 				elseif _G.SelectHeroes == "Diesel Mouse" then
 					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Diesel",1)
 				elseif _G.SelectHeroes == "Crank" then
@@ -205,6 +207,7 @@ local Hrs = w:CreateFolder("Heroes")
                                         wait(0.1)
 					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Zircontops",v)
 					wait(0.1)
+	                                game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Sir Bubbly",v)
 				end
 			end
 		end
@@ -251,6 +254,7 @@ local Hrs = w:CreateFolder("Heroes")
 				wait()
 				game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Twigs",1)
 				wait()
+                               game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Sir Bubbly",1)
 			end
 		end
 	end)
