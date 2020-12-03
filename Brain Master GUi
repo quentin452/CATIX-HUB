@@ -2,7 +2,7 @@ local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))(
 
 local w3 = library:CreateWindow("Brain masters")
 local w2 = library:CreateWindow("Eggs X1")
-
+local w4 = library:CreateWindow("Teleporters")
 
 --================== Model =======================--
 local w = w3:CreateFolder("Things")
@@ -576,7 +576,16 @@ end)
 
 --================== Autres =======================--
 
-
+local w4 = w4:CreateFolder("T^p")
+w4:Button("Spawn",function()
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-385.680664, 18.0258179, -721.401672)
+end)
+w4:Button("Deser",function()
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1090.10498, 556.684082, -1168.87451)
+end)
+w4:Button("Florest",function()
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(418.497192, 670.762817, -425.272339)
+end)
 --| Anti Ban |
 setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
 setfflag("DFIntCrashUploadToBacktracePercentage", "0")
