@@ -119,7 +119,7 @@ local Hrs = w:CreateFolder("Heroes")
 					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Sheriff Jackson",1)
 				elseif _G.SelectHeroes == "Merlin" then
 					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Merlin",1)
-				elseif _G.SelectHeroes == "Merlin" then
+				elseif _G.SelectHeroes == "Snouk" then
 					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Snouk",1)
 				elseif _G.SelectHeroes == "Gaston" then
 					game:GetService("ReplicatedStorage").GenericHeroRemote:FireServer("ApplyHero","Gaston",1)
