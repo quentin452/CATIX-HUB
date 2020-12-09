@@ -11376,6 +11376,26 @@ end
         _G.LULU2 = false
     end
 end)
+AutoTab:CreateToggle("Auto Collect Gifts", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.LULU22 = true 
+        while wait(0) and _G.LULU22 do
+         local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
+
+for i, v in next, Workspace:GetDescendants() do
+   if v.Name == 'Collect' then
+     v.CFrame = root.CFrame
+       wait()
+   
+  
+        end
+    end
+end
+
+    else
+        _G.LULU22 = false
+    end
+end)
 eggs:CreateToggle("Auto Buy Common Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.a = true 
