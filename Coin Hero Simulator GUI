@@ -36,6 +36,9 @@ end)
 w22:Button("Zone 6",function()
  game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(162.190536, 2.2264092, 1058.23535)
 end)
+w22:Button("Zone 7",function()
+ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(160.327225, 3.16398692, 1177.20752)
+end)
 --================== Model =======================--
 local w = w3:CreateFolder("Things")
 
