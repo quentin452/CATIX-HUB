@@ -12,12 +12,12 @@ w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,Te
 
 
 
-	w:Toggle("Auto Click",function(bool)
-		shared.toggle1 = bool
-	end)
+w:Toggle("Auto Click",function(bool)
+	shared.toggle1 = bool
+end)
 	
-		w:Toggle("Auto Buy Sword",function(bool)
-		shared.toggle2 = bool
+w:Toggle("Auto Buy Sword",function(bool)
+	shared.toggle2 = bool
 end) 
 w:Toggle("Auto Buy Dna",function(bool)
 		shared.toggle3 = bool
@@ -43,6 +43,61 @@ end)
 w:Toggle("Auto Sell",function(bool)
 		shared.toggle10 = bool
 end)
+
+w:Toggle("Auto Collect Coins",function(bool)
+	shared.toggleACCoins = bool
+end)
+
+w:Toggle("Auto Collect Candy",function(bool)
+	shared.toggleACCandy = bool
+end)
+
+spawn(function()
+	while wait() do
+		if shared.toggleACCoins then
+            local tween = game:GetService("TweenService")
+            local character = game.Players.LocalPlayer.character
+            local humanoid = character.HumanoidRootPart
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+            wait(1)
+            for i, v in next, {game.Workspace.CoinsHolder} do
+                pcall(
+                function()
+                    if v:FindFirstChild("Coin") then
+                        tween:Create(humanoid, TweenInfo.new(1, Enum.EasingStyle.Linear), {CFrame = v.Coin.CFrame}):Play()
+                        wait(2)
+                        v.Coin:Destroy()
+                    end
+                end
+                )
+            end
+        end
+	end
+end)
+
+spawn(function()
+	while wait() do
+		if shared.toggleACCandy then
+            local tween = game:GetService("TweenService")
+            local character = game.Players.LocalPlayer.character
+            local humanoid = character.HumanoidRootPart
+              game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+              wait(1)
+              for i, v in next, {game.Workspace.CandyHolder} do
+                 pcall(
+                 function()
+                    if v:FindFirstChild("CandyCane") then
+                       tween:Create(humanoid, TweenInfo.new(1, Enum.EasingStyle.Linear), {CFrame = v.CandyCane.CFrame}):Play()
+                       wait(2)
+                       v.CandyCane:Destroy()
+                    end
+                 end
+                 )
+              end
+        end
+	end
+end)
+
 	spawn(function()
 		while wait() do
 		       if shared.toggle1 then
