@@ -97,11 +97,7 @@ local Function = main:CreateCategory("Function")
 		spawn(function()
 			while wait(0.25) do
 				if shared.toggleAC then
-					local tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool") or game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
-					game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
-					local BladeName = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name
-					game.ReplicatedStorage.Events.Clicked:FireServer()
-					game.Players.LocalPlayer.Character[BladeName].RemoteClick:FireServer()
+					game:GetService("ReplicatedStorage").Events.Clicked:FireServer()
 				end
 			end
 		end)
