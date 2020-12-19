@@ -1,11 +1,4 @@
--- Anti AFK
 
-	local Virtual = game:service'VirtualUser'
-	game:service'Players'.LocalPlayer.Idled:connect(function()
-		Virtual:CaptureController()
-		Virtual:ClickButton2(Vector2.new())
-		wait(2)
-	end)
 
 -- Old Position Save
 	local oldpos = Instance.new("CFrameValue",game.Players.LocalPlayer)
@@ -21,71 +14,55 @@ local AF = w:CreateFolder("Auto Farm")
 	    shared.toggleAL = bool
 	end)
 
-local ABE = w:CreateFolder("Auto Buy Eggs")
-
-	ABE:Toggle("Bunny",function(bool)
-	    shared.toggleABE1 = bool
+local ABE = w:CreateFolder("Eggs")
+	ABE:Dropdown("Choose Eggs",{"Bunny","Cat","Dog","Yum Bunny","Chest","Milkshake","Present","Feelz","LiquidGalaxy","Lava","Cyborg","Disco","CatsWithHats","FlowerBunny","Bubble","Easter Egg"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	    _G.BossSelected = mob
 	end)
 
-	ABE:Toggle("Cat",function(bool)
-	    shared.toggleABE2 = bool
+	ABE:Toggle("Buy Eggs",function(bool)
+	    shared.Eggs = bool
 	end)
 
-	ABE:Toggle("Dog",function(bool)
-	    shared.toggleABE3 = bool
-	end)
-
-	ABE:Toggle("Yum Bunny",function(bool)
-	    shared.toggleABE4 = bool
-	end)
-
-	ABE:Toggle("Chest",function(bool)
-	    shared.toggleABE5 = bool
-	end)
-
-	ABE:Toggle("Milkshake",function(bool)
-	    shared.toggleABE6 = bool
-	end)
-
-	ABE:Toggle("Present",function(bool)
-	    shared.toggleABE7 = bool
-	end)
-
-	ABE:Toggle("Feelz",function(bool)
-	    shared.toggleABE8 = bool
-	end)
-
-	ABE:Toggle("LiquidGalaxy",function(bool)
-	    shared.toggleABE9 = bool
-	end)
-
-	ABE:Toggle("Lava",function(bool)
-	    shared.toggleABE10 = bool
-	end)
-
-	ABE:Toggle("Cyborg",function(bool)
-	    shared.toggleABE11 = bool
-	end)
-
-	ABE:Toggle("Disco",function(bool)
-	    shared.toggleABE12 = bool
-	end)
-
-	ABE:Toggle("CatsWithHats",function(bool)
-	    shared.toggleABE13 = bool
-	end)
-
-	ABE:Toggle("FlowerBunny",function(bool)
-	    shared.toggleABE14 = bool
-	end)
-
-	ABE:Toggle("Bubble",function(bool)
-	    shared.toggleABE15 = bool
-	end)
-
-	ABE:Toggle("Easter Egg",function(bool)
-	    shared.toggleABE16 = bool
-	end)
+spawn(function()
+	while wait(0) do
+		if shared.Eggs then
+			if _G.BossSelected == "Bunny" then
+				game.ReplicatedStorage.Events.Client.attemptEggOpeningTransaction:InvokeServer(3, false)
+			elseif _G.BossSelected == "Cat" then
+			
+			    game.ReplicatedStorage.Events.Client.attemptEggOpeningTransaction:InvokeServer(4, false)
+			elseif _G.BossSelected == "Dog" then
+						    game.ReplicatedStorage.Events.Client.attemptEggOpeningTransaction:InvokeServer(5, false)
+			elseif _G.BossSelected == "Yum Bunny" then
+						    game.ReplicatedStorage.Events.Client.attemptEggOpeningTransaction:InvokeServer(6, false)
+			elseif _G.BossSelected == "Chest" then
+						    game.ReplicatedStorage.Events.Client.attemptEggOpeningTransaction:InvokeServer(7, false)
+			elseif _G.BossSelected == "Milkshake" then
+			   				    game.ReplicatedStorage.Events.Client.attemptEggOpeningTransaction:InvokeServer(8, false)	
+			elseif _G.BossSelected == "Present" then
+			    				    game.ReplicatedStorage.Events.Client.attemptEggOpeningTransaction:InvokeServer(9, false)	
+			elseif _G.BossSelected == "Feelz" then
+			    					    game.ReplicatedStorage.Events.Client.attemptEggOpeningTransaction:InvokeServer(10, false)
+			elseif _G.BossSelected == "LiquidGalaxy" then
+			    						    game.ReplicatedStorage.Events.Client.attemptEggOpeningTransaction:InvokeServer(11, false)
+			elseif _G.BossSelected == "Lava" then
+			    						    game.ReplicatedStorage.Events.Client.attemptEggOpeningTransaction:InvokeServer(12, false)
+			elseif _G.BossSelected == "Cyborg" then
+			    						    game.ReplicatedStorage.Events.Client.attemptEggOpeningTransaction:InvokeServer(13, false)
+			elseif _G.BossSelected == "Disco" then
+			    						    game.ReplicatedStorage.Events.Client.attemptEggOpeningTransaction:InvokeServer(14, false)
+			elseif _G.BossSelected == "CatsWithHats" then
+			    						    game.ReplicatedStorage.Events.Client.attemptEggOpeningTransaction:InvokeServer(23, false)
+			elseif _G.BossSelected == "FlowerBunny" then
+			    						    game.ReplicatedStorage.Events.Client.attemptEggOpeningTransaction:InvokeServer(24, false)
+			elseif _G.BossSelected == "Bubble" then
+			    						    game.ReplicatedStorage.Events.Client.attemptEggOpeningTransaction:InvokeServer(25, false)
+			elseif _G.BossSelected == "Easter Egg" then
+					    game.ReplicatedStorage.Events.Client.attemptEggOpeningTransaction:InvokeServer(27, false)
+			end
+		end
+	end
+end)
 
 local AC = w:CreateFolder("Auto Collect")
 
@@ -323,3 +300,57 @@ spawn(function()
 			end
 	end
 end)
+
+
+--| Anti Ban |
+setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
+setfflag("DFIntCrashUploadToBacktracePercentage", "0")
+setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
+setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
+
+
+--| Anti AFK | By Altix#3395
+    local Virtual = game:service'VirtualUser'
+    game:service'Players'.LocalPlayer.Idled:connect(function()
+        Virtual:CaptureController()
+        Virtual:ClickButton2(Vector2.new())
+        wait(2)
+    end)
+
+
+--| Other Anti AFK |
+wait(10)
+    game.StarterGui:SetCore(
+        "ChatMakeSystemMessage",
+        {
+            Text = "[ANTI AFK] Started !",
+            Font = Enum.Font.SourceSansBold, 
+            FontSize = Enum.FontSize.Size24 
+        }
+    )
+while wait(30) do
+local VirtualUser=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+VirtualUser:CaptureController()
+VirtualUser:ClickButton2(Vector2.new())
+end)
+end
+
+--| Anti Chat Logs |
+local CloneFunction = clonefunction
+local CheckCaller = CloneFunction(checkcaller)
+local HookFunction = CloneFunction(hookfunction)
+local LocalPlayer = game.Players.PlayerAdded:wait()
+
+local PostMessage = require(LocalPlayer:WaitForChild("PlayerScripts", 1/0):WaitForChild("ChatScript", 1/0):WaitForChild("ChatMain", 1/0)).MessagePosted
+getgenv().MessageEvent = Instance.new("BindableEvent")
+
+local OldFunctionHook
+local PostMessageHook = function(self, msg)
+   if not CheckCaller() and self == PostMessage then
+       MessageEvent:Fire(msg)
+       return
+   end
+   return OldFunctionHook(self, msg)
+end
+OldFunctionHook = HookFunction(PostMessage.fire, PostMessageHook)
