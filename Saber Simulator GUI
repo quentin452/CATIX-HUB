@@ -1,1527 +1,1126 @@
-local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))()
-
-local w3 = library:CreateWindow("Saber Simulator GUI")
-local w2 = library:CreateWindow("Buy Eggs")
-local w4 = library:CreateWindow("Auto Boss")
-local w5 = library:CreateWindow("Teleports")
-
---================== Model =======================--
-local w = w3:CreateFolder("Cheats")
-
-w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
-
-
-
-w:Toggle("Auto Click",function(bool)
-	shared.toggle1 = bool
-end)
+local library = loadstring(game:HttpGet("https://zypher.wtf/UI-Lib"))()
 	
-w:Toggle("Auto Buy Sword",function(bool)
-	shared.toggle2 = bool
-end) 
-w:Toggle("Auto Buy Dna",function(bool)
-		shared.toggle3 = bool
-end) 
-w:Toggle("Auto Buy Skills",function(bool)
-		shared.toggle4 = bool
-end)
-w:Toggle("Auto Buy BossHits",function(bool)
-		shared.toggle5 = bool
-end)
-w:Toggle("Auto Buy Auras",function(bool)
-		shared.toggle6 = bool
-end)
-w:Toggle("Auto Buy PetAuras",function(bool)
-		shared.toggle7 = bool
-end)
-w:Toggle("Auto Buy Ranks",function(bool)
-		shared.toggle8 = bool
-end)
-w:Toggle("Auto Combine Pets",function(bool)
-		shared.toggle9 = bool
-end)
-w:Toggle("Auto Sell",function(bool)
-		shared.toggle10 = bool
-end)
-
-w:Toggle("Auto Collect Coins",function(bool)
-	shared.toggleACCoins = bool
-end)
-
-w:Toggle("Auto Collect Candy",function(bool)
-	shared.toggleACCandy = bool
-end)
-
-spawn(function()
-	while wait() do
-		if shared.toggleACCoins then
-            local tween = game:GetService("TweenService")
-            local character = game.Players.LocalPlayer.character
-            local humanoid = character.HumanoidRootPart
-            game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-            wait(1)
-            for i, v in next, {game.Workspace.CoinsHolder} do
-                pcall(
-                function()
-                    if v:FindFirstChild("Coin") then
-                        tween:Create(humanoid, TweenInfo.new(1, Enum.EasingStyle.Linear), {CFrame = v.Coin.CFrame}):Play()
-                        wait(2)
-                        v.Coin:Destroy()
-                    end
-                end
-                )
-            end
-        end
-	end
-end)
-
-spawn(function()
-	while wait() do
-		if shared.toggleACCandy then
-            local tween = game:GetService("TweenService")
-            local character = game.Players.LocalPlayer.character
-            local humanoid = character.HumanoidRootPart
-              game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-              wait(1)
-              for i, v in next, {game.Workspace.CandyHolder} do
-                 pcall(
-                 function()
-                    if v:FindFirstChild("CandyCane") then
-                       tween:Create(humanoid, TweenInfo.new(1, Enum.EasingStyle.Linear), {CFrame = v.CandyCane.CFrame}):Play()
-                       wait(2)
-                       v.CandyCane:Destroy()
-                    end
-                 end
-                 )
-              end
-        end
-	end
-end)
-
-	spawn(function()
-		while wait() do
-		       if shared.toggle1 then
-		 game:GetService("ReplicatedStorage").Events.Clicked:FireServer()
-end
-	if shared.toggle2 then
-	local args = {
-    [1] = "Swords",
-}
-
-game:GetService("ReplicatedStorage").Events.BuyAll:FireServer(unpack(args))
-end
-	if shared.toggle3 then
-local args = {
-    [1] = "Backpacks",
-}
-
-game:GetService("ReplicatedStorage").Events.BuyAll:FireServer(unpack(args))
-end
-	if shared.toggle4 then
-local args = {
-    [1] = "JumpBoosts",
-}
-
-game:GetService("ReplicatedStorage").Events.BuyAll:FireServer(unpack(args))
-end
-	if shared.toggle5 then
-local args = {
-    [1] = "BossBoosts",
-}
-
-game:GetService("ReplicatedStorage").Events.BuyAll:FireServer(unpack(args))
-end
-	if shared.toggle6 then
-local args = {
-    [1] = "Auras",
-}
-
-game:GetService("ReplicatedStorage").Events.BuyAll:FireServer(unpack(args))
-end
-	if shared.toggle7 then
-local args = {
-    [1] = "PetAuras",
-}
-
-game:GetService("ReplicatedStorage").Events.BuyAll:FireServer(unpack(args))
-	if shared.toggle8 then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Noob,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Apprentice,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Soldier,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Paladin,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Assassin,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Warrior,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Warlord,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Berserker,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Saber,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Cyborg,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Master,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Titan,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Phantom,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Shadow,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Ghoul,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Tempest,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Elementalist,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Beast,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes["Dark Ninja"],
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Warlock,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Overlord,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Demigod,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.ArchAngel,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Wraith,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Deity,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Nemesis,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Executioner,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Terminator,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Colossus,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Zeus,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Elf,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Santa,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Corruptor,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Prestige,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Caster,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Cyclops,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.King,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Hacker,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Angel,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Minotaur,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
- wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Cerberus,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
-wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Yeti,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
-wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Samurai,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
-wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Baron,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
-wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Detective,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
-wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes["Red Baron"],
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
-wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Witch,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
-wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Gladiator,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
-wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes["Purple Baron"],
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
-wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Guard,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
-wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes["Shadow Titan"],
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
-wait(0.1)
-local args = {
-    [1] = game:GetService("ReplicatedStorage").ShopItems.Classes.Superhuman,
-}
-
-game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
-	if shared.toggle9 then
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(532.235901, 214.493591, 149.810486)
-wait(0.5)
-end
-end
-end
-end
-end)
-
-local w2 = w2:CreateFolder("Eggs")
-	w2:Dropdown("Choose Eggs",{"spawn1","spawn2","spawn3","spawn4","Island1","Island2","Island3","Island4","Island5","Island6","Island7","Island8","Island9","Island10","Island11","Island12","Island13","Island14","Island16","Island17","Island18","Island19","Island20","Island21","Island22","Island23","Island24","Island25","Island26","Island27","Island28","Island29","Island31","Island32","Island33","Island34","Island35","Island36","Island37","Island38","Island39","Island40","Island41","Island42","Island43","Island44","Island45","Island46","Island47","Island48","Island49","Island50","Island51","Island52","Island53","Island55","Island56","Island57","Island58","Island59","Island60","Island61","Island62","Island63","Island64","Island65","Island66","Island67","Island68","Island69","Island70"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
-	    _G.BossSelected = mob
-	end)
-
-	w2:Toggle("Buy Eggs",function(bool)
-	    shared.Eggs = bool
-	end)
-
-
-spawn(function()
-	while wait(0) do
-		if shared.Eggs then
-			if _G.BossSelected == "spawn1" then
-		local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Basic Egg"],
-    [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-			elseif _G.BossSelected == "spawn2" then
+local main = library:CreateMain("Saber Simulator")
+
+local Home = main:CreateCategory("Home")
+
+	local Tittle = Home:CreateSection("Saber Simulator")
+	
+	local H1 = Home:CreateSection("Update logs (12-19-20):")
+
+		H1:Create(
+			"Textlabel",
+			"+ New Gui"
+		)
+		H1:Create(
+			"Textlabel",
+			"- Old Gui"
+		)
+
+
+		local H2 = Home:CreateSection("Credits")
+	
+			H2:Create(
+				"Textlabel",
+				"Script by Altix#3395"
+			)
+			H2:Create(
+				"Textlabel",
+				"Tested by I'm A Cat#7202"
+			)
+			H2:Create(
+				"Button",
+				"Copy Discord Link (https://discord.gg/x2hM4M5xWj)",
+				function()
+				setclipboard("https://discord.gg/x2hM4M5xWj")
+				end,
+				{
+					animated = true,
+				}
+			)
+
+local Function = main:CreateCategory("Function")
+
+	local AS = Function:CreateSection("Auto Stuff")
+		AS:Create(
+			"Toggle",
+			"Auto Swing",
+			function(state)
+				shared.toggleAC = state
+			end,
+			{
+				default = false,
+			}
+		)
+		AS:Create(
+			"Toggle",
+			"Auto Sell",
+			function(state)
+				shared.toggleASell = state
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(535, 184, 152)
+			end,
+			{
+				default = false,
+			}
+		)
+		AS:Create(
+			"Toggle",
+			"Auto Flags",
+			function(state)
+				shared.toggleAFlags = state
+			end,
+			{
+				default = false,
+			}
+		)
+		AS:Create(
+			"Toggle",
+			"Auto KOTH",
+			function(state)
+				shared.toggleAKOTH = state
+			end,
+			{
+				default = false,
+			}
+		)
+		AS:Create(
+			"Toggle",
+			"Auto Kill Boss",
+			function(state)
+				shared.toggleAKillBoss = state
+				local BladeName = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name
+			end,
+			{
+				default = false,
+			}
+		)
+		spawn(function()
+			while wait(0.25) do
+				if shared.toggleAC then
+					local tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool") or game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
+					game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
+					local BladeName = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name
+					game.ReplicatedStorage.Events.Clicked:FireServer()
+					game.Players.LocalPlayer.Character[BladeName].RemoteClick:FireServer()
+				end
+			end
+		end)
+		spawn(function()
+			while wait(0.25) do
+				if shared.toggleASell then
+					game:GetService("ReplicatedStorage").Events.Sell:FireServer()
+				end
+			end
+		end)
+		spawn(function()
+			while wait(0.25) do
+				if shared.toggleAFlags then
+					if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
+						local CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+						for i, v in pairs(game.Workspace.Flags:GetChildren()) do
+							if v.OwnerValue.Value ~= game.Players.LocalPlayer.Name then
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Base.CFrame
+								repeat
+								wait()
+								until v.OwnerValue.Value == game.Players.LocalPlayer.Name
+								wait(13.5)
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame
+							end
+						end
+					end
+				end
+			end
+		end)
+		spawn(function()
+			while wait(0.25) do
+				if shared.toggleAKOTH then
+					if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(790, 250, 32)
+						wait(1)
+					end
+				end
+			end
+		end)
+		spawn(function()
+			while wait(0.25) do
+				if shared.toggleAKillBoss then
+					if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
+						local me = game.Players.LocalPlayer.Character
+						local pbosd = game:GetService("Workspace").Boss.LeftLowerLeg
+						me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X, pbosd.Position.Y, pbosd.Position.Z)		
+						local tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool") or game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
+						game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
+						local BladeName = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name
+						game.ReplicatedStorage.Events.Clicked:FireServer()
+						game.Players.LocalPlayer.Character[BladeName].RemoteClick:FireServer()
+					end
+				end
+			end
+		end)
+
+	local AS = Function:CreateSection("Collect Stuff")
+	
+		AS:Create(
+			"Toggle",
+			"Auto Collect Coins",
+			function(state)
+				shared.toggleACCoins = state
+			end,
+			{
+				default = false,
+			}
+		)
+
+		AS:Create(
+			"Toggle",
+			"Auto Collect Candy & Present",
+			function(state)
+				shared.toggleACCandy = state
+			end,
+			{
+				default = false,
+			}
+		)
+
+		spawn(function()
+			while wait() do
+				if shared.toggleACCoins then
+					local plrh = game.Players.LocalPlayer.Character.HumanoidRootPart
+					if game.Players.LocalPlayer.Character:FindFirstChild("AntiPort") and game.Players.LocalPlayer.Character:FindFirstChild("AntiPortNew")  then
+						game.Players.LocalPlayer.Character.AntiPort:Destroy()
+						game.Players.LocalPlayer.Character.AntiPortNew:Destroy()
+					wait(0.1)
+					end
+					for i,v in pairs(game:GetService("Workspace").CoinsHolder:GetChildren()) do
+						if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
+							plrh.CFrame = v.CFrame*CFrame.new(0,5,0)
+							wait(0.2)
+						end
+					end
+				end
+			end
+		end)
 		
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Wooden Egg"],
-    [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-			elseif _G.BossSelected == "spawn3" then
-		local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Reinforced Egg"],
-    [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))		
-			elseif _G.BossSelected == "spawn4" then
-		local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs.Ancient,
-    [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))	
-			elseif _G.BossSelected == "Island1" then
-		local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Egg of life"],
-    [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))	
-			elseif _G.BossSelected == "Island2" then
-		local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Glory Egg"],
-    [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))	
-			elseif _G.BossSelected == "Island3" then
-		local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Dominus Egg"],
-    [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))		
-			elseif _G.BossSelected == "Island4" then
-	local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Silver Egg"],
-    [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))			
-			elseif _G.BossSelected == "Island5" then
-	local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Golden Egg"],
-    [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))		
-			elseif _G.BossSelected == "Island6" then
-			local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Premium Egg"],
-    [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))	
-			elseif _G.BossSelected == "Island7" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Class Egg"],
-    [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island8" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Diamond Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island9" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Ruby Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island10" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Alpha Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island11" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Snow Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island12" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Reaper Egg"],
-    [2] = 9999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island13" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Nature Egg"],
-    [2] = 9999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island14" then
-
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Winter Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island16" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Fire Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island17" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Valk Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island18" then
-
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Dragon Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island19" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Star Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island20" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Cow Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island21" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Flame Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island22" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Water Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island23" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Ooga Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island24" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Round Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island25" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Heart Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island26" then
-
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Matrix Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island27" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Shadow Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island28" then
-
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Pink Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island29" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Candy Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island31" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Onetap Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island32" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Swag Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island33" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Triangle Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island34" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Square Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island35" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Cringe Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island36" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Boris Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island37" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Phantom Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island38" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Business Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island39" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Egg Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island40" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Birthday Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island41" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Switch Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island42" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["America Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island43" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["British Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island44" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Erick Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island45" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Henry Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island46" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Lazy Dev Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island47" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Puppet Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-
-elseif _G.BossSelected == "Island48" then
-
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Piggy Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island49" then
-
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Easy Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island50" then
-
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Bruh Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island51" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Guts Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-
-elseif _G.BossSelected == "Island52" then
-
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Griffith Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island53" then
-
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Casca Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-
-
-elseif _G.BossSelected == "Island55" then
-
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Pippin Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island56" then
-
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Dog Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island57" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["Bingo Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-
-elseif _G.BossSelected == "Island58" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["M Egg"],
-      [2] = 999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-
-elseif _G.BossSelected == "Island59" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["A Egg"],
-    [2] = 9999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-
-elseif _G.BossSelected == "Island60" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["B Egg"],
-    [2] = 9999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-
-elseif _G.BossSelected == "Island61" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["C Egg"],
-    [2] = 9999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island62" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["D Egg"],
-    [2] = 9999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island63" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["E Egg"],
-    [2] = 9999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island64" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["F Egg"],
-    [2] = 9999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island65" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["G Egg"],
-    [2] = 9999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island66" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["H Egg"],
-    [2] = 9999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island67" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["I Egg"],
-    [2] = 9999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island68" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["O Egg"],
-    [2] = 9999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island69" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["P Egg"],
-    [2] = 9999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-elseif _G.BossSelected == "Island70" then
-local args = {
-    [1] = game:GetService("ReplicatedStorage").Eggs["R Egg"],
-    [2] = 9999,
-}
-
-game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(unpack(args))
-			end
-		end
-	end
-end)
-
---================== Boss =======================--
-
-local PLR1 = w4:CreateFolder("Boss")
-
-PLR1:Label("use this when you hit the boss Auto Click (animation)",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111))
-
-	PLR1:Toggle("Auto Click Boss",function(bool)
-		shared.toggle1 = bool
-	end)
-	
-		PLR1:Toggle("Auto Tp To Boss",function(bool)
-		shared.toggle2 = bool
-	end)
-	spawn(function()
-		while wait() do
-		       if shared.toggle1 then
-	       _G.AutoSwing = true
-        local BladeName = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Name
-        while _G.AutoSwing do
-            if BladeName then
-                game.ReplicatedStorage.Events.Clicked:FireServer()
-                game.Players.LocalPlayer.Character[BladeName].RemoteClick:FireServer()
-            else
-                EquipTool()
-            end
-            wait()
-        end
-    else
-        _G.AutoSwing = false
-        end
-         if shared.toggle2 then
-	   local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Boss.LeftLowerLeg
-
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X, pbosd.Position.Y, pbosd.Position.Z)
-    
-end
-end
-end)
-
-
---================== Teleports =======================--
-local w22 = w5:CreateFolder("Teleporters")
-
-w22:Label("MIAOU",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
-
-w22:Button("Tp To All Islands",function()
-  game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(632.57605, 269269.156, -224.652359) --70
-wait(1)
-  game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(635.743958, 223507.063, -198.920929) --69
-wait(1)
-  game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(629.44519, 220079.406, -221.873245) --68
-wait(1)
-  game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(633.049988, 216608.234, -208.06076) --67
-wait(1)
-  game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(632.413513, 255097.563, -226.424744)
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(640.958679, 248002.531, -204.051392)
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(636.386597, 251554.75, -212.339081)
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(631.567017, 244541.484, -303.288635) --63
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(630.98877, 241063.109, -303.145996) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(630.987732, 237503.609, -303.145874) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(630.98999, 233949.906, -303.145996) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(630.987915, 230473.609, -303.145874)
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(630.988098, 226953.688, -303.145905) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(631.015259, 223508.984, -303.153534) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(630.987793, 220081.359, -303.145844) 
-
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(630.987976, 216610.188, -303.145874) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(631.099121, 213009.078, -303.317566) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(631.174194, 209507.938, -303.057831) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(630.838135, 206037.859, -303.585907) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(539.995361, 202505.875, -153.752151) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(539.959656, 199263.953, -154.380234) --50
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(539.995544, 195964.438, -153.75206) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(539.96106, 192606.766, -154.380478)
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(642.328247, 190399.313, -111.637215) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(481.913055, 187552, -240.286957) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(490.161346, 184961.906, -247.845474) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(504.447662, 182101.906, -214.616257) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(554.134949, 179362.828, -290.94342) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(363.356598, 175488.75, -246.425934) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(539.908691, 171578.672, -98.0301285) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(540.013184, 166415.906, -154.131485) --40
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(539.907959, 164289.75, -154.830292) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(540.008362, 162113.609, -154.130127)
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(631.387817, 158319.391, -303.135803) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(387.065735, 152665.375, 13.6037245) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(583.962524, 150268.891, -202.374725) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(583.888123, 146933.391, -202.415009) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(690.987122, 143497.953, -2.14232206) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(691.68634, 140146.875, -1.94093335) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(553.460388, 135607.297, -140.57782) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(555.126038, 67087.5625, -281.895844) --30
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(691.586792, 127920.313, -1.94222999) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(691.686157, 121864.273, -1.9401195) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(691.586365, 117959.273, -1.94039702) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(691.685486, 113362.313, -1.93928158) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(691.642761, 108786.898, -1.89738822) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(553.216248, 104247.406, -140.635208) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(468.416199, 101249.109, -22.3314648) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(468.416077, 97712.1484, -22.3352661) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(468.417419, 94252.5156, -22.3323746) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(468.40625, 90389.8203, -22.4116096) --20
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(468.416473, 84822.4375, -22.3344784) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(468.537292, 80724.4141, -21.8089104) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(611.585876, 76590.5859, -35.2448997) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(539.869141, 72951.7266, -153.687073) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(690.779541, 186.223175, -63.1703339)
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(539.863037, 62383.0859, -153.686554) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(539.864441, 57627.0703, -153.686401) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(539.861755, 52643.1797, -153.686539) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(630.948608, 48849.0859, -303.365967) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(567.403748, 42888.4219, -190.973038) --10
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(567.375488, 38094.418, -128.069824)
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(519.993042, 34169.0859, -212.145584)
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(631.570129, 29800.4648, -86.0856628)
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(477.823181, 26256.9766, -199.675598) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(503.051056, 19439.3594, -77.2514191) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(585.684082, 12698.25, -232.688354) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(650.598694, 7092.25928, -288.938232)
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(481.90448, 2653.13818, -294.848175) 
-wait(1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(514.271912, 799.442749, 162.14859) --1
-end)
-
-w22:Button("Spawn",function()
-  game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(543.14386, 184.468475, 14.3797617)
-end)
-w22:Button("Sell",function()
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(535.757507, 183.845337, 151.620239)
-end)
-w22:Button("Palier 1",function()
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(543.564575, 67087.8203, -62.6866531)
-end)
-w22:Button("Palier 2",function()
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(626.306335, 131088.859, -52.2765007)
-end)
-w22:Button("Palier 3",function()
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(630.680359, 213009.391, -303.533386)
-end)
-w22:Button("Palier 4",function()
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(631.945435, 213007.031, -187.223587)
-end)
-
-w22:Button("Koth",function()
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(793.609009, 249.786087, 33.3503723)
-end)
-
---================== Player Settings =======================--
-
-
-local PLR = w3:CreateFolder("Player")
-
-	
-	
-	PLR:Slider("Jump Hack",10,250,true,function(value)
-	    game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
-	end)
-	PLR:Button("Speed Hack (press R)",function(bool)
-	    
-local walkspeedplayer = game:GetService("Players").LocalPlayer
-local walkspeedmouse = walkspeedplayer:GetMouse()
-
-local walkspeedenabled = false
-
-function x_walkspeed(key)
-if (key == "r") then
-if walkspeedenabled == false then
-_G.WS = 200;
-local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
-Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
-Humanoid.WalkSpeed = _G.WS;
-end)
-Humanoid.WalkSpeed = _G.WS;
-
-walkspeedenabled = true
-elseif walkspeedenabled == true then
-_G.WS = 20;
-local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
-Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
-Humanoid.WalkSpeed = _G.WS;
-end)
-Humanoid.WalkSpeed = _G.WS;
-
-walkspeedenabled = false
-end
-end
-end
-
-walkspeedmouse.KeyDown:connect(x_walkspeed)
-
-end)
-	PLR:Button("No Clip (Press E)",function()
-		noclip = false
-		game:GetService('RunService').Stepped:connect(function()
-			if noclip then
-				game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+		spawn(function()
+			while wait() do
+				if shared.toggleACCandy then
+					local plrh = game.Players.LocalPlayer.Character.HumanoidRootPart
+					if game.Players.LocalPlayer.Character:FindFirstChild("AntiPort") and game.Players.LocalPlayer.Character:FindFirstChild("AntiPortNew")  then
+						game.Players.LocalPlayer.Character.AntiPort:Destroy()
+						game.Players.LocalPlayer.Character.AntiPortNew:Destroy()
+					wait(0.1)
+					end
+					for i,v in pairs(game:GetService("Workspace").CandyHolder:GetChildren()) do
+						if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
+							plrh.CFrame = v.CFrame*CFrame.new(0,5,0)
+							wait(0.2)
+						end
+					end
+				end
 			end
 		end)
-		local plr = game.Players.LocalPlayer
-		local mouse = plr:GetMouse()
-		mouse.KeyDown:connect(function(key)
-			if key == "e" then
-				noclip = not noclip
-				game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+		
+	local PF = Function:CreateSection("Pet Function stuff")
+
+		PF:Create(
+			"Toggle",
+			"Auto Combine Pets",
+			function(state)
+				shared.toggleAC_PETS = state
+			end,
+			{
+				default = false,
+			}
+		)
+
+		Spawn(function()
+			while wait(0.5) do
+				if shared.toggleAC_PETS then
+					game:GetService("ReplicatedStorage").Events.CombineAll:FireServer()
+				end
 			end
 		end)
-	end)
 
-	PLR:Button("Fly (Press F)",function()
-   repeat wait() 
-	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Head") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
-local mouse = game.Players.LocalPlayer:GetMouse() 
-repeat wait() until mouse
-local plr = game.Players.LocalPlayer 
-local torso = plr.Character.Head 
-local flying = false
-local deb = true 
-local ctrl = {f = 0, b = 0, l = 0, r = 0} 
-local lastctrl = {f = 0, b = 0, l = 0, r = 0} 
-local maxspeed = 400 
-local speed = 5000 
+local AutoBuy = main:CreateCategory("Auto Buy")
 
-function Fly() 
-local bg = Instance.new("BodyGyro", torso) 
-bg.P = 9e4 
-bg.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
-bg.cframe = torso.CFrame 
-local bv = Instance.new("BodyVelocity", torso) 
-bv.velocity = Vector3.new(0,0.1,0) 
-bv.maxForce = Vector3.new(9e9, 9e9, 9e9) 
-repeat wait() 
-plr.Character.Humanoid.PlatformStand = true 
-if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then 
-speed = speed+.5+(speed/maxspeed) 
-if speed > maxspeed then 
-speed = maxspeed 
-end 
-elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then 
-speed = speed-1 
-if speed < 0 then 
-speed = 0 
-end 
-end 
-if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then 
-bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
-lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r} 
-elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then 
-bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
-else 
-bv.velocity = Vector3.new(0,0.1,0) 
-end 
-bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0) 
-until not flying 
-ctrl = {f = 0, b = 0, l = 0, r = 0} 
-lastctrl = {f = 0, b = 0, l = 0, r = 0} 
-speed = 100
-bg:Destroy() 
-bv:Destroy() 
-plr.Character.Humanoid.PlatformStand = false 
-end 
-mouse.KeyDown:connect(function(key) 
-if key:lower() == "f" then 
-if flying then flying = false 
-else 
-flying = true 
-Fly() 
-end 
-elseif key:lower() == "w" then 
-ctrl.f = 1 
-elseif key:lower() == "s" then 
-ctrl.b = -1 
-elseif key:lower() == "a" then 
-ctrl.l = -1 
-elseif key:lower() == "d" then 
-ctrl.r = 1 
-end 
-end) 
-mouse.KeyUp:connect(function(key) 
-if key:lower() == "w" then 
-ctrl.f = 0 
-elseif key:lower() == "s" then 
-ctrl.b = 0 
-elseif key:lower() == "a" then 
-ctrl.l = 0 
-elseif key:lower() == "d" then 
-ctrl.r = 0 
-end 
-end)
-Fly()
+	local ABS = AutoBuy:CreateSection("Auto Buy Stuff")
 
-          
+		ABS:Create(
+			"Toggle",
+			"Auto Buy Swords",
+			function(state)
+				shared.toggleAB_Swords = state
+			end,
+			{
+				default = false,
+			}
+		)
+		ABS:Create(
+			"Toggle",
+			"Auto Buy Class",
+			function(state)
+				shared.toggleAB_Class = state
+			end,
+			{
+				default = false,
+			}
+		)
+		ABS:Create(
+			"Toggle",
+			"Auto Buy Dna",
+			function(state)
+				shared.toggleAB_Dna = state
+			end,
+			{
+				default = false,
+			}
+		)
+		ABS:Create(
+			"Toggle",
+			"Auto Buy Auras",
+			function(state)
+				shared.toggleAB_Auras = state
+			end,
+			{
+				default = false,
+			}
+		)
+		ABS:Create(
+			"Toggle",
+			"Auto Buy Pet Auras",
+			function(state)
+				shared.toggleAB_Pet_Auras = state
+			end,
+			{
+				default = false,
+			}
+		)
+		ABS:Create(
+			"Toggle",
+			"Auto Buy Jumps",
+			function(state)
+				shared.toggleAB_Jumps = state
+			end,
+			{
+				default = false,
+			}
+		)
+		ABS:Create(
+			"Toggle",
+			"Auto Buy Boss Hit",
+			function(state)
+				shared.toggleAB_Boss_Hit = state
+			end,
+			{
+				default = false,
+			}
+		)
 
-	end)
+		Spawn(function()
+			while wait(0.5) do
+				if shared.toggleAB_Swords then
+					game:GetService("ReplicatedStorage").Events.BuyAll:FireServer("Swords")
+				end
+				if shared.toggleAB_Class then
+					for i,v in pairs (game:GetService("ReplicatedStorage").ShopItems.Classes:GetChildren()) do
+						local args = {
+							[1] = game:GetService("ReplicatedStorage").ShopItems.Classes[v.Name],
+						}
+						game:GetService("ReplicatedStorage").Events.BuyItem:FireServer(unpack(args))
+					end
+				end
+				if shared.toggleAB_Dna then
+					game:GetService("ReplicatedStorage").Events.BuyAll:FireServer("Backpacks")
+				end
+				if shared.toggleAB_Auras then
+					game:GetService("ReplicatedStorage").Events.BuyAll:FireServer("Auras")
+				end
+				if shared.toggleAB_Pet_Auras then
+					game:GetService("ReplicatedStorage").Events.BuyAll:FireServer("PetAuras")
+				end
+				if shared.toggleAB_Jumps then
+					game:GetService("ReplicatedStorage").Events.BuyAll:FireServer("JumpBoosts")
+				end
+				if shared.toggleAB_Boss_Hit then
+					game:GetService("ReplicatedStorage").Events.BuyAll:FireServer("BossBoosts")
+				end
+			end
+		end)
 
-	PLR:Button("Inf Jump",function()
-	game:GetService("UserInputService").JumpRequest:connect(function()
-    game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
-end)
-end)
+	local ABE = AutoBuy:CreateSection("Auto Buy Egg")
 
-	PLR:Button("Crl + Click = TP",function()
-local Plr = game:GetService("Players").LocalPlayer
-local Mouse = Plr:GetMouse()
+		ABE:Create(
+			"DropDown",
+			"Choose An Egg", 
+			function(current)
+				print("Selected to:", current)
+				shared.DropDownABEChoose = current
+				TpArea()
+			end,
+			{
+				options = {
+					"Main Island 1", "Main Island 2", "Main Island 3", "Main Island 4", "Island 1", "Island 2", "Island 3", "Island 4", "Island 5", "Island 6", "Island 7",
+					"Island 8", "Island 9", "Island 10", "Island 11", "Island 12", "Island 13", "Island 14","Island 15",
+					"Island 16", "Island 17", "Island 18", "Island 19", "Island 20", "Island 21","Island 22", "Island 23",
+					"Island 24", "Island 25", "Island 26", "Island 27", "Island 28","Island 29", "Island 30","Island 31",
+					"Island 32", "Island 33", "Island 34", "Island 35","Island 36", "Island 37","Island 38", "Island 39", 
+					"Island 40", "Island 41", "Island 42", "Island 43", "Island 44", "Island 45", "Island 46","Island 47", 
+					"Island 48", "Island 49", "Island 50", "Island 51", "Island 52", "Island 53","Island 54", "Island 55", 
+					"Island 56", "Island 57", "Island 58", "Island 59", "Island 60","Island 61", "Island 62","Island 63", 
+					"Island 64", "Island 65", "Island 66", "Island 67", "Island 68", "Island 69","Island 70",
+				},
+				-- Optional
+				default = "Choose An Egg",
+				search = true
+			}
+		)
 
-Mouse.Button1Down:connect(function()
-if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
-if not Mouse.Target then return end
-Plr.Character:MoveTo(Mouse.Hit.p)
-end)
-end)
-	PLR:Button("Extreme Light",function()
-	local s = Instance.new("PointLight", game.Players.LocalPlayer.Character.Head)
-s.Brightness = 0.3
-s.Range = 100
-game.Lighting.Changed:connect(function()
-game.Lighting.TimeOfDay = "14:00:00"
-game.Lighting.FogEnd = 300
-game.Lighting.Brightness = 10
-game.Lighting.ColorCorrection.Brightness = 0.1
-game.Lighting.ColorCorrection.Saturation = 0.1
-game.Lighting.Bloom.Intensity = 0.1
-end)
-end)
-	PLR:Button("Inf Yield",function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-end)
+		ABE:Create(
+			"Toggle",
+			"Start",
+			function(state)
+				shared.toggleABES = state
+			end,
+			{
+				default = false,
+			}
+		)
 
-	PLR:Button("Btools",function()
-game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
-for index, child in pairs(game:GetService("Workspace"):GetChildren()) do
-  if child.ClassName == "Part" then
-      child.Locked = false
-  end
-  if child.ClassName == "MeshPart" then
-      child.Locked = false
-  end
-  if child.ClassName == "UnionOperation" then
-      child.Locked = false
-  end
-  if child.ClassName == "Model" then
-      for index, chil in pairs(child:GetChildren()) do
-          if chil.ClassName == "Part" then
-              chil.Locked = false
-          end
-          if chil.ClassName == "MeshPart" then
-              chil.Locked = false
-          end
-          if chil.ClassName == "UnionOperation" then
-              chil.Locked = false
-          end
-          if chil.ClassName == "Model" then
-              for index, childe in pairs(chil:GetChildren()) do
-                  if childe.ClassName == "Part" then
-                      childe.Locked = false
-                  end
-                  if childe.ClassName == "MeshPart" then
-                      childe.Locked = false
-                  end
-                  if childe.ClassName == "UnionOperation" then
-                      childe.Locked = false
-                  end
-                  if childe.ClassName == "Model" then
-                      for index, childeo in pairs(childe:GetChildren()) do
-                          if childeo.ClassName == "Part" then
-                              childeo.Locked = false
-                          end
-                          if childeo.ClassName == "MeshPart" then
-                              childeo.Locked = false
-                          end
-                          if childeo.ClassName == "UnionOperation" then
-                              childeo.Locked = false
-                          end
-                          if childeo.ClassName == "Model" then
-                          end
-                      end
-                  end
-              end
-          end
-      end
-  end
- 
-end
-c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
-c.BinType = Enum.BinType.Hammer
-c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
-c.BinType = Enum.BinType.Clone
-c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
-c.BinType = Enum.BinType.Grab
+		spawn(function()
+			while wait(0.25) do
+				if shared.toggleABES then
+					if shared.DropDownABEChoose == "Main Island 1" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Basic Egg"],1)
+					elseif shared.DropDownABEChoose == "Main Island 2" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Wooden Egg"],1)
+					elseif shared.DropDownABEChoose == "Main Island 3" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs.Ancient,1)
+					elseif shared.DropDownABEChoose == "Main Island 4" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Reinforced Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 1" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Egg of life"],1)
+					elseif shared.DropDownABEChoose == "Island 2" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Glory Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 3" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Dominus Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 4" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Silver Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 5" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Golden Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 6" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Premium Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 7" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Class Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 8" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Diamond Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 9" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Ruby Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 10" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Alpha Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 11" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Snow Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 12" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Reaper Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 13" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Nature Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 14" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Winter Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 15" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Food Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 16" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Fire Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 17" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Valk Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 18" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Dragon Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 19" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Star Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 20" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Cow Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 21" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Flame Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 22" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Water Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 23" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Ooga Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 24" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Round Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 25" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Heart Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 26" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Matrix Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 27" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Shadow Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 28" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Pink Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 29" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Candy Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 30" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Rushed Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 31" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Onetap Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 32" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Swag Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 33" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Triangle Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 34" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Square Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 35" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Cringe Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 36" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Boris Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 37" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Phantom Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 38" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Business Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 39" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Egg Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 40" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Birthday Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 41" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Switch Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 42" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["America Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 43" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["British Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 44" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Erick Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 45" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Henry Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 46" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Lazy Dev Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 47" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Puppet Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 48" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Piggy Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 49" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Easy Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 50" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Bruh Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 51" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Guts Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 52" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Griffith Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 53" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Casca Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 54" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Femto Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 55" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Pippin Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 56" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Dog Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 57" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Bingo Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 58" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["M Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 59" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["A Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 60" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["B Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 61" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["C Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 62" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["D Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 63" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["E Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 64" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["F Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 65" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["G Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 66" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["H Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 67" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["I Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 68" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["O Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 69" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["P Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 70" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["R Egg"],1)
+					end
+				end
+			end
+		end)
 
+	local ABEE = AutoBuy:CreateSection("Auto Buy Winter Event Egg")
 
-end)
+		ABEE:Create(
+			"DropDown",
+			"Choose An Egg", 
+			function(current)
+				print("Selected to:", current)
+				shared.DropDownABEEChoose = current
+				TpArea()
+			end,
+			{
+				options = {
+					"First (200 Candy)", "Second (150 Candy)", "Third (75 Candy)",
+				},
+				-- Optional
+				default = "Choose An Egg",
+				search = true
+			}
+		)
 
---================== Misc =======================--
+		ABEE:Create(
+			"Toggle",
+			"Start",
+			function(state)
+				shared.toggleABEES = state
+			end,
+			{
+				default = false,
+			}
+		)
 
-local MISC = w3:CreateFolder("Misc")
+		spawn(function()
+			while wait(0.25) do
+				if shared.toggleABEES then
+					if shared.DropDownABEEChoose == "First (200 Candy)" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["U Egg"],1)
+					elseif shared.DropDownABEEChoose == "Second (150 Candy)" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["T Egg"],1)
+					elseif shared.DropDownABEEChoose == "Third (75 Candy)" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["S Egg"],1)
+					end
+				end
+			end
+		end)
 
-	MISC:Button("Rejoin",function()
-		local TeleportService = game:GetService("TeleportService")
-		local PlaceId = game.PlaceId
-		local player = game.Players.LocalPlayer
-		if player then
-		TeleportService:Teleport(PlaceId, player)
+local Teleport = main:CreateCategory("Teleport")
+
+	local TS = Teleport:CreateSection("Teleport Stuff")
+
+		TS:Create(
+			"DropDown",
+			"Choose a Island's Location", 
+			function(current)
+				print("Selected to:", current)
+				shared.DropDownTPChoose = current
+				TpArea()
+			end,
+			{
+				options = {
+					"Main Island", "Island 1", "Island 2", "Island 3", "Island 4", "Island 5", "Island 6", "Island 7",
+					"Island 8", "Island 9", "Island 10", "Island 11", "Island 12", "Island 13", "Island 14","Island 15",
+					"Island 16", "Island 17", "Island 18", "Island 19", "Island 20", "Island 21","Island 22", "Island 23",
+					"Island 24", "Island 25", "Island 26", "Island 27", "Island 28","Island 29", "Island 30","Island 31",
+					"Island 32", "Island 33", "Island 34", "Island 35","Island 36", "Island 37","Island 38", "Island 39", 
+					"Island 40", "Island 41", "Island 42", "Island 43", "Island 44", "Island 45", "Island 46","Island 47", 
+					"Island 48", "Island 49", "Island 50", "Island 51", "Island 52", "Island 53","Island 54", "Island 55", 
+					"Island 56", "Island 57", "Island 58", "Island 59", "Island 60","Island 61", "Island 62","Island 63", 
+					"Island 64", "Island 65", "Island 66", "Island 67", "Island 68", "Island 69","Island 70",
+				},
+				-- Optional
+				default = "Choose a Island's Location",
+				search = true
+			}
+		)
+
+		TS:Create(
+			"DropDown",
+			"Choose a Player", 
+			function(current)
+				print("Selected to:", current)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[current].Character.HumanoidRootPart.CFrame
+			end,
+			{
+				playerlist = true,
+				default = "Choose a Player",
+				search = true
+			}
+		)
+
+		TS:Create(
+			"Button",
+			"Unlock All Islands",
+			function()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(530, 186, -37)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(515, 800, 162)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(482, 2653, -295)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(651, 7092, -289)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(586, 12698, -233)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(503, 19439, -77)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(478, 26257, -200)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(632, 29800, -86)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(520, 34169, -212)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(567, 38094, -128)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(568, 42888, -191)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 48849, -303)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 52643, -154)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 57627, -154)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 62383, -154)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(544, 67088, -63)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 72952, -154)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(612, 76590, -35)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(469, 80724, -22)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(469, 84822, -22)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(469, 90390, -22)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(469, 94252, -22)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(469, 97712, -22)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(469, 101249, -22)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(553, 104247, -141)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(692, 108787, -2)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(692, 127920, -2)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(691, 117959, -2)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(692, 121864, -2)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(691, 127920, -2)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(626, 131089, -52)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(554, 135607, -141)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(692, 140147, -2)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(691, 143498, -2)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(584, 146933, -202)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(584, 150269, -202)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(346, 152664, 28)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 158319, -303)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 162114, -154)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 164290, -155)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 166416, -154)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 171579, -98)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(363, 175489, -246)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(554, 179363, -291)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(505, 182102, -215)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(490, 184962, -248)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(482, 187552, -240)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(642, 190399, -112)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 192607, -154)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 195964, -154)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 199264, -154)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 202506, -154)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 206038, -303)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 209508, -303)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 213009, -303)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 216610, -303)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 220081, -303)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 223509, -303)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 226954, -303)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 230474, -303)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 233950, -303)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 237504, -303)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 241063, -303)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 244541, -303)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 251557, -303)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 255099, -303)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(630, 255100, -310)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 258654, -312)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(630, 262200, -310)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 265717, -310)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 269271, -303)
+				wait(0.35)
+			end,
+			{
+				animated = true,
+			}
+		)
+
+		function TpArea()
+			if shared.DropDownTPChoose == "Main Island" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(530, 186, -37)
+			elseif shared.DropDownTPChoose == "Island 1" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(515, 800, 162)
+			elseif shared.DropDownTPChoose == "Island 2" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(482, 2653, -295)
+			elseif shared.DropDownTPChoose == "Island 3" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(651, 7092, -289)
+			elseif shared.DropDownTPChoose == "Island 4" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(586, 12698, -233)
+			elseif shared.DropDownTPChoose == "Island 5" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(503, 19439, -77)
+			elseif shared.DropDownTPChoose == "Island 6" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(478, 26257, -200)
+			elseif shared.DropDownTPChoose == "Island 7" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(632, 29800, -86)
+			elseif shared.DropDownTPChoose == "Island 8" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(520, 34169, -212)
+			elseif shared.DropDownTPChoose == "Island 9" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(567, 38094, -128)
+			elseif shared.DropDownTPChoose == "Island 10" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(568, 42888, -191)
+			elseif shared.DropDownTPChoose == "Island 11" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 48849, -303)
+			elseif shared.DropDownTPChoose == "Island 12" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 52643, -154)
+			elseif shared.DropDownTPChoose == "Island 13" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 57627, -154)
+			elseif shared.DropDownTPChoose == "Island 14" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 62383, -154)
+			elseif shared.DropDownTPChoose == "Island 15" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(544, 67088, -63)
+			elseif shared.DropDownTPChoose == "Island 16" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 72952, -154)
+			elseif shared.DropDownTPChoose == "Island 17" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(612, 76590, -35)
+			elseif shared.DropDownTPChoose == "Island 18" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(469, 80724, -22)
+			elseif shared.DropDownTPChoose == "Island 19" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(469, 84822, -22)
+			elseif shared.DropDownTPChoose == "Island 20" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(469, 90390, -22)
+			elseif shared.DropDownTPChoose == "Island 21" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(469, 94252, -22)
+			elseif shared.DropDownTPChoose == "Island 22" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(469, 97712, -22)
+			elseif shared.DropDownTPChoose == "Island 23" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(469, 101249, -22)
+			elseif shared.DropDownTPChoose == "Island 24" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(553, 104247, -141)
+			elseif shared.DropDownTPChoose == "Island 25" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(692, 108787, -2)
+			elseif shared.DropDownTPChoose == "Island 26" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(692, 127920, -2)
+			elseif shared.DropDownTPChoose == "Island 27" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(691, 117959, -2)
+			elseif shared.DropDownTPChoose == "Island 28" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(692, 121864, -2)
+			elseif shared.DropDownTPChoose == "Island 29" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(691, 127920, -2)
+			elseif shared.DropDownTPChoose == "Island 30" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(626, 131089, -52)
+			elseif shared.DropDownTPChoose == "Island 31" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(554, 135607, -141)
+			elseif shared.DropDownTPChoose == "Island 32" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(692, 140147, -2)
+			elseif shared.DropDownTPChoose == "Island 33" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(691, 143498, -2)
+			elseif shared.DropDownTPChoose == "Island 34" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(584, 146933, -202)
+			elseif shared.DropDownTPChoose == "Island 35" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(584, 150269, -202)
+			elseif shared.DropDownTPChoose == "Island 36" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(346, 152664, 28)
+			elseif shared.DropDownTPChoose == "Island 37" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 158319, -303)
+			elseif shared.DropDownTPChoose == "Island 38" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 162114, -154)
+			elseif shared.DropDownTPChoose == "Island 39" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 164290, -155)
+			elseif shared.DropDownTPChoose == "Island 40" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 166416, -154)
+			elseif shared.DropDownTPChoose == "Island 41" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 171579, -98)
+			elseif shared.DropDownTPChoose == "Island 42" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(363, 175489, -246)
+			elseif shared.DropDownTPChoose == "Island 43" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(554, 179363, -291)
+			elseif shared.DropDownTPChoose == "Island 44" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(505, 182102, -215)
+			elseif shared.DropDownTPChoose == "Island 45" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(490, 184962, -248)
+			elseif shared.DropDownTPChoose == "Island 46" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(482, 187552, -240)
+			elseif shared.DropDownTPChoose == "Island 47" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(642, 190399, -112)
+			elseif shared.DropDownTPChoose == "Island 48" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 192607, -154)
+			elseif shared.DropDownTPChoose == "Island 49" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 195964, -154)
+			elseif shared.DropDownTPChoose == "Island 50" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 199264, -154)
+			elseif shared.DropDownTPChoose == "Island 51" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(540, 202506, -154)
+			elseif shared.DropDownTPChoose == "Island 52" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 206038, -303)
+			elseif shared.DropDownTPChoose == "Island 53" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 209508, -303)
+			elseif shared.DropDownTPChoose == "Island 54" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 213009, -303)
+			elseif shared.DropDownTPChoose == "Island 55" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 216610, -303)
+			elseif shared.DropDownTPChoose == "Island 56" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 220081, -303)
+			elseif shared.DropDownTPChoose == "Island 57" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 223509, -303)
+			elseif shared.DropDownTPChoose == "Island 58" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 226954, -303)
+			elseif shared.DropDownTPChoose == "Island 59" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 230474, -303)
+			elseif shared.DropDownTPChoose == "Island 60" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 233950, -303)
+			elseif shared.DropDownTPChoose == "Island 61" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 237504, -303)
+			elseif shared.DropDownTPChoose == "Island 62" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 241063, -303)
+			elseif shared.DropDownTPChoose == "Island 63" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 244541, -303)
+			elseif shared.DropDownTPChoose == "Island 64" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 251557, -303)
+			elseif shared.DropDownTPChoose == "Island 65" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 255099, -303)
+			elseif shared.DropDownTPChoose == "Island 66" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(630, 255100, -310)
+			elseif shared.DropDownTPChoose == "Island 67" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 258654, -312)
+			elseif shared.DropDownTPChoose == "Island 68" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(630, 262200, -310)
+			elseif shared.DropDownTPChoose == "Island 69" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 265717, -310)
+			elseif shared.DropDownTPChoose == "Island 70" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 269271, -303)
+			end
 		end
-	end)
 
-	MISC:GuiSettings()
+local PlayerStuff = main:CreateCategory("Player Stuff")
 
---================== Credits =======================--
+	local PS = PlayerStuff:CreateSection("Player Stuff")
 
-local CS = w3:CreateFolder("Credits")
+		PS:Create(
+			"Slider",
+			"Speed Hack",
+			function(value)
+				game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+			end,
+			{
+				min = 0,
+				max = 250,
+				-- Optional
+				default = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed,
+				precise = false, -- ex: 0.1, 0.2, 0.3
+				changablevalue = true
+			}
+		)
 
-	CS:Button("Script: Im A Cat#7202",function()
-		setclipboard("Im A Cat#7202")
-	end)
+		PS:Create(
+			"Slider",
+			"Jump Hack",
+			function(value)
+				game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
+			end,
+			{
+				min = 0,
+				max = 250,
+				-- Optional
+				default = game.Players.LocalPlayer.Character.Humanoid.JumpPower,
+				precise = false, -- ex: 0.1, 0.2, 0.3
+				changablevalue = true
+			}
+		)
+			PS:Create(
+			"Slider",
+			"HipHeight Hack",
+			function(value)
+			game.Players.LocalPlayer.Character.Humanoid.HipHeight = value
+			end,
+			{
+				min = 2.56,
+				max = 250,
+				-- Optional
+				default = game.Players.LocalPlayer.Character.Humanoid.HipHeight,
+				precise = true, -- ex: 0.1, 0.2, 0.3
+				changablevalue = true
+			}
+		)
 
-	CS:Button("Discord: PKWXQae",function()
-		setclipboard("https://discord.gg/PKWXQae")
-	end)
+		PS:Create(
+			"Button",
+			"Inf MaxJumps",
+			function()
+				game:GetService("Players").LocalPlayer.PlayerScripts["Double Jump"].MaxJumps.Value = 1e+9
+			end,
+			{
+				animated = true,
+			}
+		)
 
-CS:Button("Helped by: Altix#3395",function()
-		setclipboard("Altix#3395")
-end)
+		PS:Create(
+			"Button",
+			"No Clip (Press N)",
+			function()
+				noclip = false
+				game:GetService('RunService').Stepped:connect(function()
+					if noclip then
+						game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+					end
+				end)
+				local plr = game.Players.LocalPlayer
+				local mouse = plr:GetMouse()
+				mouse.KeyDown:connect(function(key)
+					if key == "n" then
+						noclip = not noclip
+						game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+					end
+				end)
+			end,
+			{
+				animated = true,
+			}
+		)
 
-	CS:DestroyGUI()
+		PS:Create(
+			"Button",
+			"Fly (Press F)",
+			function()
+				loadstring(game:HttpGet("https://pastebin.com/raw/c01bpxpF", true))()
+			end,
+			{
+				animated = true,
+			}
+		)
 
---================== Autres =======================--
+		PS:Create(
+			"Button",
+			"Ctrl + Click Tp",
+			function()
+				local Plr = game:GetService("Players").LocalPlayer
+				local Mouse = Plr:GetMouse()
 
+				Mouse.Button1Down:connect(function()
+				if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
+				if not Mouse.Target then return end
+				Plr.Character:MoveTo(Mouse.Hit.p)
+				end)
+			end,
+			{
+				animated = true,
+			}
+		)
 
---| Anti Ban |
-setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
-setfflag("DFIntCrashUploadToBacktracePercentage", "0")
-setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
-setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
+		PS:Create(
+			"Button",
+			"Camera Max/Min Zoom Distance",
+			function()
+				game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = 99999
+				game:GetService("Players").LocalPlayer.CameraMinZoomDistance = 0
+			end,
+			{
+				animated = true,
+			}
+		)
 
---| Anti AFK | By Altix#3395
-    local Virtual = game:service'VirtualUser'
-    game:service'Players'.LocalPlayer.Idled:connect(function()
-        Virtual:CaptureController()
-        Virtual:ClickButton2(Vector2.new())
-        wait(2)
-    end)
+local Misc = main:CreateCategory("Misc")
 
---| Anti Chat Logs |
-local CloneFunction = clonefunction
-local CheckCaller = CloneFunction(checkcaller)
-local HookFunction = CloneFunction(hookfunction)
-local LocalPlayer = game.Players.PlayerAdded:wait()
+	local Miscsection = Misc:CreateSection("Misc Stuff")
 
-local PostMessage = require(LocalPlayer:WaitForChild("PlayerScripts", 1/0):WaitForChild("ChatScript", 1/0):WaitForChild("ChatMain", 1/0)).MessagePosted
-getgenv().MessageEvent = Instance.new("BindableEvent")
+		Miscsection:Create(
+			"Button",
+			"Refresh Game",
+			function()
+				local TeleportService = game:GetService("TeleportService")
+				local PlaceId = game.PlaceId
+				local player = game.Players.LocalPlayer
+				if player then
+				TeleportService:Teleport(PlaceId, player)
+				end
+			end,
+			{
+				animated = true,
+			}
+		)
 
-local OldFunctionHook
-local PostMessageHook = function(self, msg)
-   if not CheckCaller() and self == PostMessage then
-       MessageEvent:Fire(msg)
-       return
-   end
-   return OldFunctionHook(self, msg)
-end
-OldFunctionHook = HookFunction(PostMessage.fire, PostMessageHook)
+		Miscsection:Create(
+			"Button",
+			"Use All Codes",
+			function()
+				local Codes = {
+					"VoidGG";"weekend";"oioi";"Yippee";"2020";"5000Followers";"Vehnix";
+					"Slayer";"Saber";"Legend";"ISLANDS";"100m";"Airstudio";"MIRRAWRXD";"straw";
+					"calixo";"erick";"GOLDEN";"prez";"grim";"boss";"telanthric";"defild";
+					"melihkardes";"cookieclix";"cookie";"gravy";"JS";"raven";"razor";"robzi";
+					"subtoaustin";"release";"mirrorrs";"henrydev";"mmistaken";
+				}
+				for i, v in next, Codes do
+					game:GetService("ReplicatedStorage").Events.CheckCode:InvokeServer(v)
+				end
+			end,
+			{
+				animated = true,
+			}
+		)
+
+	local GuiStuff = Misc:CreateSection("Gui Stuff")
+
+		GuiStuff:Create(
+			"KeyBind",
+			"Hide Gui", 
+			function(bool)
+				print(bool)
+				local Gui = game:GetService("CoreGui")["ScreenGui"].Motherframe
+				if Gui.Visible then
+					Gui.Visible = false
+				else
+					Gui.Visible = true
+				end
+			end,
+			{
+				default = Enum.KeyCode.RightControl
+			}
+		)
+		GuiStuff:Create(
+			"Button",
+			"Destroy Gui",
+			function()
+				game:GetService("CoreGui")["ScreenGui"]:Destroy()
+			end,
+			{
+				animated = true,
+			}
+		)
