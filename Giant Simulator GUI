@@ -11312,7 +11312,18 @@ MISC:CreateButton("Speed Hack 100 Press(A)Or(E)", function() --the (arg) is if t
       if key == "A" then
           end
 end)
+AutoTab:CreateToggle("Auto Click", function(arg) --you dont need "arg" for a button
+  if arg then
+  _G.Click = true 
+        while wait(0) and _G.Click  do
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.GameService.WeaponAttackStart:FireServer()
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.GameService.WeaponAnimComplete:FireServer()
 
+        end
+    else
+        _G.Click= false
+    end
+end)
 AutoTab:CreateToggle("Auto Tp Zone Soul", function(arg) --you dont need "arg" for a button
   if arg then
   _G.so = true 
