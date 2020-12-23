@@ -1,46 +1,34 @@
 local library = loadstring(game:HttpGet("https://zypher.wtf/UI-Lib"))()
-	
-local main = library:CreateMain("Saber Simulator")
+local main = library:CreateMain("zypher")
 
 local Home = main:CreateCategory("Home")
-
 	local Tittle = Home:CreateSection("Saber Simulator")
-	
-	local H1 = Home:CreateSection("Update logs (12-19-20):")
-
+	local H1 = Home:CreateSection("Update logs V2.0.1:")
 		H1:Create(
 			"Textlabel",
-			"+ New Gui"
+			"+ Auto Collect (Coins/Candy) Updated"
 		)
-		H1:Create(
+	local H2 = Home:CreateSection("Credits")
+		H2:Create(
 			"Textlabel",
-			"- Old Gui"
+			"Script by Altix#3395"
 		)
-
-
-		local H2 = Home:CreateSection("Credits")
-	
-			H2:Create(
-				"Textlabel",
-				"Script by Altix#3395"
-			)
-			H2:Create(
-				"Textlabel",
-				"Tested by I'm A Cat#7202"
-			)
-			H2:Create(
-				"Button",
-				"Copy Discord Link (https://discord.gg/x2hM4M5xWj)",
-				function()
-				setclipboard("https://discord.gg/x2hM4M5xWj")
-				end,
-				{
-					animated = true,
-				}
-			)
-
+		H2:Create(
+			"Textlabel",
+			"Tested by I'm A Cat#7202"
+		)
+		H2:Create(
+			"Button",
+			"Copy Discord Link (https://discord.gg/x2hM4M5xWj)",
+			function()
+			setclipboard("https://discord.gg/x2hM4M5xWj")
+			end,
+			{
+				animated = true,
+			}
+		)
+		
 local Function = main:CreateCategory("Function")
-
 	local AS = Function:CreateSection("Auto Stuff")
 		AS:Create(
 			"Toggle",
@@ -155,7 +143,6 @@ local Function = main:CreateCategory("Function")
 		end)
 
 	local AS = Function:CreateSection("Collect Stuff")
-	
 		AS:Create(
 			"Toggle",
 			"Auto Collect Coins",
@@ -166,7 +153,6 @@ local Function = main:CreateCategory("Function")
 				default = false,
 			}
 		)
-
 		AS:Create(
 			"Toggle",
 			"Auto Collect Candy & Present",
@@ -176,48 +162,55 @@ local Function = main:CreateCategory("Function")
 			{
 				default = false,
 			}
-		)
+        )
+        spawn(function()
+            local tween = game:GetService("TweenService")
+            local character = game.Players.LocalPlayer.character
+            local humanoid = character.HumanoidRootPart
 
-		spawn(function()
 			while wait() do
 				if shared.toggleACCoins then
-					local plrh = game.Players.LocalPlayer.Character.HumanoidRootPart
-					if game.Players.LocalPlayer.Character:FindFirstChild("AntiPort") and game.Players.LocalPlayer.Character:FindFirstChild("AntiPortNew")  then
-						game.Players.LocalPlayer.Character.AntiPort:Destroy()
-						game.Players.LocalPlayer.Character.AntiPortNew:Destroy()
-					wait(0.1)
-					end
-					for i,v in pairs(game:GetService("Workspace").CoinsHolder:GetChildren()) do
-						if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
-							plrh.CFrame = v.CFrame*CFrame.new(0,5,0)
-							wait(0.2)
-						end
-					end
+                    game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+                    wait(1)
+                    for i, v in next, {game.Workspace.CoinsHolder} do
+                        pcall(
+                            function()
+                                if v:FindFirstChild("Coin") then
+                                    tween:Create(humanoid, TweenInfo.new(1, Enum.EasingStyle.Linear), {CFrame = v.Coin.CFrame}):Play()
+                                    wait(2)
+                                    v.Coin:Destroy()
+                                end
+                            end
+                        )
+                    end
 				end
 			end
 		end)
-		
 		spawn(function()
+			local tween = game:GetService("TweenService")
+			local character = game.Players.LocalPlayer.character
+			local humanoid = character.HumanoidRootPart
+			
 			while wait() do
 				if shared.toggleACCandy then
-					local plrh = game.Players.LocalPlayer.Character.HumanoidRootPart
-					if game.Players.LocalPlayer.Character:FindFirstChild("AntiPort") and game.Players.LocalPlayer.Character:FindFirstChild("AntiPortNew")  then
-						game.Players.LocalPlayer.Character.AntiPort:Destroy()
-						game.Players.LocalPlayer.Character.AntiPortNew:Destroy()
-					wait(0.1)
-					end
-					for i,v in pairs(game:GetService("Workspace").CandyHolder:GetChildren()) do
-						if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
-							plrh.CFrame = v.CFrame*CFrame.new(0,5,0)
-							wait(0.2)
-						end
+					game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+					wait(1)
+					for i, v in next, {game.Workspace.CandyHolder} do
+						pcall(
+							function()
+								if v:FindFirstChild("CandyCane") then
+									tween:Create(humanoid, TweenInfo.new(1, Enum.EasingStyle.Linear), {CFrame = v.CandyCane.CFrame}):Play()
+									wait(2)
+									v.CandyCane:Destroy()
+								end
+							end
+						)
 					end
 				end
 			end
 		end)
 		
 	local PF = Function:CreateSection("Pet Function stuff")
-
 		PF:Create(
 			"Toggle",
 			"Auto Combine Pets",
@@ -228,7 +221,6 @@ local Function = main:CreateCategory("Function")
 				default = false,
 			}
 		)
-
 		Spawn(function()
 			while wait(0.5) do
 				if shared.toggleAC_PETS then
@@ -238,9 +230,7 @@ local Function = main:CreateCategory("Function")
 		end)
 
 local AutoBuy = main:CreateCategory("Auto Buy")
-
 	local ABS = AutoBuy:CreateSection("Auto Buy Stuff")
-
 		ABS:Create(
 			"Toggle",
 			"Auto Buy Swords",
@@ -311,7 +301,6 @@ local AutoBuy = main:CreateCategory("Auto Buy")
 				default = false,
 			}
 		)
-
 		Spawn(function()
 			while wait(0.5) do
 				if shared.toggleAB_Swords then
@@ -344,7 +333,6 @@ local AutoBuy = main:CreateCategory("Auto Buy")
 		end)
 
 	local ABE = AutoBuy:CreateSection("Auto Buy Egg")
-
 		ABE:Create(
 			"DropDown",
 			"Choose An Egg", 
@@ -370,7 +358,6 @@ local AutoBuy = main:CreateCategory("Auto Buy")
 				search = true
 			}
 		)
-
 		ABE:Create(
 			"Toggle",
 			"Start",
@@ -381,7 +368,6 @@ local AutoBuy = main:CreateCategory("Auto Buy")
 				default = false,
 			}
 		)
-
 		spawn(function()
 			while wait(0.25) do
 				if shared.toggleABES then
@@ -539,7 +525,6 @@ local AutoBuy = main:CreateCategory("Auto Buy")
 		end)
 
 	local ABEE = AutoBuy:CreateSection("Auto Buy Winter Event Egg")
-
 		ABEE:Create(
 			"DropDown",
 			"Choose An Egg", 
@@ -557,7 +542,6 @@ local AutoBuy = main:CreateCategory("Auto Buy")
 				search = true
 			}
 		)
-
 		ABEE:Create(
 			"Toggle",
 			"Start",
@@ -568,7 +552,6 @@ local AutoBuy = main:CreateCategory("Auto Buy")
 				default = false,
 			}
 		)
-
 		spawn(function()
 			while wait(0.25) do
 				if shared.toggleABEES then
@@ -584,9 +567,7 @@ local AutoBuy = main:CreateCategory("Auto Buy")
 		end)
 
 local Teleport = main:CreateCategory("Teleport")
-
 	local TS = Teleport:CreateSection("Teleport Stuff")
-
 		TS:Create(
 			"DropDown",
 			"Choose a Island's Location", 
@@ -612,7 +593,6 @@ local Teleport = main:CreateCategory("Teleport")
 				search = true
 			}
 		)
-
 		TS:Create(
 			"DropDown",
 			"Choose a Player", 
@@ -626,7 +606,6 @@ local Teleport = main:CreateCategory("Teleport")
 				search = true
 			}
 		)
-
 		TS:Create(
 			"Button",
 			"Unlock All Islands",
@@ -778,7 +757,6 @@ local Teleport = main:CreateCategory("Teleport")
 				animated = true,
 			}
 		)
-
 		function TpArea()
 			if shared.DropDownTPChoose == "Main Island" then
 				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(530, 186, -37)
@@ -926,9 +904,7 @@ local Teleport = main:CreateCategory("Teleport")
 		end
 
 local PlayerStuff = main:CreateCategory("Player Stuff")
-
 	local PS = PlayerStuff:CreateSection("Player Stuff")
-
 		PS:Create(
 			"Slider",
 			"Speed Hack",
@@ -944,7 +920,6 @@ local PlayerStuff = main:CreateCategory("Player Stuff")
 				changablevalue = true
 			}
 		)
-
 		PS:Create(
 			"Slider",
 			"Jump Hack",
@@ -960,7 +935,7 @@ local PlayerStuff = main:CreateCategory("Player Stuff")
 				changablevalue = true
 			}
 		)
-			PS:Create(
+		PS:Create(
 			"Slider",
 			"HipHeight Hack",
 			function(value)
@@ -975,7 +950,6 @@ local PlayerStuff = main:CreateCategory("Player Stuff")
 				changablevalue = true
 			}
 		)
-
 		PS:Create(
 			"Button",
 			"Inf MaxJumps",
@@ -986,7 +960,6 @@ local PlayerStuff = main:CreateCategory("Player Stuff")
 				animated = true,
 			}
 		)
-
 		PS:Create(
 			"Button",
 			"No Clip (Press N)",
@@ -1010,7 +983,6 @@ local PlayerStuff = main:CreateCategory("Player Stuff")
 				animated = true,
 			}
 		)
-
 		PS:Create(
 			"Button",
 			"Fly (Press F)",
@@ -1021,7 +993,6 @@ local PlayerStuff = main:CreateCategory("Player Stuff")
 				animated = true,
 			}
 		)
-
 		PS:Create(
 			"Button",
 			"Ctrl + Click Tp",
@@ -1039,7 +1010,6 @@ local PlayerStuff = main:CreateCategory("Player Stuff")
 				animated = true,
 			}
 		)
-
 		PS:Create(
 			"Button",
 			"Camera Max/Min Zoom Distance",
@@ -1053,9 +1023,7 @@ local PlayerStuff = main:CreateCategory("Player Stuff")
 		)
 
 local Misc = main:CreateCategory("Misc")
-
 	local Miscsection = Misc:CreateSection("Misc Stuff")
-
 		Miscsection:Create(
 			"Button",
 			"Refresh Game",
@@ -1071,7 +1039,6 @@ local Misc = main:CreateCategory("Misc")
 				animated = true,
 			}
 		)
-
 		Miscsection:Create(
 			"Button",
 			"Use All Codes",
@@ -1093,7 +1060,6 @@ local Misc = main:CreateCategory("Misc")
 		)
 
 	local GuiStuff = Misc:CreateSection("Gui Stuff")
-
 		GuiStuff:Create(
 			"KeyBind",
 			"Hide Gui", 
