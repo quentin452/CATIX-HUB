@@ -11478,7 +11478,11 @@ AutoTab:CreateToggle("Auto Buy Dna", function(arg) --the (arg) is if the checkbo
     if arg then
         _G.f = true 
         while wait(0) and _G.f do
-      game:GetService("ReplicatedStorage").Events.BuyAllDNA:FireServer()
+wait(1)
+    for i = 1,360 do
+    game:GetService("ReplicatedStorage").Events.EquipDNA:FireServer("test"..i)
+end
+game:GetService("ReplicatedStorage").Events.BuyAllDNA:FireServer()
         end
     else
         _G.f= false
@@ -11798,6 +11802,18 @@ game:GetService("ReplicatedStorage").Events.BuyAura:FireServer(unpack(args))
         end
     else
         _G.h= false
+    end
+end)
+AutoTab:CreateToggle("Auto Collect Candy", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.f = true 
+        while wait(0) and _G.f do
+     for i,v in pairs(game:GetService("Workspace").Canes:GetChildren())do
+    v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+        end
+    else
+        _G.f= false
     end
 end)
 eggs:CreateToggle("Auto Buy Basic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
