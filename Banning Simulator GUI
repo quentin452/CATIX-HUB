@@ -13,29 +13,22 @@ local credits = Library:CreateTab("Credits","things", true)
 
 
 credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
+	setclipboard("AHAHAHAHAH")
 end)
 
-credits:CreateButton("masterkyllian#1723", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
+credits:CreateButton("https://discord.gg/KmHZUpXEmQ", function() --you dont need "arg" for a button
+	setclipboard("https://discord.gg/KmHZUpXEmQ")
 end)
 
-credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
+credits:CreateButton("by Altix#3395", function() --you dont need "arg" for a button
+	setclipboard("Altix#3395")
 end)
 
-credits:CreateButton("Im A Cat#7202", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
+credits:CreateButton("by I'm A Cat#7202", function() --you dont need "arg" for a button
+	setclipboard("I'm A Cat#7202")
 end)
 
 
-credits:CreateButton("https://discord.gg/PKWXQae", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
-credits:CreateButton("Bebo Mods#1110", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
 
 
 MISC:CreateButton("NO CLIP Press(E)", function() --the (arg) is if the checkbox is toggled or not
@@ -11638,3 +11631,796 @@ local PostMessageHook = function(self, msg)
    return OldFunctionHook(self, msg)
 end
 OldFunctionHook = HookFunction(PostMessage.fire, PostMessageHook)
+.Close.MouseButton1Click:Connect(function()
+		main:TweenPosition(UDim2.new(0.5,-250,0,-500), "InOut", "Quart", 0.5, true, nil)
+	end)
+	local inviteButton = main:FindFirstChild("InviteButton",true)
+	local lastPress = nil
+	inviteButton.MouseButton1Click:Connect(function()
+		local func = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
+		if func then
+			func("https://discord.io/infiniteyield")
+			inviteButton.Text = "Copied"
+		else
+			inviteButton.Text = "No Clipboard Function, type out the link"
+		end
+		local pressTime = tick()
+		lastPress = pressTime
+		wait(2)
+		if lastPress ~= pressTime then return end
+		inviteButton.Text = "Copy Discord Invite Link (https://discord.io/infiniteyield)"
+	end)
+	dragGUI(main)
+	main.Parent = PARENT
+	
+	ReferenceButton.MouseButton1Click:Connect(function()
+		main:TweenPosition(UDim2.new(0.5,-250,0.5,-150), "InOut", "Quart", 0.5, true, nil)
+	end)
+end)()
+
+currentShade1 = Color3.fromRGB(36, 36, 37)
+currentShade2 = Color3.fromRGB(46, 46, 47)
+currentShade3 = Color3.fromRGB(78, 78, 79)
+currentText1 = Color3.new(1, 1, 1)
+currentText2 = Color3.new(0, 0, 0)
+currentScroll = Color3.fromRGB(78,78,79)
+
+defaultsettings = {
+	prefix = ';';
+	StayOpen = false;
+	logsEnabled = false;
+	jLogsEnabled = false;
+	aliases = {};
+	binds = {};
+	WayPoints = {};
+	PluginsTable = {};
+	currentShade1 = {currentShade1.R,currentShade1.G,currentShade1.B};
+	currentShade2 = {currentShade2.R,currentShade2.G,currentShade2.B};
+	currentShade3 = {currentShade3.R,currentShade3.G,currentShade3.B};
+	currentText1 = {currentText1.R,currentText1.G,currentText1.B};
+	currentText2 = {currentText2.R,currentText2.G,currentText2.B};
+	currentScroll = {currentScroll.R,currentScroll.G,currentScroll.B};
+	eventBinds = eventEditor.SaveData()
+}
+
+defaults = game:GetService("HttpService"):JSONEncode(defaultsettings)
+
+nosaves = false
+
+local loadedEventData = nil
+function saves()
+	if writefileExploit() then
+		if pcall(function() readfile("IY_FE.iy") end) then
+			if readfile("IY_FE.iy") ~= nil then
+				local success, response = pcall(function()
+					local json = game:GetService("HttpService"):JSONDecode(readfile("IY_FE.iy"))
+					if json.prefix ~= nil then prefix = json.prefix else prefix = ';' end
+					if json.StayOpen ~= nil then StayOpen = json.StayOpen else StayOpen = false end
+					if json.logsEnabled ~= nil then logsEnabled = json.logsEnabled else logsEnabled = false end
+					if json.jLogsEnabled ~= nil then jLogsEnabled = json.jLogsEnabled else jLogsEnabled = false end
+					if json.aliases ~= nil then aliases = json.aliases else aliases = {} end
+					if json.binds ~= nil then binds = json.binds else binds = {} end
+					if json.spawnCmds ~= nil then spawnCmds = json.spawnCmds end
+					if json.WayPoints ~= nil then AllWaypoints = json.WayPoints else WayPoints = {} AllWaypoints = {} end
+					if json.PluginsTable ~= nil then PluginsTable = json.PluginsTable else PluginsTable = {} end
+					if json.currentShade1 ~= nil then currentShade1 = Color3.new(json.currentShade1[1],json.currentShade1[2],json.currentShade1[3]) end
+					if json.currentShade2 ~= nil then currentShade2 = Color3.new(json.currentShade2[1],json.currentShade2[2],json.currentShade2[3]) end
+					if json.currentShade3 ~= nil then currentShade3 = Color3.new(json.currentShade3[1],json.currentShade3[2],json.currentShade3[3]) end
+					if json.currentText1 ~= nil then currentText1 = Color3.new(json.currentText1[1],json.currentText1[2],json.currentText1[3]) end
+					if json.currentText2 ~= nil then currentText2 = Color3.new(json.currentText2[1],json.currentText2[2],json.currentText2[3]) end
+					if json.currentScroll ~= nil then currentScroll = Color3.new(json.currentScroll[1],json.currentScroll[2],json.currentScroll[3]) end
+					if json.eventBinds then loadedEventData = json.eventBinds end
+				end)
+				if not success then
+					warn("Save Json Error:", response)
+					warn("Overwriting Save File")
+					writefileCooldown("IY_FE.iy", defaults)
+					wait()
+					saves()
+				end
+			else
+				writefileCooldown("IY_FE.iy", defaults)
+				wait()
+				saves()
+			end
+		else
+			writefileCooldown("IY_FE.iy", defaults)
+			wait()
+			if pcall(function() readfile("IY_FE.iy") end) then
+				saves()
+			else
+				nosaves = true
+				prefix = ';'
+				StayOpen = false
+				logsEnabled = false
+				jLogsEnabled = false
+				aliases = {}
+				binds = {}
+				WayPoints = {}
+				PluginsTable = {}
+				
+				local FileError = Instance.new("Frame")
+				local background = Instance.new("Frame")
+				local Directions = Instance.new("TextLabel")
+				local shadow = Instance.new("Frame")
+				local PopupText = Instance.new("TextLabel")
+				local Exit = Instance.new("TextButton")
+				local ExitImage = Instance.new("ImageLabel")
+				
+				FileError.Name = randomString()
+				FileError.Parent = PARENT
+				FileError.Active = true
+				FileError.BackgroundTransparency = 1
+				FileError.Position = UDim2.new(0.5, -180, 0, 290)
+				FileError.Size = UDim2.new(0, 360, 0, 20)
+				FileError.ZIndex = 10
+				
+				background.Name = "background"
+				background.Parent = FileError
+				background.Active = true
+				background.BackgroundColor3 = Color3.fromRGB(36, 36, 37)
+				background.BorderSizePixel = 0
+				background.Position = UDim2.new(0, 0, 0, 20)
+				background.Size = UDim2.new(0, 360, 0, 205)
+				background.ZIndex = 10
+				
+				Directions.Name = "Directions"
+				Directions.Parent = background
+				Directions.BackgroundTransparency = 1
+				Directions.BorderSizePixel = 0
+				Directions.Position = UDim2.new(0, 10, 0, 10)
+				Directions.Size = UDim2.new(0, 340, 0, 185)
+				Directions.Font = Enum.Font.SourceSans
+				Directions.TextSize = 14
+				Directions.Text = "There was a problem writing a save file to your PC.\n\nPlease contact the developer/support team for your exploit and tell them writefile is not working.\n\nYour settings, keybinds, waypoints, and aliases will not save if you continue.\n\nThings to try:\n> Make sure a 'workspace' folder is located in the same folder as your exploit\n> If your exploit is inside of a zip/rar file, extract it.\n> Rejoin the game and try again or restart your PC and try again."
+				Directions.TextColor3 = Color3.new(1, 1, 1)
+				Directions.TextWrapped = true
+				Directions.TextXAlignment = Enum.TextXAlignment.Left
+				Directions.TextYAlignment = Enum.TextYAlignment.Top
+				Directions.ZIndex = 10
+				
+				shadow.Name = "shadow"
+				shadow.Parent = FileError
+				shadow.BackgroundColor3 = Color3.fromRGB(46, 46, 47)
+				shadow.BorderSizePixel = 0
+				shadow.Size = UDim2.new(0, 360, 0, 20)
+				shadow.ZIndex = 10
+				
+				PopupText.Name = "PopupText"
+				PopupText.Parent = shadow
+				PopupText.BackgroundTransparency = 1
+				PopupText.Size = UDim2.new(1, 0, 0.95, 0)
+				PopupText.ZIndex = 10
+				PopupText.Font = Enum.Font.SourceSans
+				PopupText.TextSize = 14
+				PopupText.Text = "File Error"
+				PopupText.TextColor3 = Color3.new(1, 1, 1)
+				PopupText.TextWrapped = true
+				
+				Exit.Name = "Exit"
+				Exit.Parent = shadow
+				Exit.BackgroundTransparency = 1
+				Exit.Position = UDim2.new(1, -20, 0, 0)
+				Exit.Size = UDim2.new(0, 20, 0, 20)
+				Exit.Text = ""
+				Exit.ZIndex = 10
+				
+				ExitImage.Parent = Exit
+				ExitImage.BackgroundColor3 = Color3.new(1, 1, 1)
+				ExitImage.BackgroundTransparency = 1
+				ExitImage.Position = UDim2.new(0, 5, 0, 5)
+				ExitImage.Size = UDim2.new(0, 10, 0, 10)
+				ExitImage.Image = "rbxassetid://5054663650"
+				ExitImage.ZIndex = 10
+				
+				Exit.MouseButton1Click:Connect(function()
+					FileError:Destroy()
+				end)
+			end
+		end
+	else
+		prefix = ';'
+		StayOpen = false
+		logsEnabled = false
+		jLogsEnabled = false
+		aliases = {}
+		binds = {}
+		WayPoints = {}
+		PluginsTable = {}
+	end
+end
+
+saves()
+
+function updatesaves()
+	if nosaves == false and writefileExploit() then
+		local update = {
+			prefix = prefix;
+			StayOpen = StayOpen;
+			logsEnabled = logsEnabled;
+			jLogsEnabled = jLogsEnabled;
+			aliases = aliases;
+			binds = binds;
+			WayPoints = AllWaypoints;
+			PluginsTable = PluginsTable;
+			currentShade1 = {currentShade1.R,currentShade1.G,currentShade1.B};
+			currentShade2 = {currentShade2.R,currentShade2.G,currentShade2.B};
+			currentShade3 = {currentShade3.R,currentShade3.G,currentShade3.B};
+			currentText1 = {currentText1.R,currentText1.G,currentText1.B};
+			currentText2 = {currentText2.R,currentText2.G,currentText2.B};
+			currentScroll = {currentScroll.R,currentScroll.G,currentScroll.B};
+			eventBinds = eventEditor.SaveData()
+		}
+		writefileCooldown("IY_FE.iy", game:GetService("HttpService"):JSONEncode(update))
+	end
+end
+
+eventEditor.SetOnEdited(updatesaves)
+
+pWayPoints = {}
+WayPoints = {}
+
+if #AllWaypoints > 0 then
+	for i = 1, #AllWaypoints do
+		if not AllWaypoints[i].GAME or AllWaypoints[i].GAME == game.PlaceId then
+			WayPoints[#WayPoints + 1] = {NAME = AllWaypoints[i].NAME, COORD = {AllWaypoints[i].COORD[1], AllWaypoints[i].COORD[2], AllWaypoints[i].COORD[3]}, GAME = AllWaypoints[i].GAME}
+		end
+	end
+end
+
+function Time()
+	local HOUR = math.floor((tick() % 86400) / 3600)
+	local MINUTE = math.floor((tick() % 3600) / 60)
+	local SECOND = math.floor(tick() % 60)
+	local AP = HOUR > 11 and 'PM' or 'AM'
+	HOUR = (HOUR % 12 == 0 and 12 or HOUR % 12)
+	HOUR = HOUR < 10 and '0' .. HOUR or HOUR
+	MINUTE = MINUTE < 10 and '0' .. MINUTE or MINUTE
+	SECOND = SECOND < 10 and '0' .. SECOND or SECOND
+	return HOUR .. ':' .. MINUTE .. ':' .. SECOND .. ' ' .. AP
+end
+
+PrefixBox.Text = prefix
+local SettingsOpen = false
+
+if StayOpen == false then
+	On.BackgroundTransparency = 1
+else
+	On.BackgroundTransparency = 0
+end
+
+if logsEnabled then
+	Toggle.Text = 'Enabled'
+else
+	Toggle.Text = 'Disabled'
+end
+
+if jLogsEnabled then
+	Toggle_2.Text = 'Enabled'
+else
+	Toggle_2.Text = 'Disabled'
+end
+
+function maximizeHolder()
+	if StayOpen == false then
+		Holder:TweenPosition(UDim2.new(1, Holder.Position.X.Offset, 1, -220), "InOut", "Quart", 0.2, true, nil)
+	end
+end
+
+local minimizeNum = -20
+function minimizeHolder()
+	if StayOpen == false then
+		Holder:TweenPosition(UDim2.new(1, Holder.Position.X.Offset, 1, minimizeNum), "InOut", "Quart", 0.5, true, nil)
+	end
+end
+
+function cmdbarHolder()
+	if StayOpen == false then
+		Holder:TweenPosition(UDim2.new(1, Holder.Position.X.Offset, 1, -45), "InOut", "Quart", 0.5, true, nil)
+	end
+end
+
+pinNotification = nil
+local notifyCount = 0
+function notify(text,text2,length)
+	spawn(function()
+		local LnotifyCount = notifyCount+1
+		local notificationPinned = false
+		notifyCount = notifyCount+1
+		if pinNotification then pinNotification:Disconnect() end
+		pinNotification = Notification.MouseEnter:Connect(function()
+			spawn(function()
+				pinNotification:Disconnect()
+				notificationPinned = true
+				Title_2.BackgroundTransparency = 1
+				wait(0.5)
+				Title_2.BackgroundTransparency = 0
+			end)
+		end)
+		Notification:TweenPosition(UDim2.new(1, Notification.Position.X.Offset, 1, 0), "InOut", "Quart", 0.5, true, nil)
+		wait(0.6)
+		local closepressed = false
+		if text2 then
+			Title_2.Text = text
+			Text_2.Text = text2
+		else
+			Title_2.Text = 'Notification'
+			Text_2.Text = text
+		end
+		Notification:TweenPosition(UDim2.new(1, Notification.Position.X.Offset, 1, -100), "InOut", "Quart", 0.5, true, nil)
+		CloseButton.MouseButton1Click:Connect(function()
+			Notification:TweenPosition(UDim2.new(1, Notification.Position.X.Offset, 1, 0), "InOut", "Quart", 0.5, true, nil)
+			closepressed = true
+			pinNotification:Disconnect()
+		end)
+		if length and isNumber(length) then
+			wait(length)
+		else
+			wait(10)
+		end
+		if LnotifyCount == notifyCount then
+			if closepressed == false and notificationPinned == false then
+				pinNotification:Disconnect()
+				Notification:TweenPosition(UDim2.new(1, Notification.Position.X.Offset, 1, 0), "InOut", "Quart", 0.5, true, nil)
+			end
+			notifyCount = 0
+		end
+	end)
+end
+
+local lastMessage = nil
+local lastLabel = nil
+local dupeCount = 1
+function CreateLabel(Name, Text)
+	if lastMessage == Name..Text then
+		dupeCount = dupeCount+1
+		lastLabel.Text = Time()..' - ['..Name..']: '..Text..' (x'..dupeCount..')'
+	else
+		if dupeCount > 1 then dupeCount = 1 end
+		if #scroll_2:GetChildren() >= 2546 then
+			scroll_2:ClearAllChildren()
+		end
+		local alls = 0
+		for i,v in pairs(scroll_2:GetChildren()) do
+			if v then
+				alls = v.Size.Y.Offset + alls
+			end
+			if not v then
+				alls = 0
+			end
+		end
+		local tl = Instance.new('TextLabel', scroll_2)
+		lastMessage = Name..Text
+		lastLabel = tl
+		tl.Name = Name
+		tl.ZIndex = 10
+		tl.Text = Time().." - ["..Name.."]: "..Text
+		tl.Size = UDim2.new(0,322,0,84)
+		tl.BackgroundTransparency = 1
+		tl.BorderSizePixel = 0
+		tl.Font = "SourceSans"
+		tl.Position = UDim2.new(-1,0,0,alls)
+		tl.TextTransparency = 1
+		tl.TextScaled = false
+		tl.TextSize = 14
+		tl.TextWrapped = true
+		tl.TextXAlignment = "Left"
+		tl.TextYAlignment = "Top"
+		tl.TextColor3 = currentText1
+		tl.Size = UDim2.new(0,322,0,tl.TextBounds.Y)
+		table.insert(text1,tl)
+		scroll_2.CanvasSize = UDim2.new(0,0,0,alls+tl.TextBounds.Y)
+		scroll_2.CanvasPosition = Vector2.new(0,scroll_2.CanvasPosition.Y+tl.TextBounds.Y)
+		tl:TweenPosition(UDim2.new(0,3,0,alls), 'In', 'Quint', 0.5)
+		for i = 0,50 do wait(0.05)
+			tl.TextTransparency = tl.TextTransparency - 0.05
+		end
+		tl.TextTransparency = 0
+	end
+end
+
+function CreateJoinLabel(plr,ID)
+	if #scroll_3:GetChildren() >= 2546 then
+		scroll_3:ClearAllChildren()
+	end
+	local infoFrame = Instance.new("Frame")
+	local info1 = Instance.new("TextLabel")
+	local info2 = Instance.new("TextLabel")
+	local ImageLabel_3 = Instance.new("ImageLabel")
+	infoFrame.Name = randomString()
+	infoFrame.Parent = scroll_3
+	infoFrame.BackgroundColor3 = Color3.new(1, 1, 1)
+	infoFrame.BackgroundTransparency = 1
+	infoFrame.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+	infoFrame.Size = UDim2.new(1, 0, 0, 50)
+	info1.Name = randomString()
+	info1.Parent = infoFrame
+	info1.BackgroundTransparency = 1
+	info1.BorderSizePixel = 0
+	info1.Position = UDim2.new(0, 45, 0, 0)
+	info1.Size = UDim2.new(0, 135, 1, 0)
+	info1.ZIndex = 10
+	info1.Font = Enum.Font.SourceSans
+	info1.FontSize = Enum.FontSize.Size14
+	info1.Text = "Username: "..plr.Name.."\nJoined Server: "..Time()
+	info1.TextColor3 = Color3.new(1, 1, 1)
+	info1.TextWrapped = true
+	info1.TextXAlignment = Enum.TextXAlignment.Left
+	info2.Name = randomString()
+	info2.Parent = infoFrame
+	info2.BackgroundTransparency = 1
+	info2.BorderSizePixel = 0
+	info2.Position = UDim2.new(0, 185, 0, 0)
+	info2.Size = UDim2.new(0, 140, 1, -5)
+	info2.ZIndex = 10
+	info2.Font = Enum.Font.SourceSans
+	info2.FontSize = Enum.FontSize.Size14
+	info2.Text = "User ID: "..ID.."\nAccount Age: "..plr.AccountAge.."\nJoined Roblox: Loading..."
+	info2.TextColor3 = Color3.new(1, 1, 1)
+	info2.TextWrapped = true
+	info2.TextXAlignment = Enum.TextXAlignment.Left
+	info2.TextYAlignment = Enum.TextYAlignment.Center
+	ImageLabel_3.Parent = infoFrame
+	ImageLabel_3.BackgroundTransparency = 1
+	ImageLabel_3.BorderSizePixel = 0
+	ImageLabel_3.Size = UDim2.new(0, 45, 1, 0)
+	ImageLabel_3.Image = game.Players:GetUserThumbnailAsync(ID, Enum.ThumbnailType.AvatarThumbnail, Enum.ThumbnailSize.Size420x420)
+	scroll_3.CanvasSize = UDim2.new(0, 0, 0, listlayout.AbsoluteContentSize.Y)
+	scroll_3.CanvasPosition = Vector2.new(0,scroll_2.CanvasPosition.Y+infoFrame.AbsoluteSize.Y)
+	wait()
+	local user = game:HttpGet("https://users.roblox.com/v1/users/"..ID)
+	local json = game:GetService("HttpService"):JSONDecode(user)
+	local date = json["created"]:sub(1,10)
+	local splitDates = string.split(date,"-")
+	info2.Text = string.gsub(info2.Text, "Loading...",splitDates[2].."/"..splitDates[3].."/"..splitDates[1])
+end
+
+IYMouse.KeyDown:connect(function(Key)
+	if (Key==prefix) then
+		Cmdbar:CaptureFocus()
+		spawn(function()
+			repeat Cmdbar.Text = '' until Cmdbar.Text == ''
+		end)
+		maximizeHolder()
+	end
+end)
+
+local lastMinimizeReq = 0
+Holder.MouseEnter:Connect(function()
+	lastMinimizeReq = 0
+	maximizeHolder()
+end)
+
+Holder.MouseLeave:Connect(function()
+	if not Cmdbar:IsFocused() then
+		local reqTime = tick()
+		lastMinimizeReq = reqTime
+		wait(1)
+		if lastMinimizeReq ~= reqTime then return end
+		if not Cmdbar:IsFocused() then
+			minimizeHolder()
+		end
+	end
+end)
+
+function updateColors(color,ctype)
+	if ctype == shade1 then
+		for i,v in pairs(shade1) do
+			v.BackgroundColor3 = color
+		end
+		currentShade1 = color
+	elseif ctype == shade2 then
+		for i,v in pairs(shade2) do
+			v.BackgroundColor3 = color
+		end
+		currentShade2 = color
+	elseif ctype == shade3 then
+		for i,v in pairs(shade3) do
+			v.BackgroundColor3 = color
+		end
+		currentShade3 = color
+	elseif ctype == text1 then
+		for i,v in pairs(text1) do
+			v.TextColor3 = color
+			if v:IsA("TextBox") then
+				v.PlaceholderColor3 = color	
+			end
+		end
+		currentText1 = color
+	elseif ctype == text2 then
+		for i,v in pairs(text2) do
+			v.TextColor3 = color
+		end
+		currentText2 = color
+	elseif ctype == scroll then
+		for i,v in pairs(scroll) do
+			v.ScrollBarImageColor3 = color
+		end
+		currentScroll = color
+	end
+end
+
+local colorpickerOpen = false
+ColorsButton.MouseButton1Click:Connect(function()
+	cache_currentShade1 = currentShade1
+	cache_currentShade2 = currentShade2
+	cache_currentShade3 = currentShade3
+	cache_currentText1 = currentText1
+	cache_currentText2 = currentText2
+	cache_currentScroll = currentScroll
+	if not colorpickerOpen then
+		colorpickerOpen = true
+		picker = game:GetObjects("rbxassetid://4908465318")[1]
+		picker.Name = randomString()
+		picker.Parent = PARENT
+		
+		local ColorPicker do
+			ColorPicker = {}
+			
+			ColorPicker.new = function()
+				local newMt = setmetatable({},{})
+				
+				local pickerGui = picker.ColorPicker
+				local pickerTopBar = pickerGui.TopBar
+				local pickerExit = pickerTopBar.Exit
+				local pickerFrame = pickerGui.Content
+				local colorSpace = pickerFrame.ColorSpaceFrame.ColorSpace
+				local colorStrip = pickerFrame.ColorStrip
+				local previewFrame = pickerFrame.Preview
+				local basicColorsFrame = pickerFrame.BasicColors
+				local customColorsFrame = pickerFrame.CustomColors
+				local defaultButton = pickerFrame.Default
+				local cancelButton = pickerFrame.Cancel
+				local shade1Button = pickerFrame.Shade1
+				local shade2Button = pickerFrame.Shade2
+				local shade3Button = pickerFrame.Shade3
+				local text1Button = pickerFrame.Text1
+				local text2Button = pickerFrame.Text2
+				local scrollButton = pickerFrame.Scroll
+				
+				local colorScope = colorSpace.Scope
+				local colorArrow = pickerFrame.ArrowFrame.Arrow
+				
+				local hueInput = pickerFrame.Hue.Input
+				local satInput = pickerFrame.Sat.Input
+				local valInput = pickerFrame.Val.Input
+				
+				local redInput = pickerFrame.Red.Input
+				local greenInput = pickerFrame.Green.Input
+				local blueInput = pickerFrame.Blue.Input
+				
+				local mouse = IYMouse
+				
+				local hue,sat,val = 0,0,1
+				local red,green,blue = 1,1,1
+				local chosenColor = Color3.new(0,0,0)
+				
+				local basicColors = {Color3.new(0,0,0),Color3.new(0.66666668653488,0,0),Color3.new(0,0.33333334326744,0),Color3.new(0.66666668653488,0.33333334326744,0),Color3.new(0,0.66666668653488,0),Color3.new(0.66666668653488,0.66666668653488,0),Color3.new(0,1,0),Color3.new(0.66666668653488,1,0),Color3.new(0,0,0.49803924560547),Color3.new(0.66666668653488,0,0.49803924560547),Color3.new(0,0.33333334326744,0.49803924560547),Color3.new(0.66666668653488,0.33333334326744,0.49803924560547),Color3.new(0,0.66666668653488,0.49803924560547),Color3.new(0.66666668653488,0.66666668653488,0.49803924560547),Color3.new(0,1,0.49803924560547),Color3.new(0.66666668653488,1,0.49803924560547),Color3.new(0,0,1),Color3.new(0.66666668653488,0,1),Color3.new(0,0.33333334326744,1),Color3.new(0.66666668653488,0.33333334326744,1),Color3.new(0,0.66666668653488,1),Color3.new(0.66666668653488,0.66666668653488,1),Color3.new(0,1,1),Color3.new(0.66666668653488,1,1),Color3.new(0.33333334326744,0,0),Color3.new(1,0,0),Color3.new(0.33333334326744,0.33333334326744,0),Color3.new(1,0.33333334326744,0),Color3.new(0.33333334326744,0.66666668653488,0),Color3.new(1,0.66666668653488,0),Color3.new(0.33333334326744,1,0),Color3.new(1,1,0),Color3.new(0.33333334326744,0,0.49803924560547),Color3.new(1,0,0.49803924560547),Color3.new(0.33333334326744,0.33333334326744,0.49803924560547),Color3.new(1,0.33333334326744,0.49803924560547),Color3.new(0.33333334326744,0.66666668653488,0.49803924560547),Color3.new(1,0.66666668653488,0.49803924560547),Color3.new(0.33333334326744,1,0.49803924560547),Color3.new(1,1,0.49803924560547),Color3.new(0.33333334326744,0,1),Color3.new(1,0,1),Color3.new(0.33333334326744,0.33333334326744,1),Color3.new(1,0.33333334326744,1),Color3.new(0.33333334326744,0.66666668653488,1),Color3.new(1,0.66666668653488,1),Color3.new(0.33333334326744,1,1),Color3.new(1,1,1)}
+				local customColors = {}
+				
+				dragGUI(picker)
+				
+				local function updateColor(noupdate)
+					local relativeX,relativeY,relativeStripY = 219 - hue*219, 199 - sat*199, 199 - val*199
+					local hsvColor = Color3.fromHSV(hue,sat,val)
+					
+					if noupdate == 2 or not noupdate then
+						hueInput.Text = tostring(math.ceil(359*hue))
+						satInput.Text = tostring(math.ceil(255*sat))
+						valInput.Text = tostring(math.floor(255*val))
+					end
+					if noupdate == 1 or not noupdate then
+						redInput.Text = tostring(math.floor(255*red))
+						greenInput.Text = tostring(math.floor(255*green))
+						blueInput.Text = tostring(math.floor(255*blue))
+					end
+					
+					chosenColor = Color3.new(red,green,blue)
+					
+					colorScope.Position = UDim2.new(0,relativeX-9,0,relativeY-9)
+					colorStrip.ImageColor3 = Color3.fromHSV(hue,sat,1)
+					colorArrow.Position = UDim2.new(0,-2,0,relativeStripY-4)
+					previewFrame.BackgroundColor3 = chosenColor
+					
+					newMt.Color = chosenColor
+					if newMt.Changed then newMt:Changed(chosenColor) end
+				end
+				
+				local function colorSpaceInput()
+					local relativeX = mouse.X - colorSpace.AbsolutePosition.X
+					local relativeY = mouse.Y - colorSpace.AbsolutePosition.Y
+					
+					if relativeX < 0 then relativeX = 0 elseif relativeX > 219 then relativeX = 219 end
+					if relativeY < 0 then relativeY = 0 elseif relativeY > 199 then relativeY = 199 end
+					
+					hue = (219 - relativeX)/219
+					sat = (199 - relativeY)/199
+					
+					local hsvColor = Color3.fromHSV(hue,sat,val)
+					red,green,blue = hsvColor.r,hsvColor.g,hsvColor.b
+					
+					updateColor()
+				end
+				
+				local function colorStripInput()
+					local relativeY = mouse.Y - colorStrip.AbsolutePosition.Y
+					
+					if relativeY < 0 then relativeY = 0 elseif relativeY > 199 then relativeY = 199 end	
+					
+					val = (199 - relativeY)/199
+					
+					local hsvColor = Color3.fromHSV(hue,sat,val)
+					red,green,blue = hsvColor.r,hsvColor.g,hsvColor.b
+					
+					updateColor()
+				end
+				
+				local function hookButtons(frame,func)
+					frame.ArrowFrame.Up.InputBegan:Connect(function(input)
+						if input.UserInputType == Enum.UserInputType.MouseMovement then
+							frame.ArrowFrame.Up.BackgroundTransparency = 0.5
+						elseif input.UserInputType == Enum.UserInputType.MouseButton1 then
+							local releaseEvent,runEvent
+							
+							local startTime = tick()
+							local pressing = true
+							local startNum = tonumber(frame.Text)
+							
+							if not startNum then return end
+							
+							releaseEvent = UserInputService.InputEnded:Connect(function(input)
+								if input.UserInputType ~= Enum.UserInputType.MouseButton1 then return end
+								releaseEvent:Disconnect()
+								pressing = false
+							end)
+							
+							startNum = startNum + 1
+							func(startNum)
+							while pressing do
+								if tick()-startTime > 0.3 then
+									startNum = startNum + 1
+									func(startNum)
+								end
+								wait(0.1)
+							end
+						end
+					end)
+					
+					frame.ArrowFrame.Up.InputEnded:Connect(function(input)
+						if input.UserInputType == Enum.UserInputType.MouseMovement then
+							frame.ArrowFrame.Up.BackgroundTransparency = 1
+						end
+					end)
+					
+					frame.ArrowFrame.Down.InputBegan:Connect(function(input)
+						if input.UserInputType == Enum.UserInputType.MouseMovement then
+							frame.ArrowFrame.Down.BackgroundTransparency = 0.5
+						elseif input.UserInputType == Enum.UserInputType.MouseButton1 then
+							local releaseEvent,runEvent
+							
+							local startTime = tick()
+							local pressing = true
+							local startNum = tonumber(frame.Text)
+							
+							if not startNum then return end
+							
+							releaseEvent = UserInputService.InputEnded:Connect(function(input)
+								if input.UserInputType ~= Enum.UserInputType.MouseButton1 then return end
+								releaseEvent:Disconnect()
+								pressing = false
+							end)
+							
+							startNum = startNum - 1
+							func(startNum)
+							while pressing do
+								if tick()-startTime > 0.3 then
+									startNum = startNum - 1
+									func(startNum)
+								end
+								wait(0.1)
+							end
+						end
+					end)
+					
+					frame.ArrowFrame.Down.InputEnded:Connect(function(input)
+						if input.UserInputType == Enum.UserInputType.MouseMovement then
+							frame.ArrowFrame.Down.BackgroundTransparency = 1
+						end
+					end)
+				end
+				
+				colorSpace.InputBegan:Connect(function(input)
+					if input.UserInputType == Enum.UserInputType.MouseButton1 then
+						local releaseEvent,mouseEvent
+						
+						releaseEvent = UserInputService.InputEnded:Connect(function(input)
+							if input.UserInputType ~= Enum.UserInputType.MouseButton1 then return end
+							releaseEvent:Disconnect()
+							mouseEvent:Disconnect()
+						end)
+						
+						mouseEvent = UserInputService.InputChanged:Connect(function(input)
+							if input.UserInputType == Enum.UserInputType.MouseMovement then
+								colorSpaceInput()
+							end
+						end)
+						
+						colorSpaceInput()
+					end
+				end)
+				
+				colorStrip.InputBegan:Connect(function(input)
+					if input.UserInputType == Enum.UserInputType.MouseButton1 then
+						local releaseEvent,mouseEvent
+						
+						releaseEvent = UserInputService.InputEnded:Connect(function(input)
+							if input.UserInputType ~= Enum.UserInputType.MouseButton1 then return end
+							releaseEvent:Disconnect()
+							mouseEvent:Disconnect()
+						end)
+						
+						mouseEvent = UserInputService.InputChanged:Connect(function(input)
+							if input.UserInputType == Enum.UserInputType.MouseMovement then
+								colorStripInput()
+							end
+						end)
+						
+						colorStripInput()
+					end
+				end)
+				
+				local function updateHue(str)
+					local num = tonumber(str)
+					if num then
+						hue = math.clamp(math.floor(num),0,359)/359
+						local hsvColor = Color3.fromHSV(hue,sat,val)
+						red,green,blue = hsvColor.r,hsvColor.g,hsvColor.b
+						hueInput.Text = tostring(hue*359)
+						updateColor(1)
+					end
+				end
+				hueInput.FocusLost:Connect(function() updateHue(hueInput.Text) end) hookButtons(hueInput,updateHue)
+				
+				local function updateSat(str)
+					local num = tonumber(str)
+					if num then
+						sat = math.clamp(math.floor(num),0,255)/255
+						local hsvColor = Color3.fromHSV(hue,sat,val)
+						red,green,blue = hsvColor.r,hsvColor.g,hsvColor.b
+						satInput.Text = tostring(sat*255)
+						updateColor(1)
+					end
+				end
+				satInput.FocusLost:Connect(function() updateSat(satInput.Text) end) hookButtons(satInput,updateSat)
+				
+				local function updateVal(str)
+					local num = tonumber(str)
+					if num then
+						val = math.clamp(math.floor(num),0,255)/255
+						local hsvColor = Color3.fromHSV(hue,sat,val)
+						red,green,blue = hsvColor.r,hsvColor.g,hsvColor.b
+						valInput.Text = tostring(val*255)
+						updateColor(1)
+					end
+				end
+				valInput.FocusLost:Connect(function() updateVal(valInput.Text) end) hookButtons(valInput,updateVal)
+				
+				local function updateRed(str)
+					local num = tonumber(str)
+					if num then
+						red = math.clamp(math.floor(num),0,255)/255
+						local newColor = Color3.new(red,green,blue)
+						hue,sat,val = Color3.toHSV(newColor)
+						redInput.Text = tostring(red*255)
+						updateColor(2)
+					end
+				end
+				redInput.FocusLost:Connect(function() updateRed(redInput.Text) end) hookButtons(redInput,updateRed)
+				
+				local function updateGreen(str)
+					local num = tonumber(str)
+					if num then
+						green = math.clamp(math.floor(num),0,255)/255
+						local newColor = Color3.new(red,green,blue)
+						hue,sat,val = Color3.toHSV(newColor)
+						greenInput.Text = tostring(
