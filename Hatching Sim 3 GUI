@@ -15,23 +15,18 @@ w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,Te
 	
 	spawn(function()
 		while wait() do
-		       if shared.toggle1 then
-		    if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
-            game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
-    end
-end
-	if shared.toggle2 then
-			local args = {
-    [1] = "SellEnergy",
-}
-
-game:GetService("ReplicatedStorage").Network["Port1"]:FireServer(unpack(args))
-end
-end
-end)
+            if shared.toggle1 then
+                local tool1 = game.Players.LocalPlayer.Backpack:FindFirstChild("Coin") or game.Players.LocalPlayer.Character:FindFirstChild("Coin")
+                game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool1)
+                tool1:Activate()
+            end
+        end
+    end)
 
 local w2 = w2:CreateFolder("Eggs")
-	w2:Dropdown("Choose Eggs",{"Common","Rare","Epic","Environment","Turkey","Cristal","Ice","Frost","Gift","Festive","IceCream"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w2:Dropdown("Choose Eggs",{
+        "Common","Rare","Epic","Environment","Turkey","Cristal","Ice","Frost","Gift","Festive","IceCream","NewYear"
+    },true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.BossSelected = mob
 	end)
 
@@ -46,24 +41,26 @@ spawn(function()
 				game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Common",true,"","","")
 			elseif _G.BossSelected == "Rare" then
 				game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Rare",true,"","","")
-        		elseif _G.BossSelected == "Epic" then
+        	elseif _G.BossSelected == "Epic" then
 				game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Epic",true,"","","")
 			elseif _G.BossSelected == "Environment" then
 				game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Environment",true,"","","")
 			elseif _G.BossSelected == "Turkey" then
 				game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Turkey",true,"","","")
 			elseif _G.BossSelected == "Cristal" then
-	                        game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Cristal",true,"","","")
-elseif _G.BossSelected == "Ice" then
-	                        game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Ice",true,"","","")
-elseif _G.BossSelected == "Frost" then
-	                        game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Frost",true,"","","")
-elseif _G.BossSelected == "Gift" then
-	                        game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Gift",true,"","","")
-elseif _G.BossSelected == "Festive" then
-	                        game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Festive",true,"","","")
-elseif _G.BossSelected == "IceCream" then
-	                        game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"IceCream",true,"","","")
+	             game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Cristal",true,"","","")
+            elseif _G.BossSelected == "Ice" then
+                game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Ice",true,"","","")
+            elseif _G.BossSelected == "Frost" then
+                game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Frost",true,"","","")
+            elseif _G.BossSelected == "Gift" then
+                game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Gift",true,"","","")
+            elseif _G.BossSelected == "Festive" then
+                game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Festive",true,"","","")
+            elseif _G.BossSelected == "IceCream" then
+                game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"IceCream",true,"","","")
+            elseif _G.BossSelected == "NewYear" then
+                game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"NewYear",true,"","","")               
 			end
 		end
 	end
@@ -473,9 +470,9 @@ local CS = w3:CreateFolder("Credits")
 		setclipboard("https://discord.gg/PKWXQae")
 	end)
 
-CS:Button("Helped by: Altix#3395",function()
-		setclipboard("Altix#3395")
-end)
+    CS:Button("Helped by: Altix#3395",function()
+        setclipboard("Altix#3395")
+    end)
 
 	CS:DestroyGUI()
 
@@ -496,25 +493,6 @@ setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
         Virtual:ClickButton2(Vector2.new())
         wait(2)
     end)
-
-
---| Other Anti AFK |
-wait(10)
-    game.StarterGui:SetCore(
-        "ChatMakeSystemMessage",
-        {
-            Text = "[ANTI AFK] Started !",
-            Font = Enum.Font.SourceSansBold, 
-            FontSize = Enum.FontSize.Size24 
-        }
-    )
-while wait(30) do
-local VirtualUser=game:service'VirtualUser'
-game:service'Players'.LocalPlayer.Idled:connect(function()
-VirtualUser:CaptureController()
-VirtualUser:ClickButton2(Vector2.new())
-end)
-end
 
 --| Anti Chat Logs |
 local CloneFunction = clonefunction
