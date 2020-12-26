@@ -110,7 +110,7 @@ local category = main:CreateCategory("Function")
 			"Auto Buy Ranks",
 			function(state)
 				print("Current state:", state)
-				shared.ToggleABB = state
+				shared.ToggleABR = state
 			end,
 			{
 				default = false,
@@ -133,14 +133,14 @@ local category = main:CreateCategory("Function")
 						end
 					end
 				end
-				if shared.ToggleABB then
+				if shared.ToggleABR then
 					for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.GameInterface.ItemShop.ItemSelectionRanks.ScrollingFrame:GetChildren()) do
 						if v.Name == "Infinite" or v.Name == "UIGridLayout" then
 						else
 							local args = {
 								[1] = "Buy",
 								[2] = {
-									["Item"] = v.Name,
+									["Item"] = "Coal",
 									["Type"] = "Ranks"
 								}
 							}
