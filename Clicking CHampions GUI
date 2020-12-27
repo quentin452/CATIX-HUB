@@ -1336,12 +1336,12 @@ local MISC = w3:CreateFolder("Misc")
 
 local CS = w3:CreateFolder("Credits")
 
-	CS:Button("Script: Im A Cat#7202",function()
-		setclipboard("Im A Cat#7202")
+	CS:Button("Script by: I'm A Cat#7202",function()
+		setclipboard("I'm A Cat#7202")
 	end)
 
-	CS:Button("Discord: PKWXQae",function()
-		setclipboard("https://discord.gg/PKWXQae")
+	CS:Button("Discord: https://discord.gg/KmHZUpXEmQ",function()
+		setclipboard("https://discord.gg/KmHZUpXEmQ")
 	end)
 
 CS:Button("Helped by: Altix#3395",function()
