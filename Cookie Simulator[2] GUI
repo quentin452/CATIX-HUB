@@ -15,8 +15,8 @@ w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,Te
 		w:Toggle("Collect Coins",function(bool)
 		shared.toggle2 = bool
 end) 
-w:Toggle("Auto Sell X3",function(bool)
-		shared.toggle4 = bool
+w:Toggle("Auto Sell X5",function(bool)
+		shared.toggle53 = bool
 end) 
 	spawn(function()
 		while wait() do
@@ -35,16 +35,16 @@ for i, v in next, Workspace:GetDescendants() do
         end
     end
 end
-	if shared.toggle4 then
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3228.75562, 736.029968, 2301.86401)
+	if shared.toggle53 then
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1554.05725, 748.226257, -1193.06909)
 wait(0.1)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3227.58521, 733.842041, 2311.8606)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1559.11365, 755.393921, -1203.04492)
 end
 end
 end)
 
 local w2 = w2:CreateFolder("Eggs X2")
-	w2:Dropdown("Choose Eggs",{"Standard Egg","Water Egg","Event Egg","Desert Egg"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w2:Dropdown("Choose Eggs",{"Standard Egg","Water Egg","Event Egg","Desert Egg","Present Egg","Santa Egg","Volcano Egg"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.BossSelected = mob
 	end)
 
@@ -63,6 +63,12 @@ spawn(function()
 				game:GetService("Players").LocalPlayer.PlayerGui.Main.Scripts.ClientPetBillboardsHandler.ButtonClicked:FireServer("DoubleOpening","Event Egg")
 			elseif _G.BossSelected == "Desert Egg" then
 			game:GetService("Players").LocalPlayer.PlayerGui.Main.Scripts.ClientPetBillboardsHandler.ButtonClicked:FireServer("DoubleOpening","Desert Egg")
+			elseif _G.BossSelected == "Present Egg" then
+			game:GetService("Players").LocalPlayer.PlayerGui.Main.Scripts.ClientPetBillboardsHandler.ButtonClicked:FireServer("DoubleOpening","Present Egg")
+			elseif _G.BossSelected == "Santa Egg" then
+			game:GetService("Players").LocalPlayer.PlayerGui.Main.Scripts.ClientPetBillboardsHandler.ButtonClicked:FireServer("DoubleOpening","Santa Egg")
+			elseif _G.BossSelected == "Volcano Egg" then
+			game:GetService("Players").LocalPlayer.PlayerGui.Main.Scripts.ClientPetBillboardsHandler.ButtonClicked:FireServer("DoubleOpening","Volcano Egg")
 			end
 		end
 	end
@@ -469,14 +475,9 @@ end)
 
 PLR:Label("Work Whit Paid,KRNL AND SONA Exploit",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
 
-	PLR:Button("Dark Dex other exploit",function()
+	PLR:Button("Dark Dex",function()
 loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/DEX%20EXPLORER"))()
 end)
-
-	PLR:Button("Dark Dex(synapse)",function()
-loadstring(game:HttpGetAsync("https://pastebin.com/raw/fPP8bZ8Z"))()
-end)
-
 	PLR:Button("Remote Spy Universal GAME",function()
 loadstring(game:HttpGet("https://pastebin.com/raw/BDhSQqUU", true))()
 end)
