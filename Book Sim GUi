@@ -119,7 +119,7 @@ local category = main:CreateCategory("Function")
 		spawn(function()
 			while wait(1) do
 				if shared.ToggleABB then
-					for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.GameInterface.ItemShop.ItemSelection.ScrollingFrame:GetChildren()) do
+					for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.GameInterface.ItemShop.ItemSelection.ScrollingFrame:GetChildren()) do wait(0.6)
 						if v.Name == "Infinite" or v.Name == "UIGridLayout" then
 						else
 							local args = {
@@ -134,7 +134,7 @@ local category = main:CreateCategory("Function")
 					end
 				end
 				if shared.ToggleABR then
-					for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.GameInterface.ItemShop.ItemSelectionRanks.ScrollingFrame:GetChildren()) do
+					for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.GameInterface.ItemShop.ItemSelectionRanks.ScrollingFrame:GetChildren()) do wait(0.6)
 						if v.Name == "Infinite" or v.Name == "UIGridLayout" then
 						else
 							local args = {
