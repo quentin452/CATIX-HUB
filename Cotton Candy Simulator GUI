@@ -10,29 +10,20 @@ local credits = Library:CreateTab("Credits","things", true)
 
 
 credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
+    setclipboard("AHAHAHAHAH")
 end)
 
-credits:CreateButton("masterkyllian#1723", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
+credits:CreateButton("https://discord.gg/KmHZUpXEmQ", function() --you dont need "arg" for a button
+    setclipboard("https://discord.gg/KmHZUpXEmQ")
 end)
 
-credits:CreateButton("https://discord.gg/Sr8exX4", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
+credits:CreateButton("by Altix#3395", function() --you dont need "arg" for a button
+    setclipboard("Altix#3395")
 end)
 
-credits:CreateButton("bsoleil31FR#7202", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
+credits:CreateButton("by I'm A Cat#7202", function() --you dont need "arg" for a button
+    setclipboard("I'm A Cat#7202")
 end)
-
-credits:CreateButton("https://discord.gg/m9Nn3qd", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
-credits:CreateButton("Bebo Mods#9619", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:nothing()
-end)
-
 
 AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
