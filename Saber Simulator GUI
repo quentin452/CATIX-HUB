@@ -19,9 +19,9 @@ local Home = main:CreateCategory("Home")
 		)
 		H2:Create(
 			"Button",
-			"Copy Discord Link (https://discord.gg/x2hM4M5xWj)",
+			"Copy Discord Link (https://discord.gg/KmHZUpXEmQ)",
 			function()
-			setclipboard("https://discord.gg/x2hM4M5xWj")
+			setclipboard("https://discord.gg/KmHZUpXEmQ")
 			end,
 			{
 				animated = true,
