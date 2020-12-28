@@ -322,7 +322,7 @@ me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, 
 	end
 	end)
 local w3 = x:CreateFolder("Eggs")
-	w3:Dropdown("Choose Eggs",{"Common","Rare","1M","Candy","Snow","Lava","Ocean","Moon","Fall","Sand","Dark","Halloween","Ghost","Holy","Potion","Overlord"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w3:Dropdown("Choose Eggs",{"Common","Rare","1M","Candy","Snow","Lava","Ocean","Moon","Fall","Sand","Dark","Halloween","Ghost","Holy","Potion","Overlord","Royal"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 		_G.BossSelected = mob
 	end)
 
@@ -428,6 +428,12 @@ elseif _G.BossSelected == "Potion" then
 elseif _G.BossSelected == "Overlord" then
 					local args = {
 					[1] = "Overlord",
+					[2] = "R",
+				}
+				game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args))
+			elseif _G.BossSelected == "Royal" then
+					local args = {
+					[1] = "Royal",
 					[2] = "R",
 				}
 				game:GetService("ReplicatedStorage").RemoteEvents.EggOpen:FireServer(unpack(args))
