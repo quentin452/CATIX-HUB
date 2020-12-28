@@ -263,8 +263,7 @@ local PLR = w3:CreateFolder("Player")
 	
 	
 	PLR:Slider("Jump Hack",10,250,true,function(value)
-	    game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
-	end)
+	    game.Players.LocalPlayer.Character.Humanoid.JumpPower = value end)
 	PLR:Button("Speed Hack (press R)",function(bool)
 	    
 local walkspeedplayer = game:GetService("Players").LocalPlayer
@@ -292,12 +291,8 @@ end)
 Humanoid.WalkSpeed = _G.WS;
 
 walkspeedenabled = false
-end
-end
-end
-
+end end end
 walkspeedmouse.KeyDown:connect(x_walkspeed)
-
 end)
 	PLR:Button("No Clip (Press E)",function()
 		noclip = false
@@ -436,68 +431,15 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/
 end)
 
 	PLR:Button("Btools",function()
-game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
-for index, child in pairs(game:GetService("Workspace"):GetChildren()) do
-  if child.ClassName == "Part" then
-      child.Locked = false
-  end
-  if child.ClassName == "MeshPart" then
-      child.Locked = false
-  end
-  if child.ClassName == "UnionOperation" then
-      child.Locked = false
-  end
-  if child.ClassName == "Model" then
-      for index, chil in pairs(child:GetChildren()) do
-          if chil.ClassName == "Part" then
-              chil.Locked = false
-          end
-          if chil.ClassName == "MeshPart" then
-              chil.Locked = false
-          end
-          if chil.ClassName == "UnionOperation" then
-              chil.Locked = false
-          end
-          if chil.ClassName == "Model" then
-              for index, childe in pairs(chil:GetChildren()) do
-                  if childe.ClassName == "Part" then
-                      childe.Locked = false
-                  end
-                  if childe.ClassName == "MeshPart" then
-                      childe.Locked = false
-                  end
-                  if childe.ClassName == "UnionOperation" then
-                      childe.Locked = false
-                  end
-                  if childe.ClassName == "Model" then
-                      for index, childeo in pairs(childe:GetChildren()) do
-                          if childeo.ClassName == "Part" then
-                              childeo.Locked = false
-                          end
-                          if childeo.ClassName == "MeshPart" then
-                              childeo.Locked = false
-                          end
-                          if childeo.ClassName == "UnionOperation" then
-                              childeo.Locked = false
-                          end
-                          if childeo.ClassName == "Model" then
-                          end
-                      end
-                  end
-              end
-          end
-      end
-  end
- 
-end
-c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
-c.BinType = Enum.BinType.Hammer
-c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
-c.BinType = Enum.BinType.Clone
-c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
-c.BinType = Enum.BinType.Grab
-
-
+a = Instance.new("HopperBin") 
+a.BinType = 1 
+a.Parent = game.Players.LocalPlayer.Backpack
+a = Instance.new("HopperBin") 
+a.BinType = 4 
+a.Parent = game.Players.LocalPlayer.Backpack
+a = Instance.new("HopperBin") 
+a.BinType = 3 
+a.Parent = game.Players.LocalPlayer.Backpack
 end)
 
 	PLR:Button("ESP UNIVERSAL",function()
@@ -506,13 +448,11 @@ if v.ClassName == "TouchTransmitter" then
 -- if v.ClassName == "TouchTransmitter" and v.Parent.Name == "Handle" then
 local BillboardGui = Instance.new("BillboardGui")
 local TextLabel = Instance.new("TextLabel")
-
 BillboardGui.Parent = v.Parent
 BillboardGui.AlwaysOnTop = true
 BillboardGui.LightInfluence = 1
 BillboardGui.Size = UDim2.new(0, 100, 0, 100)
 BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
-
 TextLabel.Parent = BillboardGui
 TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel.BackgroundTransparency = 1
@@ -520,9 +460,7 @@ TextLabel.Size = UDim2.new(1, 0, 1, 0)
 TextLabel.Text = v.Parent.Parent.Name
 TextLabel.TextColor3 = Color3.new(1, 0, 0)
 TextLabel.TextScaled = true
-end
-end
-end)
+end end end)
 
 	PLR:Button("Location Detector",function()
 local finder = Instance.new("ScreenGui")
@@ -532,18 +470,15 @@ local random = Instance.new("TextLabel")
 local cl = Instance.new("TextLabel")
 local border = Instance.new("TextLabel")
 local copy = Instance.new("TextButton")
-
 finder.Name = "finder"
 finder.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 finder.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 finder.ResetOnSpawn = false
-
 Main.Name = "Main"
 Main.Parent = finder
 Main.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
 Main.Position = UDim2.new(0.460674137, 0, 0.360557795, 0)
 Main.Size = UDim2.new(0, 254, 0, 192)
-
 nameofgui.Name = "nameofgui"
 nameofgui.Parent = Main
 nameofgui.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -553,7 +488,6 @@ nameofgui.Font = Enum.Font.SourceSans
 nameofgui.Text = "Location Finder"
 nameofgui.TextColor3 = Color3.new(1, 1, 1)
 nameofgui.TextSize = 20
-
 random.Name = "random"
 random.Parent = Main
 random.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -564,7 +498,6 @@ random.Font = Enum.Font.SourceSans
 random.Text = "Your current location is "
 random.TextColor3 = Color3.new(1, 1, 1)
 random.TextSize = 18
-
 cl.Name = "cl"
 cl.Parent = Main
 cl.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -574,9 +507,6 @@ cl.Size = UDim2.new(0, 200, 0, 36)
 cl.Font = Enum.Font.SourceSans
 cl.TextColor3 = Color3.new(1, 1, 1)
 cl.TextSize = 18
-
-
-
 border.Name = "border"
 border.Parent = Main
 border.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -586,7 +516,6 @@ border.Font = Enum.Font.SourceSans
 border.Text = ""
 border.TextColor3 = Color3.new(0, 0, 0)
 border.TextSize = 14
-
 copy.Name = "copy"
 copy.Parent = Main
 copy.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -601,16 +530,13 @@ setclipboard(cl.Text)
 end)
 
 local isHidden = false
-local mause = game.Players.LocalPlayer:GetMouse()
-
-do
+local mause = game.Players.LocalPlayer:GetMouse() do
 local mouse = game:GetService("Players").LocalPlayer:GetMouse();
 local inputService = game:GetService('UserInputService');
 local heartbeat = game:GetService("RunService").Heartbeat;
 function Draggable(frame)
 local s, event = pcall(function()
-return frame.MouseEnter
-end)
+return frame.MouseEnter end) 
 if s then
 frame.Active = true;
 event:connect(function()
@@ -619,21 +545,13 @@ if key.UserInputType == Enum.UserInputType.MouseButton1 then
 local objectPosition = Vector2.new(mouse.X - frame.AbsolutePosition.X, mouse.Y - frame.AbsolutePosition.Y);
 while heartbeat:wait() and inputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) do
 frame:TweenPosition(UDim2.new(0, mouse.X - objectPosition.X + (frame.Size.X.Offset * frame.AnchorPoint.X), 0, mouse.Y - objectPosition.Y + (frame.Size.Y.Offset * frame.AnchorPoint.Y)), 'Out', 'Quad', 0.1, true);
-end
-end
-end)
+end end end)
 local leave;
 leave = frame.MouseLeave:connect(function()
 input:disconnect();
 leave:disconnect();
-end)
-end)
-end
-end
-end
-
+end) end) end end end
 Draggable(Main)
-
 mause.KeyDown:connect(function(key)
 if key == ";" then
 if isHidden == false then
@@ -642,31 +560,19 @@ isHidden = true
 else
 Main:TweenPosition(Main.Position + UDim2.new(0,0,1,0),"Out","Quad",0.4,false)
 isHidden = false
-end
-end
-end)
-
-
+end end end)
 while true do
 wait()
 cl.Text = tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
-end
-end)
-
+end end)
 
 PLR:Label("Work Whit Paid,KRNL AND SONA Exploit",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
 
-	PLR:Button("Dark Dex other exploit",function()
-loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/DEX%20EXPLORER"))()
-end)
+	PLR:Button("Dark Dex",function()
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/DEX%20EXPLORER"))() end)
 
-	PLR:Button("Dark Dex(synapse)",function()
-loadstring(game:HttpGetAsync("https://pastebin.com/raw/fPP8bZ8Z"))()
-end)
-
-	PLR:Button("Remote Spy Universal GAME",function()
-loadstring(game:HttpGet("https://pastebin.com/raw/BDhSQqUU", true))()
-end)
+	PLR:Button("Remote Spy",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/!Remote%20Spy", true))() end)
 
 
 --================== Misc =======================--
