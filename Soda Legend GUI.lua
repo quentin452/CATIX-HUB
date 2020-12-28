@@ -425,7 +425,7 @@ end
 end)
 
 	PLR:Button("Dark Dex",function()
-loadstring(game:HttpGetAsync("https://pastebin.com/raw/fPP8bZ8Z"))()
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/!DEX%20EXPLORER"))() 
 end)
 
 	PLR:Button("Location Detector",function()
