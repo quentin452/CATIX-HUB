@@ -1,15 +1,10 @@
 --https://www.roblox.com/games/3923754109/CODE-10M-Backflip-Simulator
-
-
-
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
-
 local AutoTab = Library:CreateTab("Backflip Simulator GUI","things", true)
 local teleports = Library:CreateTab("Teleports","things", true)
 local AutoRebirth = Library:CreateTab("Auto Rebirth","things", true)
 local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
-
 credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
     setclipboard("AHAHAHAHAH")
 end)
@@ -44,11 +39,7 @@ if key == "e" then
 noclip = not noclip
 game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
 end
-end)
-print('Created by FileExplorer')
-print('Credits to Peyton for the ChangeState part of this script')
-
-         
+end)     
 else
 _G.NO = false
 end
@@ -134,7 +125,6 @@ Event:FireServer(A_1)
 end)
 
 AutoRebirth:CreateButton("Bugged", function() --you dont need "arg" for a button
-game:GetService("CoreGui").uiui:Nothing()
 end)
 
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
