@@ -9,15 +9,15 @@ local library = loadstring(game:HttpGet("https://zypher.wtf/UI-Lib"))()
 
 	local Home = main:CreateCategory("Home")
 		local Tittle = Home:CreateSection("Coins Hero Simulator")
-		local H1 = Home:CreateSection("Update logs v2.0")
+		local H1 = Home:CreateSection("Update logs v2.1")
 			H1:Create(
 				"Textlabel",
-				"New Update And New UI"
-			)
+				"Auto Equip,UnEquip,Evolve,Delete Pet"
+            )
 		local H2 = Home:CreateSection("Credits")
 			H2:Create(
 				"Textlabel",
-				"Script by Altix#3395 And I'm A Cat#7202"
+				"Script by Altix#3395"
 			)
 			H2:Create(
 				"Textlabel",
@@ -52,12 +52,12 @@ local library = loadstring(game:HttpGet("https://zypher.wtf/UI-Lib"))()
 				"Auto Sell",
 				function(state)
 					print("Current state:", state)
-                    shared.toggleAS = state
-                    if state then
-                        game:GetService("Players").LocalPlayer.PlayerGui.Notificaciones.Enabled = false
-                    else
-                        game:GetService("Players").LocalPlayer.PlayerGui.Notificaciones.Enabled = true
-                    end
+					shared.toggleAS = state
+					if state then
+						game:GetService("Players").LocalPlayer.PlayerGui.Notificaciones.Enabled = false
+					else
+						game:GetService("Players").LocalPlayer.PlayerGui.Notificaciones.Enabled = true
+					end
 				end,
 				{
 					default = false,
@@ -68,7 +68,7 @@ local library = loadstring(game:HttpGet("https://zypher.wtf/UI-Lib"))()
 				"Auto Op Cosmos (Fills your backpack 100%)",
 				function(state)
 					print("Current state:", state)
-                    shared.toggleAOC = state
+					shared.toggleAOC = state
 					game:GetService("ReplicatedStorage").Remotes.Sell:FireServer()
 				end,
 				{
@@ -83,15 +83,128 @@ local library = loadstring(game:HttpGet("https://zypher.wtf/UI-Lib"))()
 					if shared.toggleAS then
 						game:GetService("ReplicatedStorage").Remotes.Sell:FireServer()
 					end
-                end
+				end
 			end)
-            spawn(function()
+			spawn(function()
 				while wait(0.5) do
 					if shared.toggleAOC then
 						game:GetService("ReplicatedStorage").Remotes.Skill:FireServer("Cosmos",{math.huge,0,0,0})
 					end
 				end
 			end)
+			
+	local PetFunc = main:CreateCategory("Pet Function")
+        local PetES = PetFunc:CreateSection("Pet Equip Stuff")
+			PetES:Create(
+				"Toggle",
+				"Equip Best Pets",
+				function(state)
+					print("Current state:", state)
+					shared.togglePetFunc_EAP = state
+				end,
+				{
+					default = false,
+				}
+			)
+			PetES:Create(
+				"Toggle",
+				"UnEquip All Pets",
+				function(state)
+					print("Current state:", state)
+					shared.togglePetFunc_UAP = state
+				end,
+				{
+					default = false,
+				}
+			)
+			PetES:Create(
+				"Toggle",
+				"Auto Evolve Pets",
+				function(state)
+					print("Current state:", state)
+					shared.togglePetFunc_AEP = state
+				end,
+				{
+					default = false,
+				}
+			)
+			spawn(function()
+				while wait(1) do
+					if shared.togglePetFunc_UAP then
+						for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Pets.Inv.Menu.Scroll:GetChildren()) do
+							if v.Name == "Grid" then
+							else
+								game:GetService("ReplicatedStorage").Remotes.PetManager:FireServer("Unequip",v.PetInfo.ID.Value)
+							end
+						end
+					end
+					if shared.togglePetFunc_EAP then
+						for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Pets.Inv.Menu.Scroll:GetChildren()) do
+							if v.Name == "Grid" then
+							else
+								game:GetService("ReplicatedStorage").Remotes.PetManager:FireServer("Equip",v.PetInfo.ID.Value)
+							end
+						end
+					end
+					if shared.togglePetFunc_AEP then
+						for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Pets.Inv.Menu.Scroll:GetChildren()) do
+							if v.Name == "Grid" then
+							else
+								local args = {
+									[1] = "Upgrade",
+									[2] = 1,
+									[3] = game:GetService("ReplicatedStorage").Data[game.Players.LocalPlayer.Name].Pets.Storage[tostring(v.PetInfo.ID.Value)]
+								}
+								game:GetService("ReplicatedStorage").Remotes.PetManager:FireServer(unpack(args))
+							end
+						end
+					end
+				end
+            end)
+        local ADPS = PetFunc:CreateSection("Auto Delete Pets Stuff")
+            ADPS:Create(
+                "DropDown",
+                "Choose a Pet Type", 
+                function(current)
+                    print("Selected to:", current)
+                    _G.PETTODELETSELECTED = current
+                end,
+                {
+                    options = {
+                        "Common", "UnCommon", "Rare", "Epic", "Mythical", "Beast", "Radiant", "Glorious", "Legendary"
+                    },
+                    -- Optional
+                    default = "Choose a Pet Type",
+                    search = false
+                }
+            )
+			ADPS:Create(
+				"Toggle",
+				"Auto Delete",
+				function(state)
+					print("Current state:", state)
+					shared.toggleADPS = state
+				end,
+				{
+					default = false,
+				}
+			)
+			spawn(function()
+				while wait(1) do
+                    if shared.toggleADPS then
+                        if _G.PETTODELETSELECTED ~= nil then
+                            for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Pets.Inv.Menu.Scroll:GetChildren()) do
+                                if v.Name == "Grid" then
+                                else
+                                    if v.PetInfo.Type.Value == _G.PETTODELETSELECTED then
+                                        game:GetService("ReplicatedStorage").Remotes.PetManager:FireServer("Delete",v.PetInfo.ID.Value)
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end)
 
 	local AB = main:CreateCategory("Auto Buy")	
 		local ABS = AB:CreateSection("Auto Buy Stuff")
@@ -215,7 +328,7 @@ local library = loadstring(game:HttpGet("https://zypher.wtf/UI-Lib"))()
 				end
 			end)
 
-		local ABE = AB:CreateSection("Auto Buy Stuff")
+		local ABE = AB:CreateSection("Auto Buy Egg Stuff")
 			ABE:Create(
 				"DropDown",
 				"Choose an Egg", 
@@ -518,4 +631,3 @@ local library = loadstring(game:HttpGet("https://zypher.wtf/UI-Lib"))()
 						animated = true,
 					}
 				)
-	
