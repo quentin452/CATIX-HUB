@@ -2,118 +2,46 @@ local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))(
 
 local w3 = library:CreateWindow("Armor Simulator: Resurgence")
 
-
---================== Model =======================--
 local w = w3:CreateFolder("Hacks")
 
 w:Label("Things",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
 
 w:Button("Buy Classes",function()
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(1)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(2)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(3)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(4)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(5)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(6)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(7)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(8)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(9)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(10)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(11)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(12)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(13)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(14)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(15)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(16)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(17)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(18)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(19)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(20)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(21)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(22)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(23)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(24)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(25)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(26)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(27)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(28)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(29)
-wait(0.1)
-game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(30)
-end)
+for i = 1,100 do 
+    wait()
+game:GetService("ReplicatedStorage").ExtraRemotes.ClassUpgrade:FireServer(i)
+end end)
 
 	w:Toggle("Auto Power :D",function(bool)
-		shared.toggle1 = bool
-	end)
+		shared.toggle1 = bool end)
 	
-		w:Toggle("Auto Sell",function(bool)
-		shared.toggle2 = bool
-end) 
+		w:Toggle("Sell(use inf jump)",function(bool)
+		shared.toggle22 = bool end) 
 w:Toggle("Auto Buy Backpacks",function(bool)
-		shared.toggle3 = bool
-end) 
+		shared.toggle3 = bool end) 
 	spawn(function()
 		while wait() do
 		       if shared.toggle1 then
-game:GetService("ReplicatedStorage").GainPow:FireServer(0,99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999,0)
-end
-	if shared.toggle2 then
-	game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(15.0651045, 3.65000296, 19.5256004)
-wait(0)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(9.48171139, 3.60000134, 4.93765831)
-
+game:GetService("ReplicatedStorage").GainPow:FireServer(0,math.huge,0) end
+	if shared.toggle22 then
+	local Me = game.Players.LocalPlayer.Character.HumanoidRootPart
+local To = game:GetService("Workspace").SellShop.SellBrick
+To.CFrame = Me.CFrame
+game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end
 	if shared.toggle3 then
 game:GetService("ReplicatedStorage").ExtraRemotes.BagUpgrade:FireServer()
-end
-end
-end)
-
+end end end)
 --================== Player Settings =======================--
-
 --(alot not by me )--
 local PLR = w3:CreateFolder("Player")
-
-	
-	
 	PLR:Slider("Jump Hack",10,250,true,function(value)
 	    game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
 	end)
-	PLR:Button("Speed Hack (press R)",function(bool)
-	    
+	PLR:Button("Speed Hack (press R)",function(bool)   
 local walkspeedplayer = game:GetService("Players").LocalPlayer
 local walkspeedmouse = walkspeedplayer:GetMouse()
-
 local walkspeedenabled = false
-
 function x_walkspeed(key)
 if (key == "r") then
 if walkspeedenabled == false then
@@ -123,7 +51,6 @@ Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
 Humanoid.WalkSpeed = _G.WS;
 end)
 Humanoid.WalkSpeed = _G.WS;
-
 walkspeedenabled = true
 elseif walkspeedenabled == true then
 _G.WS = 20;
@@ -132,15 +59,9 @@ Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
 Humanoid.WalkSpeed = _G.WS;
 end)
 Humanoid.WalkSpeed = _G.WS;
-
 walkspeedenabled = false
-end
-end
-end
-
-walkspeedmouse.KeyDown:connect(x_walkspeed)
-
-end)
+end end end
+walkspeedmouse.KeyDown:connect(x_walkspeed) end)
 	PLR:Button("No Clip (Press E)",function()
 		noclip = false
 		game:GetService('RunService').Stepped:connect(function()
@@ -154,10 +75,7 @@ end)
 			if key == "e" then
 				noclip = not noclip
 				game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-			end
-		end)
-	end)
-
+			end end) end)
 	PLR:Button("Fly (Press F)",function()
    repeat wait() 
 	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Head") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
@@ -171,7 +89,6 @@ local ctrl = {f = 0, b = 0, l = 0, r = 0}
 local lastctrl = {f = 0, b = 0, l = 0, r = 0} 
 local maxspeed = 400 
 local speed = 5000 
-
 function Fly() 
 local bg = Instance.new("BodyGyro", torso) 
 bg.P = 9e4 
@@ -225,8 +142,7 @@ elseif key:lower() == "a" then
 ctrl.l = -1 
 elseif key:lower() == "d" then 
 ctrl.r = 1 
-end 
-end) 
+end end) 
 mouse.KeyUp:connect(function(key) 
 if key:lower() == "w" then 
 ctrl.f = 0 
@@ -236,30 +152,22 @@ elseif key:lower() == "a" then
 ctrl.l = 0 
 elseif key:lower() == "d" then 
 ctrl.r = 0 
-end 
-end)
+end end)
 Fly()
-
-          
-
-	end)
-
-	PLR:Button("Inf Jump",function()
+end)
+PLR:Button("Inf Jump",function()
 	game:GetService("UserInputService").JumpRequest:connect(function()
     game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
-end)
-end)
+end) end)
 
 	PLR:Button("Crl + Click = TP",function()
 local Plr = game:GetService("Players").LocalPlayer
 local Mouse = Plr:GetMouse()
-
 Mouse.Button1Down:connect(function()
 if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
 if not Mouse.Target then return end
 Plr.Character:MoveTo(Mouse.Hit.p)
-end)
-end)
+end) end)
 	PLR:Button("Extreme Light",function()
 	local s = Instance.new("PointLight", game.Players.LocalPlayer.Character.Head)
 s.Brightness = 0.3
@@ -271,75 +179,21 @@ game.Lighting.Brightness = 10
 game.Lighting.ColorCorrection.Brightness = 0.1
 game.Lighting.ColorCorrection.Saturation = 0.1
 game.Lighting.Bloom.Intensity = 0.1
-end)
-end)
+end) end)
 	PLR:Button("Inf Yield",function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
 	PLR:Button("Btools",function()
-game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
-for index, child in pairs(game:GetService("Workspace"):GetChildren()) do
-  if child.ClassName == "Part" then
-      child.Locked = false
-  end
-  if child.ClassName == "MeshPart" then
-      child.Locked = false
-  end
-  if child.ClassName == "UnionOperation" then
-      child.Locked = false
-  end
-  if child.ClassName == "Model" then
-      for index, chil in pairs(child:GetChildren()) do
-          if chil.ClassName == "Part" then
-              chil.Locked = false
-          end
-          if chil.ClassName == "MeshPart" then
-              chil.Locked = false
-          end
-          if chil.ClassName == "UnionOperation" then
-              chil.Locked = false
-          end
-          if chil.ClassName == "Model" then
-              for index, childe in pairs(chil:GetChildren()) do
-                  if childe.ClassName == "Part" then
-                      childe.Locked = false
-                  end
-                  if childe.ClassName == "MeshPart" then
-                      childe.Locked = false
-                  end
-                  if childe.ClassName == "UnionOperation" then
-                      childe.Locked = false
-                  end
-                  if childe.ClassName == "Model" then
-                      for index, childeo in pairs(childe:GetChildren()) do
-                          if childeo.ClassName == "Part" then
-                              childeo.Locked = false
-                          end
-                          if childeo.ClassName == "MeshPart" then
-                              childeo.Locked = false
-                          end
-                          if childeo.ClassName == "UnionOperation" then
-                              childeo.Locked = false
-                          end
-                          if childeo.ClassName == "Model" then
-                          end
-                      end
-                  end
-              end
-          end
-      end
-  end
- 
-end
-c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
-c.BinType = Enum.BinType.Hammer
-c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
-c.BinType = Enum.BinType.Clone
-c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
-c.BinType = Enum.BinType.Grab
-
-
+a = Instance.new("HopperBin") 
+a.BinType = 1 
+a.Parent = game.Players.LocalPlayer.Backpack
+a = Instance.new("HopperBin") 
+a.BinType = 4 
+a.Parent = game.Players.LocalPlayer.Backpack
+a = Instance.new("HopperBin") 
+a.BinType = 3 
+a.Parent = game.Players.LocalPlayer.Backpack
 end)
 
 	PLR:Button("ESP UNIVERSAL",function()
@@ -348,13 +202,11 @@ if v.ClassName == "TouchTransmitter" then
 -- if v.ClassName == "TouchTransmitter" and v.Parent.Name == "Handle" then
 local BillboardGui = Instance.new("BillboardGui")
 local TextLabel = Instance.new("TextLabel")
-
 BillboardGui.Parent = v.Parent
 BillboardGui.AlwaysOnTop = true
 BillboardGui.LightInfluence = 1
 BillboardGui.Size = UDim2.new(0, 100, 0, 100)
 BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
-
 TextLabel.Parent = BillboardGui
 TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel.BackgroundTransparency = 1
@@ -362,64 +214,37 @@ TextLabel.Size = UDim2.new(1, 0, 1, 0)
 TextLabel.Text = v.Parent.Parent.Name
 TextLabel.TextColor3 = Color3.new(1, 0, 0)
 TextLabel.TextScaled = true
-end
-end
-end)
-
+end end end)
 	PLR:Button("Dark Dex",function()
-loadstring(game:HttpGetAsync("https://pastebin.com/raw/fPP8bZ8Z"))()
-end)
-
+loadstring(game:HttpGetAsync("https://pastebin.com/raw/fPP8bZ8Z"))() end)
 PLR:Label("Work Whit Paid,KRNL AND SONA Exploit",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
-
-	PLR:Button("Remote Spy Universal GAME",function()
-loadstring(game:HttpGet("https://pastebin.com/raw/BDhSQqUU", true))()
-end)
-
-
+	PLR:Button("Remote Spy",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/!Remote%20Spy", true))() end)
 --================== Misc =======================--
-
 local MISC = w3:CreateFolder("Misc")
-
 	MISC:Button("Rejoin",function()
 		local TeleportService = game:GetService("TeleportService")
 		local PlaceId = game.PlaceId
 		local player = game.Players.LocalPlayer
 		if player then
 		TeleportService:Teleport(PlaceId, player)
-		end
-	end)
-
+		end end)
 	MISC:GuiSettings()
-
 --================== Credits =======================--
-
 local CS = w3:CreateFolder("Credits")
-
 	CS:Button("Script: I'm A Cat#7202",function()
-		setclipboard("Im A Cat#7202")
-	end)
-
+		setclipboard("Im A Cat#7202") end)
 	CS:Button("Discord: https://discord.gg/KmHZUpXEmQ",function()
-    setclipboard("https://discord.gg/KmHZUpXEmQ")
-  end)
-  
+    setclipboard("https://discord.gg/KmHZUpXEmQ")  end) 
 CS:Button("Helped by: Altix#3395",function()
-		setclipboard("Altix#3395")
-end)
-
+		setclipboard("Altix#3395") end)
 	CS:DestroyGUI()
-
 --================== Autres =======================--
-
-
 --| Anti Ban |
 setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
 setfflag("DFIntCrashUploadToBacktracePercentage", "0")
 setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
 setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
-
-
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
     game:service'Players'.LocalPlayer.Idled:connect(function()
@@ -427,35 +252,13 @@ setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
         Virtual:ClickButton2(Vector2.new())
         wait(2)
     end)
-
-
---| Other Anti AFK |
-wait(10)
-    game.StarterGui:SetCore(
-        "ChatMakeSystemMessage",
-        {
-            Text = "[ANTI AFK] Started !",
-            Font = Enum.Font.SourceSansBold, 
-            FontSize = Enum.FontSize.Size24 
-        }
-    )
-while wait(30) do
-local VirtualUser=game:service'VirtualUser'
-game:service'Players'.LocalPlayer.Idled:connect(function()
-VirtualUser:CaptureController()
-VirtualUser:ClickButton2(Vector2.new())
-end)
-end
-
 --| Anti Chat Logs |
 local CloneFunction = clonefunction
 local CheckCaller = CloneFunction(checkcaller)
 local HookFunction = CloneFunction(hookfunction)
 local LocalPlayer = game.Players.PlayerAdded:wait()
-
 local PostMessage = require(LocalPlayer:WaitForChild("PlayerScripts", 1/0):WaitForChild("ChatScript", 1/0):WaitForChild("ChatMain", 1/0)).MessagePosted
 getgenv().MessageEvent = Instance.new("BindableEvent")
-
 local OldFunctionHook
 local PostMessageHook = function(self, msg)
    if not CheckCaller() and self == PostMessage then
