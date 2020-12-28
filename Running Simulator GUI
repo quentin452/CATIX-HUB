@@ -9,24 +9,24 @@ local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
 
-credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
+credits:CreateButton("Our Discords", function() 
     setclipboard("AHAHAHAHAH")
 end)
 
-credits:CreateButton("https://discord.gg/KmHZUpXEmQ", function() --you dont need "arg" for a button
+credits:CreateButton("https://discord.gg/KmHZUpXEmQ", function() 
     setclipboard("https://discord.gg/KmHZUpXEmQ")
 end)
 
-credits:CreateButton("by Altix#3395", function() --you dont need "arg" for a button
+credits:CreateButton("by Altix#3395", function()
     setclipboard("Altix#3395")
 end)
 
-credits:CreateButton("by I'm A Cat#7202", function() --you dont need "arg" for a button
+credits:CreateButton("by I'm A Cat#7202", function() 
     setclipboard("I'm A Cat#7202")
 end)
 
 
-AutoTab:CreateToggle("Auto Click FAST", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Auto Click FAST", function(arg) 
     if arg then
         _G.a = true 
         while wait(0) and _G.a do
@@ -38,7 +38,7 @@ Event:FireServer()
     end
 end)
 
-MISC:CreateToggle("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
+MISC:CreateToggle("NO CLIP Press(E)", function(arg)
     if arg then
 _G.NO = true 
   noclip = false
@@ -67,7 +67,7 @@ end)
 
 
 
-MISC:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
+MISC:CreateToggle("Speed Hack 100", function(arg)
     if arg then
 _G.Speed = true 
         while wait() and _G.Speed do
@@ -79,7 +79,7 @@ _G.Speed = true
          end
 end)
 
-AutoTab:CreateToggle("Auto Prestige FREE", function(arg) --the (arg) is if the checkbox is toggled or not
+AutoTab:CreateToggle("Auto Prestige FREE", function(arg)
     if arg then
         _G.c = true 
         while wait(0) and _G.c do
