@@ -171,7 +171,7 @@ local library = loadstring(game:HttpGet("https://zypher.wtf/UI-Lib"))()
                 end,
                 {
                     options = {
-                        "Common", "UnCommon", "Rare", "Epic", "Mythical", "Beast", "Radiant", "Glorious", "Legendary"
+                        "Common", "Uncommon", "Rare", "Epic", "Mythical", "Beast", "Radiant", "Glorious", "Legendary"
                     },
                     -- Optional
                     default = "Choose a Pet Type",
