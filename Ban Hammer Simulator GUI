@@ -9,7 +9,12 @@ local w = w3:CreateFolder("Things")
 
 w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
 
-
+    w:Button("Oppen Hammer Shop",function()
+    game:GetService("Players").LocalPlayer.PlayerGui.HUD.HammerStore.Visible = true
+    end)
+    w:Button("Close Hammer Shop",function()
+    game:GetService("Players").LocalPlayer.PlayerGui.HUD.HammerStore.Visible = false
+    end)
 	w:Toggle("Auto Click",function(bool)
 		shared.toggle1 = bool
 	end)
@@ -33,116 +38,23 @@ w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,Te
 end
 	if shared.toggle2 then
 
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(2)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(3)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(4)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(5)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(6)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(7)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(8)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(9)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(10)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(11)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(12)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(13)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(14)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(15)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(16)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(17)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(18)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(19)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(20)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(21)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(22)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(23)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(24)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(25)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(26)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(27)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(28)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(29)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(30)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(31)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(32)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(33)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(34)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(35)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(36)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(37)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(38)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(39)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(40)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(41)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(42)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(43)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(44)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(45)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(46)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(47)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(48)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(49)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(50)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(51)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(52)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(53)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(54)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(55)
-wait(0.1)
-game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(56)
-wait(0.1)
+
+
+ game:GetService("Players").LocalPlayer.PlayerGui.HUD.BuyBansFrame:Destroy()
+	for i,v in pairs(game:GetService("ReplicatedStorage").Hammers:GetChildren()) do wait(0.6)
+						local args = {
+    [1] = v.Name
+}
+
+game:GetService("ReplicatedStorage").Remotes.BuyHammer:InvokeServer(unpack(args))
+
+	end
+
+
+
+
+
+
 end
 	if shared.toggle3 then
 game:GetService("ReplicatedStorage").Remotes.RequestQuest:InvokeServer()
@@ -171,33 +83,26 @@ spawn(function()
 			if _G.BossSelected == "Spammer" then
 			local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").NPCs.Spammers.NPCs.Spammer.UpperTorso
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 			elseif _G.BossSelected == "Noob" then
 		local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").NPCs.Noobs.NPCs.Noob.HumanoidRootPart
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)	
-
-			elseif _G.BossSelected == "Skeleton" then
+     		elseif _G.BossSelected == "Skeleton" then
 				local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").NPCs.Skeletons.NPCs.Skeleton.HumanoidRootPart
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)		
 			elseif _G.BossSelected == "Doge" then
 					local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").NPCs.Doges.NPCs.Doge.HumanoidRootPart
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)			
 			elseif _G.BossSelected == "Hacker" then
 						local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").NPCs.Hackers.NPCs.Hacker.HumanoidRootPart
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 			elseif _G.BossSelected == "Pirate" then
 						local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").NPCs.Pirates.NPCs.Pirate.HumanoidRootPart
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 			end
 		end
@@ -529,8 +434,8 @@ end)
 
 PLR:Label("Work Whit Paid,KRNL AND SONA Exploit",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
 
-	PLR:Button("Remote Spy Universal GAME",function()
-loadstring(game:HttpGet("https://pastebin.com/raw/BDhSQqUU", true))()
+	PLR:Button("Remote Spy",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/!Remote%20Spy", true))()
 end)
 
 
