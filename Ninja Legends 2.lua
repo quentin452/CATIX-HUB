@@ -18,10 +18,14 @@ local main = library:CreateMain({
 
 local Home = main:CreateCategory("Home")
 	local Tittle = Home:CreateSection("Ninja Legends 2")
-	local H1 = Home:CreateSection("Update logs V1.1:")
+	local H1 = Home:CreateSection("Update logs V1.2:")
 		H1:Create(
 			"Textlabel",
-			"+ Ui"
+			"+ Auto Boss Added"
+		)
+		H1:Create(
+			"Textlabel",
+			"+ Auto Collect Added"
 		)
 	local H2 = Home:CreateSection("Credits")
 		H2:Create(
@@ -44,7 +48,7 @@ local Home = main:CreateCategory("Home")
 		)
 
 local Function = main:CreateCategory("Function")
-	local FUNC = Function:CreateSection("Teleport Stuff")
+	local FUNC = Function:CreateSection("Function Stuff")
 		FUNC:Create(
 			"Toggle",
 			"Auto Swing",
@@ -62,6 +66,28 @@ local Function = main:CreateCategory("Function")
 			function(state)
 				print("Current state:", state)
 				shared.toggleASell = state
+			end,
+			{
+				default = false,
+			}
+		)
+		FUNC:Create(
+			"Toggle",
+			"Auto Collect",
+			function(state)
+				print("Current state:", state)
+				shared.toggleACC = state
+			end,
+			{
+				default = false,
+			}
+		)
+		FUNC:Create(
+			"Toggle",
+			"Auto Boss (Elemental Cyborg)",
+			function(state)
+				print("Current state:", state)
+				shared.toggleABEC = state
 			end,
 			{
 				default = false,
@@ -85,9 +111,47 @@ local Function = main:CreateCategory("Function")
 						end
 					end
 				end
+				if shared.toggleABEC then
+					if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
+						local boss = game:GetService("Workspace").spawnedBosses["Elemental Cyborg"].HumanoidRootPart
+						local me = game.Players.LocalPlayer.Character.HumanoidRootPart
+						me.CFrame = boss.CFrame + Vector3.new(0,-31.5,0)
+						local tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool") or game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
+						game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
+						if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
+							game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
+							wait(0.25)
+						end
+					end
+				end
 			end
 		end)
-		
+		spawn(function()
+			while wait() do
+				if shared.toggleACC then
+					if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
+						pcall(
+							function()
+								for i,v in pairs(game:GetService("Workspace").spawnedCoins["Shuriken City"]:GetChildren()) do
+									for i,v in pairs(v:GetChildren()) do
+										if v.ClassName == "Model" and shared.toggleACC then
+										   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Base.CFrame
+										   wait(0.02)
+										   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Base.CFrame + Vector3.new(0,-5,0)
+										   wait(0.02)
+										   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Base.CFrame
+										   wait(0.02)
+										end
+									end
+								end
+							end
+						)
+					end
+				end
+			end
+		end)
+
+
 local AutoBuy = main:CreateCategory("Auto Buy")
 	local AB = AutoBuy:CreateSection("Auto Buy Stuff")
 		AB:Create(
@@ -463,7 +527,7 @@ local Misc = main:CreateCategory("Misc")
 						"Use All Codes",
 						function()
 							local codes = { 
-								"epicturrets450","waterfall500","newgame500",
+								"epicturrets450","waterfall500","newgame500","epictower350", "firstplanet250", "treeninja400", "bossbattle300", "shurikencity500"
 							}
 							warn("!! CODE LIST !!")
 							redem_code = game:GetService("ReplicatedStorage").rEvents.codeRemote
@@ -482,7 +546,9 @@ local Misc = main:CreateCategory("Misc")
 						"Open All Chests",
 						function()
 							for i,v in pairs(game:GetService("Workspace").rewardChests:GetChildren()) do
-								game:GetService("ReplicatedStorage").rEvents.checkChestRemote:InvokeServer(v.Name)
+								v.chestAreaCircle.circleInner.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+								wait(0.5)
+								v.chestAreaCircle.circleInner.CFrame = CFrame.new(0,0,0)
 							end
 						end,
 						{
