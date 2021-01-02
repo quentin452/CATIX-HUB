@@ -11,7 +11,7 @@
 	local oldpos = Instance.new("CFrameValue",game.Players.LocalPlayer)
 	oldpos.Name = "oldpos"
 
-local library = loadstring(game:HttpGet("https://zypher.wtf/UI-Lib"))()
+	local library = loadstring(game:HttpGet("https://pastebin.com/raw/H5u3dYwA"))()
 local main = library:CreateMain({
 	    projName = "ScreenGui",
 	    Resizable = true,
@@ -37,9 +37,9 @@ local Home = main:CreateCategory("Home")
 		)
 		H2:Create(
 			"Button",
-			"Copy Discord Link (https://discord.gg/KmHZUpXEmQ)",
+			"Copy Discord Link (https://discord.gg/x2hM4M5xWj)",
 			function()
-			setclipboard("https://discord.gg/KmHZUpXEmQ")
+			setclipboard("https://discord.gg/x2hM4M5xWj")
 			end,
 			{
 				animated = true,
