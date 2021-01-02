@@ -7,7 +7,7 @@ game:service'Players'.LocalPlayer.Idled:connect(function()
 	wait(2)
 end)
 
-local library = loadstring(game:HttpGet("https://zypher.wtf/UI-Lib"))()
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/H5u3dYwA"))()
 local main = library:CreateMain({
 	projName = "ScreenGui",
 	Resizable = true,
