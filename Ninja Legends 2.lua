@@ -27,6 +27,10 @@ local Home = main:CreateCategory("Home")
 			"Textlabel",
 			"+ Auto Collect Added"
 		)
+		H1:Create(
+			"Textlabel",
+			"+ Auto Buy Ranks Added"
+		)
 	local H2 = Home:CreateSection("Credits")
 		H2:Create(
 			"Textlabel",
@@ -93,6 +97,17 @@ local Function = main:CreateCategory("Function")
 				default = false,
 			}
 		)
+		FUNC:Create(
+			"Toggle",
+			"Auto KOTH",
+			function(state)
+				print("Current state:", state)
+				shared.toggleAKOTH = state
+			end,
+			{
+				default = false,
+			}
+		)
 		spawn(function()
 			while wait() do
 				if shared.toggleASwing then
@@ -124,10 +139,11 @@ local Function = main:CreateCategory("Function")
 						end
 					end
 				end
-			end
-		end)
-		spawn(function()
-			while wait() do
+				if shared.toggleAKOTH then
+					if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-355, 173, 12)
+					end
+				end
 				if shared.toggleACC then
 					if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
 						pcall(
@@ -198,6 +214,18 @@ local AutoBuy = main:CreateCategory("Auto Buy")
 				default = false,
 			}
 		)
+		AB:Create(
+			"Toggle",
+			"Buy Rank (Evolution)",
+			function(state)
+				print("Current state:", state)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 113, 88)
+				shared.toggleABRE = state
+			end,
+			{
+				default = false,
+			}
+		)
 		spawn(function()
 			while wait(0.2) do
 				if shared.toggleABS then
@@ -239,6 +267,17 @@ local AutoBuy = main:CreateCategory("Auto Buy")
 						}
 					}
 					game:GetService("Players").LocalPlayer.saberEvent:FireServer(unpack(args))
+				end
+				if shared.toggleABRE then
+					for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.itemsShopGui.itemsShopMenu.menus.evolutionsMenu:GetChildren()) do
+						if v.Name == "itemButtonFrame" then
+							local args = {
+								[1] = "buyEvolution",
+								[2] = game:GetService("ReplicatedStorage").Evolutions.Ground[tostring(v.whichItem.Value)]
+							}
+							game:GetService("Players").LocalPlayer.saberEvent:FireServer(unpack(args))
+						end
+					end
 				end
 			end
 		end)
@@ -362,11 +401,13 @@ local Teleport = main:CreateCategory("Teleport")
 						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(310, 141, -191)
 					elseif current == "Forgotton Santuary" then
 						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1152, 6273, 861)
+					elseif current == "Crashed Spaceships" then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-192, 127, -152)
 					end
 				end,
 				{
 					options = {
-						"Ancien Master Blade", "Soul Fusion Arena", "Forgotton Santuary"
+						"Ancien Master Blade", "Soul Fusion Arena", "Forgotton Santuary", "Crashed Spaceships"
 					},
 					-- Optional
 					default = "Choose a Training Area",
