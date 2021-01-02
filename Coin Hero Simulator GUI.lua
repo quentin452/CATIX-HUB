@@ -1,4 +1,4 @@
-local library = loadstring(game:HttpGet("https://zypher.wtf/UI-Lib"))()
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/H5u3dYwA"))()
 
 	local main = library:CreateMain({
 		projName = "ScreenGui",
