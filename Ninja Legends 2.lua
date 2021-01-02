@@ -18,10 +18,10 @@ local main = library:CreateMain({
 
 local Home = main:CreateCategory("Home")
 	local Tittle = Home:CreateSection("Ninja Legends 2")
-	local H1 = Home:CreateSection("Update logs V1.0:")
+	local H1 = Home:CreateSection("Update logs V1.1:")
 		H1:Create(
 			"Textlabel",
-			"+ New UI"
+			"+ Auto Boss added"
 		)
 	local H2 = Home:CreateSection("Credits")
 		H2:Create(
@@ -70,14 +70,18 @@ local Function = main:CreateCategory("Function")
 		spawn(function()
 			while wait() do
 				if shared.toggleASwing then
-					game:GetService("Players").LocalPlayer.saberEvent:FireServer("swingBlade")
+					if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
+						game:GetService("Players").LocalPlayer.saberEvent:FireServer("swingBlade")
+					end
 				end
 				if shared.toggleASell then
-					for i,v in pairs(game:GetService("Workspace").sellAreaCircles:GetChildren()) do
-						if v.whichPlanet.Value == "Ground" then
-							v.circleInner.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-							wait()
-							v.circleInner.CFrame = CFrame.new(-75.0282, 6314.25, 138.326)
+					if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
+						for i,v in pairs(game:GetService("Workspace").sellAreaCircles:GetChildren()) do
+							if v.whichPlanet.Value == "Ground" then
+								v.circleInner.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+								wait()
+								v.circleInner.CFrame = CFrame.new(-75.0282, 6314.25, 138.326)
+							end
 						end
 					end
 				end
