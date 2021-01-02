@@ -21,7 +21,7 @@ local Home = main:CreateCategory("Home")
 	local H1 = Home:CreateSection("Update logs V1.1:")
 		H1:Create(
 			"Textlabel",
-			"+ Auto Boss added"
+			"+ Ui"
 		)
 	local H2 = Home:CreateSection("Credits")
 		H2:Create(
