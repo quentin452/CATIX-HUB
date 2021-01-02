@@ -1,4 +1,4 @@
-local library = loadstring(game:HttpGet("https://zypher.wtf/UI-Lib"))()
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/H5u3dYwA"))()
 local main = library:CreateMain("zypher")
 
 local Home = main:CreateCategory("Home")
@@ -6,7 +6,7 @@ local Home = main:CreateCategory("Home")
 	local H1 = Home:CreateSection("Update logs V2.0.1:")
 		H1:Create(
 			"Textlabel",
-			"+ Auto Collect (Coins/Candy) Updated"
+			"+ Update 60 Added"
 		)
 	local H2 = Home:CreateSection("Credits")
 		H2:Create(
@@ -19,9 +19,9 @@ local Home = main:CreateCategory("Home")
 		)
 		H2:Create(
 			"Button",
-			"Copy Discord Link (https://discord.gg/KmHZUpXEmQ)",
+			"Copy Discord Link (https://discord.gg/x2hM4M5xWj)",
 			function()
-			setclipboard("https://discord.gg/KmHZUpXEmQ")
+			setclipboard("https://discord.gg/x2hM4M5xWj")
 			end,
 			{
 				animated = true,
@@ -339,7 +339,6 @@ local AutoBuy = main:CreateCategory("Auto Buy")
 			function(current)
 				print("Selected to:", current)
 				shared.DropDownABEChoose = current
-				TpArea()
 			end,
 			{
 				options = {
@@ -351,7 +350,7 @@ local AutoBuy = main:CreateCategory("Auto Buy")
 					"Island 40", "Island 41", "Island 42", "Island 43", "Island 44", "Island 45", "Island 46","Island 47", 
 					"Island 48", "Island 49", "Island 50", "Island 51", "Island 52", "Island 53","Island 54", "Island 55", 
 					"Island 56", "Island 57", "Island 58", "Island 59", "Island 60","Island 61", "Island 62","Island 63", 
-					"Island 64", "Island 65", "Island 66", "Island 67", "Island 68", "Island 69","Island 70",
+					"Island 64", "Island 65", "Island 66", "Island 67", "Island 68", "Island 69","Island 70", "Island 71",
 				},
 				-- Optional
 				default = "Choose An Egg",
@@ -518,6 +517,8 @@ local AutoBuy = main:CreateCategory("Auto Buy")
 					elseif shared.DropDownABEChoose == "Island 69" then
 						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["P Egg"],1)
 					elseif shared.DropDownABEChoose == "Island 70" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Q Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 71" then
 						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["R Egg"],1)
 					end
 				end
@@ -586,7 +587,7 @@ local Teleport = main:CreateCategory("Teleport")
 					"Island 40", "Island 41", "Island 42", "Island 43", "Island 44", "Island 45", "Island 46","Island 47", 
 					"Island 48", "Island 49", "Island 50", "Island 51", "Island 52", "Island 53","Island 54", "Island 55", 
 					"Island 56", "Island 57", "Island 58", "Island 59", "Island 60","Island 61", "Island 62","Island 63", 
-					"Island 64", "Island 65", "Island 66", "Island 67", "Island 68", "Island 69","Island 70",
+					"Island 64", "Island 65", "Island 66", "Island 67", "Island 68", "Island 69","Island 70", "Island 71"
 				},
 				-- Optional
 				default = "Choose a Island's Location",
@@ -752,6 +753,7 @@ local Teleport = main:CreateCategory("Teleport")
 				wait(0.35)
 				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 269271, -303)
 				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(638, 272960, -247)
 			end,
 			{
 				animated = true,
@@ -900,6 +902,8 @@ local Teleport = main:CreateCategory("Teleport")
 				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 265717, -310)
 			elseif shared.DropDownTPChoose == "Island 70" then
 				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 269271, -303)
+			elseif shared.DropDownTPChoose == "Island 71" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(638, 272960, -247)
 			end
 		end
 
