@@ -1,653 +1,568 @@
---https://www.roblox.com/games/5817229607/BIG-UPDATE-Soda-Legends
-local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))()
+-- Anti AFK
 
-local w3 = library:CreateWindow("Soda-Legends GUI")
-local w2 = library:CreateWindow("Eggs x1 Fast")
-local w4 = library:CreateWindow("Teleporters")
-
---================== Model =======================--
-local w = w3:CreateFolder("Things")
-
-w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
-
-	w:Toggle("Click Ping",function(bool)
-		shared.toggle1 = bool
-	end)
-	w:Toggle("Click Normal",function(bool)
-		shared.toggle10 = bool
-	end)
-	w:Toggle("Click Extra Ping",function(bool)
-		shared.toggle11 = bool
-	end)
-	
-		w:Toggle("Auto Sell X8",function(bool)
-		shared.toggle29 = bool
-end) 
-	w:Toggle("Auto Collect",function(bool)
-		shared.toggle30 = bool
-end) 
-	w:Toggle("Buy Event Shop",function(bool)
-		shared.toggle31 = bool
-end) 
-	spawn(function()
-		while wait() do
-		       if shared.toggle1 then
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-end
-	if shared.toggle29 then
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(12.8714371, -30.861166, 7144.13916)
-wait(0)
-end
-	if shared.toggle10 then
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-wait(0.1)
-end
-	if shared.toggle31 then
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("Pet1")
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("Pet")
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("BoostCandy")
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("BoostHatch")
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("BoostFizz")
-end
-	if shared.toggle30 then
-local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
-
-for i, v in next, Workspace:GetDescendants() do
-   if v.Name == 'Head' then
-     v.CFrame = root.CFrame
-       wait()
-   
-  
-        end
-    end
-end
-	if shared.toggle11 then
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-end
-end
-end)
-
-local w2 = w2:CreateFolder("Eggs")
-	w2:Dropdown("Choose Eggs",{"Common","Rare","Party","Winter","Lego","Lava","Candy","Mushroom","Robot","500K","Festive","Jolly","Mint"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
-	    _G.BossSelected = mob
-	end)
-
-	w2:Toggle("Buy Eggs",function(bool)
-	    shared.Eggs = bool
-	end)
-
-spawn(function()
-	while wait(0) do
-		if shared.Eggs then
-			if _G.BossSelected == "Common" then
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Common","Buy1")
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(165.493729, 4.10719824, -158.107574)
-			elseif _G.BossSelected == "Rare" then
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Rare","Buy1")
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(175.665466, 3.56050277, -145.146088)
-			elseif _G.BossSelected == "Party" then
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Party","Buy1")
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(52.8232269, 4.46898174, -81.7460632)	
-			elseif _G.BossSelected == "Winter" then
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Winter","Buy1")
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(55.9273567, -28.8611717, 912.823425)
-			elseif _G.BossSelected == "Lego" then
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Lego","Buy1")
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(58.0512123, -27.9179363, 2979.90088)
-			elseif _G.BossSelected == "Lava" then
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Lava","Buy1")
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(53.441597, -28.861166, 1901.4436)
-	elseif _G.BossSelected == "Candy" then
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Candy","Buy1")
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(57.751358, -28.861166, 4400.5415)
-	elseif _G.BossSelected == "Mushroom" then
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Mushroom","Buy1")
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(56.2021103, -28.861166, 5737.10938)
-	elseif _G.BossSelected == "Robot" then
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Robot","Buy1")
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(60.2214546, -27.9178886, 7184.71094)
-	elseif _G.BossSelected == "500K" then
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("500K","Buy1")
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(64.9800873, 1.20399451, -57.4746742)
-	elseif _G.BossSelected == "Festive" then
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Festive","Buy1")
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(3001.89429, 7.73454952, 113.420349)
-	elseif _G.BossSelected == "Jolly" then
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Jolly","Buy1")
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2986.88135, 7.73454809, 119.953674)
-	elseif _G.BossSelected == "Mint" then
-game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Mint","Buy1")
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2968.20654, 8.26931095, 128.13591)
-
-			end
-		end
-	end
-end)
-
-local w4 = w4:CreateFolder("Teleports")
-w4:Button("Spawn",function()
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(121.305916, 3.56104922, -98.7213974)
-end)
-w4:Button("Winter",function()
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-11.3891773, -28.8611717, 909.372498)
-end)
-w4:Button("Lava",function()
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-0.146487713, -28.8611755, 1906.77197)
-end)
-w4:Button("Brick",function()
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(25.3297901, -28.8611794, 2986.146)
-end)
-w4:Button("Candy",function()
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(26.0095367, -28.8611794, 4409.56299)
-end)
-w4:Button("MushRoom",function()
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-9.72685432, -28.8611794, 5748.13867)
-end)
-w4:Button("Robot",function()
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1.01672149, -28.8611755, 7177.5293)
-end)
---================== Player Settings =======================--
-
---(alot not by me )--
-local PLR = w3:CreateFolder("Player")
-
-	
-	
-	PLR:Slider("Jump Hack",10,250,true,function(value)
-	    game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
-	end)
-	PLR:Button("Speed Hack (press R)",function(bool)
-	    
-local walkspeedplayer = game:GetService("Players").LocalPlayer
-local walkspeedmouse = walkspeedplayer:GetMouse()
-
-local walkspeedenabled = false
-
-function x_walkspeed(key)
-if (key == "r") then
-if walkspeedenabled == false then
-_G.WS = 200;
-local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
-Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
-Humanoid.WalkSpeed = _G.WS;
-end)
-Humanoid.WalkSpeed = _G.WS;
-
-walkspeedenabled = true
-elseif walkspeedenabled == true then
-_G.WS = 20;
-local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
-Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
-Humanoid.WalkSpeed = _G.WS;
-end)
-Humanoid.WalkSpeed = _G.WS;
-
-walkspeedenabled = false
-end
-end
-end
-
-walkspeedmouse.KeyDown:connect(x_walkspeed)
-
-end)
-	PLR:Button("No Clip (Press E)",function()
-		noclip = false
-		game:GetService('RunService').Stepped:connect(function()
-			if noclip then
-				game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-			end
-		end)
-		local plr = game.Players.LocalPlayer
-		local mouse = plr:GetMouse()
-		mouse.KeyDown:connect(function(key)
-			if key == "e" then
-				noclip = not noclip
-				game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-			end
-		end)
-	end)
-
-	PLR:Button("Fly (Press F)",function()
-   repeat wait() 
-	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Head") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
-local mouse = game.Players.LocalPlayer:GetMouse() 
-repeat wait() until mouse
-local plr = game.Players.LocalPlayer 
-local torso = plr.Character.Head 
-local flying = false
-local deb = true 
-local ctrl = {f = 0, b = 0, l = 0, r = 0} 
-local lastctrl = {f = 0, b = 0, l = 0, r = 0} 
-local maxspeed = 400 
-local speed = 5000 
-
-function Fly() 
-local bg = Instance.new("BodyGyro", torso) 
-bg.P = 9e4 
-bg.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
-bg.cframe = torso.CFrame 
-local bv = Instance.new("BodyVelocity", torso) 
-bv.velocity = Vector3.new(0,0.1,0) 
-bv.maxForce = Vector3.new(9e9, 9e9, 9e9) 
-repeat wait() 
-plr.Character.Humanoid.PlatformStand = true 
-if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then 
-speed = speed+.5+(speed/maxspeed) 
-if speed > maxspeed then 
-speed = maxspeed 
-end 
-elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then 
-speed = speed-1 
-if speed < 0 then 
-speed = 0 
-end 
-end 
-if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then 
-bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
-lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r} 
-elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then 
-bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
-else 
-bv.velocity = Vector3.new(0,0.1,0) 
-end 
-bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0) 
-until not flying 
-ctrl = {f = 0, b = 0, l = 0, r = 0} 
-lastctrl = {f = 0, b = 0, l = 0, r = 0} 
-speed = 100
-bg:Destroy() 
-bv:Destroy() 
-plr.Character.Humanoid.PlatformStand = false 
-end 
-mouse.KeyDown:connect(function(key) 
-if key:lower() == "f" then 
-if flying then flying = false 
-else 
-flying = true 
-Fly() 
-end 
-elseif key:lower() == "w" then 
-ctrl.f = 1 
-elseif key:lower() == "s" then 
-ctrl.b = -1 
-elseif key:lower() == "a" then 
-ctrl.l = -1 
-elseif key:lower() == "d" then 
-ctrl.r = 1 
-end 
-end) 
-mouse.KeyUp:connect(function(key) 
-if key:lower() == "w" then 
-ctrl.f = 0 
-elseif key:lower() == "s" then 
-ctrl.b = 0 
-elseif key:lower() == "a" then 
-ctrl.l = 0 
-elseif key:lower() == "d" then 
-ctrl.r = 0 
-end 
-end)
-Fly()
-
-          
-
-	end)
-
-	PLR:Button("Inf Jump",function()
-	game:GetService("UserInputService").JumpRequest:connect(function()
-    game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
-end)
-end)
-
-	PLR:Button("Crl + Click = TP",function()
-local Plr = game:GetService("Players").LocalPlayer
-local Mouse = Plr:GetMouse()
-
-Mouse.Button1Down:connect(function()
-if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
-if not Mouse.Target then return end
-Plr.Character:MoveTo(Mouse.Hit.p)
-end)
-end)
-	PLR:Button("Extreme Light",function()
-	local s = Instance.new("PointLight", game.Players.LocalPlayer.Character.Head)
-s.Brightness = 0.3
-s.Range = 100
-game.Lighting.Changed:connect(function()
-game.Lighting.TimeOfDay = "14:00:00"
-game.Lighting.FogEnd = 300
-game.Lighting.Brightness = 10
-game.Lighting.ColorCorrection.Brightness = 0.1
-game.Lighting.ColorCorrection.Saturation = 0.1
-game.Lighting.Bloom.Intensity = 0.1
-end)
-end)
-	PLR:Button("Inf Yield",function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-end)
-
-	PLR:Button("Btools",function()
-game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
-for index, child in pairs(game:GetService("Workspace"):GetChildren()) do
-  if child.ClassName == "Part" then
-      child.Locked = false
-  end
-  if child.ClassName == "MeshPart" then
-      child.Locked = false
-  end
-  if child.ClassName == "UnionOperation" then
-      child.Locked = false
-  end
-  if child.ClassName == "Model" then
-      for index, chil in pairs(child:GetChildren()) do
-          if chil.ClassName == "Part" then
-              chil.Locked = false
-          end
-          if chil.ClassName == "MeshPart" then
-              chil.Locked = false
-          end
-          if chil.ClassName == "UnionOperation" then
-              chil.Locked = false
-          end
-          if chil.ClassName == "Model" then
-              for index, childe in pairs(chil:GetChildren()) do
-                  if childe.ClassName == "Part" then
-                      childe.Locked = false
-                  end
-                  if childe.ClassName == "MeshPart" then
-                      childe.Locked = false
-                  end
-                  if childe.ClassName == "UnionOperation" then
-                      childe.Locked = false
-                  end
-                  if childe.ClassName == "Model" then
-                      for index, childeo in pairs(childe:GetChildren()) do
-                          if childeo.ClassName == "Part" then
-                              childeo.Locked = false
-                          end
-                          if childeo.ClassName == "MeshPart" then
-                              childeo.Locked = false
-                          end
-                          if childeo.ClassName == "UnionOperation" then
-                              childeo.Locked = false
-                          end
-                          if childeo.ClassName == "Model" then
-                          end
-                      end
-                  end
-              end
-          end
-      end
-  end
- 
-end
-c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
-c.BinType = Enum.BinType.Hammer
-c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
-c.BinType = Enum.BinType.Clone
-c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
-c.BinType = Enum.BinType.Grab
-
-
-end)
-
-	PLR:Button("ESP UNIVERSAL",function()
-for i,v in pairs(game.Workspace:GetDescendants()) do
-if v.ClassName == "TouchTransmitter" then
--- if v.ClassName == "TouchTransmitter" and v.Parent.Name == "Handle" then
-local BillboardGui = Instance.new("BillboardGui")
-local TextLabel = Instance.new("TextLabel")
-
-BillboardGui.Parent = v.Parent
-BillboardGui.AlwaysOnTop = true
-BillboardGui.LightInfluence = 1
-BillboardGui.Size = UDim2.new(0, 100, 0, 100)
-BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
-
-TextLabel.Parent = BillboardGui
-TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
-TextLabel.BackgroundTransparency = 1
-TextLabel.Size = UDim2.new(1, 0, 1, 0)
-TextLabel.Text = v.Parent.Parent.Name
-TextLabel.TextColor3 = Color3.new(1, 0, 0)
-TextLabel.TextScaled = true
-end
-end
-end)
-
-	PLR:Button("Dark Dex",function()
-loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/!DEX%20EXPLORER"))() 
-end)
-
-	PLR:Button("Location Detector",function()
-local finder = Instance.new("ScreenGui")
-local Main = Instance.new("Frame")
-local nameofgui = Instance.new("TextLabel")
-local random = Instance.new("TextLabel")
-local cl = Instance.new("TextLabel")
-local border = Instance.new("TextLabel")
-local copy = Instance.new("TextButton")
-
-finder.Name = "finder"
-finder.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-finder.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-finder.ResetOnSpawn = false
-
-Main.Name = "Main"
-Main.Parent = finder
-Main.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
-Main.Position = UDim2.new(0.460674137, 0, 0.360557795, 0)
-Main.Size = UDim2.new(0, 254, 0, 192)
-
-nameofgui.Name = "nameofgui"
-nameofgui.Parent = Main
-nameofgui.BackgroundColor3 = Color3.new(1, 1, 1)
-nameofgui.BackgroundTransparency = 1
-nameofgui.Size = UDim2.new(0, 254, 0, 26)
-nameofgui.Font = Enum.Font.SourceSans
-nameofgui.Text = "Location Finder"
-nameofgui.TextColor3 = Color3.new(1, 1, 1)
-nameofgui.TextSize = 20
-
-random.Name = "random"
-random.Parent = Main
-random.BackgroundColor3 = Color3.new(1, 1, 1)
-random.BackgroundTransparency = 1
-random.Position = UDim2.new(0.106299214, 0, 0.197916672, 0)
-random.Size = UDim2.new(0, 200, 0, 37)
-random.Font = Enum.Font.SourceSans
-random.Text = "Your current location is "
-random.TextColor3 = Color3.new(1, 1, 1)
-random.TextSize = 18
-
-cl.Name = "cl"
-cl.Parent = Main
-cl.BackgroundColor3 = Color3.new(1, 1, 1)
-cl.BackgroundTransparency = 1
-cl.Position = UDim2.new(0.106299214, 0, 0.39062503, 0)
-cl.Size = UDim2.new(0, 200, 0, 36)
-cl.Font = Enum.Font.SourceSans
-cl.TextColor3 = Color3.new(1, 1, 1)
-cl.TextSize = 18
-
-
-
-border.Name = "border"
-border.Parent = Main
-border.BackgroundColor3 = Color3.new(1, 1, 1)
-border.Position = UDim2.new(0, 0, 0.114583336, 0)
-border.Size = UDim2.new(0, 254, 0, 4)
-border.Font = Enum.Font.SourceSans
-border.Text = ""
-border.TextColor3 = Color3.new(0, 0, 0)
-border.TextSize = 14
-
-copy.Name = "copy"
-copy.Parent = Main
-copy.BackgroundColor3 = Color3.new(1, 1, 1)
-copy.Position = UDim2.new(0.106299214, 0, 0.666666687, 0)
-copy.Size = UDim2.new(0, 200, 0, 31)
-copy.Font = Enum.Font.SourceSans
-copy.Text = "Copy to clipboard"
-copy.TextColor3 = Color3.new(0, 0, 0)
-copy.TextSize = 20
-copy.MouseButton1Click:connect(function()
-setclipboard(cl.Text)
-end)
-
-local isHidden = false
-local mause = game.Players.LocalPlayer:GetMouse()
-
-do
-local mouse = game:GetService("Players").LocalPlayer:GetMouse();
-local inputService = game:GetService('UserInputService');
-local heartbeat = game:GetService("RunService").Heartbeat;
-function Draggable(frame)
-local s, event = pcall(function()
-return frame.MouseEnter
-end)
-if s then
-frame.Active = true;
-event:connect(function()
-local input = frame.InputBegan:connect(function(key)
-if key.UserInputType == Enum.UserInputType.MouseButton1 then
-local objectPosition = Vector2.new(mouse.X - frame.AbsolutePosition.X, mouse.Y - frame.AbsolutePosition.Y);
-while heartbeat:wait() and inputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) do
-frame:TweenPosition(UDim2.new(0, mouse.X - objectPosition.X + (frame.Size.X.Offset * frame.AnchorPoint.X), 0, mouse.Y - objectPosition.Y + (frame.Size.Y.Offset * frame.AnchorPoint.Y)), 'Out', 'Quad', 0.1, true);
-end
-end
-end)
-local leave;
-leave = frame.MouseLeave:connect(function()
-input:disconnect();
-leave:disconnect();
-end)
-end)
-end
-end
-end
-
-Draggable(Main)
-
-mause.KeyDown:connect(function(key)
-if key == ";" then
-if isHidden == false then
-Main:TweenPosition(Main.Position - UDim2.new(0,0,1,0),"Out","Quad",0.4,false)
-isHidden = true
-else
-Main:TweenPosition(Main.Position + UDim2.new(0,0,1,0),"Out","Quad",0.4,false)
-isHidden = false
-end
-end
-end)
-
-
-while true do
-wait()
-cl.Text = tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
-end
-end)
-PLR:Label("Work Whit Paid,KRNL AND SONA Exploit",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
-
-	PLR:Button("Remote Spy Universal GAME",function()
-loadstring(game:HttpGet("https://pastebin.com/raw/BDhSQqUU", true))()
-end)
-
-
---================== Misc =======================--
-
-local MISC = w3:CreateFolder("Misc")
-
-	MISC:Button("Rejoin",function()
-		local TeleportService = game:GetService("TeleportService")
-		local PlaceId = game.PlaceId
-		local player = game.Players.LocalPlayer
-		if player then
-		TeleportService:Teleport(PlaceId, player)
-		end
-	end)
-
-	MISC:GuiSettings()
-
---================== Credits =======================--
-
-local CS = w3:CreateFolder("Credits")
-
-	CS:Button("Script by: I'm A Cat#7202",function()
-		setclipboard("I'm A Cat#7202")
-	end)
-
-	CS:Button("Discord: https://discord.gg/KmHZUpXEmQ",function()
-		setclipboard("https://discord.gg/KmHZUpXEmQ")
-	end)
-
-CS:Button("Helped by: Altix#3395",function()
-		setclipboard("Altix#3395")
-end)
-
-	CS:DestroyGUI()
-
---================== Autres =======================--
-
-
---| Anti Ban |
-setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
-setfflag("DFIntCrashUploadToBacktracePercentage", "0")
-setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
-setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
-
-
---| Anti AFK | By Altix#3395
-    local Virtual = game:service'VirtualUser'
-    game:service'Players'.LocalPlayer.Idled:connect(function()
-        Virtual:CaptureController()
-        Virtual:ClickButton2(Vector2.new())
-        wait(2)
-    end)
-
-
---| Other Anti AFK |
-wait(10)
-    game.StarterGui:SetCore(
-        "ChatMakeSystemMessage",
-        {
-            Text = "[ANTI AFK] Started !",
-            Font = Enum.Font.SourceSansBold, 
-            FontSize = Enum.FontSize.Size24 
-        }
-    )
-while wait(30) do
-local VirtualUser=game:service'VirtualUser'
+local Virtual = game:service'VirtualUser'
 game:service'Players'.LocalPlayer.Idled:connect(function()
-VirtualUser:CaptureController()
-VirtualUser:ClickButton2(Vector2.new())
+Virtual:CaptureController()
+Virtual:ClickButton2(Vector2.new())
+wait(2)
 end)
-end
 
---| Anti Chat Logs |
-local CloneFunction = clonefunction
-local CheckCaller = CloneFunction(checkcaller)
-local HookFunction = CloneFunction(hookfunction)
-local LocalPlayer = game.Players.PlayerAdded:wait()
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/H5u3dYwA"))()
 
-local PostMessage = require(LocalPlayer:WaitForChild("PlayerScripts", 1/0):WaitForChild("ChatScript", 1/0):WaitForChild("ChatMain", 1/0)).MessagePosted
-getgenv().MessageEvent = Instance.new("BindableEvent")
+local main = library:CreateMain({
+	projName = "ScreenGui",
+	Resizable = true,
+	MinSize = UDim2.new(0,400,0,400),
+	MaxSize = UDim2.new(0,750,0,500),
+})
+local Home = main:CreateCategory("Home")
+	local Tittle = Home:CreateSection("Soda Legends")
+	local H1 = Home:CreateSection("Update logs V2.0:")
+		H1:Create(
+			"Textlabel",
+			"+ New UI"
+		)
+	local H2 = Home:CreateSection("Credits")
+		H2:Create(
+			"Textlabel",
+			"Script by Altix#3395"
+		)
+		H2:Create(
+			"Textlabel",
+			"Tested by I'm A Cat#7202"
+		)
+		H2:Create(
+			"Button",
+			"Copy Discord Link (https://discord.gg/KmHZUpXEmQ)",
+			function()
+			setclipboard("https://discord.gg/KmHZUpXEmQ")
+			end,
+			{
+				animated = true,
+			}
+		)
+		
+local Fnc = main:CreateCategory("Function")
+	local AS = Fnc:CreateSection("Auto Stuff")
+		AS:Create(
+			"Toggle",
+			"Auto Click (normal)",
+			function(state)
+				print("Current state:", state)
+				shared.Toggle_AutoClick_Normal = state
+			end,
+			{
+				default = false,
+			}
+		)
+		AS:Create(
+			"Toggle",
+			"Auto Click (Fast)",
+			function(state)
+				print("Current state:", state)
+				shared.Toggle_AutoClick_Fast = state
+			end,
+			{
+				default = false,
+			}
+		)
+		AS:Create(
+			"Toggle",
+			"Auto Click (Very Fast)",
+			function(state)
+				print("Current state:", state)
+				shared.Toggle_AutoClick_VeryFast = state
+			end,
+			{
+				default = false,
+			}
+		)
+		spawn(function()
+			while wait() do
+				if shared.Toggle_AutoClick_Normal then
+					game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
+				end
+				if shared.Toggle_AutoClick_Fast then
+					for i = 1,3 do
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
+					end
+				end
+				if shared.Toggle_AutoClick_VeryFast then
+					for i = 1,10 do
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
+					end
+				end
+			end
+		end)
+		AS:Create(
+			"Toggle",
+			"Auto Sell x10",
+			function(state)
+				print("Current state:", state)
+				shared.Toggle_AutoSell = state
+			end,
+			{
+				default = false,
+			}
+		)
+		spawn(function()
+			while wait(0.5) do
+				if shared.Toggle_AutoSell then
+					local sell = game:GetService("Workspace").Russo.Sell.HIT
+					local me = game.Players.LocalPlayer.Character.HumanoidRootPart
+					sell.CFrame = me.CFrame
+					wait()
+					sell.CFrame = CFrame.new(-937.21, -31.7061, 1355.38)
+				end
+			end
+		end)
 
-local OldFunctionHook
-local PostMessageHook = function(self, msg)
-   if not CheckCaller() and self == PostMessage then
-       MessageEvent:Fire(msg)
-       return
-   end
-   return OldFunctionHook(self, msg)
-end
-OldFunctionHook = HookFunction(PostMessage.fire, PostMessageHook)
+
+local EventFnc = main:CreateCategory("Event Function")
+	local ES = EventFnc:CreateSection("Event Stuff")
+		ES:Create(
+			"Button",
+			"Teleport To Christmas Event",
+			function()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3434, 123, 825)
+			end,
+			{
+				animated = true,
+			}
+		)			
+		ES:Create(
+			"Toggle",
+			"Auto Collect Candy",
+			function(state)
+				print("Current state:", state)
+				shared.Toggle_AutoCollect = state
+			end,
+			{
+				default = false,
+			}
+		)
+		ES:Create(
+			"Toggle",
+			"Auto Collect House",
+			function(state)
+				print("Current state:", state)
+				shared.Toggle_AutoHouseEvent = state
+			end,
+			{
+				default = false,
+			}
+		)
+		spawn(function()
+			while wait(1) do
+				if shared.Toggle_AutoCollect then
+					for i,v in pairs(game:GetService("Workspace").Event1.PickUpCandy:GetDescendants()) do
+						if v.Name == "MeshPart" or v.Name == "Head" then
+						   v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+						   wait()
+						   v.CFrame = CFrame.new(0,0,0)
+						end
+					end
+				end
+				if shared.Toggle_AutoHouseEvent then
+					for i,v in pairs(game:GetService("Workspace").Event1.HouseEvents:GetChildren()) do
+						v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+						wait()
+						v.CFrame = CFrame.new(0,0,0)
+					end
+				end
+			end
+		end)
+	local EBS = EventFnc:CreateSection("Event Buy Stuff")
+		EBS:Create(
+			"DropDown",
+			"Choose For Auto Buy", 
+			function(current)
+				print("Selected to:", current)
+				_G.EventSelected = current
+			end,
+			{
+				options = {
+					"2x Fizz (Boost)",
+					"2x Hatch Speed (Boost)",
+					"2x Candy Canes (Boost)",
+					"Candy Cane Duo (Pet)",
+					"Santa Plushie (Pet)",
+					"GTMaze Plushie (Pet)"
+				},
+				-- Optional
+				default = "Choose For Auto Buy",
+				search = true
+			}
+		)
+		EBS:Create(
+			"Toggle",
+			"Auto Buy",
+			function(state)
+				print("Current state:", state)
+				shared.Toggle_AutoBuyEvent = state
+			end,
+			{
+				default = false,
+			}
+		)
+		spawn(function()
+			while wait() do
+				if shared.Toggle_AutoBuyEvent then
+					if _G.EventSelected == "2x Fizz (Boost)" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("BoostFizz")
+					elseif _G.EventSelected == "2x Hatch Speed (Boost)" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("BoostHatch")
+					elseif _G.EventSelected == "2x Candy Canes (Boost)" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("BoostCandy")
+					elseif _G.EventSelected == "Candy Cane Duo (Pet)" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("Pet")
+					elseif _G.EventSelected == "Santa Plushie (Pet)" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("Pet1")
+					elseif _G.EventSelected == "GTMaze Plushie (Pet)" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("Pet2")
+					end
+				end
+			end
+		end)
+
+	local ABEE = EventFnc:CreateSection("Auto Buy Event Egg Stuff")
+		ABEE:Create(
+			"DropDown",
+			"Choose An Egg", 
+			function(current)
+				print("Selected to:", current)
+				_G.EventEggSelected = current
+			end,
+			{
+				options = {
+					"Festive",
+					"Jolly",
+					"Mint",
+					"Frosty",
+					"2020",
+				},
+				-- Optional
+				default = "Choose An Egg",
+				search = true
+			}
+		)
+		ABEE:Create(
+			"Toggle",
+			"Auto Buy Egg",
+			function(state)
+				print("Current state:", state)
+				shared.Toggle_AutoBuyEventEgg = state
+			end,
+			{
+				default = false,
+			}
+		)
+		spawn(function()
+			while wait() do
+				if shared.Toggle_AutoBuyEventEgg then
+					if _G.EventEggSelected == "Festive" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Festive","Buy1")
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3565, 100, 505)
+					elseif _G.EventEggSelected == "Jolly" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Jolly","Buy1")
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3557, 100, 519)
+					elseif _G.EventEggSelected == "Mint" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Mint","Buy1")
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3548, 100, 532)
+					elseif _G.EventEggSelected == "Frosty" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Frosty","Buy1")
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3538, 100, 549)
+					elseif _G.EventEggSelected == "2020" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("2020","Buy1")
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(64, 3, -69)
+					end
+				end
+			end
+		end)
+
+
+local AB = main:CreateCategory("Auto Buy")
+	local ABE = AB:CreateSection("Auto Buy Egg Stuff")
+		ABE:Create(
+			"DropDown",
+			"Choose An Egg", 
+			function(current)
+				print("Selected to:", current)
+				_G.EggSelected = current
+			end,
+			{
+				options = {
+					"Common",
+					"Rare",
+					"Party",
+					"Winter",
+					"Lego",
+					"Lava",
+					"Candy",
+					"Mushroom",
+					"Robot",
+				},
+				-- Optional
+				default = "Choose An Egg",
+				search = true
+			}
+		)
+		ABE:Create(
+			"Toggle",
+			"Auto Buy Egg",
+			function(state)
+				print("Current state:", state)
+				shared.Toggle_AutoBuyEgg = state
+			end,
+			{
+				default = false,
+			}
+		)
+		spawn(function()
+			while wait(0.5) do
+				if shared.Toggle_AutoBuyEgg then
+					if _G.EggSelected == "Common" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Common","Buy1")
+						game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(165.493729, 4.10719824, -158.107574)
+					elseif _G.EggSelected == "Rare" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Rare","Buy1")
+						game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(175.665466, 3.56050277, -145.146088)
+					elseif _G.EggSelected == "Party" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Party","Buy1")
+						game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(52.8232269, 4.46898174, -81.7460632)	
+					elseif _G.EggSelected == "Winter" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Winter","Buy1")
+						game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(55.9273567, -28.8611717, 912.823425)
+					elseif _G.EggSelected == "Lego" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Lego","Buy1")
+						game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(58.0512123, -27.9179363, 2979.90088)
+					elseif _G.EggSelected == "Lava" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Lava","Buy1")
+						game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(53.441597, -28.861166, 1901.4436)
+					elseif _G.EggSelected == "Candy" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Candy","Buy1")
+						game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(57.751358, -28.861166, 4400.5415)
+					elseif _G.EggSelected == "Mushroom" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Mushroom","Buy1")
+						game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(56.2021103, -28.861166, 5737.10938)
+					elseif _G.EggSelected == "Robot" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Robot","Buy1")
+						game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(60.2214546, -27.9178886, 7184.71094)
+					end
+				end
+			end
+		end)
+
+local Teleport = main:CreateCategory("Teleport")
+	local TS = Teleport:CreateSection("Teleport Stuff")
+		TS:Create(
+			"DropDown",
+			"Choose a Location", 
+			function(current)
+				print("Selected to:", current)
+				if current == "Spawn" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(121, 3, -99)
+				elseif current == "Winter World" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-17, -29, 913)
+				elseif current == "Lava World" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, -29, 1907)
+				elseif current == "Brick World" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(25, -29, 2986)
+				elseif current == "Candy World" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(26, -29, 4410)
+				elseif current == "MushRoom World" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10, -29, 5748)
+				elseif current == "Robot World" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1, -29, 7178)
+				elseif current == "Russo World" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-978, -29, 1391)
+				end
+			end,
+			{
+				options = {
+					"Spawn", "Winter World", "Lava World", "Brick World", "Candy World", "MushRoom World", "Robot World", "Russo World"
+				},
+				-- Optional
+				default = "Choose a Location",
+				search = false
+			}
+		)
+		TS:Create(
+			"DropDown",
+			"Choose a Player", 
+			function(current)
+				print("Selected to:", current)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[current].Character.HumanoidRootPart.CFrame
+			end,
+			{
+				playerlist = true,
+				default = "Choose a Player",
+				search = true
+			}
+		)
+
+local PlayerStuff = main:CreateCategory("Player Stuff")
+	local PS = PlayerStuff:CreateSection("Player Stuff")
+		PS:Create(
+			"Slider",
+			"Speed Hack",
+			function(value)
+				game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+			end,
+			{
+				min = 0,
+				max = 250,
+				-- Optional
+				default = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed,
+				precise = false, -- ex: 0.1, 0.2, 0.3
+				changablevalue = true
+			}
+		)
+		PS:Create(
+			"Slider",
+			"Jump Hack",
+			function(value)
+				game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
+			end,
+			{
+				min = 0,
+				max = 250,
+				-- Optional
+				default = game.Players.LocalPlayer.Character.Humanoid.JumpPower,
+				precise = false, -- ex: 0.1, 0.2, 0.3
+				changablevalue = true
+			}
+		)
+		PS:Create(
+			"Slider",
+			"HipHeight Hack",
+			function(value)
+			game.Players.LocalPlayer.Character.Humanoid.HipHeight = value
+			end,
+			{
+				min = 2.56,
+				max = 250,
+				-- Optional
+				default = game.Players.LocalPlayer.Character.Humanoid.HipHeight,
+				precise = true, -- ex: 0.1, 0.2, 0.3
+				changablevalue = true
+			}
+		)
+		PS:Create(
+			"Button",
+			"No Clip (Press N)",
+			function()
+				noclip = false
+				game:GetService('RunService').Stepped:connect(function()
+					if noclip then
+						game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+					end
+				end)
+				local plr = game.Players.LocalPlayer
+				local mouse = plr:GetMouse()
+				mouse.KeyDown:connect(function(key)
+					if key == "n" then
+						noclip = not noclip
+						game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+					end
+				end)
+			end,
+			{
+				animated = true,
+			}
+		)
+		PS:Create(
+			"Button",
+			"Fly (Press F)",
+			function()
+				loadstring(game:HttpGet("https://pastebin.com/raw/c01bpxpF", true))()
+			end,
+			{
+				animated = true,
+			}
+		)
+		PS:Create(
+			"Button",
+			"Ctrl + Click Tp",
+			function()
+				local Plr = game:GetService("Players").LocalPlayer
+				local Mouse = Plr:GetMouse()
+	
+				Mouse.Button1Down:connect(function()
+				if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
+				if not Mouse.Target then return end
+					Plr.Character:MoveTo(Mouse.Hit.p)
+				end)
+			end,
+			{
+				animated = true,
+			}
+		)
+		PS:Create(
+			"Button",
+			"Camera Max/Min Zoom Distance",
+			function()
+				game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = 99999
+				game:GetService("Players").LocalPlayer.CameraMinZoomDistance = 0
+			end,
+			{
+				animated = true,
+			}
+		)
+
+local Misc = main:CreateCategory("Misc")
+    local Miscsection = Misc:CreateSection("Misc Stuff")
+            Miscsection:Create(
+                "Button",
+                "Refresh Game",
+                function()
+                    local TeleportService = game:GetService("TeleportService")
+                    local PlaceId = game.PlaceId
+                    local player = game.Players.LocalPlayer
+                    if player then
+                    TeleportService:Teleport(PlaceId, player)
+                    end
+                end,
+                {
+                    animated = true,
+                }
+            )
+            Miscsection:Create(
+                "Button",
+                "Use All Codes",
+                function()
+					for i,v in pairs(game:GetService("Players").LocalPlayer.Codes:GetChildren()) do
+						game:GetService("ReplicatedStorage").GetCode:FireServer(v.Name)
+					end
+                end,
+                {
+                    animated = true,
+                }
+            )
+    local GuiStuff = Misc:CreateSection("Gui Stuff")
+            GuiStuff:Create(
+                "KeyBind",
+                "Hide Gui", 
+                function(bool)
+                    print(bool)
+                    local Gui = game:GetService("CoreGui")["ScreenGui"].Motherframe
+                    if Gui.Visible then
+                        Gui.Visible = false
+                    else
+                        Gui.Visible = true
+                    end
+                end,
+                {
+                    default = Enum.KeyCode.RightControl
+                }
+            )
+            GuiStuff:Create(
+                "Button",
+                "Destroy Gui",
+                function()
+                    game:GetService("CoreGui")["ScreenGui"]:Destroy()
+                end,
+                {
+                    animated = true,
+                }
+            )
