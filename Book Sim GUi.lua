@@ -7,7 +7,7 @@ game:service'Players'.LocalPlayer.Idled:connect(function()
 	wait(2)
 end)
 
-local library = loadstring(game:HttpGet("https://zypher.wtf/UI-Lib"))()
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/H5u3dYwA"))()
 local main = library:CreateMain({
 	projName = "ScreenGui",
 	Resizable = true,
@@ -119,7 +119,7 @@ local category = main:CreateCategory("Function")
 		spawn(function()
 			while wait(1) do
 				if shared.ToggleABB then
-					for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.GameInterface.ItemShop.ItemSelection.ScrollingFrame:GetChildren()) do wait(0.6)
+					for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.GameInterface.ItemShop.ItemSelection.ScrollingFrame:GetChildren()) do
 						if v.Name == "Infinite" or v.Name == "UIGridLayout" then
 						else
 							local args = {
@@ -134,7 +134,7 @@ local category = main:CreateCategory("Function")
 					end
 				end
 				if shared.ToggleABR then
-					for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.GameInterface.ItemShop.ItemSelectionRanks.ScrollingFrame:GetChildren()) do wait(0.6)
+					for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.GameInterface.ItemShop.ItemSelectionRanks.ScrollingFrame:GetChildren()) do
 						if v.Name == "Infinite" or v.Name == "UIGridLayout" then
 						else
 							local args = {
