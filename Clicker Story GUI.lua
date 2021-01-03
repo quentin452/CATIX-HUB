@@ -2,7 +2,7 @@
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
-local AutoTab = Library:CreateTab("Clicker Story GUI","things", true)
+local AutoTab = Library:CreateTab("(outdated)","things", true)  --Clicker-Story
 local eggs1 = Library:CreateTab("Auto Buy Eggs x1 2","things", true)
 local eggs2 = Library:CreateTab("Auto Buy Eggs x3 ","things", true)
 local eggs = Library:CreateTab("Auto Buy Eggs x1","things", true)
@@ -14,19 +14,19 @@ local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
 credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
-	setclipboard("AHAHAHAHAH")
+    setclipboard("AHAHAHAHAH")
 end)
 
 credits:CreateButton("https://discord.gg/KmHZUpXEmQ", function() --you dont need "arg" for a button
-	setclipboard("https://discord.gg/KmHZUpXEmQ")
+    setclipboard("https://discord.gg/KmHZUpXEmQ")
 end)
 
 credits:CreateButton("by Altix#3395", function() --you dont need "arg" for a button
-	setclipboard("Altix#3395")
+    setclipboard("Altix#3395")
 end)
 
 credits:CreateButton("by I'm A Cat#7202", function() --you dont need "arg" for a button
-	setclipboard("I'm A Cat#7202")
+    setclipboard("I'm A Cat#7202")
 end)
 
 
@@ -69,7 +69,7 @@ end)
 end)
 MISC:CreateButton("🪰Fly Press (F)🪰", function() --the (arg) is if the checkbox is toggled or not
      repeat wait() 
-	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Head") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
+    until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Head") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
 local mouse = game.Players.LocalPlayer:GetMouse() 
 repeat wait() until mouse
 local plr = game.Players.LocalPlayer 
@@ -152,9 +152,6 @@ Fly()
           
 end)
 
-MISC:CreateButton("Infinite Yield", function() --the (arg) is if the checkbox is toggled or not
-loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-end)
 MISC:CreateButton("💨Speed Hack 200 PRESS (R)💨", function() --the (arg) is if the checkbox is toggled or not
    
 local walkspeedplayer = game:GetService("Players").LocalPlayer
@@ -283,23 +280,6 @@ game:GetService("ReplicatedStorage").Remotes.Pets.EvolvePet:FireServer(unpack(ar
         end
     else
         _G.a = false
-    end
-end)
-
-
-eggs:CreateToggle("Auto Buy 500 Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.b = true 
-        while wait(0) and _G.b do
-           local args = {
-    [1] = " Egg",
-    [2] = 1,
-}
-
-game:GetService("ReplicatedStorage").Remotes.OpenEgg:InvokeServer(unpack(args))
-        end
-    else
-        _G.b = false
     end
 end)
 
