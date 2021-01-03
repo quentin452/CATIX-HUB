@@ -478,7 +478,18 @@ local PlayerStuff = main:CreateCategory("Local Player")
 					"Button",
 					"Inf Jumps",
 					function()
-						game:GetService("Players").LocalPlayer.multiJumpCount.Value = 1e+9
+						local mjc = getrawmetatable(game)
+						make_writeable(mjc)
+						local old_index = mjc.__index
+							
+						mjc.__index = function(a, b)
+							if tostring(a) == "multiJumpCount" then
+								if tostring(b) == "Value" then
+									return math.huge
+								end
+							end
+							return old_index(a, b)
+						end
 					end,
 					{
 						animated = true,
