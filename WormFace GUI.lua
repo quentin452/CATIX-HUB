@@ -11,32 +11,16 @@ local w = library:CreateWindow("WormFace")
 
 local b = w:CreateFolder("Things")
 
-    b:Toggle("Auto Collects",function(bool)
+    b:Toggle("Auto Farm",function(bool)
         shared.toggleAC = bool
         tp()
     end)
-    b:Toggle("Auto Rebirths",function(bool)
-        shared.toggleAR = bool
-    end)
-    b:Toggle("Auto Super Rebirths",function(bool)
-        shared.toggleASR = bool
-	end)
 	b:Toggle("Disable Popups",function(bool)
 		if bool then
 			game:GetService("Players").LocalPlayer.PlayerGui.OnScreenNotificationGui.Enabled = false
 		else
 			game:GetService("Players").LocalPlayer.PlayerGui.OnScreenNotificationGui.Enabled = true
 		end
-    end)
-    spawn(function()
-        while wait(0.25) do
-            if shared.toggleAR then
-                game:GetService("ReplicatedStorage").RebirthRequest:InvokeServer("rebirth")
-            end
-            if shared.toggleASR then
-                game:GetService("ReplicatedStorage").RebirthRequest:InvokeServer("superRebirth")
-            end
-        end
     end)
     function tp()
         if shared.toggleAC then
@@ -81,13 +65,15 @@ local b = w:CreateFolder("Things")
             deletethis:Destroy()
             end
             if(canRebirth()) then
-                rebirthevent:InvokeServer()
+				rebirthevent:InvokeServer("rebirth")
+				rebirthevent:InvokeServer("superRebirth")
             end
             local rebirthconnect = rebirthtext:GetPropertyChangedSignal("Text"):Connect(function()
             if(canRebirth()) then
                 print('rebirthing')
                 doit = false
-                rebirthevent:InvokeServer()
+				rebirthevent:InvokeServer("rebirth")
+				rebirthevent:InvokeServer("superRebirth")
                 wait(3)
                 if(game.Players.LocalPlayer.Character.HumanoidRootPart.StarterWorm.Head:FindFirstChild("FaceCenterAttachment")) then
                     game.Players.LocalPlayer.Character.HumanoidRootPart.StarterWorm.Head:FindFirstChild("FaceCenterAttachment"):Destroy()
