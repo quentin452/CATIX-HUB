@@ -21,15 +21,11 @@ local Home = main:CreateCategory("Home")
 	local H1 = Home:CreateSection("Update logs V1.2:")
 		H1:Create(
 			"Textlabel",
-			"+ Auto Boss Added"
+			"+ Auto Collect Fixed"
 		)
 		H1:Create(
 			"Textlabel",
-			"+ Auto Collect Added"
-		)
-		H1:Create(
-			"Textlabel",
-			"+ Auto Buy Ranks Added"
+			"+ Au Delete Pet "
 		)
 	local H2 = Home:CreateSection("Credits")
 		H2:Create(
@@ -77,10 +73,21 @@ local Function = main:CreateCategory("Function")
 		)
 		FUNC:Create(
 			"Toggle",
-			"Auto Collect",
+			"Auto Collect Coins",
 			function(state)
 				print("Current state:", state)
 				shared.toggleACC = state
+			end,
+			{
+				default = false,
+			}
+		)
+		FUNC:Create(
+			"Toggle",
+			"Auto Collect Shards",
+			function(state)
+				print("Current state:", state)
+				shared.toggleACS = state
 			end,
 			{
 				default = false,
@@ -115,6 +122,10 @@ local Function = main:CreateCategory("Function")
 						game:GetService("Players").LocalPlayer.saberEvent:FireServer("swingBlade")
 					end
 				end
+			end
+		end)
+		spawn(function()
+			while wait() do
 				if shared.toggleASell then
 					if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
 						for i,v in pairs(game:GetService("Workspace").sellAreaCircles:GetChildren()) do
@@ -126,6 +137,10 @@ local Function = main:CreateCategory("Function")
 						end
 					end
 				end
+			end
+		end)
+		spawn(function()
+			while wait() do
 				if shared.toggleABEC then
 					if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
 						local boss = game:GetService("Workspace").spawnedBosses["Elemental Cyborg"].HumanoidRootPart
@@ -139,34 +154,216 @@ local Function = main:CreateCategory("Function")
 						end
 					end
 				end
+			end
+		end)
+		spawn(function()
+			while wait() do
 				if shared.toggleAKOTH then
 					if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
 						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-355, 173, 12)
 					end
 				end
+			end
+		end)
+		spawn(function()
+			while wait() do
 				if shared.toggleACC then
 					if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
-						pcall(
-							function()
-								for i,v in pairs(game:GetService("Workspace").spawnedCoins["Shuriken City"]:GetChildren()) do
-									for i,v in pairs(v:GetChildren()) do
-										if v.ClassName == "Model" and shared.toggleACC then
-										   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Base.CFrame
-										   wait(0.02)
-										   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Base.CFrame + Vector3.new(0,-5,0)
-										   wait(0.02)
-										   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Base.CFrame
-										   wait(0.02)
-										end
-									end
+						for i, v in pairs(game:GetService("Workspace").spawnedCoins:GetDescendants()) do
+							if shared.toggleACC then
+								if v.Name == "Coin" or v.Name == "Blue Coin" or v.Name == "Green Coin Crate" then
+									game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = v:FindFirstChild("Base").CFrame
+									wait(.09)
 								end
 							end
-						)
+						end
+					end
+				end
+			end
+		end)
+		spawn(function()
+			while wait() do
+				if shared.toggleACS then
+					if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
+						for i, v in pairs(game:GetService("Workspace").spawnedCoins:GetDescendants()) do
+							if shared.toggleACS then
+								if v.Name == "Shard" or v.Name == "Blue Shard" or v.Name == "Red Shard Crate" then
+									game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = v:FindFirstChild("Base").CFrame
+									wait(.09)
+								end
+							end
+						end
 					end
 				end
 			end
 		end)
 
+local PetModule = main:CreateCategory("Pet Module")
+	local ABE = PetModule:CreateSection("Auto Buy Egg")
+		ABE:Create(
+			"DropDown",
+			"Select Eggs", 
+			function(current)
+				print("Selected to:", current)
+				_G.EggSelected = current
+			end,
+			{
+				options = {
+					"Electro Orb", "Astral Orb", "Sky Tempest Orb", "Mystic Fusion Orb", "Dark Supernova Orb", "Omega Genesis Orb", "Secret Shadows Orb", "Forgotten Legends Orb"
+				},
+				-- Optional
+				default = "Select Eggs",
+				search = false
+			}
+		)
+		ABE:Create(
+			"Toggle",
+			"Open 1 Egg",
+			function(state)
+				print("Current state:", state)
+				shared.toggleABE1 = state
+			end,
+			{
+				default = false,
+			}
+		)
+		ABE:Create(
+			"Toggle",
+			"Open 3 Eggs",
+			function(state)
+				print("Current state:", state)
+				shared.toggleABE3 = state
+			end,
+			{
+				default = false,
+			}
+		)
+		spawn(function()
+			while wait(0.2) do
+				if shared.toggleABE1 then
+					if _G.EggSelected ~= nil then
+						local args = {
+							[1] = "openOrb",
+							[2] = workspace.petOrbs[_G.EggSelected]
+						}
+						game:GetService("ReplicatedStorage").rEvents.openOrbRemote:InvokeServer(unpack(args))						
+					end
+				end
+				if shared.toggleABE3 then
+					if _G.EggSelected ~= nil then
+						local args = {
+							[1] = "openOrb",
+							[2] = workspace.petOrbs[_G.EggSelected],
+							[3] = true
+						}
+						game:GetService("ReplicatedStorage").rEvents.openOrbRemote:InvokeServer(unpack(args))
+											
+					end		
+				end
+				if shared.toggleABEvolve then
+					game:GetService("ReplicatedStorage").rEvents.autoEvolveRemote:InvokeServer("autoEvolvePets")
+				end
+			end
+		end)
+	local PM = PetModule:CreateSection("Pet Module Stuff")
+		PM:Create(
+			"Toggle",
+			"Auto Delete Basic Pet",
+			function(state)
+				print("Current state:", state)
+				shared.toggleADBP = state
+			end,
+			{
+				default = false,
+			}
+		)
+		PM:Create(
+			"Toggle",
+			"Auto Delete Advanced Pet",
+			function(state)
+				print("Current state:", state)
+				shared.toggleADAP = state
+			end,
+			{
+				default = false,
+			}
+		)
+		PM:Create(
+			"Toggle",
+			"Auto Delete Rare Pet",
+			function(state)
+				print("Current state:", state)
+				shared.toggleADRP = state
+			end,
+			{
+				default = false,
+			}
+		)
+		PM:Create(
+			"Toggle",
+			"Auto Delete Mythical Pet",
+			function(state)
+				print("Current state:", state)
+				shared.toggleADMP = state
+			end,
+			{
+				default = false,
+			}
+		)
+		PM:Create(
+			"Toggle",
+			"Auto Delete Legend Pet",
+			function(state)
+				print("Current state:", state)
+				shared.toggleADLP = state
+			end,
+			{
+				default = false,
+			}
+		)
+		PM:Create(
+			"Toggle",
+			"Auto Evolve",
+			function(state)
+				print("Current state:", state)
+				shared.toggleABEvolve = state
+			end,
+			{
+				default = false,
+			}
+		)
+		spawn(function()
+			while wait(0.2) do
+				if shared.toggleADBP then
+					for i, v in pairs(game:GetService("Players").LocalPlayer.petsFolder.Basic:GetChildren()) do
+						game:GetService("ReplicatedStorage").rEvents.sellPetEvent:FireServer("sellPet", v)
+					end
+				end
+				if shared.toggleADAP then
+					for i, v in pairs(game:GetService("Players").LocalPlayer.petsFolder.Advanced:GetChildren()) do
+						game:GetService("ReplicatedStorage").rEvents.sellPetEvent:FireServer("sellPet", v)
+					end
+				end
+				if shared.toggleADRP then
+					for i, v in pairs(game:GetService("Players").LocalPlayer.petsFolder.Rare:GetChildren()) do
+						game:GetService("ReplicatedStorage").rEvents.sellPetEvent:FireServer("sellPet", v)
+					end
+				end
+				if shared.toggleADMP then
+					for i, v in pairs(game:GetService("Players").LocalPlayer.petsFolder.Mythical:GetChildren()) do
+						game:GetService("ReplicatedStorage").rEvents.sellPetEvent:FireServer("sellPet", v)
+					end
+				end
+				if shared.toggleADLP then
+					for i, v in pairs(game:GetService("Players").LocalPlayer.petsFolder.Legend:GetChildren()) do
+						game:GetService("ReplicatedStorage").rEvents.sellPetEvent:FireServer("sellPet", v)
+					end
+				end
+				if shared.toggleABEvolve then
+					game:GetService("ReplicatedStorage").rEvents.autoEvolveRemote:InvokeServer("autoEvolvePets")
+				end
+			end
+		end)
 
 local AutoBuy = main:CreateCategory("Auto Buy")
 	local AB = AutoBuy:CreateSection("Auto Buy Stuff")
@@ -282,83 +479,7 @@ local AutoBuy = main:CreateCategory("Auto Buy")
 			end
 		end)
 
-	local ABE = AutoBuy:CreateSection("Auto Buy Egg Stuff")
-		ABE:Create(
-			"DropDown",
-			"Choose an Egg", 
-			function(current)
-				print("Selected to:", current)
-				_G.EggSelected = current
-			end,
-			{
-				options = {
-					"Electro Orb", "Astral Orb", "Sky Tempest Orb", "Mystic Fusion Orb", "Dark Supernova Orb", "Omega Genesis Orb", "Secret Shadows Orb", "Forgotten Legends Orb"
-				},
-				-- Optional
-				default = "Choose an Egg",
-				search = false
-			}
-		)
-		ABE:Create(
-			"Toggle",
-			"Open 1 Egg",
-			function(state)
-				print("Current state:", state)
-				shared.toggleABE1 = state
-			end,
-			{
-				default = false,
-			}
-		)
-		ABE:Create(
-			"Toggle",
-			"Open 3 Eggs",
-			function(state)
-				print("Current state:", state)
-				shared.toggleABE3 = state
-			end,
-			{
-				default = false,
-			}
-		)
-		ABE:Create(
-			"Toggle",
-			"Auto Evolve",
-			function(state)
-				print("Current state:", state)
-				shared.toggleABEvolve = state
-			end,
-			{
-				default = false,
-			}
-		)
-		spawn(function()
-			while wait(0.2) do
-				if shared.toggleABE1 then
-					if _G.EggSelected ~= nil then
-						local args = {
-							[1] = "openOrb",
-							[2] = workspace.petOrbs[_G.EggSelected]
-						}
-						game:GetService("ReplicatedStorage").rEvents.openOrbRemote:InvokeServer(unpack(args))						
-					end
-				end
-				if shared.toggleABE3 then
-					if _G.EggSelected ~= nil then
-						local args = {
-							[1] = "openOrb",
-							[2] = workspace.petOrbs[_G.EggSelected],
-							[3] = true
-						}
-						game:GetService("ReplicatedStorage").rEvents.openOrbRemote:InvokeServer(unpack(args))
-											
-					end		
-				end
-				if shared.toggleABEvolve then
-					game:GetService("ReplicatedStorage").rEvents.autoEvolveRemote:InvokeServer("autoEvolvePets")
-				end
-			end
-		end)
+
 
 local Teleport = main:CreateCategory("Teleport")
 		local TS = Teleport:CreateSection("Teleport Stuff")
