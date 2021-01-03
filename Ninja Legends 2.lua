@@ -18,7 +18,7 @@ local main = library:CreateMain({
 
 local Home = main:CreateCategory("Home")
 	local Tittle = Home:CreateSection("Ninja Legends 2")
-	local H1 = Home:CreateSection("Update logs V1.2:")
+	local H1 = Home:CreateSection("Update logs V1.3:")
 		H1:Create(
 			"Textlabel",
 			"+ Auto Collect Fixed"
