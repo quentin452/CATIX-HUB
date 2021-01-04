@@ -7,7 +7,7 @@ local Virtual = game:service'VirtualUser'
 	wait(2)
 end)
 
-local library = loadstring(game:HttpGet("https://pastebin.com/raw/H5u3dYwA"))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/!Zypher%20UI.lua"))()
 
 local main = library:CreateMain({
 	projName = "ScreenGui",
@@ -316,18 +316,16 @@ local Function = main:CreateCategory("Function")
 			end
 		end)
 		spawn(function()
-			if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
-				local tween = game:GetService("TweenService")
-				local character = game.Players.LocalPlayer.character
-				local humanoid = character.HumanoidRootPart
-				while wait() do
-					if shared.toggleACR then
-						game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
-						for i,v in pairs(game:GetService("Workspace").Rings:GetDescendants()) do
-							if v.Name == "MiddleRing" and shared.toggleACR then
-								tween:Create(humanoid, TweenInfo.new(1, Enum.EasingStyle.Linear), {CFrame = v.CFrame}):Play()
-								wait(1)
-							end
+			local tween = game:GetService("TweenService")
+			local character = game.Players.LocalPlayer.character
+			local humanoid = character.HumanoidRootPart
+			while wait() do
+				if shared.toggleACR then
+					game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+					for i,v in pairs(game:GetService("Workspace").Rings:GetDescendants()) do
+						if v.Name == "MiddleRing" and shared.toggleACR then
+							tween:Create(humanoid, TweenInfo.new(1, Enum.EasingStyle.Linear), {CFrame = v.CFrame}):Play()
+							wait(1)
 						end
 					end
 				end
