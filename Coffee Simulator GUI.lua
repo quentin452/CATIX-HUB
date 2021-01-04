@@ -191,25 +191,6 @@ AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a bu
 game:GetService("CoreGui").uiui:Destroy()
 end)
 
-AutoTab:CreateToggle("Auto Equip Coffees", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.b = true 
-        while wait(0) and _G.b do
-         local toolname = "Diamond Coffee" -- replace with the name of the tool
-local Plr = game:GetService("Players").LocalPlayer
-while wait() do
-    pcall(function()
-        if Plr.Backpack:FindFirstChild(toolname) and Plr.Character:FindFirstChild(toolname) == nil then
-            local tool = Plr.Backpack:FindFirstChild(toolname)
-            Plr.Character.Humanoid:EquipTool(tool)
-        end
-    end)
-end	
-        end
-    else
-        _G.b = false
-    end
-end)
 AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.a = true 
@@ -223,26 +204,6 @@ end
         _G.a = false
     end
 end)
-AutoTab:CreateToggle("Not WorkAuto Equip Coffee", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.b2 = true 
-        while wait(0) and _G.b2 do
-         local toolname = "Coffee Plastic" -- replace with the name of the tool
-local Plr = game:GetService("Players").LocalPlayer
-while wait() do
-    pcall(function()
-        if Plr.Backpack:FindFirstChild(toolname) and Plr.Character:FindFirstChild(toolname) == nil then
-            local tool = Plr.Backpack:FindFirstChild(toolname)
-            Plr.Character.Humanoid:EquipTool(tool)
-        end
-    end)
-end	
-        end
-    else
-        _G.b2 = false
-    end
-end)
-
 AutoTab:CreateToggle("Auto Buy Coffes", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.b = true 
@@ -599,6 +560,27 @@ end
         _G.r = false
     end
 end)
+eggs:CreateToggle("Auto Buy Mystic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.r1 = true 
+        while wait(0) and _G.r1 do
+local args = {
+    [1] = "MYSTIC",
+    [2] = "R"
+}
+
+game:GetService("ReplicatedStorage").Resources.RemoteEvents.OpenEgg:FireServer(unpack(args))
+
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(319.948883, 159346, -32.0871468)
+wait(2)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(310.570679, 159344.641, -27.3210106)
+wait(2)
+end
+
+    else
+        _G.r1 = false
+    end
+end)
 teleports:CreateButton("Tp To All Islands", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(215.231522, 14.4342747, -336.547668)
 wait(1)
@@ -623,6 +605,8 @@ wait(1)
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-193.540451, 83700.6563, 455.014008)
 wait(1)
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(106.173271, 117148.063, 188.798737)
+wait(1)
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(295.566681, 159344.594, 15.0529718)
 end)
 
 
@@ -632,8 +616,8 @@ teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(4.84454107, 15.6248083, -348.172485)
 end)
 
-teleports:CreateButton("Sell X150", function() --you dont need "arg" for a button
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(40.3062363, 117150.063, 241.201065)
+teleports:CreateButton("Sell X300", function() --you dont need "arg" for a button
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(263.006165, 159346.281, -4.39656448)
 end)
 teleports:CreateButton("Tp To All Chests", function() --you dont need "arg" for a button
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-59.1323357, 83739.8047, 337.636261)
