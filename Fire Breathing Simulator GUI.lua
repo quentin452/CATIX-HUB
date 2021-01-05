@@ -11,7 +11,9 @@ local w = w3:CreateFolder("Things")
 w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
 
 
-
+	w:Toggle("Auto Click",function(bool)
+		shared.toggleClick = bool
+end) 
 	
 		w:Toggle("Auto Refill",function(bool)
 		shared.toggle2 = bool
@@ -139,11 +141,19 @@ end
 
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.PetService.EquipBest:InvokeServer()
 end
+
+	if shared.toggleClick then
+ local tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool") or game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
+    game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
+    if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
+        game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
+    end	    
+end
 end
 end)
 
 local w2 = w2:CreateFolder("Eggs")
-	w2:Dropdown("Choose Eggs",{"Common","Uncommon","Rare","Epic","Autumn","Legendary","Hydra","Mythic","1M"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w2:Dropdown("Choose Eggs",{"Common","Uncommon","Rare","Epic","Legendary","Hydra","Mythic","1M","3M","Cyber","Freezing","Lava","Bat","Cowboy","Dino","Unicorn"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.BossSelected = mob
 	end)
 
@@ -192,15 +202,6 @@ local args = {
 
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(115.781219, 9.10520458, -100.10984)
-			elseif _G.BossSelected == "Autumn" then
-
-local args = {
-    [1] = "Autumn Egg",
-    [2] = false
-}
-
-game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(58.7253456, 9.10520458, -122.177322)
 	elseif _G.BossSelected == "Legendary" then
 
 local args = {
@@ -237,6 +238,78 @@ local args = {
 
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-18.833147, 9.11473274, 122.537102)	
+elseif _G.BossSelected == "3M" then
+
+local args = {
+    [1] = "3M Egg",
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(44.4225273, 9.11473274, -37.9666519)	
+elseif _G.BossSelected == "Cyber" then
+
+local args = {
+    [1] = "Cyber Egg",
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-11.4107389, 22399.5859, 33.2277832)	
+elseif _G.BossSelected == "Freezing" then
+
+local args = {
+    [1] = "Freezing Egg",
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-10.8443432, 17900.0332, 25.6272926)	
+elseif _G.BossSelected == "Lava" then
+
+local args = {
+    [1] = "Lava Egg",
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(10.156024, 13899.5898, 19.304985)	
+elseif _G.BossSelected == "Bat" then
+
+local args = {
+    [1] = "Bat Egg",
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-20.171711, 9.11473274, 149.349487)	
+elseif _G.BossSelected == "Cowboy" then
+
+local args = {
+    [1] = "Cowboy Egg",
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(44.1354332, 9.11473274, -32.2326698)	
+elseif _G.BossSelected == "Dino" then
+
+local args = {
+    [1] = "Dino Egg",
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(43.0043755, 9.11473274, -46.4896317)	
+elseif _G.BossSelected == "Unicorn" then
+
+local args = {
+    [1] = "Unicorn Egg",
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
+game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-4.86802292, 9.11473274, 136.036957)	
 			end
 		end
 	end
