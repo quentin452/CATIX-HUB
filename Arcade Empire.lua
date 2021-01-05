@@ -2,7 +2,7 @@ local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))(
 
 local w = library:CreateWindow("Arcade Empire")
 
-local b = w:CreateFolder("Auto Stuff")
+local b = w:CreateFolder("Function")
 
     b:Toggle("Auto Farm",function(bool)
         shared.toggleAF = bool
@@ -37,6 +37,157 @@ local b = w:CreateFolder("Auto Stuff")
             end
         end
     end)
+	b:Button("Boost Fps",function()
+		for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+			if v.Name == "Model" then
+			   v:Destroy()
+			end
+		end
+	end)
+
+local bf = w:CreateFolder("Shop Function")
+	bf:Dropdown("Select Item",{
+		"Maze Game",
+		"Prize Claw",
+		"Sword Fighter",
+		"Ball Claw",
+		"Table Game",
+		"Boxer Game",
+		"Wack A Nobb",
+		"Air Hockey",
+		"King Hammer",
+		"Ball Roll",
+		"Spin 2 Win",
+		"MotorBike Madness",
+		"Packpot Wheel",
+		"Dogfighter",
+		"Basketball Game",
+		"Dance!",
+		"4 Player Air Hockey",
+		"Potted Plant",
+		"Potted Tree",
+		"Potted Cactus",
+		"Potted Sakura Tree",
+		"Potted Bamboo",
+		"Double Couch",
+		"Couch",
+		"High Table and Stools",
+		},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+		_G.FurnitureSelected = mob
+	end)
+	bf:Box("Ammount","number",function(value) -- "number" or "string"
+		_G.FurnitureAmountSelected = value
+	end)
+	bf:Button("Buy Item",function()
+		if _G.FurnitureSelected ~= nil or _G.FurnitureAmountSelected ~= nil  then
+			game:GetService("ReplicatedStorage").Events.BuyFurniture:FireServer(_G.FurnitureSelected,_G.FurnitureAmountSelected)
+		end	
+	end)
+    bf:Toggle("Auto Buy Item",function(bool)
+        shared.toggleABI = bool
+	end)
+	spawn(function()
+		while wait() do
+			if shared.toggleABI then
+				game:GetService("ReplicatedStorage").Events.BuyFurniture:FireServer(_G.FurnitureSelected,_G.FurnitureAmountSelected)
+			end
+		end
+	end)
+	bf:Label("",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
+	bf:Dropdown("Select Capsule",{
+		"Noob Capsule",
+		"Profession Capsule",
+		"Sports Capsule",
+		"Fairy Tale Capsule",
+		"Monster Capsule",
+		"Knight Capsule",
+		"Ancient Capsule",
+		"Rich Capsule",
+		"Robot Capsule",
+		"",
+		"",
+		},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+		_G.CapsuleSelected = mob
+	end)
+	bf:Button("Buy Capsule",function()
+		if _G.CapsuleSelected ~= nil  then
+			game:GetService("ReplicatedStorage").Events.OpenCapsule:InvokeServer(_G.CapsuleSelected,1)
+		end	
+	end)
+    bf:Toggle("Auto Buy Capsule",function(bool)
+        shared.toggleABC = bool
+	end)
+	spawn(function()
+		while wait() do
+			if shared.toggleABC then
+				game:GetService("ReplicatedStorage").Events.OpenCapsule:InvokeServer(_G.CapsuleSelected,1)
+			end
+		end
+	end)
+	bf:Label("",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111))
+	bf:Dropdown("Select Arcade",{
+		"Maze Game",
+		"Prize Claw",
+		"Sword Fighter",
+		"Ball Claw",
+		"Table Game",
+		"Boxer Game",
+		"Wack A Nobb",
+		"Air Hockey",
+		"King Hammer",
+		"Ball Roll",
+		"Spin 2 Win",
+		"MotorBike Madness",
+		"Packpot Wheel",
+		"Dogfighter",
+		"Basketball Game",
+		"Dance!",
+		"4 Player Air Hockey",
+		},true,function(mob)
+		_G.ArcadeSelected = mob
+	end)
+    bf:Toggle("Auto Gold",function(bool)
+        shared.toggleAG = bool
+	end)
+    bf:Toggle("Auto Max Gold",function(bool)
+        shared.toggleAMG = bool
+	end)
+    bf:Toggle("Auto Rainbow",function(bool)
+        shared.toggleAR = bool
+	end)
+    bf:Toggle("Auto Max Rainbow",function(bool)
+        shared.toggleAMR = bool
+	end)
+	spawn(function()
+		while wait(0.5) do
+			if shared.toggleAG then
+				game:GetService("ReplicatedStorage").Events.ResearchFurniture:FireServer(_G.ArcadeSelected,"Standard")
+			end
+			if shared.toggleAMG then
+				game:GetService("ReplicatedStorage").Events.ResearchFurniture:FireServer(_G.ArcadeSelected,"Max")
+			end
+			if shared.toggleAR then
+				game:GetService("ReplicatedStorage").Events.ResearchFurniture:FireServer("Golden ".._G.ArcadeSelected,"Standard")
+			end
+			if shared.toggleAMR then
+				game:GetService("ReplicatedStorage").Events.ResearchFurniture:FireServer("Golden ".._G.ArcadeSelected,"Max")
+			end
+		end
+	end)
+local Tp = w:CreateFolder("Teleports")
+	local plr = game.Players.LocalPlayer
+	Tp:Button("To Your Arcade",function()
+		for i,v in pairs(game:GetService("Workspace").StoreModels:GetDescendants()) do
+			if v.Name == "Owner" then
+				if v.Value == plr.Name then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.BasePart.CFrame + Vector3.new(0,2,0)
+				end
+			end
+		end
+	end)
+	Tp:Button("To Shop",function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-224, 15, 1054)
+	end)
 
 local PLR = w:CreateFolder("Player")
 
