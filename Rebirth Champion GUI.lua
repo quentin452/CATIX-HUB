@@ -10,7 +10,7 @@ local w = w3:CreateFolder("Things")
 w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
 
 w:Button("Unequip All",function()
-  game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss4})
+game:GetService("ReplicatedStorage").RemoteEvents.PetActionRequest:InvokeServer("Unequip All")
 end)
 
 	w:Toggle("Auto Unequip All",function(bool)
