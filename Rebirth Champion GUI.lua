@@ -30,7 +30,7 @@ end
 end)
 
 local w2 = w2:CreateFolder("Eggs")
-	w2:Dropdown("Choose Eggs",{"FREE","Spawn","Dragon","Atlantis","Lava","Winter","Toxic","Toy","Candy","Mythic","Magic","Space","Desert","Farm","Spooky"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	w2:Dropdown("Choose Eggs",{"Free","Spawn","Dragon","Atlantis","Lava","Winter","Toxic","Toy","Candy","Mythic","Magic","Space","Desert","Farm","Spooky","FiveMillions","Easy","Youtube","Youtuber","End2020","NewYear","Santa","Present","Christmas","Bauble"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
 	    _G.BossSelected = mob
 	end)
 
@@ -41,109 +41,130 @@ local w2 = w2:CreateFolder("Eggs")
 spawn(function()
 	while wait(0) do
 		if shared.Eggs then
-
-	if _G.BossSelected == "FREE" then
-
-
-game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Dragon","Triple")
+if _G.BossSelected == "Free" then
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Codes","Triple")
 local me = game.Players.LocalPlayer.Character
-local pbosd = game:GetService("Workspace").Eggs.Dragon.UIanchor
+local pbosd = game:GetService("Workspace").Eggs.Codes.UIanchor
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
-			elseif _G.BossSelected == "Spawn" then
-			game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Spawn","Triple")
+elseif _G.BossSelected == "Spawn" then
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Spawn","Triple")
 local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Eggs.Spawn.UIanchor
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
-			elseif _G.BossSelected == "Dragon" then
-
-
+elseif _G.BossSelected == "Dragon" then
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Dragon","Triple")
 local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Eggs.Dragon.UIanchor
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
-			elseif _G.BossSelected == "Atlantis" then
-
-
+elseif _G.BossSelected == "Atlantis" then
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Atlantis","Triple")
 local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Eggs.Atlantis.UIanchor
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
-		elseif _G.BossSelected == "Lava" then
-
-
+elseif _G.BossSelected == "Lava" then
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Lava","Triple")
 local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Eggs.Lava.UIanchor
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
-		elseif _G.BossSelected == "Winter" then
-
-
+elseif _G.BossSelected == "Winter" then
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Winter","Triple")
 local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Eggs.Winter.UIanchor
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 elseif _G.BossSelected == "Toxic" then
-
-
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Toxic","Triple")
 local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Eggs.Toxic.UIanchor
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
-	elseif _G.BossSelected == "Toy" then
-
-
+elseif _G.BossSelected == "Toy" then
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Toy","Triple")
 local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Eggs.Toy.UIanchor
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
-	elseif _G.BossSelected == "Candy" then
-
-
+elseif _G.BossSelected == "Candy" then
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Candy","Triple")
 local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Eggs.Candy.UIanchor
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 elseif _G.BossSelected == "Mythic" then
-
-
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Mythic","Triple")
 local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Eggs.Mythic.UIanchor
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 elseif _G.BossSelected == "Magic" then
-
-
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Magic","Triple")
 local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Eggs.Magic.UIanchor
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 elseif _G.BossSelected == "Space" then
-
-
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Space","Triple")
 local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Eggs.Space.UIanchor
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 elseif _G.BossSelected == "Desert" then
-
-
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Desert","Triple")
 local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Eggs.Desert.UIanchor
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 elseif _G.BossSelected == "Farm" then
-
-
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Farm","Triple")
 local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Eggs.Farm.UIanchor
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 elseif _G.BossSelected == "Spooky" then
-
-
 game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Spooky","Triple")
 local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Eggs.Spooky.UIanchor
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+elseif _G.BossSelected == "FireMillions" then
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("FiveMillions","Triple")
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Eggs.FiveMillions.UIanchor
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+elseif _G.BossSelected == "Easy" then
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Easy","Triple")
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Eggs.Easy.UIanchor
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+elseif _G.BossSelected == "Youtube" then
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Youtube","Triple")
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Eggs.Youtube.UIanchor
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+elseif _G.BossSelected == "Youtuber" then
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Youtuber","Triple")
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Eggs.Youtuber.UIanchor
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+elseif _G.BossSelected == "Bauble" then
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Bauble","Triple")
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Eggs.Bauble.UIanchor
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+elseif _G.BossSelected == "Christmas" then
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Christmas","Triple")
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Eggs.Christmas.UIanchor
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+elseif _G.BossSelected == "Present" then
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Present","Triple")
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Eggs.Present.UIanchor
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+elseif _G.BossSelected == "Santa" then
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("Santa","Triple")
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Eggs.Santa.UIanchor
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+elseif _G.BossSelected == "NewYear" then
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("NewYear","Triple")
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Eggs.NewYear.UIanchor
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
+elseif _G.BossSelected == "End2020" then
+game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer("End2020","Triple")
+local me = game.Players.LocalPlayer.Character
+local pbosd = game:GetService("Workspace").Eggs.End2020.UIanchor
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+0)
 			end
 		end
