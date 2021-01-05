@@ -207,7 +207,7 @@ local ARS = category:CreateSection("Auto Rebirths Stuff")
 			end
 		end)
 
-local ABS = category:CreateSection("Auto Buy Stuff")
+local ABS = category:CreateSection("Auto Buy Egg Stuff")
 	ABS:Create(
 		"DropDown",
 		"Choose an Egg", 
@@ -269,7 +269,81 @@ local ABS = category:CreateSection("Auto Buy Stuff")
 				end
 			end
 		end)
-	
+	local ABP = category:CreateSection("Auto Buy Potions Stuff")
+		ABP:Create(
+			"Toggle",
+			"x2 Clicks",
+			function(state)
+				print("Current state:", state)
+				shared.ToggleABPx2c = state
+			end,
+			{
+				default = false,
+			}
+		)
+		ABP:Create(
+			"Toggle",
+			"x3 Clicks",
+			function(state)
+				print("Current state:", state)
+				shared.ToggleABPx3c = state
+			end,
+			{
+				default = false,
+			}
+		)
+		ABP:Create(
+			"Toggle",
+			"x2 Gems",
+			function(state)
+				print("Current state:", state)
+				shared.ToggleABPx2g = state
+			end,
+			{
+				default = false,
+			}
+		)
+		ABP:Create(
+			"Toggle",
+			"Secret Pet Luck",
+			function(state)
+				print("Current state:", state)
+				shared.ToggleABPspl = state
+			end,
+			{
+				default = false,
+			}
+		)
+		ABP:Create(
+			"Toggle",
+			"Instant Golden",
+			function(state)
+				print("Current state:", state)
+				shared.ToggleABPig = state
+			end,
+			{
+				default = false,
+			}
+		)
+		spawn(function()
+			while wait() do
+				if shared.ToggleABPx2c then
+					game:GetService("ReplicatedStorage").RemoteEvents.Potion:FireServer("x2Clicks")	
+				end
+				if shared.ToggleABPx3c then
+					game:GetService("ReplicatedStorage").RemoteEvents.Potion:FireServer("x3Clicks")	
+				end
+				if shared.ToggleABPx2g then
+					game:GetService("ReplicatedStorage").RemoteEvents.Potion:FireServer("x2Gems")	
+				end
+				if shared.ToggleABPspl then
+					game:GetService("ReplicatedStorage").RemoteEvents.Potion:FireServer("x2Secret")	
+				end
+				if shared.ToggleABPig then
+					game:GetService("ReplicatedStorage").RemoteEvents.Potion:FireServer("InstantGold")	
+				end
+			end
+		end)
 local PlayerStuff = main:CreateCategory("Player Stuff")
 	local PS = PlayerStuff:CreateSection("Player Stuff")
 	PS:Create(
