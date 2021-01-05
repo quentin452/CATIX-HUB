@@ -1,6 +1,4 @@
 --https://www.roblox.com/games/3462993756/Clicking-Simulator
-
-
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
 
 
@@ -31,8 +29,10 @@ AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox 
     if arg then
         _G.a = true 
         while wait(0) and _G.a do
-            if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
-            game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
+           local tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool") or game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
+    game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
+    if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
+        game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
     end
 end
 
@@ -41,9 +41,7 @@ end
     end
 end)
 
-MISC:CreateToggle("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-_G.NO = true 
+MISC:CreateButton("NO CLIP Press(E)", function(arg) --the (arg) is if the checkbox is toggled or not
   noclip = false
 game:GetService('RunService').Stepped:connect(function()
 if noclip then
@@ -61,39 +59,19 @@ end
 end)
 print('Created by FileExplorer')
 print('Credits to Peyton for the ChangeState part of this script')
-
-         
-else
-_G.NO = false
-end
 end)
 
-MISC:CreateToggle("Inf Jump", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-_G.INF = true 
-        while wait() and _G.INF do
+MISC:CreateButton("Inf Jump", function(arg) --the (arg) is if the checkbox is toggled or not
   InfiniteJumpEnabled = true
 game:GetService("UserInputService").JumpRequest:connect(function()
 	if InfiniteJumpEnabled then
 		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
 	end
 end)
-         end
-else
-_G.INF = false
-end
 end)
 
-MISC:CreateToggle("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-_G.Speed = true 
-        while wait() and _G.Speed do
+MISC:CreateButton("Speed Hack 100", function(arg) --the (arg) is if the checkbox is toggled or not
             game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
-        end
-    else
-        _G.Speed = false
-           game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
-         end
 end)
 
 AutoTab:CreateButton("Destroy Gui :D", function() --you dont need "arg" for a button
