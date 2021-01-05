@@ -43,6 +43,7 @@ local b = w:CreateFolder("Function")
 			   v:Destroy()
 			end
 		end
+		game:GetService("Workspace").BuildingsWithLights:Destroy()
 	end)
 
 local bf = w:CreateFolder("Shop Function")
