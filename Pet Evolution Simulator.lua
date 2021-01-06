@@ -215,7 +215,7 @@ local Function = main:CreateCategory("Function")
                 "Button",
                 "If not Work ? Restart the Hub!",
                 function()
-                    loadstring(game:HttpGet((""), true))()
+                    loadstring(game:HttpGet(("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Pet%20Evolution%20Simulator.lua"), true))()
                     wait()
                     game:GetService("CoreGui")["ScreenGui"]:Destroy()
                 end,
