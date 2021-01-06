@@ -140,11 +140,13 @@ local Function = main:CreateCategory("Function")
                         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1557.13452, 8, 150.865341)
                     elseif current == "Stage 12" then
                         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1708.8562, 8, 174.231552)
+                    elseif current == "Stage 13" then
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1869.98279, 8, 121.53511)
                     end
                 end,
                 {
                     options = {
-                        "Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5", "Stage 6","Stage 7", "Stage 8", "Stage 9", "Stage 10", "Stage 11", "Stage 12"
+                        "Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5", "Stage 6","Stage 7", "Stage 8", "Stage 9", "Stage 10", "Stage 11", "Stage 12", "Stage 13"
                     },
                     -- Optional
                     default = "Choose a Stage",
@@ -205,6 +207,9 @@ local Function = main:CreateCategory("Function")
                                 elseif _G.SelecteStage == "Stage 12" then
                                     local pbosd = HumanCache:FindFirstChild("Steamer") or HumanCache:FindFirstChild("MadMan") or HumanCache:FindFirstChild("Pan")
                                     me.CFrame = pbosd.HumanoidRootPart.CFrame
+                                elseif _G.SelecteStage == "Stage 13" then
+                                    local pbosd = HumanCache:FindFirstChild("Noober") or HumanCache:FindFirstChild("JetKa") or HumanCache:FindFirstChild("Blue Bruiser")
+                                    me.CFrame = pbosd.HumanoidRootPart.CFrame
                                 end
                             end
                         end
@@ -246,7 +251,7 @@ local PetModule = main:CreateCategory("Pet Module")
                 end,
                 {
                     options = {
-                        "stage1", "stage2", "stage3", "stage4", "stage5", "stage6", "stage7", "stage8", "stage9", "stage10", "stage11", "stage12"
+                        "stage1", "stage2", "stage3", "stage4", "stage5", "stage6", "stage7", "stage8", "stage9", "stage10", "stage11", "stage12", "stage13"
                     },
                     -- Optional
                     default = "Select Eggs",
@@ -315,6 +320,10 @@ local PetModule = main:CreateCategory("Pet Module")
                                     game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.StageService.Purchase:InvokeServer(workspace.StageCapsules[_G.EggSelected])
                                 elseif _G.EggSelected == "stage12" then
                                     game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1733.47058, 9.93076706, 264.870667)
+                                    wait()
+                                    game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.StageService.Purchase:InvokeServer(workspace.StageCapsules[_G.EggSelected])
+                                elseif _G.EggSelected == "stage13" then
+                                    game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1909.9469, 5.03870583, 263.875336)
                                     wait()
                                     game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.StageService.Purchase:InvokeServer(workspace.StageCapsules[_G.EggSelected])
                                 end
@@ -469,7 +478,7 @@ local Misc = main:CreateCategory("Misc")
                         "Use All Codes",
                         function()
                             local codes = { 
-                                "officialrelease","randompotion","randomeffect","treasure","freecoins",
+                                "UpdateHype","FreeGems","SORRY","shutdown",
                             }
                             warn("!! CODE LIST !!")
                             redem_code = game:GetService("ReplicatedStorage").Remotes.RedeemCode
