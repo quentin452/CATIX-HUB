@@ -211,18 +211,7 @@ local Function = main:CreateCategory("Function")
                     end
                 end
             end)
-            Mobs:Create(
-                "Button",
-                "If not Work ? Restart the Hub!",
-                function()
-                    loadstring(game:HttpGet(("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Pet%20Evolution%20Simulator.lua"), true))()
-                    wait()
-                    game:GetService("CoreGui")["ScreenGui"]:Destroy()
-                end,
-                {
-                    animated = true,
-                }
-            ) 
+
     local OS = Function:CreateSection("Other Stuff")
         OS:Create(
             "Button",
