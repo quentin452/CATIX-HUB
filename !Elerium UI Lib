@@ -1,8 +1,8 @@
 local ui_options = {
 	main_color = Color3.fromRGB(0, 0, 0),
-	min_size = Vector2.new(450, 600),
+       min_size = Vector2.new(800, 800),
 	toggle_key = Enum.KeyCode.RightShift,
-	can_resize = false,
+	can_resize = true,
 }
 
 do
@@ -141,7 +141,7 @@ Toggle.Position = UDim2.new(0, 5, 0, -2)
 Toggle.Rotation = 0
 Toggle.Size = UDim2.new(0, 20, 0, 20)
 Toggle.ZIndex = 2
-Toggle.Image = "https://media.discordapp.net/attachments/761622180693278721/796464521258336276/IMG_20200227_205952.jpg?width=480&height=640"
+Toggle.Image = "rbxassetid://6201121372"
 
 Base.Name = "Base"
 Base.Parent = Bar
