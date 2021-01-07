@@ -280,7 +280,7 @@ Title_2.ZIndex = 2
 Title_2.Font = Enum.Font.GothamBold
 Title_2.Text = "Slider"
 Title_2.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
-Title_2.TextSize = 14
+Title_2.TextSize = 16
 
 Indicator.Name = "Indicator"
 Indicator.Parent = Slider
@@ -703,7 +703,7 @@ Switch.ZIndex = 2
 Switch.Font = Enum.Font.SourceSans
 Switch.Text = ""
 Switch.TextColor3 = Color3.new(1, 1, 1)
-Switch.TextSize = 30
+Switch.TextSize = 25
 
 TextButton_Roundify_4px_4.Name = "TextButton_Roundify_4px"
 TextButton_Roundify_4px_4.Parent = Switch
@@ -712,7 +712,7 @@ TextButton_Roundify_4px_4.BackgroundTransparency = 1
 TextButton_Roundify_4px_4.Size = UDim2.new(1, 0, 1, 0)
 TextButton_Roundify_4px_4.Image = "rbxassetid://2851929490"
 TextButton_Roundify_4px_4.ImageColor3 = Color3.new(0.160784, 0.290196, 0.478431)
-TextButton_Roundify_4px_4.ImageTransparency = 0.5
+TextButton_Roundify_4px_4.ImageTransparency = 0.8
 TextButton_Roundify_4px_4.ScaleType = Enum.ScaleType.Slice
 TextButton_Roundify_4px_4.SliceCenter = Rect.new(4, 4, 4, 4)
 
@@ -721,11 +721,11 @@ Title_3.Parent = Switch
 Title_3.BackgroundColor3 = Color3.new(1, 1, 1)
 Title_3.BackgroundTransparency = 1
 Title_3.Position = UDim2.new(1.20000005, 0, 0, 0)
-Title_3.Size = UDim2.new(0, 20, 0, 20)
+Title_3.Size = UDim2.new(0, 30, 0, 30)
 Title_3.Font = Enum.Font.GothamSemibold
 Title_3.Text = "Switch"
 Title_3.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
-Title_3.TextSize = 14
+Title_3.TextSize = 20
 Title_3.TextXAlignment = Enum.TextXAlignment.Left
 
 Button_2.Name = "Button"
@@ -1165,7 +1165,7 @@ function library:AddWindow(title, options)
 
 						button.Parent = new_tab
 						button.Text = button_text
-						button.Size = UDim2.new(0.1, gNameLen(button), 0.005, 20)
+						button.Size = UDim2.new(0.05, gNameLen(button), 0.005, 22)
 						button.ZIndex = button.ZIndex + (windows * 10)
 						button:GetChildren()[1].ZIndex = button:GetChildren()[1].ZIndex + (windows * 10)
 
