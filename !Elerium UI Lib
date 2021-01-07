@@ -687,12 +687,12 @@ Switch.BackgroundColor3 = Color3.new(1, 1, 1)
 Switch.BackgroundTransparency = 1
 Switch.BorderSizePixel = 0
 Switch.Position = UDim2.new(0.229411766, 0, 0.20714286, 0)
-Switch.Size = UDim2.new(0, 20, 0, 20)
+Switch.Size = UDim2.new(0, 25, 0, 25)
 Switch.ZIndex = 2
 Switch.Font = Enum.Font.SourceSans
 Switch.Text = ""
 Switch.TextColor3 = Color3.new(1, 1, 1)
-Switch.TextSize = 18
+Switch.TextSize = 30
 
 TextButton_Roundify_4px_4.Name = "TextButton_Roundify_4px"
 TextButton_Roundify_4px_4.Parent = Switch
