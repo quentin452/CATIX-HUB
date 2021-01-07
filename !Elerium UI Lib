@@ -1,7 +1,6 @@
 local ui_options = {
 	main_color = Color3.fromRGB(0, 0, 0),
        min_size = Vector2.new(800, 800),
-	toggle_key = Enum.KeyCode.RightShift,
 	can_resize = true,
 }
 
@@ -2217,6 +2216,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/
                     if player then
                     TeleportService:Teleport(PlaceId, player)
                     end
+     end)
+     misc:AddKeybind("Hide GUI", function()
+     game:GetService("CoreGui")["imgui"].Windows.Visible = not game:GetService("CoreGui")["imgui"].Windows.Visible
      end)
      misc:AddButton("Destroy GUI", function()
      game:GetService("CoreGui")["imgui"]:Destroy()
