@@ -1190,7 +1190,7 @@ function library:AddWindow(title, options)
 
 						spawn(function()
 							while true do
-								switch:GetChildren()[1].ImageColor3 = options.main_color
+								switch:GetChildren()[1].ImageColor3 = Color3.new(12,12,12)
 								RS.Heartbeat:Wait()
 							end
 						end)
