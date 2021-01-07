@@ -964,10 +964,10 @@ function library:AddWindow(title, options)
 
 		spawn(function()
 			while true do
-				Bar.BackgroundColor3 = options.main_color
-				Base.BackgroundColor3 = options.main_color
-				Base.ImageColor3 = options.main_color
-				Top.ImageColor3 = options.main_color
+				Bar.BackgroundColor3 = Color3.new(58, 0, 0)
+				Base.BackgroundColor3 = Color3.new(58, 0, 0)
+				Base.ImageColor3 = Color3.new(58, 0, 0)
+				Top.ImageColor3 = Color3.new(58, 0, 0)
 				SplitFrame.BackgroundColor3 = options.main_color
 
 				RS.Heartbeat:Wait()
