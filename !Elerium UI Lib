@@ -2026,6 +2026,9 @@ local Local = TEST:AddTab("Local Player")
 local misc = TEST:AddTab("MISC")
 
 local credits = TEST:AddTab("Credits")
+
+local ScUp = TEST:AddTab("Script Update")
+
 	Farming:AddLabel("Things")
 	Farming:AddButton("Button", function()
 			print("Button clicked.")
@@ -2204,3 +2207,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/
      credits:AddButton("Catix Hub Discord Server: Copy Link", function()
      setclipboard("https://discord.gg/KmHZUpXEmQ")
      end)
+
+     ScUp:AddLabel("**Update 0.1**"), function()
+     ScUp:AddLabel("**+ New Ui**"), function()
