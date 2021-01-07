@@ -2028,16 +2028,38 @@ local misc = TEST:AddTab("MISC")
 local credits = TEST:AddTab("Credits")
 
 local ScUp = TEST:AddTab("Script Update")
+
+local Eggs = TEST:AddTab("Buy Eggs")
     Farming:AddLabel("******************************************************************************")
 	Farming:AddLabel("Things")
 	Farming:AddButton("Button", function()
 			print("Button clicked.")
 	end)
-	local Switch = Farming:AddSwitch("Toggle", function(bool)
+	local Switch = Farming:AddSwitch("Auto Click", function(bool)
     _G.Toggle1 = (bool and true or false)
     while _G.Toggle1 and wait() do
-            print("Toggle Enabled.")
+         local tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool") or game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
+    game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
+    if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
+        game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
+    end	    
+
     end  
+	end)
+	local Switch = Farming:AddSwitch("Auto Buy Cameras", function(bool)
+    _G.Toggle3 = (bool and true or false)
+    while _G.Toggle3 and wait() do
+   	for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.CoreUI.ShopFrame.PaddedHolder.ShopItems.Cameras:GetChildren()) do wait(0.1)
+						if v.Name == "UIPadding" or v.Name == "UIGridLayout" or v.Name == "UIAspectRatioConstraint" then
+						else
+local args = {
+    [1] = v.Name
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ShopService.BuyCamera:InvokeServer(unpack(args))
+end
+end
+end  
 	end)
 	Farming:AddLabel("******************************************************************************")
     Local:AddLabel("******************************************************************************")
@@ -2215,6 +2237,30 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/
      end)
      credits:AddLabel("******************************************************************************")
      ScUp:AddLabel("******************************************************************************")
-     ScUp:AddLabel("**Update 0.1**")
-     ScUp:AddLabel("** + New Ui **")
+     ScUp:AddLabel("**   Update 1.0   **")
+     ScUp:AddLabel("** + New Game **")
      ScUp:AddLabel("******************************************************************************")
+     
+     Eggs:AddLabel("******************************************************************************")
+ local EggsSelected
+
+local EggsS = Eggs:AddDropdown("Select Eggs", function(Selected)
+     EggsSelected = Selected
+end)
+
+for i, v in pairs(game:GetService("Workspace").EggCapsules:GetChildren()) do
+     EggsS:Add(v.Name)
+end
+
+Eggs:AddSwitch("Buy Eggs", function(bool)
+ _G.ToggleEgg = (bool and true or false)
+    while _G.ToggleEgg and wait() do
+local args = {
+    [1] = EggsSelected
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.BuyEgg:InvokeServer(unpack(args))
+end
+end)
+
+       Eggs:AddLabel("******************************************************************************")
