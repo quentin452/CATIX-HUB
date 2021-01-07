@@ -17,6 +17,7 @@ local Window = Instance.new("ImageLabel")
 local Resizer = Instance.new("Frame")
 local Bar = Instance.new("Frame")
 local Toggle = Instance.new("ImageButton")
+local Toggle2 = Instance.new("ImageButton")
 local Base = Instance.new("ImageLabel")
 local Top = Instance.new("ImageLabel")
 local Tabs = Instance.new("Frame")
@@ -142,6 +143,16 @@ Toggle.Rotation = 0
 Toggle.Size = UDim2.new(0, 20, 0, 20)
 Toggle.ZIndex = 2
 Toggle.Image = "rbxassetid://6201121372"
+
+Toggle2.Name = "Toggle2"
+Toggle2.Parent = Bar
+Toggle2.BackgroundColor3 = Color3.new(1, 1, 1)
+Toggle2.BackgroundTransparency = 1
+Toggle2.Position = UDim2.new(0, 775, 0, -2)
+Toggle2.Rotation = 0
+Toggle2.Size = UDim2.new(0, 20, 0, 20)
+Toggle2.ZIndex = 2
+Toggle2.Image = "rbxassetid://6201121372"
 
 Base.Name = "Base"
 Base.Parent = Bar
@@ -2006,7 +2017,7 @@ function library:AddWindow(title, options)
 	return window_data, Window
 end
 
-local TEST = library:AddWindow("Catix Hub / Model                                                                                            By:I'm A Cat#7202 And Altix[FR]#3395")
+local TEST = library:AddWindow("Catix Hub / Model                                                                                       By:I'm A Cat#7202 And Altix[FR]#3395")
 
 local Farming = TEST:AddTab("Model")
 
