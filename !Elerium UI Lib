@@ -1154,7 +1154,7 @@ function library:AddWindow(title, options)
 
 						button.Parent = new_tab
 						button.Text = button_text
-						button.Size = UDim2.new(0.1, gNameLen(button), 0, 20)
+						button.Size = UDim2.new(0.1, gNameLen(button), 0.005, 20)
 						button.ZIndex = button.ZIndex + (windows * 10)
 						button:GetChildren()[1].ZIndex = button:GetChildren()[1].ZIndex + (windows * 10)
 
