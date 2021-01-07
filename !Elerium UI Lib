@@ -2197,7 +2197,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/
      setclipboard("I'm A Cat#7202")
      end)
 
-     credits:AddButton("By: Altix[FR]#3395 Copy Username", function()
+     credits:AddButton("By: Altix#3395 Copy Username", function()
      setclipboard("Altix[FR]#3395")
      end)
 
