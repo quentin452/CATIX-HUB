@@ -2201,6 +2201,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/
      setclipboard("Altix#3395")
      end)
 
-     credits:AddButton("Discord Server: Copy Link (https://discord.gg/KmHZUpXEmQ)", function()
+     credits:AddButton("Catix Hub Discord Server: Copy Link", function()
      setclipboard("https://discord.gg/KmHZUpXEmQ")
      end)
