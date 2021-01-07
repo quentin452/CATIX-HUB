@@ -2030,6 +2030,7 @@ local ScUp = TEST:AddTab("Script Update")
 
 local Eggs = TEST:AddTab("Buy Eggs")
     Farming:AddLabel("******************************************************************************")
+      Farming:AddLabel("")
 	Farming:AddLabel("Things")
 	Farming:AddButton("Button", function()
 			print("Button clicked.")
@@ -2060,8 +2061,10 @@ end
 end
 end  
 	end)
+		Farming:AddLabel("")
 	Farming:AddLabel("******************************************************************************")
     Local:AddLabel("******************************************************************************")
+         Local:AddLabel("")
 	Local:AddLabel("Player Stuff")
 	local Slider = Local:AddSlider("Jump Hack", function(x)
 	game.Players.LocalPlayer.Character.Humanoid.JumpPower = x
@@ -2206,8 +2209,10 @@ loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/quentin452/CATIX
      Local:AddButton("Remote Spy", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/!Remote%20Spy", true))()
      end) 
+          Local:AddLabel("")
      Local:AddLabel("******************************************************************************")
      misc:AddLabel("******************************************************************************")
+     misc:AddLabel("")
      misc:AddLabel("Misc Stuff")
      misc:AddButton("Refresh Game", function()
      local TeleportService = game:GetService("TeleportService")
@@ -2223,8 +2228,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/
      misc:AddButton("Destroy GUI", function()
      game:GetService("CoreGui")["imgui"]:Destroy()
      end)
+     misc:AddLabel("")
      misc:AddLabel("******************************************************************************")
      credits:AddLabel("******************************************************************************")
+     credits:AddLabel("")
      credits:AddLabel("Credits")
      credits:AddButton("By: I'm A Cat#7202 Copy Username", function()
      setclipboard("I'm A Cat#7202")
@@ -2237,6 +2244,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/
      credits:AddButton("Catix Hub Discord Server: Copy Link", function()
      setclipboard("https://discord.gg/KmHZUpXEmQ")
      end)
+     credits:AddLabel("")
      credits:AddLabel("******************************************************************************")
      ScUp:AddLabel("******************************************************************************")
      ScUp:AddLabel("**   Update 1.0   **")
@@ -2244,6 +2252,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/
      ScUp:AddLabel("******************************************************************************")
      
      Eggs:AddLabel("******************************************************************************")
+        Eggs:AddLabel("")
  local EggsSelected
 
 local EggsS = Eggs:AddDropdown("Select Eggs", function(Selected)
@@ -2264,5 +2273,5 @@ local args = {
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.BuyEgg:InvokeServer(unpack(args))
 end
 end)
-
+   Eggs:AddLabel("")
        Eggs:AddLabel("******************************************************************************")
