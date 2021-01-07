@@ -445,7 +445,7 @@ Toggle_2.Parent = Button
 Toggle_2.BackgroundColor3 = Color3.new(1, 1, 1)
 Toggle_2.BackgroundTransparency = 1
 Toggle_2.Position = UDim2.new(0, 5, 0, 0)
-Toggle_2.Size = UDim2.new(0, 20, 0, 20)
+Toggle_2.Size = UDim2.new(0, 20, 0, 25)
 Toggle_2.Image = "https://www.roblox.com/Thumbs/Asset.ashx?width=420&height=420&assetId=4731371541"
 
 Objects_2.Name = "Objects"
