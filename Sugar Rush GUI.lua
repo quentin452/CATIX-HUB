@@ -2016,7 +2016,7 @@ function library:AddWindow(title, options)
 	return window_data, Window
 end
 
-local TEST = library:AddWindow("Catix Hub / Sugar Rush                                                                              By:I'm A Cat#7202 And Altix[FR]#3395")
+local TEST = library:AddWindow("Catix Hub / Sugar Rush                                                                              By:I'm A Cat#7202 And Altix#3395")
 
 local Farming = TEST:AddTab("Things")
 
