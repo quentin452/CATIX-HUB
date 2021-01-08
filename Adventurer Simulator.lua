@@ -62,11 +62,7 @@ local Function = main:CreateCategory("Function")
             "Toggle",
             "Auto Sell",
             function(state)
-                if state then
-              local Me = game.Players.LocalPlayer.Character.HumanoidRootPart
-local To = game:GetService("Workspace").Activations.Sell.RootPart
-To.CFrame = Me.CFrame 
-                end
+                shared.toggleSell = state
             end,
             {
                 default = false,
@@ -108,10 +104,12 @@ To.CFrame = Me.CFrame
         spawn(function()
             while wait() do
                 if shared.toggleAF then
+                                            game:GetService("ReplicatedStorage").Remotes.Events.Weapon:FireServer({["Action"] = "Attack"})
                     local tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool") or game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
                     game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
                     if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
                         game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
+
                     end
                 end
                 if shared.toggleAC1 then
@@ -139,9 +137,21 @@ To.CFrame = Me.CFrame
                     for i,v in pairs(StrengthAch:GetChildren()) do
                         game:GetService("ReplicatedStorage").Remotes.Events.Achievement:FireServer({["Type"] = "Total Strength",["Action"] = "Claim",["Index"] = i})
                         wait()
-                    end
+              end
+                  
                 end
             end
+        end)
+                       spawn(function()
+            while wait() do
+                    if shared.toggleSell then     
+                            local Me = game.Players.LocalPlayer.Character.HumanoidRootPart
+local To = game:GetService("Workspace").Activations.Sell.RootPart
+To.CFrame = Me.CFrame 
+                end
+                    end
+         
+       
         end)
 
 local Shop = main:CreateCategory("Shop")
