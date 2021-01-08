@@ -2029,6 +2029,9 @@ local credits = TEST:AddTab("Credits")
 local ScUp = TEST:AddTab("Script Update")
 
 local Eggs = TEST:AddTab("Buy Eggs")
+
+local Tp = TEST:AddTab("Teleport")
+
     Farming:AddLabel("******************************************************************************")
       Farming:AddLabel("")
 	Farming:AddLabel("Things")
@@ -2289,3 +2292,16 @@ end
 end)
    Eggs:AddLabel("")
        Eggs:AddLabel("******************************************************************************")
+       Tp:AddLabel("******************************************************************************")
+Tp:AddLabel("")
+
+       local Tpm = Tp:AddDropdown("Select Player", function(Selected)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[tostring(Selected)].Character.HumanoidRootPart.CFrame
+end)
+
+for i,v in pairs(game.Players:GetChildren()) do
+    Tpm:Add(v.name)
+end
+
+ Tp:AddLabel("")
+       Tp:AddLabel("******************************************************************************")
