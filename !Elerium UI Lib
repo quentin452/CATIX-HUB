@@ -2016,7 +2016,7 @@ function library:AddWindow(title, options)
 	return window_data, Window
 end
 
-local TEST = library:AddWindow("Catix Hub / Model                                                                                       By:I'm A Cat#7202 And Altix[FR]#3395")
+local TEST = library:AddWindow("Catix Hub / Model                                                                                       By:I'm A Cat#7202 And Altix#3395")
 
 local Farming = TEST:AddTab("Model")
 
@@ -2258,6 +2258,15 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/
      
      Eggs:AddLabel("******************************************************************************")
         Eggs:AddLabel("")
+
+ Eggs:AddSwitch("Auto Delete Advanced Pets", function(bool)
+ _G.Advanced = (bool and true or false)
+    while _G.Advanced and wait() do
+for i, v in pairs(game:GetService("Players").LocalPlayer.petsFolder.Advanced:GetChildren()) do  
+game:GetService("ReplicatedStorage").rEvents.sellPetEvent:FireServer("sellPet", v)  --Remote
+end
+end
+end)
  local EggsSelected
 
 local EggsS = Eggs:AddDropdown("Select Eggs", function(Selected)
