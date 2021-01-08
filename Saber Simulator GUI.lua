@@ -517,51 +517,11 @@ local AutoBuy = main:CreateCategory("Auto Buy")
 					elseif shared.DropDownABEChoose == "Island 69" then
 						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["P Egg"],1)
 					elseif shared.DropDownABEChoose == "Island 70" then
-						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["Q Egg"],1)
-					elseif shared.DropDownABEChoose == "Island 71" then
 						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["R Egg"],1)
-					end
-				end
-			end
-		end)
-
-	local ABEE = AutoBuy:CreateSection("Auto Buy Winter Event Egg")
-		ABEE:Create(
-			"DropDown",
-			"Choose An Egg", 
-			function(current)
-				print("Selected to:", current)
-				shared.DropDownABEEChoose = current
-				TpArea()
-			end,
-			{
-				options = {
-					"First (200 Candy)", "Second (150 Candy)", "Third (75 Candy)",
-				},
-				-- Optional
-				default = "Choose An Egg",
-				search = true
-			}
-		)
-		ABEE:Create(
-			"Toggle",
-			"Start",
-			function(state)
-				shared.toggleABEES = state
-			end,
-			{
-				default = false,
-			}
-		)
-		spawn(function()
-			while wait(0.25) do
-				if shared.toggleABEES then
-					if shared.DropDownABEEChoose == "First (200 Candy)" then
-						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["U Egg"],1)
-					elseif shared.DropDownABEEChoose == "Second (150 Candy)" then
-						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["T Egg"],1)
-					elseif shared.DropDownABEEChoose == "Third (75 Candy)" then
-						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["S Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 71" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["V Egg"],1)
+					elseif shared.DropDownABEChoose == "Island 72" then
+						game:GetService("ReplicatedStorage").Events.HatchEggs:InvokeServer(game:GetService("ReplicatedStorage").Eggs["W Egg"],1)
 					end
 				end
 			end
@@ -587,7 +547,7 @@ local Teleport = main:CreateCategory("Teleport")
 					"Island 40", "Island 41", "Island 42", "Island 43", "Island 44", "Island 45", "Island 46","Island 47", 
 					"Island 48", "Island 49", "Island 50", "Island 51", "Island 52", "Island 53","Island 54", "Island 55", 
 					"Island 56", "Island 57", "Island 58", "Island 59", "Island 60","Island 61", "Island 62","Island 63", 
-					"Island 64", "Island 65", "Island 66", "Island 67", "Island 68", "Island 69","Island 70", "Island 71"
+					"Island 64", "Island 65", "Island 66", "Island 67", "Island 68", "Island 69","Island 70", "Island 71", "Island 72"
 				},
 				-- Optional
 				default = "Choose a Island's Location",
@@ -754,6 +714,8 @@ local Teleport = main:CreateCategory("Teleport")
 				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 269271, -303)
 				wait(0.35)
 				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(638, 272960, -247)
+				wait(0.35)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(634, 276486, -208)
 			end,
 			{
 				animated = true,
@@ -904,6 +866,8 @@ local Teleport = main:CreateCategory("Teleport")
 				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(631, 269271, -303)
 			elseif shared.DropDownTPChoose == "Island 71" then
 				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(638, 272960, -247)
+			elseif shared.DropDownTPChoose == "Island 72" then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(634, 276486, -208)
 			end
 		end
 
