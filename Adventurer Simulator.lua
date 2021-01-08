@@ -62,7 +62,9 @@ local Function = main:CreateCategory("Function")
             "Toggle",
             "Auto Sell",
             function(state)
-                shared.toggleSell = state
+            if state then
+                     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-91, 3, -30) 
+                end
             end,
             {
                 default = false,
@@ -142,17 +144,8 @@ local Function = main:CreateCategory("Function")
                 end
             end
         end)
-                       spawn(function()
-            while wait() do
-                    if shared.toggleSell then     
-                            local Me = game.Players.LocalPlayer.Character.HumanoidRootPart
-local To = game:GetService("Workspace").Activations.Sell.RootPart
-To.CFrame = Me.CFrame 
-                end
-                    end
          
-       
-        end)
+      
 
 local Shop = main:CreateCategory("Shop")
     local AbS = Shop:CreateSection("Auto Buy Stuff")
