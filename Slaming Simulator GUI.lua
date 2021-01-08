@@ -2487,14 +2487,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/
      Eggs:AddLabel("******************************************************************************")
         Eggs:AddLabel("")
 
- Eggs:AddSwitch("Auto Delete Advanced Pets", function(bool)
- _G.Advanced = (bool and true or false)
-    while _G.Advanced and wait() do
-for i, v in pairs(game:GetService("Players").LocalPlayer.petsFolder.Advanced:GetChildren()) do  
-game:GetService("ReplicatedStorage").rEvents.sellPetEvent:FireServer("sellPet", v)  --Remote
-end
-end
-end)
  local EggsSelected
 
 local EggsS = Eggs:AddDropdown("Select Eggs", function(Selected)
