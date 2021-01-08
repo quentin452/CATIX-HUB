@@ -1,3 +1,4 @@
+
 -- Anti AFK
 
 local Virtual = game:service'VirtualUser'
@@ -62,7 +63,9 @@ local Function = main:CreateCategory("Function")
             "Auto Sell",
             function(state)
                 if state then
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-91, 3, -30)
+              local Me = game.Players.LocalPlayer.Character.HumanoidRootPart
+local To = game:GetService("Workspace").Activations.Sell.RootPart
+To.CFrame = Me.CFrame 
                 end
             end,
             {
