@@ -2207,11 +2207,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/
      misc:AddLabel("******************************************************************************")
      misc:AddLabel("")
      misc:AddLabel("Misc Stuff")
-     misc:AddButton("Get Some Gamepasses (many display issue cases)", function()
-          for i,v in pairs(game:GetService("Players").LocalPlayer.Passes:GetChildren()) do
-                    v.Value = true
-                end
-     end)
      misc:AddButton("Refresh Game", function()
      local TeleportService = game:GetService("TeleportService")
                     local PlaceId = game.PlaceId
