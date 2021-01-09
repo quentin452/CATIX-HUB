@@ -1,3 +1,16 @@
+-- Anti AFK
+
+if game.CoreGui:FindFirstChild("ScreenGui") then
+    game.CoreGui:FindFirstChild("ScreenGui"):Destroy() 
+end
+
+local Virtual = game:service'VirtualUser'
+    game:service'Players'.LocalPlayer.Idled:connect(function()
+    Virtual:CaptureController()
+    Virtual:ClickButton2(Vector2.new())
+    wait(2)
+end)
+
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/!Zypher%20UI.lua"))()
 local main = library:CreateMain("zypher")
 
