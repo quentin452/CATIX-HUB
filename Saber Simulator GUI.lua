@@ -22,7 +22,8 @@ local Virtual = game:service'VirtualUser'
     Virtual:ClickButton2(Vector2.new())
     wait(2)
 end)
-local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/!Zypher%20UI.lua"))()
+
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/H5u3dYwA"))()
 local main = library:CreateMain("zypher")
 
 local Home = main:CreateCategory("Home")
@@ -58,8 +59,6 @@ local Function = main:CreateCategory("Function")
 			"Toggle",
 			"Auto Swing",
 			function(state)
-				local tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool") or game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
-				game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
 				shared.toggleAC = state
 			end,
 			{
@@ -111,6 +110,8 @@ local Function = main:CreateCategory("Function")
 		spawn(function()
 			while wait(0.25) do
 				if shared.toggleAC then
+					local tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool") or game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
+					game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
 					game:GetService("ReplicatedStorage").Events.Clicked:FireServer()
 				end
 			end
