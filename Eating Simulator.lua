@@ -64,16 +64,29 @@ local Function = main:CreateCategory("Function")
                 default = false,
             }
         )
+        AS:Create(
+            "Toggle",
+            "Auto Rebirths",
+            function(state)
+                shared.toggleAR = state
+            end,
+            {
+                default = false,
+            }
+        )
         spawn(function()
             while wait() do
                 if shared.toggleAC then
                     for i,v in pairs(game:GetService("Workspace").SpawnedFood:GetChildren()) do
-                            if shared.toggleAC then
+                        if shared.toggleAC then
                             v.CanCollide = false
                             v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                             wait()
                         end
                     end
+                end
+                if shared.toggleAR then
+                    game:GetService("ReplicatedStorage").Rebirth:FireServer()
                 end
             end
         end)
