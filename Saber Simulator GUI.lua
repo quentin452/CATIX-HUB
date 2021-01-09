@@ -22,8 +22,7 @@ local Virtual = game:service'VirtualUser'
     Virtual:ClickButton2(Vector2.new())
     wait(2)
 end)
-
-local library = loadstring(game:HttpGet("https://pastebin.com/raw/H5u3dYwA"))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/!Zypher%20UI.lua"))()
 local main = library:CreateMain("zypher")
 
 local Home = main:CreateCategory("Home")
