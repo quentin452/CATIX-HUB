@@ -23,7 +23,7 @@ local Virtual = game:service'VirtualUser'
     wait(2)
 end)
 
-local library = loadstring(game:HttpGet("https://pastebin.com/raw/H5u3dYwA"))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/!Zypher%20UI.lua"))()
 local main = library:CreateMain("zypher")
 
 local Home = main:CreateCategory("Home")
