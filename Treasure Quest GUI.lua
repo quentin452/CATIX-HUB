@@ -1,223 +1,68 @@
 -- Anti AFK
 
-	local Virtual = game:service'VirtualUser'
-	game:service'Players'.LocalPlayer.Idled:connect(function()
-		Virtual:CaptureController()
-		Virtual:ClickButton2(Vector2.new())
-		wait(2)
-	end)
+local Virtual = game:service'VirtualUser'
+    game:service'Players'.LocalPlayer.Idled:connect(function()
+    Virtual:CaptureController()
+    Virtual:ClickButton2(Vector2.new())
+    wait(2)
+end)
+
+if game.CoreGui:FindFirstChild("ScreenGui") then
+    game.CoreGui:FindFirstChild("ScreenGui"):Destroy() 
+end
 
 -- Old Position Save
-	local oldpos = Instance.new("CFrameValue",game.Players.LocalPlayer)
-	oldpos.Name = "oldpos"
+local oldpos = Instance.new("CFrameValue",game.Players.LocalPlayer)
+oldpos.Name = "oldpos"
 
-	local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/!Zypher%20UI.lua"))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/!Zypher%20UI.lua"))()
 local main = library:CreateMain({
-	    projName = "ScreenGui",
-	    Resizable = true,
-	    MinSize = UDim2.new(0,400,0,400),
-	    MaxSize = UDim2.new(0,750,0,500),
-	})
+	projName = "ScreenGui",
+	Resizable = true,
+	MinSize = UDim2.new(0,400,0,400),
+	MaxSize = UDim2.new(0,750,0,500),
+})
 
 local Home = main:CreateCategory("Home")
 	local Tittle = Home:CreateSection("Treasure Quest")
-	local H1 = Home:CreateSection("Update logs V2.0.1:")
-		H1:Create(
-			"Textlabel",
-			"+ Christmas Update"
-		)
-	local H2 = Home:CreateSection("Credits")
-		H2:Create(
-			"Textlabel",
-			"Script by Altix#3395"
-		)
-		H2:Create(
-			"Textlabel",
-			"Tested by I'm A Cat#7202"
-		)
-		H2:Create(
+		local H1 = Home:CreateSection("Update logs V2.2:")
+			H1:Create(
+				"Textlabel",
+				"+ Auto Farm Fixed"
+			)
+		local H2 = Home:CreateSection("Credits")
+			H2:Create(
+				"Textlabel",
+				"Script by Altix#3395"
+			)
+			H2:Create(
+				"Textlabel",
+				"Tested by I'm A Cat#7202"
+			)
+			H2:Create(
+				"Button",
+				"Copy Discord Link (https://discord.gg/x2hM4M5xWj)",
+				function()
+				setclipboard("https://discord.gg/x2hM4M5xWj")
+				end,
+				{
+					animated = true,
+				}
+			)
+
+
+local Function = main:CreateCategory("Function")
+	local AF = Function:CreateSection("Auto Farm")
+		AF:Create(
 			"Button",
-			"Copy Discord Link (https://discord.gg/x2hM4M5xWj)",
+			"Start",
 			function()
-			setclipboard("https://discord.gg/x2hM4M5xWj")
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Tq%20Auto%20Farm"))()
 			end,
 			{
 				animated = true,
 			}
 		)
-
-local category = main:CreateCategory("Auto Farm")
-	local AF = category:CreateSection("Auto Farm (Simple Method)")
-		AF:Create(
-		    "Button",
-		    "Start",
-		    function()
-				loadstring(game:HttpGet("https://pastebin.com/raw/c58AFVU0"))()
-		    end,
-		    {
-		        animated = true,
-		    }
-		)
-	local AF = category:CreateSection("Auto Farm (Complex Method)")
-		AF:Create(
-		    "Textlabel",
-		    "-- Dungeon Settings --"
-		)
-		AF:Create(
-			"DropDown",
-			"Select Map", 
-			function(current)
-			    print("You have selected:",current)
-			    _G.Map = current
-			end,
-			{
-				options = {
-					"Ancient Jungle","Coral Kingdom","Crystal Cave","Sacred Sands",
-					"Candy Land","Sinister Sewers","Magical Mushrooms","Space Base",
-					"Daring Dojo","Cryptic Castle","Santa's Workshop","Ice Palace",
-					"Frenzy Factory","Fiery Fortress"
-				},
-				-- Optional
-				default = "Select Map",
-				search = false
-			}
-		)
-		AF:Create(
-			"DropDown",
-			"Select DungeonType", 
-			function(current)
-			    print("You have selected:",current)
-			    _G.DungeonType = current
-			end,
-			{
-				options = {
-					"Classic","MiniBosses","Endless","Uncapped","Endless Uncapped"
-				},
-				-- Optional
-				default = "Select DungeonType",
-				search = false
-			}
-		)
-		AF:Create(
-			"DropDown",
-			"Select Difficulty", 
-			function(current)
-			    print("You have selected:",current)
-			    _G.Difficulty = current
-			end,
-			{
-				options = {
-					"Easy","Medium","Hard","Demon","Impossible"
-				},
-				-- Optional
-				default = "Select Difficulty",
-				search = false
-			}
-		)
-		AF:Create(
-			"DropDown",
-			"Select Privacy", 
-			function(current)
-			    print("You have selected:",current)
-			    _G.Privacy = current
-			end,
-			{
-				options = {
-					"Public","Friends","Solo"
-				},
-				-- Optional
-				default = "Select Privacy",
-				search = false
-			}
-		)
-		AF:Create(
-		    "Textlabel",
-		    "-- Other Settings --"
-		)
-		AF:Create(
-			"Toggle",
-			"SemiGodMode",
-			function(state)
-	    		print("SemiGodMode =",state)
-   				_G.SemiGodMode = state
-			end,
-			{
-				default = false,
-			}
-		)
-		AF:Create(
-			"Toggle",
-			"AutoChest",
-			function(state)
-	    		print("AutoChest =",state)
-   				_G.AutoChest = state
-			end,
-			{
-				default = false,
-			}
-		)
-		AF:Create(
-			"Toggle",
-			"AutoMedKit",
-			function(state)
-	    		print("AutoMedKit =",state)
-   				_G.AutoMedKit = state
-			end,
-			{
-				default = false,
-			}
-		)
-		AF:Create(
-			"Toggle",
-			"Security",
-			function(state)
-	    		print("Security =",state)
-   				_G.Security = state
-			end,
-			{
-				default = false,
-			}
-		)
-		AF:Create(
-		    "Button",
-		    "Click to verified (F9)",
-		    function()
-				print("")
-				print("-- Dungeon Settings --")
-				print("You have selected:",_G.Map)
-				print("You have selected:",_G.DungeonType)
-				print("You have selected:",_G.Difficulty)
-				print("You have selected:",_G.Privacy)
-				print("")
-				print("-- Dungeon Settings --")
-				print("SemiGodMode =",_G.SemiGodMode)
-				print("AutoChest =",_G.AutoChest)
-				print("AutoMedKit =",_G.AutoMedKit)
-				print("Security =",_G.Security)
-				print("")
-		    end,
-		    {
-		        animated = true,
-		    }
-		)
-		AF:Create(
-		    "Button",
-		    "Run (After Virified)",
-		    function()
-				loadstring(game:HttpGet("https://pastebin.com/raw/c58AFVU0"))()
-		    end,
-		    {
-		        animated = true,
-		    }
-		)
-
-	local Tittle = category:CreateSection("! Important !")
-		Tittle:Create(
-		    "Textlabel",
-		    "Autofarm does not work with all Exploits!"
-		)
-
-local Function = main:CreateCategory("Function")
 	local AS = Function:CreateSection("Auto Stuff")
 		AS:Create(
 			"Toggle",
@@ -239,18 +84,17 @@ local Function = main:CreateCategory("Function")
 				default = false,
 			}
 		)
-
 		spawn(function()
 			while wait() do
 				if shared.toggleAA then
 					local args = {
-					    [1] = Vector3.new(586.664978, 320.968811, 656.171387),
+						[1] = Vector3.new(586.664978, 320.968811, 656.171387),
 					}
 					game:GetService("ReplicatedStorage").Remotes.Attack:FireServer(unpack(args))
 				end
 				if shared.toggleAA2 then
 					local args = {
-					    [1] = Vector3.new(603.193542, 322.180023, 492.801849),
+						[1] = Vector3.new(603.193542, 322.180023, 492.801849),
 					}
 					game:GetService("ReplicatedStorage").Remotes.Ability:FireServer(unpack(args))
 				end
@@ -258,33 +102,33 @@ local Function = main:CreateCategory("Function")
 		end)
 	local Event = Function:CreateSection("Christmas Event")
 		Event:Create(
-		    "Button",
-		    "Tp To Event Area",
-		    function()
+			"Button",
+			"Tp To Event Area",
+			function()
 				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(339, 321, 530)
-		    end,
-		    {
-		        animated = true,
-		    }
+			end,
+			{
+				animated = true,
+			}
 		)
 		Event:Create(
-		    "Button",
-		    "Solo Event",
-		    function()
+			"Button",
+			"Solo Event",
+			function()
 				local TeleportService = game:GetService("TeleportService")
 				local PlaceId = 2978518061
 				local player = game.Players.LocalPlayer
 				if player then
 					TeleportService:Teleport(PlaceId, player)
 				end
-		    end,
-		    {
-		        animated = true,
-		    }
+			end,
+			{
+				animated = true,
+			}
 		)
 		Event:Create(
-		    "Textlabel",
-		    "the autofarm works very badly with the event"
+			"Textlabel",
+			"the autofarm works very badly with the event"
 		)
 
 local Teleport = main:CreateCategory("Teleport")
@@ -298,13 +142,13 @@ local Teleport = main:CreateCategory("Teleport")
 					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(619, 320, 470)
 				elseif current == "Prize Wheel & Daily Rewards" then
 					game.Players.LocalPlayer.oldpos.Value = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame
-				    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(517.379, 329.191, 663.12)
-				    wait(0)
-				    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(392.291, 322.15, 638.79)
-				    wait(0)
-				    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(517.379, 329.191, 663.12)
-				    wait(0)
-				    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.oldpos.Value
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(517.379, 329.191, 663.12)
+					wait(0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(392.291, 322.15, 638.79)
+					wait(0)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(517.379, 329.191, 663.12)
+					wait(0)
+					game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.oldpos.Value
 				elseif current == "Training Area" then
 					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(478, 345, 562)
 				elseif current == "Beach" then
@@ -524,13 +368,14 @@ local Misc = main:CreateCategory("Misc")
 					"PROTECTOR","NEWGAMEMODE","ENDLESSUNCAPPED","ONEYEAR","THANKSFORPLAYING","METEORBLAST",
 					"SHOPREVAMP","HUGEUPDATESOON","SUMMERTIME","BRIGHTBEACHISBACK","SHELLGRIND","PEARLHUNT",
 					"SUNSHINE","SUMMERPART2","FEDERATIONGRIND","DOMINUSGRIND","COCONUT","PALMTREES","HALLOWEENPART2",
-					"SPOOKY","GHOUL","HAUNTED","OMBIE","FRANKENSTEIN","DANGERDEPTHS","ABYSS","HYPERFROST","BOSSFIGHT"
+					"SPOOKY","GHOUL","HAUNTED","OMBIE","FRANKENSTEIN","DANGERDEPTHS","ABYSS","HYPERFROST","BOSSFIGHT",
+					"HAPPYNEWYEARS2021", "CHRISTMASMIRACLE2020"
 				}
 				warn("!! CODE LIST !!")
 				redem_code = game:GetService("ReplicatedStorage").Remotes.RedeemCode
 				for i,v in pairs(codes) do
-				    redem_code:InvokeServer(v)
-				    print(i,")",v)
+					redem_code:InvokeServer(v)
+					print(i,")",v)
 				end
 				warn("All Codes Used")
 			end,
@@ -552,8 +397,8 @@ local Misc = main:CreateCategory("Misc")
 			"DropDown",
 			"Open Gui", 
 			function(current)
-			    print("You have selected:",current)
-			    game:GetService("Players").LocalPlayer.PlayerGui.MainGui.MainFrame.Pages[current].Visible = true
+				print("You have selected:",current)
+				game:GetService("Players").LocalPlayer.PlayerGui.MainGui.MainFrame.Pages[current].Visible = true
 			end,
 			{
 				options = {
