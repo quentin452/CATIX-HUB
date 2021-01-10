@@ -2370,6 +2370,7 @@ function Library:CreateMain(Options)
 	Main.Motherframe.Parent = Main.Screengui
 	Main.Upline.Parent = Main.Motherframe
 	Main.Uplinegradient.Parent = Main.Upline
+	Main.UplineTop.Parent = Main.Upline
 	Main.Sidebar.Parent = Main.Motherframe
 	Main.Categorieshandler.Parent = Main.Motherframe
 	Main.Categoriesselector.Parent = Main.Sidebar
