@@ -114,7 +114,8 @@ function Library:CreateMain(Options)
 			ColorSequenceKeypoint.new(1.00, Color3.fromRGB(125, 92, 164))
 		}
 	})
-    Main.UplineTop = Library:Create("Top", {
+    Main.UplineTop = Library:Create("ImageLabel", {
+    	Name = "Top",
         BackgroundColor3 = Color3.fromRGB(255, 255, 255),
 		BackgroundTransparency = 1.000,
 		Position = UDim2.new(0, 0, -1.25701344, 0),
