@@ -124,7 +124,7 @@ function Library:CreateMain(Options)
 		ImageColor3 = Color3.fromRGB(14790, 0, 0)
 		ScaleType = Enum.ScaleType.Slice
 		SliceCenter = Rect.new(12, 12, 12, 12)
-		}
+		 
 	})
 	Main.Sidebar = Library:Create("ScrollingFrame", {
 		Name = "Sidebar",
