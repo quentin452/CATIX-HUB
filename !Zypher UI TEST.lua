@@ -2356,7 +2356,7 @@ function Library:CreateMain(Options)
 
 	end
 
-	Main.Screengui.Parent = game:GetService("StarterGui")
+	Main.Screengui.Parent = game:GetService("CoreGui")
 	Main.Motherframe.Parent = Main.Screengui
 	Main.Upline.Parent = Main.Motherframe
 	Main.Uplinegradient.Parent = Main.Upline
