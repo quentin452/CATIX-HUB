@@ -104,7 +104,7 @@ function Library:CreateMain(Options)
 		BackgroundColor3 = Color3.fromRGB(255, 255, 255),
 		BorderSizePixel = 0,
 		Size = UDim2.new(1, 0, 0.00899999961, 0),
-		ZIndex = -12,
+		ZIndex = 10,
 	})
 
 	Main.Uplinegradient = Library:Create("UIGradient", {
@@ -112,18 +112,6 @@ function Library:CreateMain(Options)
 			ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 183, 183)),
 			ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 248, 248)),
 			ColorSequenceKeypoint.new(1.00, Color3.fromRGB(125, 92, 164))
-		}
-	})
-    Main.UplineTop = Library:Create("Top", {
-        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-		BackgroundTransparency = 1.000,
-		Position = UDim2.new(0, 0, -1.25701344, 0),
-		Size = UDim2.new(1, 0, 2.66662264, 10),
-		ZIndex = -10,
-		Image = "rbxassetid://2851926732",
-		ImageColor3 = Color3.fromRGB(14790, 0, 0),
-		ScaleType = Enum.ScaleType.Slice,
-		SliceCenter = Rect.new(12, 12, 12, 12),
 		}
 	})
 	Main.Sidebar = Library:Create("ScrollingFrame", {
