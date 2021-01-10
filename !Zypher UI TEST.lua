@@ -103,7 +103,7 @@ function Library:CreateMain(Options)
 		Name = "Upline",
 		BackgroundColor3 = Color3.fromRGB(255, 255, 255),
 		BorderSizePixel = 0,
-		Size = UDim2.new(1, 0, 0.0189999994, 0),
+		Size = UDim2.new(1, 0, 0.00899999961, 0),
 		ZIndex = -12,
 	})
 
