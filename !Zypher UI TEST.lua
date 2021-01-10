@@ -101,10 +101,9 @@ function Library:CreateMain(Options)
 
 	Main.Upline = Library:Create("Frame", {
 		Name = "Upline",
-		BackgroundColor3 = Color3.new(0.160784, 0.290196, 0.478431),
+		BackgroundColor3 = Color3.fromRGB(255, 255, 255),
 		BorderSizePixel = 0,
-		Size = UDim2.new(1, 0, 0, 15),
-                Position = UDim2.new(0, 0, 0, 5)
+		Size = UDim2.new(1, 0, 0.00899999961, 0),
 		ZIndex = 10,
 	})
 
@@ -2357,7 +2356,7 @@ function Library:CreateMain(Options)
 
 	end
 
-	Main.Screengui.Parent = game:GetService("CoreGui")
+	Main.Screengui.Parent = game:GetService("StarterGui")
 	Main.Motherframe.Parent = Main.Screengui
 	Main.Upline.Parent = Main.Motherframe
 	Main.Uplinegradient.Parent = Main.Upline
