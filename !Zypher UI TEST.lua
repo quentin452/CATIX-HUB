@@ -104,6 +104,7 @@ function Library:CreateMain(Options)
 		BackgroundColor3 = Color3.new(0.160784, 0.290196, 0.478431),
 		BorderSizePixel = 0,
 		Size = UDim2.new(1, 0, 0, 15),
+                Position = UDim2.new(0, 0, 0, 5)
 		ZIndex = 10,
 	})
 
