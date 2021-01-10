@@ -104,7 +104,7 @@ function Library:CreateMain(Options)
 		BackgroundColor3 = Color3.fromRGB(255, 255, 255),
 		BorderSizePixel = 0,
 		Size = UDim2.new(1, 0, 0.00899999961, 0),
-		ZIndex = 10,
+		ZIndex = -12,
 	})
 
 	Main.Uplinegradient = Library:Create("UIGradient", {
