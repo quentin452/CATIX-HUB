@@ -104,7 +104,7 @@ function Library:CreateMain(Options)
         BackgroundColor3 = Color3.fromRGB(255, 255, 255),
 		BackgroundTransparency = 1.000,
 		Position = UDim2.new(0, 0, -1.25701344, 0),
-		Size = UDim2.new(1, 0, 2.66662264, 10),
+		Size = UDim2.new(1, 0, 1.66662264, 10),
 		ZIndex = -10,
 		Image = "rbxassetid://2851926732",
 		ImageColor3 = Color3.fromRGB(14790, 0, 0),
