@@ -114,6 +114,7 @@ function Library:CreateMain(Options)
 			ColorSequenceKeypoint.new(1.00, Color3.fromRGB(125, 92, 164))
 		}
 	})
+
 	Main.Sidebar = Library:Create("ScrollingFrame", {
 		Name = "Sidebar",
 		Active = true,
