@@ -107,7 +107,7 @@ local function initLibrary()
             end;
         end);
 
-        local gui = Instance.new("CatixHub", CoreGui);
+        local gui = Instance.new("ScreenGui", CoreGui);
         gui.Enabled = false;
         library.gui = gui;
 
