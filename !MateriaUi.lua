@@ -1,6 +1,6 @@
 local Player = game:GetService("Players").LocalPlayer
 local Mouse = Player:GetMouse()
---
+
 local TextService = game:GetService("TextService")
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
@@ -20,7 +20,7 @@ local Themes = {
 		NavBarInvert = Color3.fromRGB(30,30,30),
 		TitleBar = Color3.fromRGB(0, 0, 0),
 		TitleBarAccent = Color3.fromRGB(255,255,255),
-		Overlay = Color3.fromRGB(44, 44, 44),
+		Overlay = Color3.fromRGB(124,37,255),
 		Banner = Color3.fromRGB(255,255,255),
 		BannerAccent = Color3.fromRGB(124,37,255),
 		Content = Color3.fromRGB(124,37,255),
