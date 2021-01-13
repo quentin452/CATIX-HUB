@@ -61,8 +61,8 @@ function Library:CreateMain(Options)
 		Position = UDim2.new(0.5, -400, 0.5, -225),
         Size = UDim2.new(1,-50,1,-30),
         Motherframe = RoundBox(5),
-        ClipsDescendants = true
-        ImageColor3 = Color3.fromRGB(30,30,30)
+        ClipsDescendants = true,
+        ImageColor3 = Color3.fromRGB(30,30,30),
     
 	})
 
