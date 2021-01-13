@@ -9,6 +9,38 @@ local CoreGuiService = game:GetService("CoreGui")
 local ContentService = game:GetService("ContentProvider")
 
 local Themes = {
+	Red = {
+		MainFrame = Color3.fromRGB(170, 0, 0),
+		Minimise = Color3.fromRGB(255,106,0),
+		MinimiseAccent = Color3.fromRGB(147,59,0),
+		Maximise = Color3.fromRGB(25,255,0),
+		MaximiseAccent = Color3.fromRGB(0,255,110),
+		NavBar = Color3.fromRGB(124,37,255),
+		NavBarAccent = Color3.fromRGB(170, 0, 0),
+		NavBarInvert = Color3.fromRGB(30,30,30),
+		TitleBar = Color3.fromRGB(124,37,255),
+		TitleBarAccent = Color3.fromRGB(170, 0, 0),
+		Overlay = Color3.fromRGB(124,37,255),
+		Banner = Color3.fromRGB(170, 0, 0),
+		BannerAccent = Color3.fromRGB(124,37,255),
+		Content = Color3.fromRGB(124,37,255),
+		Button = Color3.fromRGB(124,37,255),
+		ButtonAccent = Color3.fromRGB(170, 0, 0),
+		ChipSet = Color3.fromRGB(124,37,255),
+		ChipSetAccent = Color3.fromRGB(170, 0, 0),
+		DataTable = Color3.fromRGB(124,37,255),
+		DataTableAccent = Color3.fromRGB(170, 0, 0),
+		Slider = Color3.fromRGB(170, 0, 0),
+		SliderAccent = Color3.fromRGB(124,37,255),
+		Toggle = Color3.fromRGB(124,37,255),
+		ToggleAccent = Color3.fromRGB(170, 0, 0),
+		Dropdown = Color3.fromRGB(170, 0, 0),
+		DropdownAccent = Color3.fromRGB(124,37,255),
+		ColorPicker = Color3.fromRGB(170, 0, 0),
+		ColorPickerAccent = Color3.fromRGB(124,37,255),
+		TextField = Color3.fromRGB(124,37,255),
+		TextFieldAccent = Color3.fromRGB(124,37,255),
+	},
 	Light = {
 		MainFrame = Color3.fromRGB(255,255,255),
 		Minimise = Color3.fromRGB(255,106,0),
@@ -2217,16 +2249,16 @@ function Material.Load(Config)
 
 			return TextFieldLibrary
 		end
-		
+
 		function OptionLibrary.Label(LabelConfig)
 			local LabelText = LabelConfig.Text or "nil label"
-			
+
 			local LabelContainer = Objects.new("Round")
 			LabelContainer.Name = "Label"
 			LabelContainer.Size = UDim2.fromScale(1,0) + UDim2.fromOffset(0,20)
 			LabelContainer.ImageColor3 = Theme.MainFrame
 			LabelContainer.Parent = PageContentFrame
-			
+
 			local LabelContent = Objects.new("Label")
 			LabelContent.TextColor3 = Theme.ChipSet
 			LabelContent.Text = LabelText:upper()
@@ -2235,13 +2267,13 @@ function Material.Load(Config)
 			LabelContent.Size = UDim2.fromScale(1,1) + UDim2.fromOffset(-5,0)
 			LabelContent.Position = UDim2.fromOffset(5,0)
 			LabelContent.Parent = LabelContainer
-			
+
 			local LabelOptions = {}
-			
+
 			function LabelOptions.SetText(Text)
 				LabelContent.Text = Text
 			end
-			
+
 			return LabelOptions
 		end
 
