@@ -63,7 +63,7 @@ function Library:CreateMain(Options)
         Motherframe = RoundBox(5),
         ClipsDescendants = true,
         ImageColor3 = Color3.fromRGB(30,30,30),
-    
+
 	})
 
 	table.insert(Objects.Background, Main.Motherframe)
