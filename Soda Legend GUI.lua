@@ -122,9 +122,9 @@ local EventFnc = main:CreateCategory("Event Function")
 	local ES = EventFnc:CreateSection("Event Stuff")
 		ES:Create(
 			"Button",
-			"Teleport To Christmas Event",
+			"Teleport To Carnival Event",
 			function()
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3434, 123, 825)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2738, -11, -1191)
 			end,
 			{
 				animated = true,
@@ -132,7 +132,7 @@ local EventFnc = main:CreateCategory("Event Function")
 		)			
 		ES:Create(
 			"Toggle",
-			"Auto Collect Candy",
+			"Auto Collect Ticket",
 			function(state)
 				print("Current state:", state)
 				shared.Toggle_AutoCollect = state
@@ -143,7 +143,7 @@ local EventFnc = main:CreateCategory("Event Function")
 		)
 		ES:Create(
 			"Toggle",
-			"Auto Collect House",
+			"Auto Spin Wheel",
 			function(state)
 				print("Current state:", state)
 				shared.Toggle_AutoHouseEvent = state
@@ -164,11 +164,7 @@ local EventFnc = main:CreateCategory("Event Function")
 					end
 				end
 				if shared.Toggle_AutoHouseEvent then
-					for i,v in pairs(game:GetService("Workspace").Event1.HouseEvents:GetChildren()) do
-						v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-						wait()
-						v.CFrame = CFrame.new(0,0,0)
-					end
+					game:GetService("ReplicatedStorage").SpinWheel:FireServer("Normal")
 				end
 			end
 		end)
@@ -184,14 +180,13 @@ local EventFnc = main:CreateCategory("Event Function")
 				options = {
 					"2x Fizz (Boost)",
 					"2x Hatch Speed (Boost)",
-					"2x Candy Canes (Boost)",
-					"Candy Cane Duo (Pet)",
-					"Santa Plushie (Pet)",
-					"GTMaze Plushie (Pet)"
+					"2x Tickets (Boost)",
+					"Teddy Bear (Pet)",
+
 				},
 				-- Optional
 				default = "Choose For Auto Buy",
-				search = true
+				search = false
 			}
 		)
 		EBS:Create(
@@ -212,14 +207,10 @@ local EventFnc = main:CreateCategory("Event Function")
 						game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("BoostFizz")
 					elseif _G.EventSelected == "2x Hatch Speed (Boost)" then
 						game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("BoostHatch")
-					elseif _G.EventSelected == "2x Candy Canes (Boost)" then
-						game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("BoostCandy")
-					elseif _G.EventSelected == "Candy Cane Duo (Pet)" then
+					elseif _G.EventSelected == "2x Tickets (Boost)" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("BoostTickets")
+					elseif _G.EventSelected == "Teddy Bear (Pet)" then
 						game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("Pet")
-					elseif _G.EventSelected == "Santa Plushie (Pet)" then
-						game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("Pet1")
-					elseif _G.EventSelected == "GTMaze Plushie (Pet)" then
-						game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.EventShop:FireServer("Pet2")
 					end
 				end
 			end
@@ -235,11 +226,9 @@ local EventFnc = main:CreateCategory("Event Function")
 			end,
 			{
 				options = {
-					"Festive",
-					"Jolly",
-					"Mint",
-					"Frosty",
-					"2020",
+					"Clown",
+					"Sweet",
+					"Magic",
 				},
 				-- Optional
 				default = "Choose An Egg",
@@ -260,21 +249,15 @@ local EventFnc = main:CreateCategory("Event Function")
 		spawn(function()
 			while wait() do
 				if shared.Toggle_AutoBuyEventEgg then
-					if _G.EventEggSelected == "Festive" then
-						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Festive","Buy1")
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3565, 100, 505)
-					elseif _G.EventEggSelected == "Jolly" then
-						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Jolly","Buy1")
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3557, 100, 519)
-					elseif _G.EventEggSelected == "Mint" then
-						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Mint","Buy1")
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3548, 100, 532)
-					elseif _G.EventEggSelected == "Frosty" then
-						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Frosty","Buy1")
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3538, 100, 549)
-					elseif _G.EventEggSelected == "2020" then
-						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("2020","Buy1")
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(64, 3, -69)
+					if _G.EventEggSelected == "Clown" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Clown","Buy1")
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2772, -11, -1390)
+					elseif _G.EventEggSelected == "Sweet" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Sweet","Buy1")
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2788, -11, -1385)
+					elseif _G.EventEggSelected == "Magic" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Magic","Buy1")
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2807, -11, -1376)
 					end
 				end
 			end
