@@ -10,7 +10,7 @@ local ContentService = game:GetService("ContentProvider")
 
 local Themes = {
 	Red = {
-		MainFrame = Color3.fromRGB(255,255,255),
+		MainFrame = Color3.fromRGB(22, 22, 22),
 		Minimise = Color3.fromRGB(170, 0, 0),
 		MinimiseAccent = Color3.fromRGB(147,59,0),
 		Maximise = Color3.fromRGB(25,255,0),
@@ -20,7 +20,7 @@ local Themes = {
 		NavBarInvert = Color3.fromRGB(30,30,30),
 		TitleBar = Color3.fromRGB(0, 0, 0),
 		TitleBarAccent = Color3.fromRGB(255,255,255),
-		Overlay = Color3.fromRGB(124,37,255),
+		Overlay = Color3.fromRGB(44, 44, 44),
 		Banner = Color3.fromRGB(255,255,255),
 		BannerAccent = Color3.fromRGB(124,37,255),
 		Content = Color3.fromRGB(124,37,255),
