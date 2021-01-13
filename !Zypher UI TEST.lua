@@ -59,7 +59,11 @@ function Library:CreateMain(Options)
 		BackgroundColor3 = Themes.Background,
 		BorderSizePixel = 0,
 		Position = UDim2.new(0.5, -400, 0.5, -225),
-		Size = UDim2.new(0, 700, 0, 460),
+        Size = UDim2.new(1,-50,1,-30),
+        Motherframe = RoundBox(5),
+        ClipsDescendants = true
+        ImageColor3 = Color3.fromRGB(30,30,30)
+    
 	})
 
 	table.insert(Objects.Background, Main.Motherframe)
@@ -103,8 +107,8 @@ function Library:CreateMain(Options)
 		Name = "Upline",
 		BackgroundColor3 = Color3.fromRGB(255, 255, 255),
 		BorderSizePixel = 0,
-		Size = UDim2.new(1, 0, 0.0189999994, 0),
-		ZIndex = -12,
+		Size = UDim2.new(1, 0, 0.00899999961, 0),
+		ZIndex = 10,
 	})
 
 	Main.Uplinegradient = Library:Create("UIGradient", {
@@ -114,18 +118,7 @@ function Library:CreateMain(Options)
 			ColorSequenceKeypoint.new(1.00, Color3.fromRGB(125, 92, 164))
 		}
 	})
-    Main.UplineTop = Library:Create("ImageLabel", {
-    	Name = "Top",
-        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-		BackgroundTransparency = 1.000,
-		Position = UDim2.new(0, 0, -1.25701344, 0),
-		Size = UDim2.new(1, 0, 2.66662264, 10),
-		ZIndex = -10,
-		Image = "rbxassetid://2851926732",
-		ImageColor3 = Color3.fromRGB(14790, 0, 0),
-		ScaleType = Enum.ScaleType.Slice,
-		SliceCenter = Rect.new(12, 12, 12, 12),
-	})
+
 	Main.Sidebar = Library:Create("ScrollingFrame", {
 		Name = "Sidebar",
 		Active = true,
@@ -2371,7 +2364,6 @@ function Library:CreateMain(Options)
 	Main.Motherframe.Parent = Main.Screengui
 	Main.Upline.Parent = Main.Motherframe
 	Main.Uplinegradient.Parent = Main.Upline
-	Main.UplineTop.Parent = Main.Upline
 	Main.Sidebar.Parent = Main.Motherframe
 	Main.Categorieshandler.Parent = Main.Motherframe
 	Main.Categoriesselector.Parent = Main.Sidebar
