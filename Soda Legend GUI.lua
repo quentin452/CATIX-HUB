@@ -284,6 +284,7 @@ local AB = main:CreateCategory("Auto Buy")
 					"Candy",
 					"Mushroom",
 					"Robot",
+					"Russo"
 				},
 				-- Optional
 				default = "Choose An Egg",
@@ -331,6 +332,9 @@ local AB = main:CreateCategory("Auto Buy")
 					elseif _G.EggSelected == "Robot" then
 						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Robot","Buy1")
 						game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(60.2214546, -27.9178886, 7184.71094)
+					elseif _G.EggSelected == "Russo" then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Russo","Buy1")
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-900, -29, 1391)
 					end
 				end
 			end
