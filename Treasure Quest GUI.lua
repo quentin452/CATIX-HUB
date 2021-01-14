@@ -1,15 +1,28 @@
 -- Anti AFK
 
 local Virtual = game:service'VirtualUser'
-    game:service'Players'.LocalPlayer.Idled:connect(function()
-    Virtual:CaptureController()
-    Virtual:ClickButton2(Vector2.new())
-    wait(2)
+	game:service'Players'.LocalPlayer.Idled:connect(function()
+	Virtual:CaptureController()
+	Virtual:ClickButton2(Vector2.new())
+	wait(2)
 end)
 
 if game.CoreGui:FindFirstChild("ScreenGui") then
-    game.CoreGui:FindFirstChild("ScreenGui"):Destroy() 
+	game.CoreGui:FindFirstChild("ScreenGui"):Destroy() 
 end
+
+spawn(function()
+    game.Players.LocalPlayer.MaximumSimulationsRadius = math.huge
+    game.Players.LocalPlayer.SimulationRadius = math.huge
+end)
+
+spawn(function()
+	local partt = Instance.new("Part", workspace)
+	partt.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0,-40,0)
+	partt.Size = Vector3.new(3000,1,3000)
+	partt.Anchored = true
+	partt.BrickColor = BrickColor.random()
+end)
 
 -- Old Position Save
 local oldpos = Instance.new("CFrameValue",game.Players.LocalPlayer)
@@ -54,15 +67,110 @@ local Home = main:CreateCategory("Home")
 local Function = main:CreateCategory("Function")
 	local AF = Function:CreateSection("Auto Farm")
 		AF:Create(
-			"Button",
-			"Start",
-			function()
-				loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Tq%20Auto%20Farm"))()
+			"Toggle",
+			"Auto Kill",
+			function(state)
+				shared.toggleAK = state
 			end,
 			{
-				animated = true,
+				default = false,
 			}
 		)
+		AF:Create(
+			"Toggle",
+			"Kill Aura",
+			function(state)
+				shared.toggleAKA = state
+			end,
+			{
+				default = false,
+			}
+		)
+		AF:Create(
+			"Toggle",
+			"Auto Chest",
+			function(state)
+				shared.toggleAC = state
+			end,
+			{
+				default = false,
+			}
+		)
+		AF:Create(
+			"Toggle",
+			"Auto Medkit",
+			function(state)
+				shared.toggleAM = state
+			end,
+			{
+				default = false,
+			}
+		)
+		spawn(function()
+			while wait() do
+				if toggleAC then
+					for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+						if v.Name == "Chest" and v:FindFirstChild("Hitbox") then
+							v.Hitbox.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+						end
+					end
+				end
+			end
+		end)
+		spawn(function()
+			while wait() do
+				if shared.toggleAM then
+					for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+						if v.Name == "Medkit1" or v.Name == "Medkit2" then
+							v.CanCollide = false
+							v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+						end
+					end
+				end
+			end
+		end)
+		spawn(function()
+			while wait() do
+				if shared.toggleAKA then
+					for i,v in pairs(game.workspace.DungeonFolder:GetDescendants()) do 
+						if v.Name == "HumanoidRootPart" and v.Parent.Name ~= v then 
+							if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.Position).magnitude < 50 then 
+								local A_1 = game:GetService("Workspace").PlayerWeapons:WaitForChild(game.Players.LocalPlayer.Name)
+								local A_2 = v
+								local Event = game:GetService("ReplicatedStorage").Remotes.HitMonster
+								Event:FireServer(A_1, A_2)
+								game:GetService("ReplicatedStorage").Remotes.Attack:FireServer()
+							end
+						end
+					end
+				end
+			end
+		end)
+		spawn(function()
+			while wait() do
+				if shared.toggleAK then
+					if game.Players.LocalPlayer.Character:WaitForChild("Humanoid") then
+						game:GetService("ReplicatedStorage").Remotes.Dungeon.Begin:FireServer()
+						game.workspace.Terrain:Clear()
+						for i,v in pairs(game:GetService("Workspace").DungeonFolder:GetDescendants()) do 
+							if v.Name == "HumanoidRootPart" then
+								if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.Position).magnitude < 300 then
+									local A_1 = game:GetService("Workspace").PlayerWeapons:WaitForChild(game.Players.LocalPlayer.Name)
+									local A_2 = v
+									local Event = game:GetService("ReplicatedStorage").Remotes.HitMonster
+									Event:FireServer(A_1, A_2)
+									game:GetService("ReplicatedStorage").Remotes.Attack:FireServer()
+									tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(1.5, Enum.EasingStyle.Linear)
+									game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+									tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(v.Position + Vector3.new(0,-18,0))})
+									tween:Play()
+								end
+							end
+						end
+					end
+				end
+			end
+		end)
 	local AS = Function:CreateSection("Auto Stuff")
 		AS:Create(
 			"Toggle",
