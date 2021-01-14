@@ -1783,7 +1783,7 @@ do
 				self:updateDropdown(dropdown, nil, list, callback)
 			end
 			
-			focused = false
+			focused = true
 		end)
 		
 		search.TextBox.FocusLost:Connect(function()
