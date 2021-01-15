@@ -12,13 +12,24 @@ w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,Te
 	w:Toggle("Auto Click",function(bool)
 		shared.toggle1 = bool
 	end)
-	
+    w:Toggle("Auto Collect Moon",function(bool)
+		shared.toggleACMC = bool
+	end)
 	spawn(function()
 		while wait() do
             if shared.toggle1 then
                 local tool1 = game.Players.LocalPlayer.Backpack:FindFirstChild("Coin") or game.Players.LocalPlayer.Character:FindFirstChild("Coin")
                 game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool1)
                 tool1:Activate()
+            end
+            if shared.toggleACMC then
+                for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+                    if v.Name == "MoonCoin" or v.Name == "MoonBox" then
+                        v.CanCollide = false
+                        v.CFrame = CFrame.new(0,0,0)
+                        v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                    end
+                end
             end
         end
     end)
@@ -462,17 +473,17 @@ local MISC = w3:CreateFolder("Misc")
 
 local CS = w3:CreateFolder("Credits")
 
-	CS:Button("Script by: I'm A Cat#7202",function()
-		setclipboard("I'm A Cat#7202")
+	CS:Button("Script: Im A Cat#7202",function()
+		setclipboard("Im A Cat#7202")
 	end)
 
-	CS:Button("Discord: https://discord.gg/KmHZUpXEmQ",function()
-		setclipboard("https://discord.gg/KmHZUpXEmQ")
+	CS:Button("Discord: PKWXQae",function()
+		setclipboard("https://discord.gg/PKWXQae")
 	end)
 
-CS:Button("Helped by: Altix#3395",function()
-		setclipboard("Altix#3395")
-end)
+    CS:Button("Helped by: Altix#3395",function()
+        setclipboard("Altix#3395")
+    end)
 
 	CS:DestroyGUI()
 
