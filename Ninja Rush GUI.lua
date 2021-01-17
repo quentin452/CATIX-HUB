@@ -1833,6 +1833,12 @@ while _G.Toggle2 and wait() do
 game:GetService("ReplicatedStorage").TGSPlayerLevel_LevelUp:InvokeServer()
     end
 end)
+ThingsSec:addToggle("Auto Rebirth", nil, function(bool)
+    _G.Toggle3 = (bool and true or false)
+    while _G.Toggle3 and wait() do   
+        game:GetService("ReplicatedStorage").TGSPlayerLevel_Rebirth:InvokeServer()
+        end
+    end)
 local ThingsSec = Things:addSection("Use SpeedHack To Kill Faster")
 local Misc = venyx:addPage("Misc", 6252267612)
 local section4 = Misc:addSection("MISC:")
