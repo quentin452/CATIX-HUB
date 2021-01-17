@@ -1879,6 +1879,9 @@ end)
 Local:addSlider("HipHeight Hack", 0,2, 300, function(x)
 	game.Players.LocalPlayer.Character.Humanoid.HipHeight = x
 end)
+Local:addSlider("Field Of View Hack", 0,2, 120, function(x)
+				game:GetService("Workspace").Camera.FieldOfView = x
+end)
 Local:addButton("Speed Hack(Press R)", function()
 local walkspeedplayer = game:GetService("Players").LocalPlayer local walkspeedmouse = walkspeedplayer:GetMouse() local walkspeedenabled = false function x_walkspeed(key) if (key == "r") then if walkspeedenabled == false then _G.WS = 200; local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid; Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function() Humanoid.WalkSpeed = _G.WS; end) Humanoid.WalkSpeed = _G.WS; walkspeedenabled = true elseif walkspeedenabled == true then _G.WS = 20; local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid; Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function() Humanoid.WalkSpeed = _G.WS; end) Humanoid.WalkSpeed = _G.WS; walkspeedenabled = false end end end walkspeedmouse.KeyDown:connect(x_walkspeed)
 end)
@@ -1894,10 +1897,6 @@ game:GetService("UserInputService").JumpRequest:connect(function()game.Players.L
      Local:addButton("Ctrl + Click = TP", function()
 local Plr = game:GetService("Players").LocalPlayer local Mouse = Plr:GetMouse()Mouse.Button1Down:connect(function()if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end if not Mouse.Target then return end Plr.Character:MoveTo(Mouse.Hit.p)end)
     end)
-	Local:addButton("Camera Max/Min Zoom Distance", function()
-				game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = 99999
-				game:GetService("Players").LocalPlayer.CameraMinZoomDistance = 0
-	end)
      Local:addButton("Extreme Light", function()
 local s = Instance.new("PointLight", game.Players.LocalPlayer.Character.Head) s.Brightness = 0.3 s.Range = 100 game.Lighting.Changed:connect(function() game.Lighting.TimeOfDay = "14:00:00" game.Lighting.FogEnd = 300 game.Lighting.Brightness = 10 game.Lighting.ColorCorrection.Brightness = 0.1 game.Lighting.ColorCorrection.Saturation = 0.1 game.Lighting.Bloom.Intensity = 0.1 end)
     end)
