@@ -1881,6 +1881,9 @@ end)
 Local:addSlider("Field Of View Hack", 0,2, 120, function(x)
             game:GetService("Workspace").Camera.FieldOfView = x
 end)
+Local:addSlider("Speed Hack", 0,0, 300, function(x)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = x
+end)
 Local:addButton("Speed Hack(Press R)", function()
 local walkspeedplayer = game:GetService("Players").LocalPlayer local walkspeedmouse = walkspeedplayer:GetMouse() local walkspeedenabled = false function x_walkspeed(key) if (key == "r") then if walkspeedenabled == false then _G.WS = 200; local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid; Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function() Humanoid.WalkSpeed = _G.WS; end) Humanoid.WalkSpeed = _G.WS; walkspeedenabled = true elseif walkspeedenabled == true then _G.WS = 20; local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid; Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function() Humanoid.WalkSpeed = _G.WS; end) Humanoid.WalkSpeed = _G.WS; walkspeedenabled = false end end end walkspeedmouse.KeyDown:connect(x_walkspeed)
 end)
