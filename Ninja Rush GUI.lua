@@ -1851,6 +1851,7 @@ ThingsSec:addToggle("Auto Level Up", nil, function(bool)
 game:GetService("ReplicatedStorage").TGSPlayerLevel_LevelUp:InvokeServer()
         end
 end)
+local ThingsSec = Things:addSection("Use SpeedHack To Kill Faster")
 local Misc = venyx:addPage("Misc", 6252267612)
 local section4 = Misc:addSection("MISC:")
 section4:addButton("Refresh Game", function()
