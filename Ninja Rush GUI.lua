@@ -1839,6 +1839,17 @@ ThingsSec:addToggle("Auto Rebirth", nil, function(bool)
         game:GetService("ReplicatedStorage").TGSPlayerLevel_Rebirth:InvokeServer()
         end
     end)
+    ThingsSec:addToggle("Auto Rebirth Upgrade", nil, function(bool)
+        _G.Toggle4 = (bool and true or false)
+        while _G.Toggle4 and wait() do   
+            game:GetService("ReplicatedStorage").BuyRebirthUpgrade:InvokeServer("XP")
+            game:GetService("ReplicatedStorage").BuyRebirthUpgrade:InvokeServer("Health")
+            game:GetService("ReplicatedStorage").BuyRebirthUpgrade:InvokeServer("AttackPower")
+            game:GetService("ReplicatedStorage").BuyRebirthUpgrade:InvokeServer("SpellPower")
+            game:GetService("ReplicatedStorage").BuyRebirthUpgrade:InvokeServer("Tokens")
+            game:GetService("ReplicatedStorage").BuyRebirthUpgrade:InvokeServer("BaseStats")
+            end
+        end)
 local ThingsSec = Things:addSection("Use SpeedHack To Kill Faster")
 local Misc = venyx:addPage("Misc", 6252267612)
 local section4 = Misc:addSection("MISC:")
