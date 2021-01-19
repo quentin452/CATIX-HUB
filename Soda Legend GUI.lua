@@ -77,6 +77,23 @@ local Fnc = main:CreateCategory("Function")
 				default = false,
 			}
 		)
+		AS:Create(
+			"Toggle",
+			"Auto Click (OP, SPAM BUTTON)",
+			function(state)
+				shared.Toggle_AutoClick_VeryFastOP = state
+				spawn(function()
+					while wait() do
+						if shared.Toggle_AutoClick_VeryFastOP then
+							game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
+						end
+					end
+				end)
+			end,
+			{
+				default = false,
+			}
+		)
 		spawn(function()
 			while wait() do
 				if shared.Toggle_AutoClick_Normal then
@@ -302,8 +319,55 @@ local AB = main:CreateCategory("Auto Buy")
 				default = false,
 			}
 		)
+		ABE:Create(
+			"Toggle",
+			"Auto Buy Egg SUPER FAST (SPAM BUTTON)",
+			function(state)
+				shared.Toggle_AutoBuyEggSF = state
+				spawn(function()
+					while wait() do
+						if shared.Toggle_AutoBuyEggSF then
+								if _G.EggSelected == "Common" then
+									game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Common","Buy1")
+									game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(165.493729, 4.10719824, -158.107574)
+								elseif _G.EggSelected == "Rare" then
+									game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Rare","Buy1")
+									game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(175.665466, 3.56050277, -145.146088)
+								elseif _G.EggSelected == "Party" then
+									game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Party","Buy1")
+									game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(52.8232269, 4.46898174, -81.7460632)	
+								elseif _G.EggSelected == "Winter" then
+									game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Winter","Buy1")
+									game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(55.9273567, -28.8611717, 912.823425)
+								elseif _G.EggSelected == "Lego" then
+									game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Lego","Buy1")
+									game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(58.0512123, -27.9179363, 2979.90088)
+								elseif _G.EggSelected == "Lava" then
+									game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Lava","Buy1")
+									game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(53.441597, -28.861166, 1901.4436)
+								elseif _G.EggSelected == "Candy" then
+									game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Candy","Buy1")
+									game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(57.751358, -28.861166, 4400.5415)
+								elseif _G.EggSelected == "Mushroom" then
+									game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Mushroom","Buy1")
+									game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(56.2021103, -28.861166, 5737.10938)
+								elseif _G.EggSelected == "Robot" then
+									game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Robot","Buy1")
+									game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(60.2214546, -27.9178886, 7184.71094)
+								elseif _G.EggSelected == "Russo" then
+									game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Russo","Buy1")
+									game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-900, -29, 1391)
+								end
+						end
+					end
+				end)
+			end,
+			{
+				default = false,
+			}
+		)
 		spawn(function()
-			while wait(0.5) do
+			while wait() do
 				if shared.Toggle_AutoBuyEgg then
 					if _G.EggSelected == "Common" then
 						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer("Common","Buy1")
@@ -339,7 +403,6 @@ local AB = main:CreateCategory("Auto Buy")
 				end
 			end
 		end)
-
 local Teleport = main:CreateCategory("Teleport")
 	local TS = Teleport:CreateSection("Teleport Stuff")
 		TS:Create(
