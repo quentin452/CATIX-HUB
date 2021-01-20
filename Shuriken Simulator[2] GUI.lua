@@ -1,74 +1,31 @@
 --https://www.roblox.com/games/5770043489/UPDATE-Shuriken-Simulator
 local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))()
-
 local w3 = library:CreateWindow("Shuriken-Simulator GUI")
-
-
---================== Model =======================--
 local w = w3:CreateFolder("Things")
-
-    w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
-
-        w:Dropdown("Choose Shuriken",{
-            "Wood Shuriken",
-            "Stone Shuriken",
-            "Copper Shuriken",
-            "Tin Shuriken",
-            "Silver Shuriken",
-            "Iron Shuriken",
-            "Gold Shuriken",
-            "Crimson Shuriken",
-            "Ultra Shuriken",
-            "Wind Shuriken",
-            "Electro Shuriken",
-            "Fire Shuriken",
-            "Toxic Shuriken",
-            "Corrupted Shuriken",
-            "Infernal Shuriken",
-            "Lightning Shuriken",
-            "Elemental Shuriken",
-            "Mythical Shuriken",
-            "Immortal Shuriken",
-            "Legends Shuriken",
-            "Explosive Legends Shuriken",
-            "Explosive Dragon Shuriken",
-            "Explosive Corrupt Shuriken",
-            "Explosive Hypersonic Shuriken",
-            "Explosive Eternal Shuriken",
-            "Double Lightning Shuriken",
-            "Double Elemental Shuriken",
-            "Double Mythical Shuriken",
-            "Double Immortal Shuriken",
-            "Double Legends Shuriken",
-            "Double Explosive Legends Shuriken",
-            "Supreme Shuriken",
-        },true,function(mob)
-            print(mob)
-            _G.SelectShuriken = mob
-        end)
-    
+    w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111))
         w:Toggle("Auto Click",function(bool)
             shared.toggleAC = bool
         end)
-    
         spawn(function()
             while wait(0.5) do
                 if shared.toggleAC then
-                    if game.Players.LocalPlayer.Backpack:FindFirstChild(_G.SelectShuriken) or game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectShuriken) then
-                        local tool1 = game.Players.LocalPlayer.Backpack:FindFirstChild(_G.SelectShuriken) or game.Players.LocalPlayer.Character:FindFirstChild(_G.SelectShuriken)
-                        game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool1)
+                    while wait() do
+                        local tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool") or game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
+                           game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
+                        if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
+                           game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
+                        end	  
+                        for i,v in pairs (game:GetService("Workspace")[game.Players.LocalPlayer.Name]:GetChildren()) do
                         local args = {
-                            [1] = Vector3.new(0,0,0),
-                            [2] = game:GetService("Players").LocalPlayer.Character[_G.SelectShuriken]
+                         [1] = Vector3.new(0,0,0),
+                         [2] = game:GetService("Players").LocalPlayer.Character[v.Name]
                         }
                         game:GetService("ReplicatedStorage").Resources.RemoteEvents.FireEvent:FireServer(unpack(args))
-                    else
-                        warn("You have chosen the wrong shuriken, please select the correct shuriken")
+                        end
                     end
                 end
             end
         end)
-
     w:Toggle("Auto Sell",function(bool)
         shared.toggle2 = bool
     end) 
@@ -89,7 +46,6 @@ local w = w3:CreateFolder("Things")
             "UPDATE1",
             "UPDATE2",
         }
-    
         for i, v in next, Codes do
             local args = {
                 [1] = v
@@ -114,9 +70,7 @@ local w = w3:CreateFolder("Things")
             end
         end
     end)
-
 local AB = w3:CreateFolder("Auto Buy")
-
     local Shuriken = {
         "Wood Shuriken",
         "Stone Shuriken",
@@ -150,11 +104,9 @@ local AB = w3:CreateFolder("Auto Buy")
         "Double Legends Shuriken",
         "Double Explosive Legends Shuriken",
     }
-    
     AB:Toggle("Auto Buy Shuriken",function(bool)
         shared.toggleABS = bool
     end) 
-
 	spawn(function()
 		while wait(0.5) do
             if shared.toggleABS then
@@ -168,8 +120,7 @@ local AB = w3:CreateFolder("Auto Buy")
             end
         end
     end)
-
-    local Backpacks = {
+  local Backpacks = {
         "Normal Backpack",
         "Large Backpack",
         "Camping Backpack",
@@ -193,11 +144,9 @@ local AB = w3:CreateFolder("Auto Buy")
         "Dragon Backpack",
         "Hydra Backpack",
     }
-    
     AB:Toggle("Auto Buy BackPacks",function(bool)
         shared.toggleABB = bool
     end) 
-
 	spawn(function()
 		while wait(0.5) do
             if shared.toggleABB then
@@ -211,11 +160,7 @@ local AB = w3:CreateFolder("Auto Buy")
             end
         end
     end)
-
---================== Player Settings =======================--
-
 local TP = w3:CreateFolder("Teleport")
-
 	TP:Dropdown("Select Area",{
         "Spawn",
 		"Butterfly Island",
@@ -225,14 +170,11 @@ local TP = w3:CreateFolder("Teleport")
 		"Camel Island",
 		"Giraffe Island",
         "Elephant Island",
-        
     },true,function(mob)
 		SelectArea = mob
 		TpArea()
 		print("Telepored to "..mob)
     end)
-    
-
     function TpArea()
         if SelectArea == "Spawn" then
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1124, 61, -383)
@@ -252,10 +194,7 @@ local TP = w3:CreateFolder("Teleport")
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3168, 83, 2887)
         end
     end
-
---(alot not by me )--
 local PLR = w3:CreateFolder("Player")
-
 	PLR:Slider("Jump Hack",10,250,true,function(value)
 	    game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
 	end)
@@ -263,7 +202,6 @@ local PLR = w3:CreateFolder("Player")
             local walkspeedplayer = game:GetService("Players").LocalPlayer
             local walkspeedmouse = walkspeedplayer:GetMouse()
             local walkspeedenabled = false
-
             function x_walkspeed(key)
                 if (key == "g") then
                     if walkspeedenabled == false then
@@ -287,7 +225,6 @@ local PLR = w3:CreateFolder("Player")
         end
         walkspeedmouse.KeyDown:connect(x_walkspeed)
     end)
-
 	PLR:Button("No Clip (Press V)",function()
 		noclip = false
 		game:GetService('RunService').Stepped:connect(function()
@@ -304,19 +241,14 @@ local PLR = w3:CreateFolder("Player")
 			end
 		end)
 	end)
-
-
-
     PLR:Button("Inf Jump",function()
         game:GetService("UserInputService").JumpRequest:connect(function()
             game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
         end)
     end)
-
     PLR:Button("Crl + Click = TP",function()
         local Plr = game:GetService("Players").LocalPlayer
         local Mouse = Plr:GetMouse()
-
         Mouse.Button1Down:connect(function()
             if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
             if not Mouse.Target then return end
@@ -336,8 +268,6 @@ local PLR = w3:CreateFolder("Player")
             game.Lighting.Bloom.Intensity = 0.1
         end)
     end)
-
-
 	PLR:Button("Btools",function()
         game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
         for index, child in pairs(game:GetService("Workspace"):GetChildren()) do
@@ -399,7 +329,6 @@ local PLR = w3:CreateFolder("Player")
         c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
         c.BinType = Enum.BinType.Grab
     end)
-
 	PLR:Button("ESP UNIVERSAL",function()
         for i,v in pairs(game.Workspace:GetDescendants()) do
             if v.ClassName == "TouchTransmitter" then
@@ -411,7 +340,6 @@ local PLR = w3:CreateFolder("Player")
                 BillboardGui.LightInfluence = 1
                 BillboardGui.Size = UDim2.new(0, 100, 0, 100)
                 BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
-
                 TextLabel.Parent = BillboardGui
                 TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
                 TextLabel.BackgroundTransparency = 1
@@ -422,22 +350,14 @@ local PLR = w3:CreateFolder("Player")
             end
         end
     end)
-
 	PLR:Button("Dark Dex",function()
         loadstring(game:HttpGetAsync("https://pastebin.com/raw/fPP8bZ8Z"))()
     end)
-
-    PLR:Label("Work Whit Paid,KRNL AND SONA Exploit",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
-
+    PLR:Label("Work Whit Paid,KRNL AND SONA Exploit",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) 
 	PLR:Button("Remote Spy Universal GAME",function()
         loadstring(game:HttpGet("https://pastebin.com/raw/BDhSQqUU", true))()
     end)
-
-
---================== Misc =======================--
-
 local MISC = w3:CreateFolder("Misc")
-
 	MISC:Button("Rejoin",function()
 		local TeleportService = game:GetService("TeleportService")
 		local PlaceId = game.PlaceId
@@ -446,47 +366,24 @@ local MISC = w3:CreateFolder("Misc")
 		TeleportService:Teleport(PlaceId, player)
 		end
 	end)
-
-	MISC:GuiSettings()
-
---================== Credits =======================--
-
+MISC:GuiSettings()
 local CS = w3:CreateFolder("Credits")
-
     CS:Button("Script by: I'm A Cat#7202",function()
         setclipboard("I'm A Cat#7202")
     end)
-
     CS:Button("Discord: https://discord.gg/KmHZUpXEmQ",function()
         setclipboard("https://discord.gg/KmHZUpXEmQ")
     end)
-
-CS:Button("Helped by: Altix#3395",function()
+    CS:Button("Helped by: Altix#3395",function()
         setclipboard("Altix#3395")
-end)
-
+    end)
 	CS:DestroyGUI()
-
---================== Autres =======================--
-
-
---| Anti Ban |
-    setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
-    setfflag("DFIntCrashUploadToBacktracePercentage", "0")
-    setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
-    setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
-
-
---| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
     game:service'Players'.LocalPlayer.Idled:connect(function()
         Virtual:CaptureController()
         Virtual:ClickButton2(Vector2.new())
         wait(2)
     end)
-
-
---| Other Anti AFK |
 wait(10)
     game.StarterGui:SetCore(
         "ChatMakeSystemMessage",
@@ -503,16 +400,12 @@ wait(10)
         VirtualUser:ClickButton2(Vector2.new())
     end)
 end
-
---| Anti Chat Logs |
 local CloneFunction = clonefunction
 local CheckCaller = CloneFunction(checkcaller)
 local HookFunction = CloneFunction(hookfunction)
 local LocalPlayer = game.Players.PlayerAdded:wait()
-
 local PostMessage = require(LocalPlayer:WaitForChild("PlayerScripts", 1/0):WaitForChild("ChatScript", 1/0):WaitForChild("ChatMain", 1/0)).MessagePosted
 getgenv().MessageEvent = Instance.new("BindableEvent")
-
 local OldFunctionHook
 local PostMessageHook = function(self, msg)
    if not CheckCaller() and self == PostMessage then
