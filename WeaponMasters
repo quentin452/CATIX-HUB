@@ -1,0 +1,227 @@
+-- Anti AFK
+
+local Virtual = game:service'VirtualUser'
+	game:service'Players'.LocalPlayer.Idled:connect(function()
+	Virtual:CaptureController()
+	Virtual:ClickButton2(Vector2.new())
+	wait(2)
+end)
+
+if game.CoreGui:FindFirstChild("ScreenGui") then
+	game.CoreGui:FindFirstChild("ScreenGui"):Destroy() 
+end
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/!Zypher%20UI.lua"))()
+
+local main = library:CreateMain({projName = "ScreenGui",Resizable = true,MinSize = UDim2.new(0,400,0,400),MaxSize = UDim2.new(0,750,0,500),})
+
+local Home = main:CreateCategory("Home")
+	local Tittle = Home:CreateSection("Weapon Masters!")
+	local H1 = Home:CreateSection("Update logs ("..game:GetService("Players").LocalPlayer.PlayerGui.GameHUD["Game Version"].Text..")")
+		H1:Create(
+			"Textlabel",
+			"+ Game Added"
+		)
+	local H2 = Home:CreateSection("Credits")
+		H2:Create(
+			"Textlabel",
+			"Script by Altix#3395"
+		)
+		H2:Create(
+			"Textlabel",
+			"Tested by I'm A Cat#7202"
+		)
+		H2:Create(
+			"Button",
+			"Copy Discord Link (https://discord.gg/KmHZUpXEmQ)",
+			function()
+			setclipboard("https://discord.gg/KmHZUpXEmQ")
+			end,
+			{
+				animated = true,
+			}
+		)
+
+local Function = main:CreateCategory("Function")
+	local Func = Function:CreateSection("Function Stuff")
+		Func:Create(
+			"Toggle",
+			"Auto Swing",
+			function(state)
+				shared.toggleAS = state
+			end,
+			{
+				default = false,
+			}
+		)
+		Func:Create(
+			"Toggle",
+			"Auto Rebirth",
+			function(state)
+				shared.toggleAR = state
+			end,
+			{
+				default = false,
+			}
+		)
+		Func:Create(
+			"Toggle",
+			"Auto Prestige",
+			function(state)
+				shared.toggleAP = state
+			end,
+			{
+				default = false,
+			}
+		)
+		spawn(function()
+			while wait() do
+				if shared.toggleAS then
+					game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.SwordService.Swing:FireServer()
+				end
+				if shared.toggleAR then
+					game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.Rebirth:InvokeServer()
+				end
+				if shared.toggleAP then
+					game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.PrestigeService.Prestige:InvokeServer()
+				end
+			end
+		end)
+
+	local Stats = Function:CreateSection("Stats Stuff")
+		local StrenghtStats = Stats:Create("TextLabel", "")
+		local RebirthStats = Stats:Create("TextLabel", "")
+		local needstrenghttorebirths = Stats:Create("TextLabel", "")
+		local PrestigetStats = Stats:Create("TextLabel", "")
+		local needrebirthtoprestige = Stats:Create("TextLabel", "")
+		local KillsStats = Stats:Create("TextLabel", "")
+		spawn(function()
+			while wait(0.1) do
+				needstrenghttorebirths:SetText(game:GetService("Players").LocalPlayer.PlayerGui.GameHUD.Holder.Frames.Rebirth.Holder.Cost.StatValue.TextLabel.Text.." needed for rebirth")
+				StrenghtStats:SetText("Strength: "..game:GetService("Players").LocalPlayer.leaderstats.Strength.Value)
+				RebirthStats:SetText("Rebirths: "..game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value)
+				needrebirthtoprestige:SetText(game:GetService("Players").LocalPlayer.PlayerGui.GameHUD.Holder.Frames.Prestige.Holder.Cost.StatValue.TextLabel.Text.." needed for Prestige")
+				for i,v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.GameHUD.Holder.Frames.Stats:GetDescendants()) do
+					if v.ClassName == "TextLabel" then
+						if v.Text == "Prestige" then
+							PrestigetStats:SetText("Prestige: "..v.Parent.StatTextHolder.TextLabel.Text)
+						end
+					end
+				end
+				KillsStats:SetText("Kills: "..game:GetService("Players").LocalPlayer.leaderstats.Kills.Value)
+			end
+		end)
+
+
+local PlayerStuff = main:CreateCategory("Local Player")
+	local PS = PlayerStuff:CreateSection("Player Stuff")
+		PS:Create(
+			"Button",
+			"Camera Max/Min Zoom Distance",
+			function()
+				game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = 99999
+				game:GetService("Players").LocalPlayer.CameraMinZoomDistance = 0
+			end,
+			{
+				animated = true,
+			}
+		)
+		PS:Create(
+			"Button",
+			"Copy Location",
+			function()
+				local function RoundNumber(Number, Divider)
+					Divider = Divider or 1
+					return (math.floor((Number/Divider)+0.5)*Divider)
+				end
+				syn.write_clipboard("game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(" .. tostring(Vector3.new(RoundNumber(game.Players.LocalPlayer.Character.Head.Position.X,1),RoundNumber(game.Players.LocalPlayer.Character.Head.Position.Y-1.5,1),RoundNumber(game.Players.LocalPlayer.Character.Head.Position.Z,1))) .. ")")
+			end,
+			{
+				animated = true,
+			}
+		)
+
+local Misc = main:CreateCategory("Misc")
+		local Miscsection = Misc:CreateSection("Misc Stuff")
+			Miscsection:Create(
+				"Button",
+				"Refresh Game",
+				function()
+					local TeleportService = game:GetService("TeleportService")
+					local PlaceId = game.PlaceId
+					local player = game.Players.LocalPlayer
+					if player then
+					TeleportService:Teleport(PlaceId, player)
+					end
+				end,
+				{
+					animated = true,
+				}
+			)
+			Miscsection:Create(
+				"Button",
+				"Use All Codes",
+				function()
+					local codes = { 
+						"6klikes125",
+						"halloween2020",
+						"trickortreat2020",
+						"5.5klikes100",
+						"update9",
+						"reaper",
+						"3dot5million",
+						"update8",
+						"cave",
+						"sorry2",
+						"sorry1",
+						"update7",
+						"4klikes80",
+						"hammers",
+						"update5",
+						"3klikes70",
+						"1mvisits100",
+						"update3",
+						"2klikes40",
+						"update2",
+						"1.5klikes20",
+						"1klikes20",
+						"update1",
+						"300likes2020",
+						"150likes",
+						"release",
+					}
+					for i,v in pairs(codes) do
+						game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CodesService.Redeem:InvokeServer(v)
+					end
+				end,
+				{
+					animated = true,
+				}
+			)
+		local GuiStuff = Misc:CreateSection("Gui Stuff")
+			GuiStuff:Create(
+				"KeyBind",
+				"Hide Gui", 
+				function(bool)
+					print(bool)
+					local Gui = game:GetService("CoreGui")["ScreenGui"].Motherframe
+					if Gui.Visible then
+						Gui.Visible = false
+					else
+						Gui.Visible = true
+					end
+				end,
+				{
+					default = Enum.KeyCode.RightControl
+				}
+			)
+			GuiStuff:Create(
+				"Button",
+				"Destroy Gui",
+				function()
+					game:GetService("CoreGui")["ScreenGui"]:Destroy()
+				end,
+				{
+					animated = true,
+				}
+			)
