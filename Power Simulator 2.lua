@@ -100,6 +100,7 @@ local Function = main:CreateCategory("Function")
 
 
 local Teleport = main:CreateCategory("Teleport")
+    local TS = Teleport:CreateSection("Teleport Stuff")
             TS:Create(
                 "DropDown",
                 "Choose a Player", 
