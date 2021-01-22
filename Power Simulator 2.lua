@@ -1,14 +1,14 @@
 -- Anti AFK
 
 local Virtual = game:service'VirtualUser'
-    game:service'Players'.LocalPlayer.Idled:connect(function()
-    Virtual:CaptureController()
-    Virtual:ClickButton2(Vector2.new())
-    wait(2)
+	game:service'Players'.LocalPlayer.Idled:connect(function()
+	Virtual:CaptureController()
+	Virtual:ClickButton2(Vector2.new())
+	wait(2)
 end)
 
 if game.CoreGui:FindFirstChild("ScreenGui") then
-    game.CoreGui:FindFirstChild("ScreenGui"):Destroy() 
+	game.CoreGui:FindFirstChild("ScreenGui"):Destroy() 
 end
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/!Zypher%20UI.lua"))()
@@ -40,80 +40,176 @@ local Home = main:CreateCategory("Home")
 			{
 				animated = true,
 			}
-        )
+		)
 
 local Function = main:CreateCategory("Function")
-    local Func = Function:CreateSection("Function Stuff")        
-        Func:Create(
-            "Toggle",
-            "Auto Punch",
-            function(state)
-                shared.toggleAUTOPUNHC = state
-            end,
-            {
-                default = false,
-            }
-        )
-        Func:Create(
-            "Toggle",
-            "Auto Pressup",
-            function(state)
-                shared.toggleAUTOPRESSUP = state
-            end,
-            {
-                default = false,
-            }
-        )
-        Func:Create(
-            "Toggle",
-            "Auto Jumping",
-            function(state)
-                shared.toggleAUTOJUMPING = state
-            end,
-            {
-                default = false,
-            }
-        )
-        Func:Create(
-            "Toggle",
-            "Auto Medidate",
-            function(state)
-                game:GetService("ReplicatedStorage").RemoteEvent:FireServer("Meditate.ChangeState",state)
-            end,
-            {
-                default = false,
-            }
-        )
-        spawn(function()
-            while wait(0.1) do
-                if shared.toggleAUTOPUNHC then
-                    game:GetService("ReplicatedStorage").RemoteEvent:FireServer("Powers.Punch")
-                end
-                if shared.toggleAUTOPRESSUP then
-                    game:GetService("ReplicatedStorage").RemoteEvent:FireServer("Powers.Pressup")
-                end
-                if shared.toggleAUTOJUMPING then
-                    game:GetService("ReplicatedStorage").RemoteEvent:FireServer("Jumping")
-                end
-            end
-        end)
+	local Func = Function:CreateSection("Function Stuff")        
+		Func:Create(
+			"Toggle",
+			"Auto Punch",
+			function(state)
+				shared.toggleAUTOPUNHC = state
+			end,
+			{
+				default = false,
+			}
+		)
+		Func:Create(
+			"Toggle",
+			"Auto Swiftness",
+			function(state)
+				shared.toggleAUTOSWIFTNESS = state
+				if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+					game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Anchored = state
+				end
+				if state then
+					Virtual:SetKeyDown("w")
+				else
+					Virtual:SetKeyUp("w")
+				end
+			end,
+			{
+				default = false,
+			}
+		)
+		Func:Create(
+			"Toggle",
+			"Auto Pressup",
+			function(state)
+				shared.toggleAUTOPRESSUP = state
+			end,
+			{
+				default = false,
+			}
+		)
+		Func:Create(
+			"Toggle",
+			"Auto Jumping",
+			function(state)
+				shared.toggleAUTOJUMPING = state
+			end,
+			{
+				default = false,
+			}
+		)
+		Func:Create(
+			"Toggle",
+			"Auto Medidate",
+			function(state)
+				if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
+					game:GetService("ReplicatedStorage").RemoteEvent:FireServer("Meditate.ChangeState",state)
+				end
+			end,
+			{
+				default = false,
+			}
+		)
+		spawn(function()
+			while wait(0.1) do
+				if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
+					if shared.toggleAUTOPUNHC then
+						game:GetService("ReplicatedStorage").RemoteEvent:FireServer("Powers.Punch")
+					end
+					if shared.toggleAUTOSWIFTNESS then
+						Virtual:SetKeyDown("w")
+						wait(1)
+						Virtual:SetKeyUp("w")
+					end
+					if shared.toggleAUTOPRESSUP then
+						game:GetService("ReplicatedStorage").RemoteEvent:FireServer("Powers.Pressup")
+					end
+					if shared.toggleAUTOJUMPING then
+						game:GetService("ReplicatedStorage").RemoteEvent:FireServer("Jumping")
+					end
+				end
+			end
+		end)
 
-
+local QuestModule = main:CreateCategory("QuestModule")
+	local QuestStuff = QuestModule:CreateSection("Quest Stuff")
+		QuestStuff:Create(
+			"Button",
+			"Collect ShildFragments",
+			function()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1069, 68, 286)
+			end,
+			{
+				animated = true,
+			}
+		)
+		QuestStuff:Create(
+			"Button",
+			"Talk to Cleetus",
+			function()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-945, 40, -79)
+			end,
+			{
+				animated = true,
+			}
+		)
+		QuestStuff:Create(
+			"Button",
+			"Talk to Ecoded",
+			function()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-952, 43, -193)
+			end,
+			{
+				animated = true,
+			}
+		)
+		QuestStuff:Create(
+			"Button",
+			"Go the park statue near the warehouse",
+			function()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-967, 55, 384)
+			end,
+			{
+				animated = true,
+			}
+		)
+		QuestStuff:Create(
+			"Button",
+			"Go to Locasta",
+			function()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-587, 42, 87)
+			end,
+			{
+				animated = true,
+			}
+		)
 local Teleport = main:CreateCategory("Teleport")
-    local TS = Teleport:CreateSection("Teleport Stuff")
-            TS:Create(
-                "DropDown",
-                "Choose a Player", 
-                function(current)
-                    print("Selected to:", current)
-                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[current].Character.HumanoidRootPart.CFrame
-                end,
-                {
-                    playerlist = true,
-                    default = "Choose a Player",
-                    search = true
-                }
-            )
+	local TS = Teleport:CreateSection("Teleport Stuff")
+		TS:Create(
+			"DropDown",
+			"Choose a Location", 
+			function(current)
+				print("Selected to:", current)
+				if current == "Spawn" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-830, 55, 433)
+				end
+			end,
+			{
+				options = {
+					"Spawn"
+				},
+				-- Optional
+				default = "Choose a Location",
+				search = false
+			}
+		)
+		TS:Create(
+			"DropDown",
+			"Choose a Player", 
+			function(current)
+				print("Selected to:", current)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[current].Character.HumanoidRootPart.CFrame
+			end,
+			{
+				playerlist = true,
+				default = "Choose a Player",
+				search = true
+			}
+		)
 
 local PlayerStuff = main:CreateCategory("Local Player")
 	local PS = PlayerStuff:CreateSection("Player Stuff")
@@ -222,89 +318,89 @@ local PlayerStuff = main:CreateCategory("Local Player")
 			{
 				animated = true,
 			}
-        )
-        PS:Create(
-            "Button",
-            "Copy Location",
-            function()
-                local function RoundNumber(Number, Divider)
-                    Divider = Divider or 1
-                    return (math.floor((Number/Divider)+0.5)*Divider)
-                end
-                syn.write_clipboard("game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(" .. tostring(Vector3.new(RoundNumber(game.Players.LocalPlayer.Character.Head.Position.X,1),RoundNumber(game.Players.LocalPlayer.Character.Head.Position.Y-1.5,1),RoundNumber(game.Players.LocalPlayer.Character.Head.Position.Z,1))) .. ")")
-            end,
-            {
-                animated = true,
-            }
-        )
+		)
+		PS:Create(
+			"Button",
+			"Copy Location",
+			function()
+				local function RoundNumber(Number, Divider)
+					Divider = Divider or 1
+					return (math.floor((Number/Divider)+0.5)*Divider)
+				end
+				syn.write_clipboard("game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(" .. tostring(Vector3.new(RoundNumber(game.Players.LocalPlayer.Character.Head.Position.X,1),RoundNumber(game.Players.LocalPlayer.Character.Head.Position.Y-1.5,1),RoundNumber(game.Players.LocalPlayer.Character.Head.Position.Z,1))) .. ")")
+			end,
+			{
+				animated = true,
+			}
+		)
 
 local Misc = main:CreateCategory("Misc")
-        local Miscsection = Misc:CreateSection("Misc Stuff")
-            Miscsection:Create(
-                "Button",
-                "Refresh Game",
-                function()
-                    local TeleportService = game:GetService("TeleportService")
-                    local PlaceId = game.PlaceId
-                    local player = game.Players.LocalPlayer
-                    if player then
-                    TeleportService:Teleport(PlaceId, player)
-                    end
-                end,
-                {
-                    animated = true,
-                }
-            )
-            Miscsection:Create(
-                "Button",
-                "Use All Codes",
-                function()
-                    local codes = { 
-                        "RELEASE",
-                    }
-                    for i,v in pairs(codes) do
-                        game:GetService("ReplicatedStorage").Remotes.RedeemCode:InvokeServer(v)
-                    end
-                end,
-                {
-                    animated = true,
-                }
-            )
-            Miscsection:Create(
-                "Button",
-                "Claim Daily Reward",
-                function()
-                    game:GetService("ReplicatedStorage").RemoteEvent:FireServer("Rewards.Daily")
-                    game:GetService("ReplicatedStorage").RemoteEvent:FireServer("Rewards.Group")
-                end,
-                {
-                    animated = true,
-                }
-            )
-        local GuiStuff = Misc:CreateSection("Gui Stuff")
-            GuiStuff:Create(
-                "KeyBind",
-                "Hide Gui", 
-                function(bool)
-                    print(bool)
-                    local Gui = game:GetService("CoreGui")["ScreenGui"].Motherframe
-                    if Gui.Visible then
-                        Gui.Visible = false
-                    else
-                        Gui.Visible = true
-                    end
-                end,
-                {
-                    default = Enum.KeyCode.RightControl
-                }
-            )
-            GuiStuff:Create(
-                "Button",
-                "Destroy Gui",
-                function()
-                    game:GetService("CoreGui")["ScreenGui"]:Destroy()
-                end,
-                {
-                    animated = true,
-                }
-            )
+		local Miscsection = Misc:CreateSection("Misc Stuff")
+			Miscsection:Create(
+				"Button",
+				"Refresh Game",
+				function()
+					local TeleportService = game:GetService("TeleportService")
+					local PlaceId = game.PlaceId
+					local player = game.Players.LocalPlayer
+					if player then
+					TeleportService:Teleport(PlaceId, player)
+					end
+				end,
+				{
+					animated = true,
+				}
+			)
+			Miscsection:Create(
+				"Button",
+				"Use All Codes",
+				function()
+					local codes = { 
+						"RELEASE",
+					}
+					for i,v in pairs(codes) do
+						game:GetService("ReplicatedStorage").Remotes.RedeemCode:InvokeServer(v)
+					end
+				end,
+				{
+					animated = true,
+				}
+			)
+			Miscsection:Create(
+				"Button",
+				"Claim Daily Reward",
+				function()
+					game:GetService("ReplicatedStorage").RemoteEvent:FireServer("Rewards.Daily")
+					game:GetService("ReplicatedStorage").RemoteEvent:FireServer("Rewards.Group")
+				end,
+				{
+					animated = true,
+				}
+			)
+		local GuiStuff = Misc:CreateSection("Gui Stuff")
+			GuiStuff:Create(
+				"KeyBind",
+				"Hide Gui", 
+				function(bool)
+					print(bool)
+					local Gui = game:GetService("CoreGui")["ScreenGui"].Motherframe
+					if Gui.Visible then
+						Gui.Visible = false
+					else
+						Gui.Visible = true
+					end
+				end,
+				{
+					default = Enum.KeyCode.RightControl
+				}
+			)
+			GuiStuff:Create(
+				"Button",
+				"Destroy Gui",
+				function()
+					game:GetService("CoreGui")["ScreenGui"]:Destroy()
+				end,
+				{
+					animated = true,
+				}
+			)
