@@ -74,20 +74,16 @@ local Function = main:CreateCategory("Function")
 				default = false,
 			}
 		)
-		spawn(function()
-			while wait() do
-				if shared.toggleAS then
-					game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.SwordService.Swing:FireServer()
-				end
-				if shared.toggleAR then
-					game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.Rebirth:InvokeServer()
-				end
-				if shared.toggleAP then
-					game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.PrestigeService.Prestige:InvokeServer()
-				end
-			end
-		end)
-
+			Func:Create(
+			"Button",
+			"Desable Message Pop Ups",
+			function(state)
+			    game:GetService("Players").LocalPlayer.PlayerGui.GameHUD.Messages.Visible = false
+			end,
+			{
+				default = false,
+			}
+		)
 	local Stats = Function:CreateSection("Stats Stuff")
 		local StrenghtStats = Stats:Create("TextLabel", "")
 		local RebirthStats = Stats:Create("TextLabel", "")
