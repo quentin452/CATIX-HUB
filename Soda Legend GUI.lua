@@ -281,58 +281,66 @@ local EventFnc = main:CreateCategory("Event Function")
 		end)
 
 
-		local Eggs = main:CreateCategory("Eggs")
-		local EggsS = Eggs:CreateSection("Eggs Stuff")
-	  local DropDownName = EggsS:Create(
-				 "DropDown",
-				 "Select Eggs", 
-				 function(current)
-				   _G.EggsNtm = current
-				 end,
-				 {
-					 options = {
-						 "",
-					 },
-					 -- Optional
-					 default = "Select Eggs",
-					 search = false
-				 }
-			 )
-			 local tablename = {}
-			 spawn(function()
-				 while wait(1) do 
-					 tablename = {}
-					 for i,v in pairs(game:GetService("Workspace").Eggs:GetChildren()) do 
-						 table.insert(tablename, v.Name)
-					 end
-					 DropDownName:SetDropDownList({options = tablename})
-					 if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
-	 
-				 end end
-			 end)
-	 
-			  EggsS:Create(
-		 "Toggle",
-		 "Auto Buy Eggs",
-		 function(state)
-			 shared.toggle2 = state
-		 end,
-		 {
-			 default = false,
-		 }
-	 )
-	 spawn(function()
-		 while wait() do
-			 if shared.toggle2 then
-			 if _G.EggsNtm ~= nil then
-				game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer(_G.EggsNtm,"Buy1") 
-				local me = game.Players.LocalPlayer.Character
-	 local pbosd = game:GetService("Workspace").Eggs[_G.EggsNtm].View
-	 me.HumanoidRootPart.CFrame = pbosd.CFrame + Vector3.new(0,0,0)
-	 end
-			 end
-			 end
-	 end)
+local Eggs = main:CreateCategory("Eggs")
+	local EggsS = Eggs:CreateSection("Eggs Stuff")
+		EggUpdated = {}
+		for i,v in pairs(game:GetService("Workspace").Eggs:GetChildren()) do 
+			table.insert(EggUpdated, v.Name)
+		end
+		local DropDownName = EggsS:Create(
+			"DropDown",
+			"Select Eggs", 
+			function(current)
+				_G.EggsNtm = current
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Eggs[current].View.CFrame
+			end,
+			{
+				options = EggUpdated,
+				-- Optional
+				default = "Select Eggs",
+				search = false
+			}
+		)
+		EggsS:Create(
+			"Toggle",
+			"Auto Buy Eggs",
+			function(state)
+				shared.toggle2 = state
+			end,
+			{
+				default = false,
+			}
+		)
+		EggsS:Create(
+			"Toggle",
+			"Auto Buy Egg SUPER FAST 1k openned/s",
+			function(state)
+				shared.toggle3 = state
+			end,
+			{
+				default = false,
+			}
+		)
+		spawn(function()
+			while wait() do
+				if shared.toggle2 then
+					if _G.EggsNtm ~= nil then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer(_G.EggsNtm,"Buy1") 
+					end
+				end
+			end
+		end)
+		for i = 1, 1000 do
+			spawn(function()
+				while wait() do
+					if shared.toggle3 then
+						if _G.EggsNtm ~= nil then
+							game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer(_G.EggsNtm,"Buy1")
+						end
+					end
+				end
+			end)
+		end
 local Teleport = main:CreateCategory("Teleport")
 	local TS = Teleport:CreateSection("Teleport Stuff")
 		TS:Create(
@@ -491,58 +499,58 @@ local PlayerStuff = main:CreateCategory("Player Stuff")
 		)
 
 local Misc = main:CreateCategory("Misc")
-    local Miscsection = Misc:CreateSection("Misc Stuff")
-            Miscsection:Create(
-                "Button",
-                "Refresh Game",
-                function()
-                    local TeleportService = game:GetService("TeleportService")
-                    local PlaceId = game.PlaceId
-                    local player = game.Players.LocalPlayer
-                    if player then
-                    TeleportService:Teleport(PlaceId, player)
-                    end
-                end,
-                {
-                    animated = true,
-                }
-            )
-            Miscsection:Create(
-                "Button",
-                "Use All Codes",
-                function()
+	local Miscsection = Misc:CreateSection("Misc Stuff")
+			Miscsection:Create(
+				"Button",
+				"Refresh Game",
+				function()
+					local TeleportService = game:GetService("TeleportService")
+					local PlaceId = game.PlaceId
+					local player = game.Players.LocalPlayer
+					if player then
+					TeleportService:Teleport(PlaceId, player)
+					end
+				end,
+				{
+					animated = true,
+				}
+			)
+			Miscsection:Create(
+				"Button",
+				"Use All Codes",
+				function()
 					for i,v in pairs(game:GetService("Players").LocalPlayer.Codes:GetChildren()) do
 						game:GetService("ReplicatedStorage").GetCode:FireServer(v.Name)
 					end
-                end,
-                {
-                    animated = true,
-                }
-            )
-    local GuiStuff = Misc:CreateSection("Gui Stuff")
-            GuiStuff:Create(
-                "KeyBind",
-                "Hide Gui", 
-                function(bool)
-                    print(bool)
-                    local Gui = game:GetService("CoreGui")["ScreenGui"].Motherframe
-                    if Gui.Visible then
-                        Gui.Visible = false
-                    else
-                        Gui.Visible = true
-                    end
-                end,
-                {
-                    default = Enum.KeyCode.RightControl
-                }
-            )
-            GuiStuff:Create(
-                "Button",
-                "Destroy Gui",
-                function()
-                    game:GetService("CoreGui")["ScreenGui"]:Destroy()
-                end,
-                {
-                    animated = true,
-                }
-            )
+				end,
+				{
+					animated = true,
+				}
+			)
+	local GuiStuff = Misc:CreateSection("Gui Stuff")
+			GuiStuff:Create(
+				"KeyBind",
+				"Hide Gui", 
+				function(bool)
+					print(bool)
+					local Gui = game:GetService("CoreGui")["ScreenGui"].Motherframe
+					if Gui.Visible then
+						Gui.Visible = false
+					else
+						Gui.Visible = true
+					end
+				end,
+				{
+					default = Enum.KeyCode.RightControl
+				}
+			)
+			GuiStuff:Create(
+				"Button",
+				"Destroy Gui",
+				function()
+					game:GetService("CoreGui")["ScreenGui"]:Destroy()
+				end,
+				{
+					animated = true,
+				}
+			)
