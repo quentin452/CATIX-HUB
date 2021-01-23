@@ -6,7 +6,7 @@ Virtual:CaptureController()
 Virtual:ClickButton2(Vector2.new())
 wait(2)
 end)
-
+local rs = game:GetService("RunService").RenderStepped
 local library = loadstring(game:HttpGet("https://pastebin.com/raw/H5u3dYwA"))()
 
 local main = library:CreateMain({
@@ -79,16 +79,10 @@ local Fnc = main:CreateCategory("Function")
 		)
 		AS:Create(
 			"Toggle",
-			"Auto Click (OP, SPAM BUTTON)",
+			"Auto Click OH SHIT (+10k click/s)",
 			function(state)
-				shared.Toggle_AutoClick_VeryFastOP = state
-				spawn(function()
-					while wait() do
-						if shared.Toggle_AutoClick_VeryFastOP then
-							game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-						end
-					end
-				end)
+				print("Current state:", state)
+				shared.Toggle_AutoClick_OHSHIT = state
 			end,
 			{
 				default = false,
@@ -99,18 +93,35 @@ local Fnc = main:CreateCategory("Function")
 				if shared.Toggle_AutoClick_Normal then
 					game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
 				end
-				if shared.Toggle_AutoClick_Fast then
-					for i = 1,3 do
-						game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-					end
-				end
-				if shared.Toggle_AutoClick_VeryFast then
-					for i = 1,10 do
-						game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
-					end
-				end
 			end
 		end)
+		for i = 1,3 do
+			spawn(function()
+				while rs:wait() do
+					if shared.Toggle_AutoClick_Fast then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
+					end
+				end
+			end)
+		end
+		for i = 1,10 do
+			spawn(function()
+				while rs:wait() do
+					if shared.Toggle_AutoClick_VeryFast then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
+					end
+				end
+			end)
+		end
+		for i = 1,1000 do
+			spawn(function()
+				while rs:wait() do
+					if shared.Toggle_AutoClick_OHSHIT then
+						game:GetService("ReplicatedStorage").GameClient.Events.RemoteEvent.PlayerClicked:FireServer(game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ClickButton.ClickFireFunction)
+					end
+				end
+			end)
+		end
 		AS:Create(
 			"Toggle",
 			"Auto Sell x10",
@@ -122,8 +133,26 @@ local Fnc = main:CreateCategory("Function")
 				default = false,
 			}
 		)
+		AS:Create(
+			"Toggle",
+			"Toggle Popups",
+			function(state)
+				if state then
+					game:GetService("Players").LocalPlayer.PlayerGui.ClickPopup.Enabled = false
+				else
+					game:GetService("Players").LocalPlayer.PlayerGui.ClickPopup.Enabled = true
+				end
+			end,
+			{
+				default = false,
+			}
+		)
+		AS:Create(
+			"Textlabel",
+			"If you don't have a good pc avoid the last one auto clicker"
+		)
 		spawn(function()
-			while wait(0.5) do
+			while wait() do
 				if shared.Toggle_AutoSell then
 					local sell = game:GetService("Workspace").Russo.Sell.HIT
 					local me = game.Players.LocalPlayer.Character.HumanoidRootPart
@@ -313,7 +342,7 @@ local Eggs = main:CreateCategory("Eggs")
 		)
 		EggsS:Create(
 			"Toggle",
-			"Auto Buy Egg SUPER FAST 1k openned/s",
+			"Auto Buy Egg SUPER FAST (~1k openned/s)",
 			function(state)
 				shared.toggle3 = state
 			end,
@@ -321,8 +350,18 @@ local Eggs = main:CreateCategory("Eggs")
 				default = false,
 			}
 		)
+		EggsS:Create(
+			"Toggle",
+			"Auto Buy Egg OH SHIT (~5k openned/s)",
+			function(state)
+				shared.toggle4 = state
+			end,
+			{
+				default = false,
+			}
+		)
 		spawn(function()
-			while wait() do
+			while rs:wait() do
 				if shared.toggle2 then
 					if _G.EggsNtm ~= nil then
 						game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer(_G.EggsNtm,"Buy1") 
@@ -330,10 +369,21 @@ local Eggs = main:CreateCategory("Eggs")
 				end
 			end
 		end)
+		for i = 1, 100 do
+			spawn(function()
+				while rs:wait() do
+					if shared.toggle3 then
+						if _G.EggsNtm ~= nil then
+							game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer(_G.EggsNtm,"Buy1")
+						end
+					end
+				end
+			end)
+		end
 		for i = 1, 1000 do
 			spawn(function()
-				while wait() do
-					if shared.toggle3 then
+				while rs:wait() do
+					if shared.toggle4 then
 						if _G.EggsNtm ~= nil then
 							game:GetService("ReplicatedStorage").GameClient.Events.RemoteFunction.BuyEgg:InvokeServer(_G.EggsNtm,"Buy1")
 						end
@@ -554,4 +604,3 @@ local Misc = main:CreateCategory("Misc")
 					animated = true,
 				}
 			)
-
