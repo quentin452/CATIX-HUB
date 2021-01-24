@@ -142,33 +142,34 @@ local PD = w:CreateFolder("OMG CLICK HERE")
 	end)
 
 	PD:Label("Once you have clicked on the ''Combine All pets'' button, your pets will be combined but will not be deleted, it is a kind of duplication",Color3.fromRGB(38,38,38),Color3.fromRGB(200,0,0))
-
 	PD:Button("Enchant all Pickaxe",function()
-		for i,v in pairs (game:GetService("Players").LocalPlayer.PlayerGui.UI.Prompts.Inventory.PickaxeScrollingFrame:GetChildren()) do
-		    A1 = v.Name
-		end
-		for i,c in pairs (game:GetService("Players").LocalPlayer.PlayerGui.UI.Prompts.Inventory.PickaxeScrollingFrame:GetChildren()) do
-		    A2 = c.Name
-		end
-		for i,vd in pairs (game:GetService("Players").LocalPlayer.PlayerGui.UI.Prompts.Inventory.PickaxeScrollingFrame:GetChildren()) do
-		    A3 = vd.Name
-		end
-
-		local args = {
-		    [1] = {
-		    ["PickaxeIds"] = {
-		        [1] = A1,
-		        [2] = A2,
-		        [3] = A3,
-		        },
-		    ["RequestType"] = "Enchant",
-		    },
-		}
-		game:GetService("ReplicatedStorage").Functions.EnchantFunction:InvokeServer(unpack(args))
+		for i = 1,math.huge do
+			for i,v in pairs (game:GetService("Players").LocalPlayer.PlayerGui.UI.Prompts.Inventory.PickaxeScrollingFrame:GetChildren()) do
+					A1 = v.Name
+				end
+				for i,c in pairs (game:GetService("Players").LocalPlayer.PlayerGui.UI.Prompts.Inventory.PickaxeScrollingFrame:GetChildren()) do
+					A2 = c.Name
+				end
+				for i,vd in pairs (game:GetService("Players").LocalPlayer.PlayerGui.UI.Prompts.Inventory.PickaxeScrollingFrame:GetChildren()) do
+					A3 = vd.Name
+				end
+		
+				local args = {
+					[1] = {
+					["PickaxeIds"] = {
+						[1] = A1,
+						[2] = A2,
+						[3] = A3,
+						},
+					["RequestType"] = "Enchant",
+					},
+				}
+				game:GetService("ReplicatedStorage").Functions.EnchantFunction:InvokeServer(unpack(args))
+			end
 	end)
 
 	PD:Label("once after clicking on ''Enchant All Pickaxe'' there is an almost sure chance that the pickaxes are endlessly enchanted",Color3.fromRGB(38,38,38),Color3.fromRGB(200,0,0))
-
+	PD:Label("Click One Time On (Enchant All Pickaxe)",Color3.fromRGB(38,38,38),Color3.fromRGB(200,0,0))
 local TP = w:CreateFolder("Teleport")
 
 	TP:Dropdown("Select Area",{
