@@ -184,9 +184,9 @@ local args = {
 game:GetService("ReplicatedStorage").Network["Port1"]:FireServer(unpack(args))
 	end
 			if shared.toggle13 then	
-				wait(1)
+				wait(5)
 game:GetService("ReplicatedStorage").Network.Port1:FireServer("Purchase","BossVitality")
-                wait(1)
+                wait(5)
 game:GetService("ReplicatedStorage").Network.Port1:FireServer("Purchase","BossPower")
 			end
 		end
