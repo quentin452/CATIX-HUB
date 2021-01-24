@@ -1,3 +1,30 @@
+-- Anti AFK
+local Virtual = game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+Virtual:CaptureController()
+Virtual:ClickButton2(Vector2.new())
+wait(2)
+end)
+--| Anti KICK |
+local mt = getrawmetatable(game)
+local old = mt.__namecall
+local protect = newcclosure or protect_function
+
+if not protect then
+protect = function(f) return f end
+end
+
+setreadonly(mt, false)
+mt.__namecall = protect(function(self, ...)
+local method = getnamecallmethod()
+if method == "Kick" then
+wait(9e9)
+return
+end
+return old(self, ...)
+end)
+hookfunction(game:GetService("Players").LocalPlayer.Kick,protect(function() wait(9e9)
+end))
 local player = game.Players.LocalPlayer local mouse = player:GetMouse() local input = game:GetService("UserInputService") local run = game:GetService("RunService") local tween = game:GetService("TweenService") local tweeninfo = TweenInfo.new local utility = {} local objects = {} do	function utility:Create(instance, properties, children)
 		local object = Instance.new(instance)
 		for i, v in pairs(properties or {}) do
@@ -1930,30 +1957,3 @@ local EggsS = PageEgg:addSection("Auto Buy Eggs:")
                 end
             end)
 venyx:SelectPage(venyx.pages[1], true)
--- Anti AFK
-local Virtual = game:service'VirtualUser'
-game:service'Players'.LocalPlayer.Idled:connect(function()
-Virtual:CaptureController()
-Virtual:ClickButton2(Vector2.new())
-wait(2)
-end)
---| Anti KICK |
-local mt = getrawmetatable(game)
-local old = mt.__namecall
-local protect = newcclosure or protect_function
-
-if not protect then
-protect = function(f) return f end
-end
-
-setreadonly(mt, false)
-mt.__namecall = protect(function(self, ...)
-local method = getnamecallmethod()
-if method == "Kick" then
-wait(9e9)
-return
-end
-return old(self, ...)
-end)
-hookfunction(game:GetService("Players").LocalPlayer.Kick,protect(function() wait(9e9)
-end))
