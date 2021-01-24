@@ -2,6 +2,7 @@
 local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))()
 
 local w3 = library:CreateWindow("Simulateur de légende muscler GUI")
+local rs = game:GetService("RunService").RenderStepped
 
 
 --================== Auto Farm =======================--
@@ -31,7 +32,7 @@ local b = w3:CreateFolder("Auto Farm")
 		b:Toggle("Auto Buy Strenghts",function(bool)
 		shared.toggle8 = bool
 		end)
-		b:Toggle("Auto Buy Endurances",function(bool)
+		b:Toggle("Auto Buy Endurance",function(bool)
 		shared.toggle9 = bool
 		end)
 		b:Toggle("Auto Buy Ranks",function(bool)
@@ -49,7 +50,7 @@ local b = w3:CreateFolder("Auto Farm")
 		
 		
 	spawn(function()
-		while wait() do
+		while rs:wait() do
 		       if shared.toggle1 then
 			local args = {
     [1] = "Click",
@@ -72,6 +73,7 @@ if shared.toggle4 then
 				game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
 			end	
 					if shared.toggle5 then
+						wait(2)
 			game:GetService("ReplicatedStorage").Network.Port1:FireServer("Purchase","Ascension")
 			
 					end   
@@ -91,6 +93,7 @@ game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
 game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
 end
 	if shared.toggle8 then
+		wait(1)
 local args = {
     [1] = "PurchaseAll",
     [2] = "Strength",
@@ -99,6 +102,7 @@ local args = {
 game:GetService("ReplicatedStorage").Network["Port1"]:FireServer(unpack(args))
 end
 	if shared.toggle9 then
+		wait(1)
 local args = {
     [1] = "PurchaseAll",
     [2] = "Endurance",
@@ -107,6 +111,7 @@ local args = {
 game:GetService("ReplicatedStorage").Network["Port1"]:FireServer(unpack(args))
 end
 	if shared.toggle10 then
+		wait(1)
 game:GetService("ReplicatedStorage").Network.Port1:FireServer("Purchase","Rank")
 	end
 			if shared.toggle11 then
@@ -179,95 +184,23 @@ local args = {
 game:GetService("ReplicatedStorage").Network["Port1"]:FireServer(unpack(args))
 	end
 			if shared.toggle13 then	
+				wait(1)
 game:GetService("ReplicatedStorage").Network.Port1:FireServer("Purchase","BossVitality")
-
+                wait(1)
 game:GetService("ReplicatedStorage").Network.Port1:FireServer("Purchase","BossPower")
-
 			end
 		end
 	end)
 
 
 b:Button("Get Gamepass",function()
-local gamepass1 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.InfiniteEnergy
-local gamepass2 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.DoubleEnergy
-local gamepass3 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.DoubleHealth
-local gamepass4 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.DoubleSpeed
-local gamepass5 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.ZoneUnlock
-local gamepass6 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.DualWeight
-local gamepass7 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.DoubleCoin
-local gamepass8 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.Radio
-local gamepass9 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.VIP
-local gamepass10 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.DoubleDamage
-local gamepass11 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.AutoBuy
-local gamepass12 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.AutoRank
-local gamepass13 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.AutoClick
-local gamepass14 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.FastLifting
-local gamepass15 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.PetEquip5
-local gamepass16 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.PetStorage250
-local gamepass17 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.PetStorage500
-local gamepass18 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.TripleCrate
-local gamepass19 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.Souls5
-local gamepass20 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.Luck
-local gamepass21 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.FastCrate
-wait(0)
-gamepass1.Value = true
-wait(0)
-gamepass2.Value = true
-wait(0)
-gamepass3.Value = true
-wait(0)
-gamepass4.Value = true
-wait(0)
-gamepass5.Value = true
-wait(0)
-gamepass6.Value = true
-wait(0)
-gamepass7.Value = true
-wait(0)
-gamepass8.Value = true
-wait(0)
-gamepass9.Value = true
-wait(0)
-gamepass10.Value = true
-wait(0)
-gamepass11.Value = true
-wait(0)
-gamepass12.Value = true
-wait(0)
-gamepass13.Value = true
-wait(0)
-gamepass14.Value = true
-wait(0)
-gamepass15.Value = true
-wait(0)
-gamepass16.Value = true
-wait(0)
-gamepass17.Value = true
-wait(0)
-gamepass18.Value = true
-wait(0)
-gamepass19.Value = true
-wait(0)
-gamepass20.Value = true
-wait(0)
-gamepass21.Value = true
+	for i,v in pairs(game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass:GetChildren()) do
+		v.Value = true
+	end
 end)
-
-
-
-
-
-
-
-
 --================== Player Settings =======================--
-
 --(alot not by me )--
 local PLR = w3:CreateFolder("Player")
-
-	
-	
 	PLR:Slider("Jump Hack",10,250,true,function(value)
 	    game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
 	end)
@@ -281,7 +214,7 @@ local walkspeedenabled = false
 function x_walkspeed(key)
 if (key == "r") then
 if walkspeedenabled == false then
-_G.WS = 200;
+_G.WS = 1000;
 local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
 Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
 Humanoid.WalkSpeed = _G.WS;
@@ -720,7 +653,7 @@ local d = w2:CreateFolder("Eggs")
 		shared.eggs1 = bool
 	end)
 		spawn(function()
-		while wait() do
+		while rs:wait() do
 		if shared.eggs1 then
 				local args = {
 					[1] = "Evolve",
@@ -754,7 +687,7 @@ game:GetService("ReplicatedStorage").Network.Port1:FireServer(unpack(args))
 	end)
 
 spawn(function()
-	while wait() do
+	while rs:wait() do
 		if shared.toggleAutoBuyEgg then
 			if _G.EggSelected == "Tier1Eggs" then
 				local args = {
@@ -822,108 +755,86 @@ end)
 			end)
 
 	spawn(function()
-		while wait() do
+		while rs:wait() do
 		       if shared.Boss1 then
-		           
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(3.23107147, -12.7165165, 819.350891)
-wait(0.3)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-9.11474419, -12.7165165, 535.076782)
-wait(0.3)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(4.57413244, -12.7165146, 1113.02734)
-wait(0.3)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(5.19087315, -12.7165146, 1407.09045)
-wait(0.3)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3.58674169, -12.7165165, 1730.36902)
-wait(0.3)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-0.797964573, -12.7520237, 2155.17554)
-wait(0.3)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(13.1697464, -12.7165165, 2681.2063)
-wait(0.3)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(12.7092981, -12.7165108, 2989.81226)
-wait(0.3)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(7.71046686, -12.7165165, 3264.04468)
-wait(0.3)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(8.79852486, -12.7165165, 3578.06665)
-wait(0.3)
-
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(26.0901527, -12.7165585, 3885.59106)
-wait(0.3)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(12.1697702, -12.7165146, 4162.25684)
-wait(0.3)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(12.2964563, -12.7520237, 4810.53955)
-wait(0.3)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(7.54875755, -12.7165146, 5251.68311)
-wait(0.3)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(11.0293522, -12.7165108, 5703.66064)
-wait(0.3)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-8.79776955, -12.7165146, 6206.69727)
-wait(0.3)
-		           
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(3.23107147, -12.7165165, 819.350891)
-wait(0.3)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-9.11474419, -12.7165165, 535.076782)
-wait(0.3)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(4.57413244, -12.7165146, 1113.02734)
-wait(0.3)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(5.19087315, -12.7165146, 1407.09045)
-wait(0.3)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3.58674169, -12.7165165, 1730.36902)
-wait(0.3)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-0.797964573, -12.7520237, 2155.17554)
-wait(0.3)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(13.1697464, -12.7165165, 2681.2063)
-wait(0.3)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(12.7092981, -12.7165108, 2989.81226)
-wait(0.3)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(7.71046686, -12.7165165, 3264.04468)
-wait(0.3)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(8.79852486, -12.7165165, 3578.06665)
-wait(0.3)
-
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(26.0901527, -12.7165585, 3885.59106)
-wait(0.3)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(12.1697702, -12.7165146, 4162.25684)
-wait(0.3)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(12.2964563, -12.7520237, 4810.53955)
-wait(0.3)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(7.54875755, -12.7165146, 5251.68311)
-wait(0.3)
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(11.0293522, -12.7165108, 5703.66064)
-wait(0.3)
-
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-8.79776955, -12.7165146, 6206.69727)
-wait(0.3)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2.64147854, -12.7165136, 528.579773)
+				wait(0.3)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(21.0237484, -12.7165136, 827.92395)
+				wait(0.3)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(28.5304337, -12.7167158, 1116.14148)
+				wait(0.3)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(36.2975769, -12.7165136, 1412.70776)
+				wait(0.3)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(15.2318926, -12.7165489, 1732.84143)
+				wait(0.3)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(8.8602047, -12.7520208, 2164.13208)
+				wait(0.3)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(22.174942, -12.716629, 2673.88672)
+				wait(0.3)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(30.5094872, -12.7166777, 2992.09644)
+				wait(0.3)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(38.8003502, -12.7165165, 3308.63916)
+				wait(0.3)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(45.8694496, -12.7165184, 3578.53442)
+				wait(0.3)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(53.4621849, -12.7166176, 3868.42188)
+				wait(0.3)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(42.8309555, -12.7165165, 4172.77783)
+				wait(0.3)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(19.6258278, -12.7520208, 4827.40186)
+				wait(0.3)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(22.1472626, -12.7165127, 5247.96729)
+				wait(0.3)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(16.5653534, -12.7165136, 5712.53564)
+				wait(0.3)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(16.5215054, -12.716692, 6199.91406)
+				wait(0.3)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(12.3093786, -12.7165155, 6617.37891)
+				wait(0.3)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(6.88506079, -12.7167072, 7071.65576)
+				wait(0.3)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(20.8474979, -12.7175074, 7548.95947)
+				wait(0.3)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(14.4025869, -12.7171879, 7943.72266)
+				wait(0.3)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(21.1938095, -12.7180252, 8390.50684)
+				wait(0.3)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(32.0677299, -12.7165956, 8858.20508)
+				wait(0.3)
+				game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1.54153156, -12.716691, 9298.84766)
+				wait(0.3)
 		       end
 		       end
 		
 	end)
    
        
-c:Dropdown("Choose Boss",{"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
-    _G.BossSelected = mob
+c:Dropdown("Choose Boss",{"1 ","2 ","3 ","4 ","5 ","6 ","7 ","8 ","9 ","10","11","12","13","14","15","16","17","18","19","20","21","22","23"},true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+	_G.BossSelected = mob
+    if _G.BossSelected == "1 " then game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(2.64147854, -12.7165136, 528.579773)
+elseif _G.BossSelected == "2 " then game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(21.0237484, -12.7165136, 827.92395)
+elseif _G.BossSelected == "3 " then game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(28.5304337, -12.7167158, 1116.14148)
+elseif _G.BossSelected == "4 " then game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(36.2975769, -12.7165136, 1412.70776)
+elseif _G.BossSelected == "5 " then game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(15.2318926, -12.7165489, 1732.84143)
+elseif _G.BossSelected == "6 " then game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(8.8602047, -12.7520208, 2164.13208)
+elseif _G.BossSelected == "7 " then game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(22.174942, -12.716629, 2673.88672)
+elseif _G.BossSelected == "8 " then game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(30.5094872, -12.7166777, 2992.09644)
+elseif _G.BossSelected == "9 " then game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(38.8003502, -12.7165165, 3308.63916)
+elseif _G.BossSelected == "10" then game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(45.8694496, -12.7165184, 3578.53442)
+elseif _G.BossSelected == "11" then game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(53.4621849, -12.7166176, 3868.42188)
+elseif _G.BossSelected == "12" then game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(42.8309555, -12.7165165, 4172.77783)
+elseif _G.BossSelected == "13" then game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(19.6258278, -12.7520208, 4827.40186)
+elseif _G.BossSelected == "14" then game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(22.1472626, -12.7165127, 5247.96729)
+elseif _G.BossSelected == "15" then game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(16.5653534, -12.7165136, 5712.53564)
+elseif _G.BossSelected == "16" then game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(16.5215054, -12.716692, 6199.91406)
+elseif _G.BossSelected == "17" then game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(12.3093786, -12.7165155, 6617.37891)
+elseif _G.BossSelected == "18" then game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(6.88506079, -12.7167072, 7071.65576)
+elseif _G.BossSelected == "19" then game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(20.8474979, -12.7175074, 7548.95947)
+elseif _G.BossSelected == "20" then game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(14.4025869, -12.7171879, 7943.72266)
+elseif _G.BossSelected == "21" then game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(21.1938095, -12.7180252, 8390.50684)
+elseif _G.BossSelected == "22" then game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(32.0677299, -12.7165956, 8858.20508)
+elseif _G.BossSelected == "23" then game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1.54153156, -12.716691, 9298.84766)
+end
 end)
 
 c:Toggle("Start",function(bool)
@@ -934,105 +845,122 @@ _G.time = 0.3
 spawn(function()
 	while wait(_G.time) do
 		if shared.Boss then
-			if _G.BossSelected == "1" then
+				if _G.BossSelected == "1 " then
 				if game:GetService("Workspace").BossFolder:WaitForChild("Boss1") then
 					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss1})
 					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss1.Head.CFrame
 				end
-			elseif _G.BossSelected == "2" then
+				elseif _G.BossSelected == "2 " then
 				if game:GetService("Workspace").BossFolder:WaitForChild("Boss2") then
 					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss2})
 					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss2.Head.CFrame
 				end
-			elseif _G.BossSelected == "3" then
+				elseif _G.BossSelected == "3 " then
 				if game:GetService("Workspace").BossFolder:WaitForChild("Boss3") then
 					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss3})
 					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss3.Head.CFrame
 				end
-			elseif _G.BossSelected == "4" then
-	if game:GetService("Workspace").BossFolder:WaitForChild("Boss4") then
+				elseif _G.BossSelected == "4 " then
+	            if game:GetService("Workspace").BossFolder:WaitForChild("Boss4") then
 					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss4})
 					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss4.Head.CFrame
-	end
-				elseif _G.BossSelected == "5" then
-	if game:GetService("Workspace").BossFolder:WaitForChild("Boss5") then
+				end
+				elseif _G.BossSelected == "5 " then
+				if game:GetService("Workspace").BossFolder:WaitForChild("Boss5") then
 					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss5})
 					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss5.Head.CFrame
-	end
-				elseif _G.BossSelected == "6" then
-	if game:GetService("Workspace").BossFolder:WaitForChild("Boss6") then
+				end
+				elseif _G.BossSelected == "6 " then
+				if game:GetService("Workspace").BossFolder:WaitForChild("Boss6") then
 					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss6})
 					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss6.Head.CFrame
-	end
-				elseif _G.BossSelected == "7" then
-	if game:GetService("Workspace").BossFolder:WaitForChild("Boss7") then
+				end
+				elseif _G.BossSelected == "7 " then
+				if game:GetService("Workspace").BossFolder:WaitForChild("Boss7") then
 					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss7})
 					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss7.Head.CFrame
-	end
-				elseif _G.BossSelected == "8" then
-	if game:GetService("Workspace").BossFolder:WaitForChild("Boss8") then
+				end
+				elseif _G.BossSelected == "8 " then
+				if game:GetService("Workspace").BossFolder:WaitForChild("Boss8") then
 					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss8})
 					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss8.Head.CFrame
-	end
-				elseif _G.BossSelected == "9" then
-	if game:GetService("Workspace").BossFolder:WaitForChild("Boss9") then
+				end
+				elseif _G.BossSelected == "9 " then
+				if game:GetService("Workspace").BossFolder:WaitForChild("Boss9") then
 					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss9})
 					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss9.Head.CFrame
-	end
+				end
 				elseif _G.BossSelected == "10" then
-	if game:GetService("Workspace").BossFolder:WaitForChild("Boss10") then
+				if game:GetService("Workspace").BossFolder:WaitForChild("Boss10") then
 					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss10})
 					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss10.Head.CFrame
-	end
+				end
 				elseif _G.BossSelected == "11" then
-	if game:GetService("Workspace").BossFolder:WaitForChild("Boss11") then
+				if game:GetService("Workspace").BossFolder:WaitForChild("Boss11") then
 					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss11})
 					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss11.Head.CFrame
-	end
-						elseif _G.BossSelected == "12" then
-	if game:GetService("Workspace").BossFolder:WaitForChild("Boss12") then
+					end
+				elseif _G.BossSelected == "12" then
+				if game:GetService("Workspace").BossFolder:WaitForChild("Boss12") then
 					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss12})
 					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss12.Head.CFrame
-	end
-						elseif _G.BossSelected == "13" then
-	if game:GetService("Workspace").BossFolder:WaitForChild("Boss13") then
+				end
+				elseif _G.BossSelected == "13" then
+				if game:GetService("Workspace").BossFolder:WaitForChild("Boss13") then
 					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss13})
 					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss13.Head.CFrame
-	end
-						elseif _G.BossSelected == "14" then
-	if game:GetService("Workspace").BossFolder:WaitForChild("Boss14") then
+				end
+				elseif _G.BossSelected == "14" then
+				if game:GetService("Workspace").BossFolder:WaitForChild("Boss14") then
 					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss14})
 					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss14.Head.CFrame
-	end
-						elseif _G.BossSelected == "15" then
-	if game:GetService("Workspace").BossFolder:WaitForChild("Boss15") then
+				end
+				elseif _G.BossSelected == "15" then
+				if game:GetService("Workspace").BossFolder:WaitForChild("Boss15") then
 					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss15})
 					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss15.Head.CFrame
-	end
-						elseif _G.BossSelected == "16" then
-	if game:GetService("Workspace").BossFolder:WaitForChild("Boss16") then
+				end
+				elseif _G.BossSelected == "16" then
+				if game:GetService("Workspace").BossFolder:WaitForChild("Boss16") then
 					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss16})
 					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss16.Head.CFrame
 				end
-			end
-		end
-	end
-end)
-
-
-c:Label("if its working no longer restart the GUI",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111))
-
-
+			    elseif _G.BossSelected == "17" then
+				if game:GetService("Workspace").BossFolder:WaitForChild("Boss17") then
+					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss17})
+					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss17.Head.CFrame
+				end
+				elseif _G.BossSelected == "18" then
+				if game:GetService("Workspace").BossFolder:WaitForChild("Boss18") then
+					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss18})
+					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss18.Head.CFrame
+				end
+				elseif _G.BossSelected == "19" then
+				if game:GetService("Workspace").BossFolder:WaitForChild("Boss19") then
+					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss19})
+					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss19.Head.CFrame
+				end
+				elseif _G.BossSelected == "20" then
+				if game:GetService("Workspace").BossFolder:WaitForChild("Boss20") then
+					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss20})
+					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss20.Head.CFrame
+				end
+				elseif _G.BossSelected == "21" then
+				if game:GetService("Workspace").BossFolder:WaitForChild("Boss21") then
+					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss21})
+					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss21.Head.CFrame
+				end
+				elseif _G.BossSelected == "22" then
+				if game:GetService("Workspace").BossFolder:WaitForChild("Boss22") then
+					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss22})
+					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss22.Head.CFrame
+				end
+				elseif _G.BossSelected == "23" then
+				if game:GetService("Workspace").BossFolder:WaitForChild("Boss23") then
+					game:GetService("ReplicatedStorage").Network.Port1:FireServer("Swing",{game:GetService("Workspace").BossFolder.Boss23})
+					game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = game:GetService("Workspace").BossFolder.Boss23.Head.CFrame
+				end end	end	end end)
 --================== Autres =======================--
-
-
---| Anti Ban |
-setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
-setfflag("DFIntCrashUploadToBacktracePercentage", "0")
-setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
-setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
-
-
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
     game:service'Players'.LocalPlayer.Idled:connect(function()
@@ -1040,41 +968,3 @@ setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
         Virtual:ClickButton2(Vector2.new())
         wait(2)
     end)
-
-
---| Other Anti AFK |
-wait(10)
-    game.StarterGui:SetCore(
-        "ChatMakeSystemMessage",
-        {
-            Text = "[ANTI AFK] Started !",
-            Font = Enum.Font.SourceSansBold, 
-            FontSize = Enum.FontSize.Size24 
-        }
-    )
-while wait(30) do
-local VirtualUser=game:service'VirtualUser'
-game:service'Players'.LocalPlayer.Idled:connect(function()
-VirtualUser:CaptureController()
-VirtualUser:ClickButton2(Vector2.new())
-end)
-end
-
---| Anti Chat Logs |
-local CloneFunction = clonefunction
-local CheckCaller = CloneFunction(checkcaller)
-local HookFunction = CloneFunction(hookfunction)
-local LocalPlayer = game.Players.PlayerAdded:wait()
-
-local PostMessage = require(LocalPlayer:WaitForChild("PlayerScripts", 1/0):WaitForChild("ChatScript", 1/0):WaitForChild("ChatMain", 1/0)).MessagePosted
-getgenv().MessageEvent = Instance.new("BindableEvent")
-
-local OldFunctionHook
-local PostMessageHook = function(self, msg)
-   if not CheckCaller() and self == PostMessage then
-       MessageEvent:Fire(msg)
-       return
-   end
-   return OldFunctionHook(self, msg)
-end
-OldFunctionHook = HookFunction(PostMessage.fire, PostMessageHook)
