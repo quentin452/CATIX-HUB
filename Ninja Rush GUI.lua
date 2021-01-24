@@ -1819,13 +1819,257 @@ section11:addButton("By: I'm A Cat#7202 Copy Username", function()
  end)
 local Things = venyx:addPage("Things", 6252255409)
 local ThingsSec = Things:addSection("Auto Farm:")
+ThingsSec:addToggle("Auto click", nil, function(bool)
+ _G.Toggle1 = (bool and true or false)
+    while _G.Toggle1 and wait() do   
+        for i = 1,20 do
+            game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end
+end)
 ThingsSec:addToggle("Auto click FAST", nil, function(bool)
  _G.Toggle1 = (bool and true or false)
-while _G.Toggle1 and wait() do   
-    for i = 1,20 do
-        game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
-    end
-    end
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+    spawn(function()
+        while _G.Toggle1 and wait() do   
+                game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+        end
+    end)
+
 end)
 ThingsSec:addToggle("Auto Level Up", nil, function(bool)
 _G.Toggle2 = (bool and true or false)
@@ -1923,3 +2167,30 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/
  end)
 
 venyx:SelectPage(venyx.pages[1], true)
+-- Anti AFK
+local Virtual = game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+Virtual:CaptureController()
+Virtual:ClickButton2(Vector2.new())
+wait(2)
+end)
+--| Anti KICK |
+local mt = getrawmetatable(game)
+local old = mt.__namecall
+local protect = newcclosure or protect_function
+
+if not protect then
+protect = function(f) return f end
+end
+
+setreadonly(mt, false)
+mt.__namecall = protect(function(self, ...)
+local method = getnamecallmethod()
+if method == "Kick" then
+wait(9e9)
+return
+end
+return old(self, ...)
+end)
+hookfunction(game:GetService("Players").LocalPlayer.Kick,protect(function() wait(9e9)
+end))
