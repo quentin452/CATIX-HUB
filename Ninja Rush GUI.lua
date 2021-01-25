@@ -1823,7 +1823,7 @@ ThingsSec:addToggle("Auto click", nil, function(bool)
  _G.Toggle1 = (bool and true or false)
     while _G.Toggle1 and wait() do   
         for i = 1,20 do
-            game:GetService("ReplicatedStorage").Combat_Attack:InvokeServer(true)
+            game:GetService("ReplicatedStorage").TGSNinjaCombat_Attack:FireServer(true)
         end
     end
 end)
