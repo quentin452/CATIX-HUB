@@ -1,3 +1,12 @@
+-- Anti AFK
+
+local Virtual = game:service'VirtualUser'
+    game:service'Players'.LocalPlayer.Idled:connect(function()
+    Virtual:CaptureController()
+    Virtual:ClickButton2(Vector2.new())
+    wait(2)
+end)
+
 local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))()
 
 local w3 = library:CreateWindow("Hatching Sim 3")
@@ -35,47 +44,37 @@ w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,Te
     end)
 
 local w2 = w2:CreateFolder("Eggs")
-	w2:Dropdown("Choose Eggs",{
-        "Common","Rare","Epic","Environment","Turkey","Cristal","Ice","Frost","Gift","Festive","IceCream","NewYear"
-    },true,function(mob) --Replace the Dropdown name with the selected one(A,B,C)
+    local SelectEggsStrings = {}
+
+    for i,v in pairs(game:GetService("Workspace").Eggs:GetChildren()) do
+        table.insert(SelectEggsStrings, v.Name)
+    end
+    w2:Dropdown("Choose Eggs",SelectEggsStrings,true,function(mob)
 	    _G.BossSelected = mob
 	end)
 
-	w2:Toggle("Buy Eggs",function(bool)
-	    shared.Eggs = bool
-	end)
-
-spawn(function()
-	while wait(0) do
-		if shared.Eggs then
-			if _G.BossSelected == "Common" then
-				game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Common",true,"","","")
-			elseif _G.BossSelected == "Rare" then
-				game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Rare",true,"","","")
-        	elseif _G.BossSelected == "Epic" then
-				game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Epic",true,"","","")
-			elseif _G.BossSelected == "Environment" then
-				game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Environment",true,"","","")
-			elseif _G.BossSelected == "Turkey" then
-				game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Turkey",true,"","","")
-			elseif _G.BossSelected == "Cristal" then
-	             game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Cristal",true,"","","")
-            elseif _G.BossSelected == "Ice" then
-                game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Ice",true,"","","")
-            elseif _G.BossSelected == "Frost" then
-                game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Frost",true,"","","")
-            elseif _G.BossSelected == "Gift" then
-                game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Gift",true,"","","")
-            elseif _G.BossSelected == "Festive" then
-                game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"Festive",true,"","","")
-            elseif _G.BossSelected == "IceCream" then
-                game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"IceCream",true,"","","")
-            elseif _G.BossSelected == "NewYear" then
-                game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,"NewYear",true,"","","")               
-			end
-		end
-	end
-end)
+	w2:Toggle("Buy Eggs x1",function(bool)
+	    shared.Eggsx1 = bool
+    end)
+    
+	w2:Toggle("Buy Eggs x3",function(bool)
+	    shared.Eggsx3 = bool
+    end)
+    
+    spawn(function()
+        while wait() do
+            if shared.Eggsx1 then
+                if _G.BossSelected ~= nil then
+                    game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,_G.BossSelected,false,"","","")
+                end
+            end
+            if shared.Eggsx3 then
+                if _G.BossSelected ~= nil then
+                    game:GetService("ReplicatedStorage").KeyBind:InvokeServer("plsnohackplsnoooooob",game:GetService("Players").LocalPlayer,_G.BossSelected,true,"","","")
+                end
+            end
+        end
+    end)
 
 --================== Player Settings =======================--
 
