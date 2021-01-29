@@ -221,7 +221,7 @@ _G.Game_Info = {
     [219] = {["Name"] = "Parkour!", ["GameId"] = 812712255, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Parkour!.lua"},
     [220] = {["Name"] = "Smash Legends", ["GameId"] = 1974980482, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Smash%20Legends.lua"},
     [221] = {["Name"] = "Gods Of Glory", ["GameId"] = 1995935886, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Gods%20Of%20Glory.lua"},
-};
+}
 
 -- Important! Ne pas oublier le "", entre chaque update sinon risque que le hub ne s'affiche pas :/
 
@@ -373,7 +373,7 @@ _G.Game_Update = {
 	"",
 	"**Update 2.0.9**",
 	"Dragon Ball Rage Added",
-
+	"",
 	"Update 2.0.8**",
 	"Dragon Ball Warriors Added",
 	"",
@@ -404,4 +404,4 @@ _G.Game_Update = {
 	"**Update 2.0.0**",
 	"New Ui - New Script",
 	"Hub Merged",
-};
+}
