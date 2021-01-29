@@ -222,21 +222,3 @@ _G.Game_Info = {
     [220] = {["Name"] = "Smash Legends", ["GameId"] = 1974980482, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Smash%20Legends.lua"},
     [221] = {["Name"] = "Gods Of Glory", ["GameId"] = 1995935886, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Gods%20Of%20Glory.lua"},
 }
-
-for i,v in pairs(_G.Game_Info) do
-    if v.GameId == game.GameId then
-        game.StarterGui:SetCore("SendNotification", {
-            Title = "Catix Hub V2" ;
-            Text = v.Name.." Detected";
-            Icon = "rbxassetid://6316002020";
-            Duration = 5;
-        })
-        game.StarterGui:SetCore("SendNotification", {
-            Title = "Catix Hub V2" ;
-            Text = "thank you for being faithful to our hub ;)";
-            Icon = "rbxassetid://6316002020";
-            Duration = 5;
-        })
-        loadstring(game:HttpGet(v.LoadString, true))()
-    end
-end
