@@ -225,8 +225,10 @@ _G.Game_Info = {
 
 -- Important! Ne pas oublier le "", entre chaque update sinon risque que le hub ne s'affiche pas :/
 
+_G.Game_Vers = "2.2.1"
+
 _G.Game_Update = {
-	"**Update 2.2.0**",
+	"**Update 2.2.1**",
 	"Gods Of Glory Added",
 	"",
 	"**Update 2.2.0**",
