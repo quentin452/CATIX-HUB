@@ -221,13 +221,17 @@ _G.Game_Info = {
     [219] = {["Name"] = "Parkour!", ["GameId"] = 812712255, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Parkour!.lua"},
     [220] = {["Name"] = "Smash Legends", ["GameId"] = 1974980482, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Smash%20Legends.lua"},
     [221] = {["Name"] = "Gods Of Glory", ["GameId"] = 1995935886, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Gods%20Of%20Glory.lua"},
+    [222] = {["Name"] = "Mythical Clickers", ["GameId"] = 2124606422, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Mythical_Clickers.Lua"},
 }
 
 -- Important! Ne pas oublier le "", entre chaque update sinon risque que le hub ne s'affiche pas :/
 
-_G.Game_Vers = "2.2.1"
+_G.Game_Vers = "2.2.2"
 
 _G.Game_Update = {
+	"**Update 2.2.2**",
+	"Mythical Clickers Added",
+	"",
 	"**Update 2.2.1**",
 	"Gods Of Glory Added",
 	"",
