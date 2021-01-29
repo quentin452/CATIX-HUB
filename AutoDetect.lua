@@ -1,4 +1,4 @@
-local Game_Info = {
+_G.Game_Info = {
       [1] = {["Name"] = "Armor Simulator", ["GameId"] = 1364452551, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Armor%20Simulator%3A%20Resurgence%20GUI.lua"},
       [2] = {["Name"] = "Assassin!", ["GameId"] = 142553158, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Assassin!%20GUI.lua"},
       [3] = {["Name"] = "Backflip Simulator!", ["GameId"] = 1329903032, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Backflip%20Simulator%20GUI.lua"},
@@ -223,7 +223,7 @@ local Game_Info = {
     [221] = {["Name"] = "Gods Of Glory", ["GameId"] = 1995935886, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Gods%20Of%20Glory.lua"},
 }
 
-for i,v in pairs(Game_Info) do
+for i,v in pairs(_G.Game_Info) do
     if v.GameId == game.GameId then
         game.StarterGui:SetCore("SendNotification", {
             Title = "Catix Hub V2" ;
