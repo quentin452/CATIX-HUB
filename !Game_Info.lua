@@ -224,6 +224,7 @@ _G.Game_Info = {
     [222] = {["Name"] = "Mythical Clickers", ["GameId"] = 2124606422, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Mythical_Clickers.Lua"},
     [223] = {["Name"] = "Fishing Simulator", ["GameId"] = 1037979853, ["LoadString"] = "https://pastebin.com/raw/5r2kwfzn"},
     [224] = {["Name"] = "Color Block", ["GameId"] = 2126386806, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Color_Block.Lua"},
+    [225] = {["Name"] = "Fall Block", ["GameId"] = 2248521760, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Fall_Block.lua"},
 }
 
 -- Important! Ne pas oublier le "", entre chaque update sinon risque que le hub ne s'affiche pas :/
@@ -234,6 +235,7 @@ _G.Game_Update = {
 	"**Update 2.2.3**",
 	"Fishing Simulator Added",
 	"Color Block Added",
+	"Fall Block Added",
 	"",
 	"**Update 2.2.2**",
 	"Mythical Clickers Added",
