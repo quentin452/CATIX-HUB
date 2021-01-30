@@ -224,13 +224,17 @@ _G.Game_Info = {
     [222] = {["Name"] = "Mythical Clickers", ["GameId"] = 2124606422, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Mythical_Clickers.Lua"},
     [223] = {["Name"] = "Color Block", ["GameId"] = 2126386806, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Color_Block.Lua"},
     [224] = {["Name"] = "Fall Block", ["GameId"] = 2248521760, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Fall_Block.lua"},
+    [225] = {["Name"] = "Knight Heroes", ["GameId"] = 2135935983, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Knight_Heroes.lua"},
 }
 
 -- Important! Ne pas oublier le "", entre chaque update sinon risque que le hub ne s'affiche pas :/
 
-_G.Game_Vers = "2.2.3"
+_G.Game_Vers = "2.2.4"
 
 _G.Game_Update = {
+	"**Update 2.2.3**",
+	"Knight Heroes Added",
+	"",
 	"**Update 2.2.3**",
 	"Color Block Added",
 	"Fall Block Added",
