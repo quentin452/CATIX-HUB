@@ -232,7 +232,7 @@ _G.Game_Info = {
 _G.Game_Vers = "2.2.4"
 
 _G.Game_Update = {
-	"**Update 2.2.3**",
+	"**Update 2.2.4**",
 	"Knight Heroes Added",
 	"",
 	"**Update 2.2.3**",
