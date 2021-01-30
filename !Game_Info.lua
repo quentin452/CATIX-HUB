@@ -222,9 +222,8 @@ _G.Game_Info = {
     [220] = {["Name"] = "Smash Legends", ["GameId"] = 1974980482, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Smash%20Legends.lua"},
     [221] = {["Name"] = "Gods Of Glory", ["GameId"] = 1995935886, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Gods%20Of%20Glory.lua"},
     [222] = {["Name"] = "Mythical Clickers", ["GameId"] = 2124606422, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Mythical_Clickers.Lua"},
-    [223] = {["Name"] = "Fishing Simulator", ["GameId"] = 1037979853, ["LoadString"] = "https://pastebin.com/raw/5r2kwfzn"},
-    [224] = {["Name"] = "Color Block", ["GameId"] = 2126386806, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Color_Block.Lua"},
-    [225] = {["Name"] = "Fall Block", ["GameId"] = 2248521760, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Fall_Block.lua"},
+    [223] = {["Name"] = "Color Block", ["GameId"] = 2126386806, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Color_Block.Lua"},
+    [224] = {["Name"] = "Fall Block", ["GameId"] = 2248521760, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Fall_Block.lua"},
 }
 
 -- Important! Ne pas oublier le "", entre chaque update sinon risque que le hub ne s'affiche pas :/
@@ -233,7 +232,6 @@ _G.Game_Vers = "2.2.3"
 
 _G.Game_Update = {
 	"**Update 2.2.3**",
-	"Fishing Simulator Added",
 	"Color Block Added",
 	"Fall Block Added",
 	"",
