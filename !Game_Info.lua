@@ -230,7 +230,7 @@ _G.Game_Info = {
 
 -- Important! Ne pas oublier le "", entre chaque update sinon risque que le hub ne s'affiche pas :/
 
-_G.Game_Vers = "2.2.4"
+_G.Game_Vers = "2.2.5"
 
 _G.Game_Update = {
 	"**Update 2.2.5**",
