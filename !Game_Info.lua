@@ -225,6 +225,7 @@ _G.Game_Info = {
     [223] = {["Name"] = "Color Block", ["GameId"] = 2126386806, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Color_Block.Lua"},
     [224] = {["Name"] = "Fall Block", ["GameId"] = 2248521760, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Fall_Block.lua"},
     [225] = {["Name"] = "Knight Heroes", ["GameId"] = 2135935983, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Knight_Heroes.lua"},
+    [226] = {["Name"] = "Tapping Legacy[1]", ["GameId"] = 1992485866, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Tapping%20Legacy%5B1%5D.lua"},
 }
 
 -- Important! Ne pas oublier le "", entre chaque update sinon risque que le hub ne s'affiche pas :/
@@ -232,6 +233,9 @@ _G.Game_Info = {
 _G.Game_Vers = "2.2.4"
 
 _G.Game_Update = {
+	"**Update 2.2.5**",
+	"Tapping Legacy[1] Added",
+	"",
 	"**Update 2.2.4**",
 	"Knight Heroes Added",
 	"",
