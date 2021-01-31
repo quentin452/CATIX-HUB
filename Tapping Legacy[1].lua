@@ -1869,16 +1869,16 @@ end
 end
 end
 end)
-ThingsSec:addToggle("Auto Collect Gems,Clicks(laggy)", nil, function(bool)
+ThingsSec:addToggle("Auto Collect Gems,Clicks", nil, function(bool)
  _G.Collect1 = (bool and true or false)
     while _G.Collect1 and wait(0.2)do
-for i,v in pairs(game:GetService("Workspace").Collectables:GetChildren()) do
-    if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
-    local Me = game.Players.LocalPlayer.Character.HumanoidRootPart
-    local To = v
-    To.CFrame = Me.CFrame
-   end
-end
+		local rs = game:GetService("RunService").RenderStepped
+		for i,v in pairs(game:GetService("Workspace").Collectables:GetChildren()) do
+			v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			rs:wait()
+			v.CFrame = CFrame.new(0,0,0)
+		end
+		
 end
 end)
 ThingsSec:addToggle("Auto Equip Best Pets", nil, function(bool)
