@@ -1939,10 +1939,9 @@ local section3 = Teleports:addSection("Select Players:")
 					end)
 				end
 			end)
-			local section4 = Teleports:addSection("Select Island:")
 local section4 = Teleports:addSection("Select Island:")       
     section4:addDropdown("Dropdown", {
-        "Spawn", "Ta Grand Mère", "Peut être Ton grand père le déceder"
+        "Spawn", "Forest", "Beach", "Volcano", "Sweet"
     }, function(text)
         if text ==       "Spawn" then
             game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-32.8896217, 69.887825, -117.038475)
