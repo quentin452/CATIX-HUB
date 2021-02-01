@@ -235,7 +235,7 @@ _G.Game_Vers = "2.2.6"
 
 _G.Game_Update = {
 	"**Update 2.2.6**",
-	"Tapping Legacy[1] Added",
+	"Fishing Simulator Added",
 	"",
 	"**Update 2.2.5**",
 	"Tapping Legacy[1] Added",
