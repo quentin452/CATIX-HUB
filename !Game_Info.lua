@@ -227,6 +227,7 @@ _G.Game_Info = {
     [225] = {["Name"] = "Knight Heroes", ["GameId"] = 2135935983, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Knight_Heroes.lua"},
     [226] = {["Name"] = "Tapping Legacy[1]", ["GameId"] = 1992485866, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Fishing_Simulator.lua"},
     [227] = {["Name"] = "Fishing Simulator", ["GameId"] = 1037979853, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Fishing_Simulator.lua"},
+    [228] = {["Name"] = "Azure Mines", ["GameId"] = 162580928, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Azure%20Mines.lua"},
 }
 
 -- Important! Ne pas oublier le "", entre chaque update sinon risque que le hub ne s'affiche pas :/
@@ -236,6 +237,7 @@ _G.Game_Vers = "2.2.6"
 _G.Game_Update = {
 	"**Update 2.2.6**",
 	"Fishing Simulator Added",
+	"Azure Mines Added",
 	"",
 	"**Update 2.2.5**",
 	"Tapping Legacy[1] Added",
