@@ -228,14 +228,18 @@ _G.Game_Info = {
     [226] = {["Name"] = "Tapping Legacy[1]", ["GameId"] = 1992485866, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Fishing_Simulator.lua"},
     [227] = {["Name"] = "Fishing Simulator", ["GameId"] = 1037979853, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Fishing_Simulator.lua"},
     [228] = {["Name"] = "Azure Mines", ["GameId"] = 162580928, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Azure%20Mines.lua"},
-    [229] = {["Name"] = "Sleeping Simulator", ["GameId"] = 2243257031, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/SleepingSimulator.lua"},
+    [229] = {["Name"] = "Sleeping Simulator", ["GameId"] = 1717644912, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/SleepingSimulator.lua"},
+    [230] = {["Name"] = "One Punch simulator", ["GameId"] = 2243257031, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/One%20Punch%20simulator.lua"},
 }
 
 -- Important! Ne pas oublier le "", entre chaque update sinon risque que le hub ne s'affiche pas :/
 
-_G.Game_Vers = "2.2.7"
+_G.Game_Vers = "2.2.8"
 
 _G.Game_Update = {
+	"**Update 2.2.8**",
+	"One Punch simulator Added",
+	"",
 	"**Update 2.2.7**",
 	"Sleeping Simulator Added",
 	"",
