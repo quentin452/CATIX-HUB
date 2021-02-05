@@ -6,7 +6,7 @@ local Virtual = game:service'VirtualUser'
     Virtual:ClickButton2(Vector2.new())
     wait(2)
 end)
-
+local rs = game:GetService("RunService").RenderStepped
 local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))()
 
 local w = library:CreateWindow("Pet Hatching Simulator 5")
@@ -20,23 +20,26 @@ local b = w:CreateFolder("Functions")
         shared.toggleACT = bool
     end)
     spawn(function()
-        while wait(0.5) do
+        while wait(1.5) do
             if shared.toggleACC then
-                for i,v in pairs(game:GetService("Workspace").Coins:GetChildren()) do
-                    if v.ClassName == "MeshPart" then
-                        v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                    end
-                end
+				for i,v in pairs(game:GetService("Workspace").Coins:GetChildren()) do
+					if v.ClassName == "MeshPart" then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+						rs:wait()
+					end
+				end
 			end
             if shared.toggleACT then
 				for i,v in pairs(game:GetService("Workspace").Tickets:GetChildren()) do
 					if v.Name == "Tickets" then
-						v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+						rs:wait()
 					end
 				end
 				for i,v in pairs(game:GetService("Workspace").TicketsBarel:GetChildren()) do
 					if v.Name == "Ticket" then
-						v.Part.CFrame =  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Part.CFrame
+						rs:wait()
 					end
 				end
             end
