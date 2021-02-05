@@ -65,6 +65,9 @@ local c = w:CreateFolder("Pet Module")
     c:Toggle("LockAllRarity",function(bool)
         shared.toggleLAR = bool
     end)
+    c:Toggle("Auto Craft",function(bool)
+        shared.toggleACRaft = bool
+    end)
     spawn(function()
 		while wait(0.5) do
 			if _G.EggSelected ~= nil then
@@ -77,6 +80,12 @@ local c = w:CreateFolder("Pet Module")
 			end
 			if shared.toggleLAR then
 				game:GetService("ReplicatedStorage").RemoteEvents.PetActionRequest:InvokeServer("LockAllRarity")
+			end
+			if shared.toggleACRaft then
+				local remote = game:GetService("ReplicatedStorage").RemoteEvents.PetActionRequest
+				for i,v in pairs(game:GetService("Players").LocalPlayer.Pets:GetChildren()) do
+					remote:InvokeServer("Craft",{["PetID"] = v.PetID.Value})
+				end
 			end
         end
 	end)
