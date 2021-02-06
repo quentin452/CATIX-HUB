@@ -1841,37 +1841,55 @@ end)
      end)
 local Things = venyx:addPage("Things", 6252255409)
 local ThingsSec = Things:addSection("Auto Farm:")
-ThingsSec:addToggle("(laggy~0fps) Auto Collect Foods", nil, function(bool)
- _G.Collect2 = (bool and true or false)
-    while _G.Collect2 and rs:wait(1)do
-for i,v in pairs(game:GetService("Workspace").Food:GetChildren()) do
-    if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
-    local Me = game.Players.LocalPlayer.Character.HumanoidRootPart
-    local To = v
-    To.CFrame = Me.CFrame
+ThingsSec:addToggle("Auto Collect Foods", nil, function(bool)
+ _G.Collect = (bool and true or false)
+    while _G.Collect and rs:wait(1)do
+        if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
+		for i,v in pairs(game:GetService("Workspace").Food:GetChildren()) do
+			v.CanCollide = false
+			v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			rs:wait()
+			v.CFrame = CFrame.new(0,0,0)
+		end
+		
+		for i,v in pairs(game:GetService("Workspace").BeachFood:GetChildren()) do
+			v.CanCollide = false
+			v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			rs:wait()
+			v.CFrame = CFrame.new(0,0,0)
+		end
    end
-end
 end
 end)
-ThingsSec:addToggle("Auto Tp To Foods", nil, function(bool)
- _G.TpTo = (bool and true or false)
-    while _G.TpTo and rs:wait(0)do
-for i,v in pairs(game:GetService("Workspace").Food:GetChildren()) do
-    if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
-    local Me = game.Players.LocalPlayer.Character.HumanoidRootPart
-    local To = v
-    Me.CFrame = To.CFrame
+ThingsSec:addToggle("Auto Collect Coins", nil, function(bool)
+ _G.CollectCoins = (bool and true or false)
+    while _G.CollectCoins and rs:wait(1)do
+        if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
+for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+    if v.Name == "Coin" then
+        v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    end
+end
    end
+end
+end)
+ThingsSec:addToggle("Auto Kill Players", nil, function(bool)
+ _G.KILL = (bool and true or false)
+    while _G.KILL and rs:wait(2)do
+	for i,v in pairs(game.Players:GetChildren()) do
+    if v.leaderstats.Weight.Value ~= 0 then
+        if v.leaderstats.Weight.Value < game.Players.LocalPlayer.leaderstats.Weight.Value then
+            v.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        end
+    end
 end
 end
 end)
 ThingsSec:addToggle("Auto Delete Bananas", nil, function(bool)
- _G.Del = (bool and true or false)
-    while _G.Del and rs:wait(0)do
-for i,v in pairs(game:GetService("Workspace").DebuffFood:GetChildren()) do
- v:Destroy()
-end
-end
+     _G.Del = (bool and true or false)
+    while _G.Del and rs:wait()do
+	game:GetService("Workspace").DebuffFood:Destroy() 
+	end
 end)
 local Teleports = venyx:addPage("Teleports", 6252010818)
 local section3 = Teleports:addSection("Select Players:")
