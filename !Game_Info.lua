@@ -230,13 +230,17 @@ _G.Game_Info = {
     [228] = {["Name"] = "Azure Mines", ["GameId"] = 162580928, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Azure%20Mines.lua"},
     [229] = {["Name"] = "Sleeping Simulator", ["GameId"] = 2243257031, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/SleepingSimulator.lua"},
     [230] = {["Name"] = "One Punch simulator", ["GameId"] = 1717644912, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/One%20Punch%20simulator.lua"},
+    [231] = {["Name"] = "Eating Simulator 2021", ["GameId"] = 1878546410, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Eating%20Simulator%202021.lua"},
 }
 
 -- Important! Ne pas oublier le "", entre chaque update sinon risque que le hub ne s'affiche pas :/
 
-_G.Game_Vers = "2.2.8"
+_G.Game_Vers = "2.2.9"
 
 _G.Game_Update = {
+	"**Update 2.2.9**",
+	"Eating Simulator 2021 Added",
+	"",
 	"**Update 2.2.8**",
 	"One Punch simulator Added",
 	"",
