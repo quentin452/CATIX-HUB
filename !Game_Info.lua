@@ -231,13 +231,19 @@ _G.Game_Info = {
     [229] = {["Name"] = "Sleeping Simulator", ["GameId"] = 2243257031, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/SleepingSimulator.lua"},
     [230] = {["Name"] = "One Punch simulator", ["GameId"] = 1717644912, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/One%20Punch%20simulator.lua"},
     [231] = {["Name"] = "Eating Simulator 2021", ["GameId"] = 1878546410, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Eating%20Simulator%202021.lua"},
+    [232] = {["Name"] = "Egg Hatching Simulator", ["GameId"] = 2309578129, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Egg%20Hatching%20Sim.lua"},
+    [233] = {["Name"] = "Tapping Craze", ["GameId"] = 2215703039, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Tapping%20Craze.lua"},
 }
 
 -- Important! Ne pas oublier le "", entre chaque update sinon risque que le hub ne s'affiche pas :/
 
-_G.Game_Vers = "2.2.9"
+_G.Game_Vers = "2.3.0"
 
 _G.Game_Update = {
+	"**Update 2.3.0**",
+	"Egg Hatching Simulator Added",
+	"Tapping Craze Added",
+	"",
 	"**Update 2.2.9**",
 	"Eating Simulator 2021 Added",
 	"",
