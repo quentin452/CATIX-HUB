@@ -209,6 +209,30 @@ AutoTab:CreateToggle("Auto Rebirths", function(arg) --the (arg) is if the checkb
     end
 end)
 
+AutoTab:CreateToggle("Inf Rebirths", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.lel3 = true 
+        while wait(0) and _G.lel3 do
+    game.ReplicatedStorage.Remotes:WaitForChild("AddRebirth"):FireServer("999999999999999999");
+
+end
+else
+_G.lel3 = false
+end
+end)
+
+AutoTab:CreateToggle("Inf Speed", function(arg) --the (arg) is if the checkbox is toggled or not
+    if arg then
+        _G.lel2 = true 
+        while wait(0) and _G.lel2 do
+    game.ReplicatedStorage.Remotes:WaitForChild("AddSpeed"):FireServer("999999999999999999")
+
+end
+else
+_G.lel2 = false
+end
+end)
+
 AutoTab:CreateToggle("Inf Pets Eqsuiped", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.lel = true 
