@@ -225,7 +225,7 @@ _G.Game_Info = {
     [223] = {["Name"] = "Color Block", ["GameId"] = 2126386806, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Color_Block.Lua"},
     [224] = {["Name"] = "Fall Block", ["GameId"] = 2248521760, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Fall_Block.lua"},
     [225] = {["Name"] = "Knight Heroes", ["GameId"] = 2135935983, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Knight_Heroes.lua"},
-    [226] = {["Name"] = "Tapping Legacy[1]", ["GameId"] = 1992485866, ["LoadString"] = "https://github.com/quentin452/CATIX-HUB/blob/master/Tapping%20Legacy%5B1%5D.lua"},
+    [226] = {["Name"] = "Tapping Legacy[1]", ["GameId"] = 1992485866, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Tapping%20Legacy%5B1%5D.lua"},
     [227] = {["Name"] = "Fishing Simulator", ["GameId"] = 1037979853, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Fishing_Simulator.lua"},
     [228] = {["Name"] = "Azure Mines", ["GameId"] = 162580928, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Azure%20Mines.lua"},
     [229] = {["Name"] = "Sleeping Simulator", ["GameId"] = 2243257031, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/SleepingSimulator.lua"},
