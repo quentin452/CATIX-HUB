@@ -234,13 +234,17 @@ _G.Game_Info = {
     [232] = {["Name"] = "Egg Hatching Simulator", ["GameId"] = 2309578129, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Egg%20Hatching%20Sim.lua"},
     [233] = {["Name"] = "Tapping Craze", ["GameId"] = 2215703039, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Tapping%20Craze.lua"},
     [234] = {["Name"] = "Crystal Magnet Simulator", ["GameId"] = 2353002202, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Crystal%20Magnet%20Simulator%20GUI.lua"},
+    [235] = {["Name"] = "Bacon Simulator", ["GameId"] = 2353002202, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Bacon%20Simulator%20GUI.lua"},
 }
 
 -- Important! Ne pas oublier le "", entre chaque update sinon risque que le hub ne s'affiche pas :/
 
-_G.Game_Vers = "2.3.1"
+_G.Game_Vers = "2.3.2"
 
 _G.Game_Update = {
+	"**Update 2.3.2**",
+	"Bacon Simulator Added",
+	"",
 	"**Update 2.3.1**",
 	"Crystal Magnet Simulator Added",
 	"",
