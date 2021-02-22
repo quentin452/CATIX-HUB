@@ -1861,29 +1861,27 @@ end)
 ThingsSec:addToggle("Auto Tp To ALL Gems", nil, function(bool)
  _G.Gems1 = (bool and true or false)
     while _G.Gems1 and rs:wait(0.2)do
-
-   local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
-
-for i, v in next, game:GetService("Workspace").GemsHolder:GetDescendants() do
-   if v.Name == 'Gem' then
-     root.CFrame =  v.CFrame 
-     wait(0.2)
-        end
-    end
+		for i,v in pairs(game:GetService("Workspace").GemsHolder:GetDescendants()) do
+			if _G.Gems1 then
+				if v.Name == "Gem" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+				end
+				wait()
+			end
+		end
 end
 end)
 ThingsSec:addToggle("Auto Tp To Best Gems", nil, function(bool)
  _G.Gems2 = (bool and true or false)
     while _G.Gems2 and rs:wait(0)do
-
-   local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
-
-for i, v in next, game:GetService("Workspace").GemsHolder.Candyland.Part1:GetChildren() do
-   if v.Name == 'Gem' then
-     root.CFrame =  v.CFrame 
-     wait(0)
-        end
-    end
+		for i,v in pairs(game:GetService("Workspace").GemsHolder.Candyland.Part1:GetChildren()) do
+			if _G.Gems2 then
+				if v.Name == "Gem" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+				end
+				wait()
+			end
+		end
 end
 end)
 local ThingsSec1 = Things:addSection("Auto Buys:")
