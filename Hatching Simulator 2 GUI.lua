@@ -115,7 +115,6 @@ local CS = w:CreateFolder("Credits")
     CS:Label("GUI: Altix & Wally",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
     CS:Button("Discord: https://discord.gg/KmHZUpXEmQ",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
     setclipboard("https://discord.gg/KmHZUpXEmQ")
-    end)
 	CS:DestroyGUI()
 
 spawn(function()
