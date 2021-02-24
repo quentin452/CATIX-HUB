@@ -1,41 +1,147 @@
 local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))()
 
-local w3 = library:CreateWindow("Dragon Ball Hyper Blood")
+local w3 = library:CreateWindow("Dragon Ball Infinity GUI")
 
 
 --================== Model =======================--
 local w = w3:CreateFolder("Things")
 
 w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
-
-	w:Toggle("Auto Golpe",function(bool)
+w:Label("IF YOU DIE RESTART GAME",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
+w:Button("ARREST KI",function()
+game:GetService("ReplicatedStorage").Remotes.Training.ChargeFinish:FireServer()
+end)
+w:Button("FARM ALL",function()
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.Stats,
+    [2] = game:GetService("Players").LocalPlayer.Status,
+    [3] = game:GetService("Players").LocalPlayer.Character.Humanoid,
+    [4] = game:GetService("Players").LocalPlayer.Character.RightHand
+}
+game:GetService("ReplicatedStorage").Remotes.Training.Defense:InvokeServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.Stats,
+    [2] = {
+        ["LeftLowerArm"] = game:GetService("Players").LocalPlayer.Character.LeftLowerArm,
+        ["RightUpperArm"] = game:GetService("Players").LocalPlayer.Character.RightUpperArm,
+        ["LeftFoot"] = game:GetService("Players").LocalPlayer.Character.LeftFoot,
+        ["RightHand"] = game:GetService("Players").LocalPlayer.Character.RightHand,
+        ["RightLowerArm"] = game:GetService("Players").LocalPlayer.Character.RightLowerArm,
+        ["LeftUpperLeg"] = game:GetService("Players").LocalPlayer.Character.LeftUpperLeg,
+        ["LeftUpperArm"] = game:GetService("Players").LocalPlayer.Character.LeftUpperArm,
+        ["Character"] = game:GetService("Players").LocalPlayer.Character,
+        ["LeftHand"] = game:GetService("Players").LocalPlayer.Character.LeftHand,
+        ["RightFoot"] = game:GetService("Players").LocalPlayer.Character.RightFoot,
+        ["Humanoid"] = game:GetService("Players").LocalPlayer.Character.Humanoid,
+        ["RightLowerLeg"] = game:GetService("Players").LocalPlayer.Character.RightLowerLeg,
+        ["RightUpperLeg"] = game:GetService("Players").LocalPlayer.Character.RightUpperLeg,
+        ["LeftLowerLeg"] = game:GetService("Players").LocalPlayer.Character.LeftLowerLeg
+    }
+}
+game:GetService("ReplicatedStorage").Remotes.Training.Combat:InvokeServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.Stats
+}
+game:GetService("ReplicatedStorage").Remotes.Training.Agility:FireServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.Status,
+    [2] = game:GetService("Players").LocalPlayer.Stats,
+    [3] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
+    [4] = game:GetService("Players").LocalPlayer.Character.LeftHand,
+    [5] = game:GetService("Players").LocalPlayer.Character
+}
+game:GetService("ReplicatedStorage").Remotes.Training.Blast:InvokeServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.Stats,
+    [2] = game:GetService("Players").LocalPlayer.Status,
+    [3] = game:GetService("Players").LocalPlayer.Character.Humanoid,
+    [4] = game:GetService("Players").LocalPlayer.Character.RightHand
+}
+game:GetService("ReplicatedStorage").Remotes.Training.Defense:InvokeServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.Status,
+    [2] = game:GetService("Players").LocalPlayer.Character.UpperTorso,
+    [3] = game:GetService("Players").LocalPlayer.Character.Humanoid
+}
+game:GetService("ReplicatedStorage").Remotes.Training.Charge:InvokeServer(unpack(args))
+end)
+	w:Toggle("Auto Combat,Agility",function(bool)
+		shared.toggle1 = bool
+	end)
+	w:Toggle("Auto Defence",function(bool)
 		shared.toggle11 = bool
 	end)
-	
-		w:Toggle("Auto Defence",function(bool)
+	w:Toggle("Auto Energy",function(bool)
+		shared.toggle12 = bool
+	end)
+		w:Toggle("Auto Ki",function(bool)
 		shared.toggle2 = bool
 end) 
 	spawn(function()
 		while wait() do
-		       if shared.toggle11 then
-wait(0.2)
-
-game:GetService("ReplicatedStorage").Training.Golpe:FireServer(true,"GolpeIzquierdo",game:GetService("ReplicatedStorage").Asset.Anims.L)
-end
-	if shared.toggle2 then
-
-
-
+		       if shared.toggle1 then
 local args = {
-    [1] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
-    [2] = "antihack@"
+    [1] = game:GetService("Players").LocalPlayer.Stats,
+    [2] = {
+        ["LeftLowerArm"] = game:GetService("Players").LocalPlayer.Character.LeftLowerArm,
+        ["RightUpperArm"] = game:GetService("Players").LocalPlayer.Character.RightUpperArm,
+        ["LeftFoot"] = game:GetService("Players").LocalPlayer.Character.LeftFoot,
+        ["RightHand"] = game:GetService("Players").LocalPlayer.Character.RightHand,
+        ["RightLowerArm"] = game:GetService("Players").LocalPlayer.Character.RightLowerArm,
+        ["LeftUpperLeg"] = game:GetService("Players").LocalPlayer.Character.LeftUpperLeg,
+        ["LeftUpperArm"] = game:GetService("Players").LocalPlayer.Character.LeftUpperArm,
+        ["Character"] = game:GetService("Players").LocalPlayer.Character,
+        ["LeftHand"] = game:GetService("Players").LocalPlayer.Character.LeftHand,
+        ["RightFoot"] = game:GetService("Players").LocalPlayer.Character.RightFoot,
+        ["Humanoid"] = game:GetService("Players").LocalPlayer.Character.Humanoid,
+        ["RightLowerLeg"] = game:GetService("Players").LocalPlayer.Character.RightLowerLeg,
+        ["RightUpperLeg"] = game:GetService("Players").LocalPlayer.Character.RightUpperLeg,
+        ["LeftLowerLeg"] = game:GetService("Players").LocalPlayer.Character.LeftLowerLeg
+    }
 }
 
-game:GetService("ReplicatedStorage").Training.Defensa:InvokeServer(unpack(args))
+game:GetService("ReplicatedStorage").Remotes.Training.Combat:InvokeServer(unpack(args))
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.Stats
+}
+
+game:GetService("ReplicatedStorage").Remotes.Training.Agility:FireServer(unpack(args))
+end
+if shared.toggle12 then
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.Status,
+    [2] = game:GetService("Players").LocalPlayer.Stats,
+    [3] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
+    [4] = game:GetService("Players").LocalPlayer.Character.LeftHand,
+    [5] = game:GetService("Players").LocalPlayer.Character
+}
+
+game:GetService("ReplicatedStorage").Remotes.Training.Blast:InvokeServer(unpack(args))
+end
+	if shared.toggle11 then
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.Stats,
+    [2] = game:GetService("Players").LocalPlayer.Status,
+    [3] = game:GetService("Players").LocalPlayer.Character.Humanoid,
+    [4] = game:GetService("Players").LocalPlayer.Character.RightHand
+}
+
+game:GetService("ReplicatedStorage").Remotes.Training.Defense:InvokeServer(unpack(args))
+
+end
+	if shared.toggle2 then
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.Status,
+    [2] = game:GetService("Players").LocalPlayer.Character.UpperTorso,
+    [3] = game:GetService("Players").LocalPlayer.Character.Humanoid
+}
+
+game:GetService("ReplicatedStorage").Remotes.Training.Charge:InvokeServer(unpack(args))
 
 end
 end
 end)
+
 --================== Player Settings =======================--
 
 --(alot not by me )--
@@ -501,280 +607,3 @@ setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
         Virtual:ClickButton2(Vector2.new())
         wait(2)
     end)
-
-
---| Other Anti AFK |
-wait(10)
-    game.StarterGui:SetCore(
-        "ChatMakeSystemMessage",
-        {
-            Text = "[ANTI AFK] Started !",
-            Font = Enum.Font.SourceSansBold, 
-            FontSize = Enum.FontSize.Size24 
-        }
-    )
-while wait(30) do
-local VirtualUser=game:service'VirtualUser'
-game:service'Players'.LocalPlayer.Idled:connect(function()
-VirtualUser:CaptureController()
-VirtualUser:ClickButton2(Vector2.new())
-end)
-end
-
-	PLR:Button("ESP UNIVERSAL",function()
-for i,v in pairs(game.Workspace:GetDescendants()) do
-if v.ClassName == "TouchTransmitter" then
--- if v.ClassName == "TouchTransmitter" and v.Parent.Name == "Handle" then
-local BillboardGui = Instance.new("BillboardGui")
-local TextLabel = Instance.new("TextLabel")
-
-BillboardGui.Parent = v.Parent
-BillboardGui.AlwaysOnTop = true
-BillboardGui.LightInfluence = 1
-BillboardGui.Size = UDim2.new(0, 100, 0, 100)
-BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
-
-TextLabel.Parent = BillboardGui
-TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
-TextLabel.BackgroundTransparency = 1
-TextLabel.Size = UDim2.new(1, 0, 1, 0)
-TextLabel.Text = v.Parent.Parent.Name
-TextLabel.TextColor3 = Color3.new(1, 0, 0)
-TextLabel.TextScaled = true
-end
-end
-end)
-
-	PLR:Button("Location Detector",function()
-local finder = Instance.new("ScreenGui")
-local Main = Instance.new("Frame")
-local nameofgui = Instance.new("TextLabel")
-local random = Instance.new("TextLabel")
-local cl = Instance.new("TextLabel")
-local border = Instance.new("TextLabel")
-local copy = Instance.new("TextButton")
-
-finder.Name = "finder"
-finder.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-finder.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-finder.ResetOnSpawn = false
-
-Main.Name = "Main"
-Main.Parent = finder
-Main.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
-Main.Position = UDim2.new(0.460674137, 0, 0.360557795, 0)
-Main.Size = UDim2.new(0, 254, 0, 192)
-
-nameofgui.Name = "nameofgui"
-nameofgui.Parent = Main
-nameofgui.BackgroundColor3 = Color3.new(1, 1, 1)
-nameofgui.BackgroundTransparency = 1
-nameofgui.Size = UDim2.new(0, 254, 0, 26)
-nameofgui.Font = Enum.Font.SourceSans
-nameofgui.Text = "Location Finder"
-nameofgui.TextColor3 = Color3.new(1, 1, 1)
-nameofgui.TextSize = 20
-
-random.Name = "random"
-random.Parent = Main
-random.BackgroundColor3 = Color3.new(1, 1, 1)
-random.BackgroundTransparency = 1
-random.Position = UDim2.new(0.106299214, 0, 0.197916672, 0)
-random.Size = UDim2.new(0, 200, 0, 37)
-random.Font = Enum.Font.SourceSans
-random.Text = "Your current location is "
-random.TextColor3 = Color3.new(1, 1, 1)
-random.TextSize = 18
-
-cl.Name = "cl"
-cl.Parent = Main
-cl.BackgroundColor3 = Color3.new(1, 1, 1)
-cl.BackgroundTransparency = 1
-cl.Position = UDim2.new(0.106299214, 0, 0.39062503, 0)
-cl.Size = UDim2.new(0, 200, 0, 36)
-cl.Font = Enum.Font.SourceSans
-cl.TextColor3 = Color3.new(1, 1, 1)
-cl.TextSize = 18
-
-
-
-border.Name = "border"
-border.Parent = Main
-border.BackgroundColor3 = Color3.new(1, 1, 1)
-border.Position = UDim2.new(0, 0, 0.114583336, 0)
-border.Size = UDim2.new(0, 254, 0, 4)
-border.Font = Enum.Font.SourceSans
-border.Text = ""
-border.TextColor3 = Color3.new(0, 0, 0)
-border.TextSize = 14
-
-copy.Name = "copy"
-copy.Parent = Main
-copy.BackgroundColor3 = Color3.new(1, 1, 1)
-copy.Position = UDim2.new(0.106299214, 0, 0.666666687, 0)
-copy.Size = UDim2.new(0, 200, 0, 31)
-copy.Font = Enum.Font.SourceSans
-copy.Text = "Copy to clipboard"
-copy.TextColor3 = Color3.new(0, 0, 0)
-copy.TextSize = 20
-copy.MouseButton1Click:connect(function()
-setclipboard(cl.Text)
-end)
-
-local isHidden = false
-local mause = game.Players.LocalPlayer:GetMouse()
-
-do
-local mouse = game:GetService("Players").LocalPlayer:GetMouse();
-local inputService = game:GetService('UserInputService');
-local heartbeat = game:GetService("RunService").Heartbeat;
-function Draggable(frame)
-local s, event = pcall(function()
-return frame.MouseEnter
-end)
-if s then
-frame.Active = true;
-event:connect(function()
-local input = frame.InputBegan:connect(function(key)
-if key.UserInputType == Enum.UserInputType.MouseButton1 then
-local objectPosition = Vector2.new(mouse.X - frame.AbsolutePosition.X, mouse.Y - frame.AbsolutePosition.Y);
-while heartbeat:wait() and inputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) do
-frame:TweenPosition(UDim2.new(0, mouse.X - objectPosition.X + (frame.Size.X.Offset * frame.AnchorPoint.X), 0, mouse.Y - objectPosition.Y + (frame.Size.Y.Offset * frame.AnchorPoint.Y)), 'Out', 'Quad', 0.1, true);
-end
-end
-end)
-local leave;
-leave = frame.MouseLeave:connect(function()
-input:disconnect();
-leave:disconnect();
-end)
-end)
-end
-end
-end
-
-Draggable(Main)
-
-mause.KeyDown:connect(function(key)
-if key == ";" then
-if isHidden == false then
-Main:TweenPosition(Main.Position - UDim2.new(0,0,1,0),"Out","Quad",0.4,false)
-isHidden = true
-else
-Main:TweenPosition(Main.Position + UDim2.new(0,0,1,0),"Out","Quad",0.4,false)
-isHidden = false
-end
-end
-end)
-
-
-while true do
-wait()
-cl.Text = tostring(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
-end
-end)
-
-
-PLR:Label("Work Whit Paid,KRNL AND SONA Exploit",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
-
-	PLR:Button("Dark Dex other exploit",function()
-loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/DEX%20EXPLORER"))()
-end)
-
-	PLR:Button("Dark Dex(synapse)",function()
-loadstring(game:HttpGetAsync("https://pastebin.com/raw/fPP8bZ8Z"))()
-end)
-
-	PLR:Button("Remote Spy Universal GAME",function()
-loadstring(game:HttpGet("https://pastebin.com/raw/BDhSQqUU", true))()
-end)
-
-
---================== Misc =======================--
-
-local MISC = w3:CreateFolder("Misc")
-
-	MISC:Button("Rejoin",function()
-		local TeleportService = game:GetService("TeleportService")
-		local PlaceId = game.PlaceId
-		local player = game.Players.LocalPlayer
-		if player then
-		TeleportService:Teleport(PlaceId, player)
-		end
-	end)
-
-	MISC:GuiSettings()
-
---================== Credits =======================--
-
-local CS = w3:CreateFolder("Credits")
-
-	CS:Button("Script: Im A Cat#7202",function()
-		setclipboard("Im A Cat#7202")
-	end)
-
-	CS:Button("Discord: PKWXQae",function()
-		setclipboard("https://discord.gg/PKWXQae")
-	end)
-
-CS:Button("Helped by: Altix#3395",function()
-		setclipboard("Altix#3395")
-end)
-
-	CS:DestroyGUI()
-
---================== Autres =======================--
-
-
---| Anti Ban |
-setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
-setfflag("DFIntCrashUploadToBacktracePercentage", "0")
-setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
-setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
-
-
---| Anti AFK | By Altix#3395
-    local Virtual = game:service'VirtualUser'
-    game:service'Players'.LocalPlayer.Idled:connect(function()
-        Virtual:CaptureController()
-        Virtual:ClickButton2(Vector2.new())
-        wait(2)
-    end)
-
-
---| Other Anti AFK |
-wait(10)
-    game.StarterGui:SetCore(
-        "ChatMakeSystemMessage",
-        {
-            Text = "[ANTI AFK] Started !",
-            Font = Enum.Font.SourceSansBold, 
-            FontSize = Enum.FontSize.Size24 
-        }
-    )
-while wait(30) do
-local VirtualUser=game:service'VirtualUser'
-game:service'Players'.LocalPlayer.Idled:connect(function()
-VirtualUser:CaptureController()
-VirtualUser:ClickButton2(Vector2.new())
-end)
-end
-
---| Anti Chat Logs |
-local CloneFunction = clonefunction
-local CheckCaller = CloneFunction(checkcaller)
-local HookFunction = CloneFunction(hookfunction)
-local LocalPlayer = game.Players.PlayerAdded:wait()
-
-local PostMessage = require(LocalPlayer:WaitForChild("PlayerScripts", 1/0):WaitForChild("ChatScript", 1/0):WaitForChild("ChatMain", 1/0)).MessagePosted
-getgenv().MessageEvent = Instance.new("BindableEvent")
-
-local OldFunctionHook
-local PostMessageHook = function(self, msg)
-   if not CheckCaller() and self == PostMessage then
-       MessageEvent:Fire(msg)
-       return
-   end
-   return OldFunctionHook(self, msg)
-end
-OldFunctionHook = HookFunction(PostMessage.fire, PostMessageHook)
