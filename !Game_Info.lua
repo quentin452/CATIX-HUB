@@ -236,7 +236,7 @@ _G.Game_Info = {
     [235] = {["Name"] = "Crystal Magnet Simulator", ["GameId"] = 2353002202, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Crystal%20Magnet%20Simulator%20GUI.lua"},
 }
 
--- Important! Ne pas oublier le "", entre chaque update sinon risque que le hub ne s'affiche pas :/
+ -- Important! Ne pas oublier le "", entre chaque update sinon risque que le hub ne s'affiche pas :/
 
 _G.Game_Vers = "2.3.1"
 
