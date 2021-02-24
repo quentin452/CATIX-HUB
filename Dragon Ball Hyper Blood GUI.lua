@@ -521,57 +521,6 @@ VirtualUser:ClickButton2(Vector2.new())
 end)
 end
 
---| Anti Chat Logs |
-local CloneFunction = clonefunction
-local CheckCaller = CloneFunction(checkcaller)
-local HookFunction = CloneFunction(hookfunction)
-local LocalPlayer = game.Players.PlayerAdded:wait()
-
-local PostMessage = require(LocalPlayer:WaitForChild("PlayerScripts", 1/0):WaitForChild("ChatScript", 1/0):WaitForChild("ChatMain", 1/0)).MessagePosted
-getgenv().MessageEvent = Instance.new("BindableEvent")
-
-local OldFunctionHook
-local PostMessageHook = function(self, msg)
-   if not CheckCaller() and self == PostMessage then
-       MessageEvent:Fire(msg)
-       return
-   end
-   return OldFunctionHook(self, msg)
-end
-OldFunctionHook = HookFunction(PostMessage.fire, PostMessageHook)
-        childe.Locked = false
-                  end
-                  if childe.ClassName == "Model" then
-                      for index, childeo in pairs(childe:GetChildren()) do
-                          if childeo.ClassName == "Part" then
-                              childeo.Locked = false
-                          end
-                          if childeo.ClassName == "MeshPart" then
-                              childeo.Locked = false
-                          end
-                          if childeo.ClassName == "UnionOperation" then
-                              childeo.Locked = false
-                          end
-                          if childeo.ClassName == "Model" then
-                          end
-                      end
-                  end
-              end
-          end
-      end
-  end
- 
-end
-c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
-c.BinType = Enum.BinType.Hammer
-c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
-c.BinType = Enum.BinType.Clone
-c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
-c.BinType = Enum.BinType.Grab
-
-
-end)
-
 	PLR:Button("ESP UNIVERSAL",function()
 for i,v in pairs(game.Workspace:GetDescendants()) do
 if v.ClassName == "TouchTransmitter" then
