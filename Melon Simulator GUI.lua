@@ -37,17 +37,16 @@ end)
 
 AutoTab:CreateToggle("Auto Rebirths Free", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
-        _G.Basic = true 
-        while wait(0) and _G.Basic do
-            game.RunService.RenderStepped:Connect(function()
- for i=1,500 do
-     game:GetService("Workspace").Events.Rebirth:FireServer()
-        end
+        _G.LULU22 = true 
+        while wait(1) and _G.LULU22 do
+            for i=1,500 do
+                game:GetService("Workspace").Events.Rebirth:FireServer()
+                   end  
+                end  
     else
-        _G.Basic = false
+        _G.LULU22 = false
     end
 end)
-
 AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
     if arg then
         _G.LULU = true 
