@@ -203,7 +203,7 @@ _G.Game_Info = {
     [202] = {["Name"] = "Arcade Empire", ["GameId"] = 2214135845, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Arcade%20Empire.lua"},
     [203] = {["Name"] = "Pet Evolution Simulator", ["GameId"] = 2080323446, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Pet%20Evolution%20Simulator.lua"},
     [204] = {["Name"] = "Selfie Simulator", ["GameId"] = 2012943558, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Selfie%20Simulator.lua"},
-    [205] = {["Name"] = "Sugar Simulator", ["GameId"] = 1762029091, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Sugar%20Rush%20GUI.lua"},
+    [205] = {["Name"] = "Sugar Simulator", ["GameId"] = 1030577224, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Sugar%20Simulator%20GUI.lua"},
     [206] = {["Name"] = "Adventurer Simulator", ["GameId"] = 2130005084, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Adventurer%20Simulator.lua"},
     [207] = {["Name"] = "Clicker Lords", ["GameId"] = 2249175897, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Clicker%20Lords%20GUI.lua"},
     [208] = {["Name"] = "Potion Effect Simulator!", ["GameId"] = 1968272064, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Potion%20Effect%20Simulator%20GUI.lua"},
