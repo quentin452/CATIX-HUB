@@ -312,24 +312,4 @@ local CS = w:CreateFolder("Credits")
     CS:Label("GUI: Altix & Wally",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
     CS:Button("Discord: https://discord.gg/KmHZUpXEmQ",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
     setclipboard("https://discord.gg/KmHZUpXEmQ")
-    end)
 	CS:DestroyGUI()
-
-
---| Other Anti AFK |
-wait(10)
-    game.StarterGui:SetCore(
-        "ChatMakeSystemMessage",
-        {
-            Text = "[ANTI AFK] Started !",
-            Font = Enum.Font.SourceSansBold, 
-            FontSize = Enum.FontSize.Size24 
-        }
-    )
-while wait(30) do
-local VirtualUser=game:service'VirtualUser'
-game:service'Players'.LocalPlayer.Idled:connect(function()
-VirtualUser:CaptureController()
-VirtualUser:ClickButton2(Vector2.new())
-end)
-end
