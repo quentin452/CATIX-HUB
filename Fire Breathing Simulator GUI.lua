@@ -1,24 +1,16 @@
 --https://www.roblox.com/games/5006110264/
 local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))()
-
 local w3 = library:CreateWindow("Fire Breathing")
 local w2 = library:CreateWindow("Eggs X1")
-
-
 --================== Model =======================--
 local w = w3:CreateFolder("Things")
-
 w:Label("Hacks",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
-
-
-	w:Toggle("Auto Click",function(bool)
+    w:Toggle("Auto Click",function(bool)
 		shared.toggleClick = bool
+end) 	
+	w:Toggle("Auto Refill",function(bool)
+        shared.toggle2 = bool
 end) 
-	
-		w:Toggle("Auto Refill",function(bool)
-		shared.toggle2 = bool
-end) 
-		
 	w:Toggle("Auto Buy Fire",function(bool)
 		shared.toggle3 = bool
 end) 
@@ -39,18 +31,12 @@ end)
 end) 
 	spawn(function()
 		while wait() do
-	
-
 	if shared.toggle2 then
-
 	local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
-
 for i, v in next, Workspace:GetDescendants() do
    if v.Name == 'RefillHitbox' then
      v.CFrame = root.CFrame
        wait()
-   
-  
         end
     end	
 end
@@ -109,8 +95,6 @@ wait(0.1)
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ShopService.BuyItem:InvokeServer("Dark Assasin")
 end
 	if shared.toggle55 then
-
-
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ShopService.BuyItem:InvokeServer("Small Jetpack")
 wait(0.1)
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ShopService.BuyItem:InvokeServer("Big Jetpack")
@@ -126,23 +110,18 @@ end
 
 	if shared.toggle6 then
 local root = game:service('Players').LocalPlayer.Character.HumanoidRootPart
-
 for i, v in next, Workspace:GetDescendants() do
    if v.Name == 'ChestTouchPart' then
      v.CFrame = root.CFrame
-       wait()
-   
-  
+       wait()  
         end
     end
 end
 
-	if shared.toggle7 then
-
+   if shared.toggle7 then
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.PetService.EquipBest:InvokeServer()
 end
-
-	if shared.toggleClick then
+   if shared.toggleClick then
  local tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool") or game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
     game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
     if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
@@ -165,7 +144,6 @@ spawn(function()
 	while wait(0) do
 		if shared.Eggs then
 			if _G.BossSelected == "Common" then
-
 local args = {
     [1] = "Common Egg",
     [2] = false
@@ -173,10 +151,7 @@ local args = {
 
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(138.26123, 9.10520744, -108.289764)
-
-			elseif _G.BossSelected == "Uncommon" then
-			
-
+		elseif _G.BossSelected == "Uncommon" then
 local args = {
     [1] = "Uncommon Egg",
     [2] = false
@@ -185,7 +160,6 @@ local args = {
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(129.861115, 9.35350513, -104.795227)
 			elseif _G.BossSelected == "Rare" then
-
 local args = {
     [1] = "Rare Egg",
     [2] = false
@@ -194,7 +168,6 @@ local args = {
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(123.554398, 9.29972458, -102.491714)
 			elseif _G.BossSelected == "Epic" then
-
 local args = {
     [1] = "Epic Egg",
     [2] = false
@@ -203,7 +176,6 @@ local args = {
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(115.781219, 9.10520458, -100.10984)
 	elseif _G.BossSelected == "Legendary" then
-
 local args = {
     [1] = "Legendary Egg",
     [2] = false
@@ -212,7 +184,6 @@ local args = {
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-12.3348112, 545.822937, 31.432457)
 	elseif _G.BossSelected == "Hydra" then
-
 local args = {
     [1] = "Hydra Egg",
     [2] = false
@@ -221,7 +192,6 @@ local args = {
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1.61418176, 7409.58105, 23.3669014)
 elseif _G.BossSelected == "Mythic" then
-
 local args = {
     [1] = "Mythic Egg",
     [2] = false
@@ -230,7 +200,6 @@ local args = {
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-23.1548252, 3006.7041, 44.2238312)
 	elseif _G.BossSelected == "1M" then
-
 local args = {
     [1] = "1M Egg",
     [2] = false
@@ -239,7 +208,6 @@ local args = {
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-18.833147, 9.11473274, 122.537102)	
 elseif _G.BossSelected == "3M" then
-
 local args = {
     [1] = "3M Egg",
     [2] = false
@@ -248,7 +216,6 @@ local args = {
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(44.4225273, 9.11473274, -37.9666519)	
 elseif _G.BossSelected == "Cyber" then
-
 local args = {
     [1] = "Cyber Egg",
     [2] = false
@@ -257,7 +224,6 @@ local args = {
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-11.4107389, 22399.5859, 33.2277832)	
 elseif _G.BossSelected == "Freezing" then
-
 local args = {
     [1] = "Freezing Egg",
     [2] = false
@@ -266,7 +232,6 @@ local args = {
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-10.8443432, 17900.0332, 25.6272926)	
 elseif _G.BossSelected == "Lava" then
-
 local args = {
     [1] = "Lava Egg",
     [2] = false
@@ -275,7 +240,6 @@ local args = {
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(10.156024, 13899.5898, 19.304985)	
 elseif _G.BossSelected == "Bat" then
-
 local args = {
     [1] = "Bat Egg",
     [2] = false
@@ -284,7 +248,6 @@ local args = {
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-20.171711, 9.11473274, 149.349487)	
 elseif _G.BossSelected == "Cowboy" then
-
 local args = {
     [1] = "Cowboy Egg",
     [2] = false
@@ -293,7 +256,6 @@ local args = {
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(44.1354332, 9.11473274, -32.2326698)	
 elseif _G.BossSelected == "Dino" then
-
 local args = {
     [1] = "Dino Egg",
     [2] = false
@@ -302,7 +264,6 @@ local args = {
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Hatch:InvokeServer(unpack(args))
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(43.0043755, 9.11473274, -46.4896317)	
 elseif _G.BossSelected == "Unicorn" then
-
 local args = {
     [1] = "Unicorn Egg",
     [2] = false
@@ -314,24 +275,16 @@ game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-4.86802
 		end
 	end
 end)
-
 --================== Player Settings =======================--
-
 --(alot not by me )--
 local PLR = w3:CreateFolder("Player")
-
-	
-	
 	PLR:Slider("Jump Hack",10,250,true,function(value)
 	    game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
 	end)
-	PLR:Button("Speed Hack (press R)",function(bool)
-	    
+	PLR:Button("Speed Hack (press R)",function(bool)   
 local walkspeedplayer = game:GetService("Players").LocalPlayer
 local walkspeedmouse = walkspeedplayer:GetMouse()
-
 local walkspeedenabled = false
-
 function x_walkspeed(key)
 if (key == "r") then
 if walkspeedenabled == false then
@@ -341,7 +294,6 @@ Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
 Humanoid.WalkSpeed = _G.WS;
 end)
 Humanoid.WalkSpeed = _G.WS;
-
 walkspeedenabled = true
 elseif walkspeedenabled == true then
 _G.WS = 20;
@@ -350,14 +302,11 @@ Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
 Humanoid.WalkSpeed = _G.WS;
 end)
 Humanoid.WalkSpeed = _G.WS;
-
 walkspeedenabled = false
 end
 end
 end
-
 walkspeedmouse.KeyDown:connect(x_walkspeed)
-
 end)
 	PLR:Button("No Clip (Press E)",function()
 		noclip = false
@@ -457,10 +406,7 @@ ctrl.r = 0
 end 
 end)
 Fly()
-
-          
-
-	end)
+end)
 
 	PLR:Button("Inf Jump",function()
 	game:GetService("UserInputService").JumpRequest:connect(function()
@@ -548,7 +494,6 @@ for index, child in pairs(game:GetService("Workspace"):GetChildren()) do
           end
       end
   end
- 
 end
 c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
 c.BinType = Enum.BinType.Hammer
@@ -556,23 +501,18 @@ c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
 c.BinType = Enum.BinType.Clone
 c = Instance.new("HopperBin", game:GetService("Players").LocalPlayer.Backpack)
 c.BinType = Enum.BinType.Grab
-
-
 end)
 
 	PLR:Button("ESP UNIVERSAL",function()
 for i,v in pairs(game.Workspace:GetDescendants()) do
 if v.ClassName == "TouchTransmitter" then
--- if v.ClassName == "TouchTransmitter" and v.Parent.Name == "Handle" then
 local BillboardGui = Instance.new("BillboardGui")
 local TextLabel = Instance.new("TextLabel")
-
 BillboardGui.Parent = v.Parent
 BillboardGui.AlwaysOnTop = true
 BillboardGui.LightInfluence = 1
 BillboardGui.Size = UDim2.new(0, 100, 0, 100)
 BillboardGui.StudsOffset = Vector3.new(0, 2, 0)
-
 TextLabel.Parent = BillboardGui
 TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel.BackgroundTransparency = 1
@@ -583,22 +523,16 @@ TextLabel.TextScaled = true
 end
 end
 end)
-
 	PLR:Button("Dark Dex",function()
 loadstring(game:HttpGetAsync("https://pastebin.com/raw/fPP8bZ8Z"))()
 end)
-
-PLR:Label("Work Whit Paid,KRNL AND SONA Exploit",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111)) --BgColor,TextColor
-
+PLR:Label("Work Whit Paid,KRNL AND SONA Exploit",Color3.fromRGB(38,38,38),Color3.fromRGB(0,216,111))
 	PLR:Button("Remote Spy Universal GAME",function()
 loadstring(game:HttpGet("https://pastebin.com/raw/BDhSQqUU", true))()
 end)
-
-
 --================== Misc =======================--
 
 local MISC = w3:CreateFolder("Misc")
-
 	MISC:Button("Rejoin",function()
 		local TeleportService = game:GetService("TeleportService")
 		local PlaceId = game.PlaceId
@@ -607,38 +541,26 @@ local MISC = w3:CreateFolder("Misc")
 		TeleportService:Teleport(PlaceId, player)
 		end
 	end)
-
 	MISC:GuiSettings()
-
 --================== Credits =======================--
 
 local CS = w3:CreateFolder("Credits")
-
-	CS:Button("Script by: I'm A Cat#7202",function()
+    CS:Button("Script by: I'm A Cat#7202",function()
 		setclipboard("I'm A Cat#7202")
 	end)
-
 	CS:Button("Discord: https://discord.gg/KmHZUpXEmQ",function()
 		setclipboard("https://discord.gg/KmHZUpXEmQ")
 	end)
-
-CS:Button("Helped by: Altix#3395",function()
+    CS:Button("Helped by: Altix#3395",function()
 		setclipboard("Altix#3395")
-end)
-
-
-	CS:DestroyGUI()
-
+    end)
+    CS:DestroyGUI()
 --================== Autres =======================--
-
-
 --| Anti Ban |
 setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
 setfflag("DFIntCrashUploadToBacktracePercentage", "0")
 setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
 setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
-
-
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
     game:service'Players'.LocalPlayer.Idled:connect(function()
