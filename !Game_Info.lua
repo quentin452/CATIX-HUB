@@ -1,4 +1,4 @@
-_G.Game_Info = { 
+_G.Game_Info = {  
     [1] = {["Name"] = "Armor Simulator", ["GameId"] = 1364452551, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Armor%20Simulator%3A%20Resurgence%20GUI.lua"},
     [2] = {["Name"] = "Assassin!", ["GameId"] = 142553158, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Assassin!%20GUI.lua"},
     [3] = {["Name"] = "Backflip Simulator!", ["GameId"] = 1329903032, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Backflip%20Simulator%20GUI.lua"},
