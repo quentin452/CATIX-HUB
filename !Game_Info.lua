@@ -1,4 +1,4 @@
-_G.Game_Info = {  
+_G.Game_Info = { 
     [1] = {["Name"] = "Armor Simulator", ["GameId"] = 1364452551, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Armor%20Simulator%3A%20Resurgence%20GUI.lua"},
     [2] = {["Name"] = "Assassin!", ["GameId"] = 142553158, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Assassin!%20GUI.lua"},
     [3] = {["Name"] = "Backflip Simulator!", ["GameId"] = 1329903032, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Backflip%20Simulator%20GUI.lua"},
@@ -189,7 +189,7 @@ _G.Game_Info = {
   [188] = {["Name"] = "Button Simulator 3.5", ["GameId"] = 2081152310, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Button%20Simulator%203.5.lua"	},
   [189] = {["Name"] = "Brain Masters", ["GameId"] = 2144413390, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Brain%20Master%20GUI.lua"	},
   [190] = {["Name"] = "Tapping Eggs", ["GameId"] = 1908163355, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Tapping%20Eggs%20GUI.lua"	},
-  [191] = {["Name"] = "Rebirth Champions", ["GameId"] = 1938260241, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Rebirth%20Champion%20GUI.lua"	}, -- GAME DOWN
+  [191] = {["Name"] = "Rebirth Champions", ["GameId"] = 1938260241, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Rebirth%20Champion%20GUI.lua"	},
   [192] = {["Name"] = "Dragon Ball Hyper Blood", ["GameId"] = 1077604723, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Dragon%20Ball%20Hyper%20Blood%20GUI.lua"},
   [193] = {["Name"] = "Hatching Simulator 3", ["GameId"] = 2124596068, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Hatching%20Sim%203%20GUI.lua"	},
   [194] = {["Name"] = "World // Zero", ["GameId"] = 985731078, ["LoadString"] = "https://raw.githubusercontent.com/HimikoToga1474/Ahegao-Hub/master/Main.Lua"},
