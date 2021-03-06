@@ -1,5 +1,471 @@
+-- Anti AFK
 
---[[
-AztupBrew(Fork of IronBrew2): obfuscation; Version 2.7.2
-]]
-return(function(h,m,q)local k=string.char;local e=string.sub;local n=table.concat;local l=math.ldexp;local r=getfenv or function()return _ENV end;local o=select;local f=unpack or table.unpack;local j=tonumber;local function p(h)local b,c,d="","",{}local g=256;local f={}for a=0,g-1 do f[a]=k(a)end;local a=1;local function i()local b=j(e(h,a,a),36)a=a+1;local c=j(e(h,a,a+b-1),36)a=a+b;return c end;b=k(i())d[1]=b;while a<#h do local a=i()if f[a]then c=f[a]else c=b..e(b,1,1)end;f[g]=b..e(c,1,1)d[#d+1],b,g=c,c,g+1 end;return table.concat(d)end;local j=p('22U1P2751O1T2751P23I23C23823G1O1U27922Y23G22Z23323423E27E1I27922723422Z23123023C23922427I22Z27F27922123923C22O27J22Y1O27P27522D23A23E27W28328527J1O1S27922823H23923G23H28127523E23A23B23B23G23E23128R1P22I23A22Z23G22M2302341O1N27922N23423B23H29C22Z22Y23122I23523423928Q1G27922223E29423G23B29629827G27522L23G29I22Z23A22O1O1J27922M23G23122227J27L27N2A627922323023B2AC27K27M27E1K2AH29U23H27J22223123G22X22X28P1O182AQ22X23927M23C2AV23H2AU29323C23I27E29Y1P22C23A23H23028O2881H29Q2AD2AN28829A27522F2AA2322932362AL2AE27E1V27922K23329U2312882BE22E23F23728X2C62892A82AA29K29M23H29423B2AG27523923A23C23H2A229D23I29022923123122X2A928Z22F2792352CX22X22Y1Z21I21I22Z23C23221J23I23423123523023F23027Z28T23B2AV2DO21J28T23821I22W2302C529D21921821721I22I22G22522821T21G22922422J21I23823C29I27J21I21K21V22O22X23527J21O21721522422821J23927V2CM2912942B623G22C23C29D1O2BM27522X2A323722F27C27E29P2752232A123422R23C23F28O1Q1O29022C29D2222FH27E28K27522422L2342382171O1Q27928W2322792G62G72G622O22H2FO23C22P2FR22R23G2G822X24E22H2G822H22U2GB2BR2EX23G2EZ22I2EZ23I2932A527827522923A27D1O2AP27522I2EY2AV2AC28Y23428U2H427922A23B23423I2D421L22927J23A2A11O1L27922422X23H2EZ21L2CO23I2D71O2C12H62H82FC27922523G22P23128423F23G2391O1A27921E21L22723A23423H21L2HT2HV2AV21L22G23H2AS28Q2BE2H728P2DG2881D29Q29S23422X23121L23F22O2IS23923123422P21M2162161W2181O112I62A12B72J82JA22821Q2382IS21L2GU23121M21A2EP2G02I21P22J2302CX2HD21427929222X2JA2FX22Y28T22Z2IN22D29D23621L21D2D42CY2D72D923H2342KF29323H2DE23I21I22A23822921V2HT21T22K23822021C2F427923C2HH2ED2B72LA27522N2AJ2HB2HD2GQ2LI23B2LK23B21L2AU23023J23J2I12I623A23I23I28O2EW22G2K623A2JW2B423E2362902AS23J23C2BJ2312G21O2FD1P2M32312M52AC2392IE2A72752MK2M52FF2BC2CL1B2792MS2JW23A2MO2CC21L2232CT2882FU1P22Y22X2DC2CL1M2MY2M421L22J23A22Y22Y2LR27U2LU28J2792NB27S2882MI2262BW2NA23C2AF2K32NI2NK2HP2N82312FJ2M12K329D27Z28Z2GZ1P2FA2H32F51P22L2A322X22L23A2322CL28A1P2MN2N32O12C727923A2J62HC23B2882K327I23C22Z23E2352992NF2ML21L22N2P32JU2OT2P72MR2NG2K52JA2LS2NO2NE2PG2P92PI2LR2BV2KH2NT2822AA2BG2BI2M12H52K42302JA22K2LZ2NM2LT2LV2K322G2O22CD2OC2212AA2882OC2Q32HZ2HE2752OR28Y2IS2LQ2QH1O192P82M522E2AY2QO2Q422P2142QQ2QS21L2QU29U21L2QH21L22P2162CE27522E2DH27J2Q52NO2OP2MZ2C32N12C42LG1P2I728O22X29328Z2GQ2RO2AW2RR2RF2LV2B12H623523A2NJ23G21L23C21L28C28E2JD2HD2K322C22O29I27M29022423B23623B2OM2CL2K32252AJ2CJ23C2902252DI29E28I2BE22823B23J27J2SL27727Q2IL28Q2PM2912S12S32S521L28G2862802MQ1P2B328H22Z2B429I2HQ2792S827W2TD2842TF2TO2752TE2RE2PK2Q729Q2B42AS2TG29Q2AY28P2HL2NY2M92G22752382F32UB1P2ED22P2GM23A2GB2MI29K2P32NY2AV2802OG2292302ED2SL2IM2MH27922627W2BX2U62IW2NQ29423E2KT27E2GQ2P52LC27B2FK23G23327W2DW2UY27522B2UU22X2U82M82VJ1P2VL23822X2212OM28I2GQ2292J52HM2HI2HK2292U92VQ2VZ22X2W12HJ28Z2RZ2OD2M522I2B42VN21D2212942NK21L22F2L92PZ22N2392JA2WI2WK2NL22N2L92T822I2312TL21L2II2WF27M2KL22522X1O152KA2FB2DB21L2F122P21I2FP2LQ21V2S22JU2KE2O52LO2AO2KA2OW2JA2TQ2SA2CL2OC2FP2KF2EW2XY23E2RX2TV1P2FF23J2WK23521L22M2FB2QJ1P27Y2S422G2MO2N02AS2PT27529W2Y32BE22A23G22O22J29D28Q2US2IM2S429W2T427522K23B2UU2902YQ22O2922AS2Y42N52WA2922DO2A32IE2OP2A02A22A42YA2971P21L2792K32B02XB2J62302942ZD2X02N128O2802HR2H62M72362K52K723B2G02BE2272CC2932G02UF2G42Z01P2322F22312G82752GL2G62PZ1P23F310L2ZO2G71O2G81R1P310V310L275310T2G6310X2MX1P310X2UF310T310X310X2OC3116310Y31102761P31152752N83115310V2K32G7310X310Z2G6311Q310X27631012N92AA23E2WG23F2CP2KH1O142D32D52KQ21I2KS2KU2KH2KX2KZ2L12L322X2L52L72G72OC1B213279311Q1B2JM310V311T275217279311P27521I312N312V312N2P12352P32AZ2K32ML2LZ2M12G62UF312L311E311Q192MG311D279312Y311G275312S2LW27522Y31332942V427531372M023G2G0313A279313C310V313E313G312S1P313J311E313L313127H313Q2AZ2BE313U28O2R9313Y275314031471P313F311E31443146311S3149313O314B313S1P314E23G219311Q1P313B312M3141279314M312R2G6314P2792XA2762OC310I2DG313N2N9314T315F314W310L1D2GB2TH29G23G2BY28I2TH2222322CT315T2KV290314W2G02MI2MN2392VV2322SX279314W216310L21F2GB2OC2H12H3314D2LY313V314Y2N82NR29H310G27B2H32TH2D02BY2AN2VQ2NV22Z2362NX2AF2N82N523B2QI2GQ2D02ZI27N29E2LC2QB2792OE2FT2792PW2ID2YD2922MO2KT2OY2212P328Z2K322I22N2DB316F2822TT2872RA1P2TQ3163317V2802UM313Q2UP28I2QR2H02UU2LC2T62232S2231317M27T2G12G323G2G5311F2G622A313Z312M313K275227312Z310X1V2WC28K31531T31871P318X1P318Z27922B311E313C3148311124D2G72G21V311I29A311Q3194275319G27524A310S319B2G62782IO2G728K312P311D311N2BE312W3198313H2ZN319O27927G319E2791E314K319I1P31A7310Z319M2G821L31A2275319Q224319S311H2JM310X2OG1P319X3197318P31A031AF2G729P318V3159313D319331902XA310V31A921K314731AD2G731AU2G62A7319R2G6319T31AM1P2OP31AP3130310V319Z312S31B92792HR31AX27521R31AZ31A931BS31B33190311G319Z2PZ1B2D2310V2GQ310T31532NE31152G231BX311G2G2310X31C5311E2B131CE31BK311R31A0310L311B2G622M311E31AU28K2782IG21R22Q31911P219311E2J231A931CY31BW2A831CP319B31CR1P1C311H21D1P2C131C42752C12C131A7310T31DG1P2JM31DJ31DC1P102ZN31DF31DO1331DR31DO2C11F314L311J1P31DY311N3192311131E031E431E0312W310T31D731D9311531DX27931DN2C112311H27527G315A31EJ1P2BM31EM311529P31EM2ZP1P29P310X318728K31E231DC244279215314N31B031F3311E31A9313K315831AH312N316K22Z29D28Z311V2QL2JP2ML1Z1O312S21Y22M2Y42OT31FJ2AZ2G62BE1B31D2314K3115311A2G82UF310U3150319731CB3154311G311C31CJ3199310Y3132313429O3167316H28O22G22N22J314Z315131AZ275315531CK31FB31D8312N315C310J31FN27931FP31FR2NJ22Y31FT23H1R315F313P31GF2VQ314W31GK31GM2OC316O2BD317U2TK2882OP317Z2TX31822KA318428Y31862792UT2UV318B318D318F317O2KA317R2YC316Q2AA316S2AF2NU2NW2NB2NZ2792OT2O3317E2BH2ID310L21A315M29B27S315P2AD315R27922L27C2BB23G2PE2MI2PR316X31I827E2TH28C316522Z22529322Y23A2G73169314I31AS314Z318S311G318U311I312U319H319031JG311H31AS31BM31AG31G531CU31G427831F931AR2792N831BN31DS31A531GB31F631CJ319Z2BE21L31J62G62BM311227929P31K827531BB2G827P311L31BI31E531AZ2AP31C81P2GQ312Z31CC31DV31C631EN31G131KI31G131G3315331CD311G310V2QR31G031AT3148311731CJ315631CH31BG31KQ311E2HR31BX2HR314Z31AE2G831CG2G82MX31L22IG314I2752G22J231KI2G22G231C731FC31BM31FC27831G331LS319331DV31M031L131LV31EF31LX31G527931M0319Q31LO31G531EC31M531KI31JR31M8319P31F82G8310Z31GT313M31GE313R2EW314W2FJ2NK31GN318O31GP314L31433157312Z31EK31GV279315D31HY314S31H92TH31MS23F2NK315K31II2LH31IK315Q310031IA2Q12YH239315W2PS310G2IK2IM2G72WC319Z31JB318T31DC318W31BT3190319231A92QR31BK31JL31EF31JN319D311I318Q31JS31AC310S31DY31MJ31KB31CW31L22K331KL2BE319C31MK31G4314531N131A031GY27531H02OP2QH31H431MV31J931MX31GR314O31OQ31MO314A31H92OG314W2QY31OY31JK31P031MZ313I31P3314R315G31P631GH31382I8314G31M931MW315331GQ31PD312X31OQ2PZ310G31N531102GB31MP2AZ31P731GI2I82QZ31FO31FQ31OV2LZ31H4314427921831NE1P315O31NH310L21P316C31ID2T331Q131PK2R8315F22531FF2B32GH2G621C31MW318Q319U315627922V313031JE27931DB31JH31R431JT31MC319A312J31NX2792A7318Y319031RE31K031AA31R831CW31RA2G62C121R1W2792NE310V27G31A931RS31RI31AB319L310S31LM27931K72G829P31L22TH31KL31JV31MC319D31EN27831BH31MJ31O431PN31RM31BO31DC31O931A831CA31SG31E031SI31DS31JP31CJ31RU31SN31RZ31AE31S127531S331AV31KS1P31S731MC31S931G531SB3115278310P31SF31RI31FA31PF27631PZ31GG313T31Q222G22K22731PA314J314231F531PE318Q2BE31PV310J310L26X21231H7315H2MI31HB31TM310L1H31QD31QF31IM22Z310L15310N313Z31QW31FZ312Q31CK31R131L431RC31DS31RF31EU31D32752B131SO31MI31JW31M131BQ31L931UN27527P31UP31N131B72G621L23J31AK31OG2C131L231OL311331ON31GB31GT1731FD2V531FG2Y431H421L31FL310G316E27E31HE2YC2BE31HM31HJ2TP28D28F31812VQ2UN2DB31HQ280319031HT318A2IM318C23A318E317N315F317Q317S27E310E318J31U531UD2G622631WK27921S31PY317E2SE2JD23E318L2G724F2592612SH2SJ2SL2ON31U52612G826L24H31WZ2SO2SQ2DB310L21U31WN24922E25U31WZ2BE2SU2SQ27J2G81D25N31XJ28L2T02T231K52G726H24M2G722H24F25H31WZ2OC31NQ23H2G826123231XF1T26Y31WZ2G6238313Z21G31MX31L231QA31MI31G4313G31BS2792IG310V2G231A931YQ31PB31B331EF21O31AZ28K31L82C131L827G31L82BM31L22MI3119311D2A731KL2OP31T91P311V311528K31TB311D28K31EX311G31EW31M1279239311E31RP27921N311E29A31A931ZV31SG31YW311131YY315331Z031KZ31DO31Z331LA310V31Z6314831Z831UK31ZB31MC2T831ZE31ZG31E031CA31ZK311D3187310V31ZO311C31ZR310V31ZT2752K9310V2B131A9320W31YV31ZP2ZN3203311E320531AZ31Z2320631Z43206320B311D320D311D310X320F31G5311I320I31UE31CW31SY314831ZL31DZ311E320Q2G6320S1P320U1P2GL310V31D03190321Y32112OC21L3214310V32163153321831AZ321A31AZ321C310X321E31G1321H2G231D931LN31M1320J31CW31OE31VC321P320O31EV311D320R31ZS31RQ2RB311E31A731A922E31JT3201321331YZ3209320732193237322E322T31KU31ZA31EN2G2321J31FC322N28K2JM311O31CW31ZM321R322U321T322W27921Z311E31DQ31A9323U320032123225323631Z13237322C3153323B322G323E31KL31DU322L278323J1P31EI323M322R31ZN323Q31ZQ323S2CN311E2XA31A9321U314J322423L32423206322A31533245311E324731M6321F31T3323F1P3124324C31ZF321L28K31VG324H320N324J311T31GT2OG2NP2F631FF2DO31VK2ID2CC2U731VN31VR317T2TW318131VV28B31VX31802TK31W031HP2UQ2R0318831HU31W831HW31WC317P31I02H32G631NT29P31PP31T231YK31G331CJ313G31KG3118320631MB324V3217324431T2326N3253311C31KT31DV31G1322A31G1322C31G12BM322S2BM31YK311Q2ZQ325S31HG325U31HI317X31HL31VZ31832UO31W32RM31W62UW31TI1P2V02392V223G31FU31A3313Z23C31MX31L831KY31AZ2G231L8326P3204321Q311M3110327831N327531HF29031VU327E325Y31HM3261327I32632US3189327M2VQ2VS2VU2VW28031FV327V327X3206327Z31533281326O323728K322S311N31JZ3279279328B31VT325V328E28E325Z2TU327H31W2328J31HS328L2T62W62W023G2W228Z328S314I327W326G327Y3237328Y31BT3290328531DO310L311Q2TH315F2SL311Y2J5316N31I12CF2AB2BO2AF2TH2AI2AK32AB327B2OQ2AV2AX314C2792DN28W28Y328C329931HK328F31VZ2OG2D02BG2DL32AH2Z62OL31X3312S325I2K332A42WG32A7325T1P328D32AS329B328G329E31852UR329H326628Q2OP2UN3172315P2O52AV310L21R31WN31C031JA2ZP2WC27831UY31M131V131LE31PB31GC21L31UA313Y31OG326P31BD31DV31RN32CB327U31L231AO31VC31MM31OQ2MI2FN2G332A328D32B7327A32AQ327D32BC31VY326032BF327J328K32BJ317X32BM2BC2AU2EZ32BR2GB2G62GQ321W2AP32BZ32DA3211314421T31YI31JD321L31YR3252318Y329X3243320831Z532552MI31KO314731GT31LQ27521P310L31O9312O31VC31KI313Y31L231GA31R232CD31E031V8311631BS31YK23W31BJ31EN32C42G8322C31K631LA27532DR3156327Z312W31KD32532C11R31BS32BY328S31CM32CI31OA312N2TH2CO2CQ2CS317232B832AH2CW2CY2D01O31B52752KO2D62D821I2NB2EF23F29D2DR2H22DA2DC21I23E21521423F22X22P22X22N31T1314I22R31OQ31KG31LW3280325532E532EV31JQ318L3277314K31OQ31TU32CQ31I232AA2AM2AF329832CS31VW32BD32AU32A932AX27I317X31052ML23B21432B12CL2BE32AN2CC314K311V32F62EW316R32AG32642YE27Z2SZ22X2K631I42I527522822Y32B02SM310G2Z22Z42YP2YR2Z827O2TP23G23J29J28U2ZX2IE2SO2P32BC28Z32CW32632SC23A2C431J3318H2H0315E311Q22X2G7324B311H23V31OQ31OG31143148326J32E632C831T231T6326Z326Y311D31VB32ER2G632C231AH319032C231A932DC31OP318Q1P31V331O62G72BM31UW2MX32BZ32JB31PS32J431B7311Q2LR31T131OG2TH31CK32IS310X27P31Z9310X311V32EE31OO31KM313Z23532II310W326T311031G132IO31CE31SP32DH32EO311E327032IT31DC229321231QZ22S31OQ1P32KF310L27G32EX32JE314K325I32GF32A932HE32CR2TF325W317Y32AT3260322K2912XC23C2XF2XK2H22XN2LC27N31XW2342692GB32KY2GU27D2DB2XI32L323832L52XP31WV27931C022T32JY323M31L232IM31UK32IO31F431JU31DO32DZ325231VC32LR32K1311D32LU328S32CG31FZ312N2UF22Y22O2ND31N431FF2AV21Y32A522X31202P328Q32KC328A2FB21J31VU21J327F2TK21J31W132BG21J327L31HV31WA31HX32MU326B2S42102JW32N321J2G421D2RM2ML32F42CU3109310B22Z2R931WH23232H432GK32KT329A32CU329D31HO328I28I316D2GS2YV2822NJ2DG2OY32CL27532DF2G826H31TZ311Q21S310L26932O627921V32O11P31QV319H318L32O5310G2LE2P62N823J2CO29331TX21231442OP31AX32DJ32BZ326L31UH312O312M326X21L22O325331LZ312Z310T31MA31VC326X3253314Z32PB31JZ21H312V31YO2G71B228328U31AZ32IK311D313B31MC312K31FC31T631MH31E332PJ31DS31K331JX31EO31DV31DK31KA32Q032EQ31DK32JP32Q02HR31EG1P31KK31N231KN31E032KK32CC2G6311527G32PZ31BI27G31T032QL322T310T32QQ32EQ32QQ32Q832QN325932QS31BI2NE32QZ27G31M432Q132QF31DO3276329P321L2BM32QM2BM32RD31DV32RE32Q432Q12BM32EQ32RE32QW32RE32QA31SZ32Q12B131ER32JV2G727G32DR31FC310L2UF32PO27831SL326V31CJ312W32JU32GE329632A82YM31I332H72T82RU2RQ27T32KR32GK27N28M32KS317W32CT329C28I2OG32SE2RR2G731901B31WU318Q32IJ32K031CL311D31KG32JH328Z31L232T33253321632IR2I2310X31RW32IY31RR31CP31AJ2UF29Y22631CW314Z32TJ32ES328S31SB32EY31A8312N2BE22322K22D22K22G22222K325J2TI2F229H31QH31U731NG31U92G72T81P31Y631QX32OZ2G6211312Z323Z314432TJ31YK31B5315631YS32IZ31B6329Z32J731DK328131AJ31DK2GZ32TJ2BM2N831BI2C12BM311M31F231RT31F531A927G32TQ311Q32CK31FE31VJ32KP32SA32GH2BZ2902922942YZ316129S327S29V297317X2BG2RD22Z2Y731VS27Q317K2VE31LS32OE321Q311H310K326G313032A0311D31CI31TR329U32G631ML31G5328W3215323732K932V632TA32JV31R6319J311E21531RH32QO31RI31RW32WQ311E32RV32KM311Q2N832H432GG32SH2XR32VL32VR32VN29T32VQ29X31IO2JO2A332P432EJ314I23X32LP32M032IL32M2327Z31OF2G832V0314831LF314K24S310Z1B22J32XI313032M132T032PO329S328V32WD31YM32M33206322832K82ZN31AJ324Y32KB31MI31PP32KI2G8240311E326L320631KI3246323731S531MC32JL31G7318U311G31B227931A932YV31TP31EF319632YN31L832YP31G532YR32YJ32Y631AZ31BH3156323Z32JH22G31AZ2HR31KL31ZJ32DJ32WG31C331T232T631G132ZG31FC32UA314827832K731ZM32JQ1P31LI32532MX32ZW2IG32ZW2J232ZW32KY325332PO2G2322P31ZE32T631MH31A731ED31DL2G8278329331MI314431MZ310T31LY31DP32QI31M132LV2C131DU2A7330S324F1P2XA32QK1P325C31DV32QQ1631EN31T031EN29P32FC31EN32EQ31EN27P331A327U27P323O2C1312427G3310331232R21P33153115331732RS21M321L331C311527P32DX32RU31L9331I1P31ZV31OL330I32Z831D731YY331032PI32LW32QH31DN28K21Q33161P31DB2G732V232Z827G332F331832OF32EH322T327Z32RB1P21F331B1P21E321L27P32PG32J831UX32RF31CW332G31152A731YH33332A7327Z29P2BM332W331X332Y321L2HR21J31S43259310V310T333E332V331D333I322L2HR314631K9333N31DV333Q333G31UZ1P32LV31EN2HR2K9313L31BS32J231E02GQ310V32LV29A312U31ET29P319K333P31M13329334231J82G629P331H31DV2A729P33372752HR31CY2G72A72HR327Z27P2A7333G2JM2AP218313Z2JM29A21B32PH1P2NE314431243190334D31GQ1P21A1P1X2G627P31O331DV3353333R31153357321L29A322X32EA335E31YL335H312Z32LV2QR335M335O279335Q31CP3342335431EN335W322L29A1Z335D2NE311C3363311G3365335L335N335P31DZ333O336C335U275336F31EN29A1Y336J31RL27531Y6335I33432A73366336Q31BI336A31SG27P32UG31DF32KC31BP31TR32YG314432YG314Z323U334R336T31L9334U336E1P21031KE32QC31CK32JS337S31AS31C132WM325229A29A32ZP31DZ2122G829A2QR327Z3384321X31DV338D330629A32ZR337W275336K2G625431JT2MX32ZE31RA31LK2K427532TJ2IG311V31AU2J22B122I31N22MX2J232V4337W23P32V731903398333O31AJ2AP27P3355336122L335931DZ22K335D2B132IU311I31C931LN32FY2HR32LV2MX335M339L339U1P31CO3368336W31EJ337P339E336V33613358322L2QR32MM33602B131AO31Y6311I334D320F336731N232QD31SG2AP337E32YD29A326F3147337J2G6332G2AP31E933A2337R31152NE32PL2G72AP335F338F337W334131DZ33A831EN2B13196334831EJ32JL31Y631S133AH1P2IG33AJ31BI29A31YU313C29A33AO1V32KC2NE31V033AS32W7311G29A33AX32JV278334M31DZ318N2G7338A32Z82NE29A334V32ZX317Y2G82NE2B1314431CA31152B1338031LN32JH31AJ338T32ZG23T1P2J2338J339432Z8338T22C31DV338T2D2310T338T323233D331EJ33062MX321N33CD2752IG311C25G31JT31DY338R31A131E133DK32XW327O31RJ319031AU2JM31D9339231BI31DY31UH1V31F22B125D339927933E0339C33CD2NE339G2IG339I314I2JM2J2221335D31D9337Y33DK31MC318731DY32FY2QR32LV31DY335M33ED33EN339Z337931UQ33DK337P2B133E631EN2IG33BA31152J222033EE338K2753124322P335J33DK33BM33EU31DY33EW336133B833F0321L2J222333F531KN31Y633F9337633FB337927G2B133FE31PB2B133BS32KC2MX31RW310Z33AT279332G33CH336B33CD33CB33EZ2OQ31LH33BK33CX33CD33B82J233F127531D9225335D31DY31BX31Y631A7336N2A731A733BM331L31RJ31SG2MX33FY33GD31UR33BX31GC1P32322MX33C12MX33C331EN2J231AJ32PX2J2327Z2IG2MX33CC31D931JC2G62IG31D9327Z2J22IG33B831DY33E931EN31A732TJ33BE2JM31O9310X31DQ31R927531DU31FW27531EI32PI31152XA32O331EN312432O8322L31VG21V321L331521U321L2ZO21X321L31B521W2G831DU32UM31MY330P32FY31DU215339231DQ335M32TJ32LV31DQ33A02G62J231DQ337P33HP33A633HS321L31A7323U33HX33GD2HF330P31MC33J31P21Y330Y334327533J01P323U33JL31CO31ET33J733G731D01P33C431DY23D31XO33DK327Z31D92J233CC31A7327W31ZU31GU31A731CD31AJ31DY31D9339G2JM310R33EA330P32SW336031DU32DV31RJ324G31CW32LV31EI31Y62ZO33KV1P2GH31V633I9314K310T2XA324P31DV33L631CW33L533JO23I33L833JO32JX33LB2XA234321Q31EI335M2XA33IY330X237336Q33KZ23633JO27931DY31EI337P33KH33A633KK321L31DQ31ZR33BE31DU330631A733KT28K33KZ33KX33JP330X33L131EN32YV31KI33L9326P33L9321633L933LD33LH1P33LG27533L931YF318733LL33JO33LO31EI33LQ335O33LS33LU27533LW33G733LZ33B833M1322L31DQ23B335D31DU322P1P33F433M933MG33L433MS33JO33MK33JO33MM33LC33LE2XA33MR33JO2XA31J633MV32UB33MX33I633L01P33L233NL32JH319B33MJ2ZN31DU33ML33NR27A33OB33NT33L933NW33O033LM33MD33MZ33NZ330X33LT31ET33N533LY31GU33N833MD31AL330P32ID33M531RJ279312433KT33FA31EI334G2G633OP31DV33N731EN2JM3344311531DQ22W33ND330G33OZ330X336N33O033P433LV330X33OQ33KI33P933OT33PC1P32C633KP33JJ33F733PI32WP33PK33N333DK33LX33P733OR33PQ33PB33JQ2N933PF32IF325633PY33P21P33PL33N433PN33Q433PP311533PA33M2314V33PF33KT31CW33P133OJ33QF33Q133P6310T31DY33H933QL1P2302G833DV32Z831A731DY33CC31DQ2332G831A731DQ327Z2JM31A7339G33IX339J31EI318K336033L933PH325733PZ33QC33QG330G3124337P33RF33A633RI322L31EI2UI337F33JO33RU33H231CK33GL33RP33FA312433RS2JM33S4310T2JM33R731EN31DU32XE2G62JM31DU327Z31DQ2JM33B831EI32G1322L2XA31CV33BE312433121P2K9331232WA331532LO31KI3315331532KF310T33T61P31R1318731VG335M331527931DQ31VG337P33SO33A631EI33Q733JO27433SW331P2G631Y633T133FQ31VG33PL27G33TI32DT31OQ');local a=(bit or bit32);local d=a and a.bxor or function(a,c)local b,d,e=1,0,10 while a>0 and c>0 do local f,e=a%2,c%2 if f~=e then d=d+b end a,c,b=(a-f)/2,(c-e)/2,b*2 end if a<c then a=c end while a>0 do local c=a%2 if c>0 then d=d+b end a,b=(a-c)/2,b*2 end return d end local function c(b,a,c)if c then local a=(b/2^(a-1))%2^((c-1)-(a-1)+1);return a-a%1;else local a=2^(a-1);return(b%(a+a)>=a)and 1 or 0;end;end;local a=1;local function b()local f,e,b,c=h(j,a,a+3);f=d(f,25)e=d(e,25)b=d(b,25)c=d(c,25)a=a+4;return(c*16777216)+(b*65536)+(e*256)+f;end;local function i()local b=d(h(j,a,a),25);a=a+1;return b;end;local function g()local b,c=h(j,a,a+2);b=d(b,25)c=d(c,25)a=a+2;return(c*256)+b;end;local function s()local a=b();local b=b();local e=1;local d=(c(b,1,20)*(2^32))+a;local a=c(b,21,31);local b=((-1)^c(b,32));if(a==0)then if(d==0)then return b*0;else a=1;e=0;end;elseif(a==2047)then return(d==0)and(b*(1/0))or(b*(0/0));end;return l(b,a-1023)*(e+(d/(2^52)));end;local p=b;local function l(b)local c;if(not b)then b=p();if(b==0)then return'';end;end;c=e(j,a,a+b-1);a=a+b;local b={}for a=1,#c do b[a]=k(d(h(e(c,a,a)),25))end return n(b);end;local a=b;local function p(...)return{...},o('#',...)end local function j()local k={};local e={};local a={};local h={[#{"1 + 1 = 111";{511;596;835;45};}]=e,[#{{893;581;582;761};"1 + 1 = 111";{331;949;726;620};}]=nil,[#{{803;168;726;363};{188;160;203;912};{598;113;734;837};{213;994;679;769};}]=a,[#{"1 + 1 = 111";}]=k,};local a=b()local d={}for c=1,a do local b=i();local a;if(b==3)then a=(i()~=0);elseif(b==0)then a=s();elseif(b==1)then a=l();end;d[c]=a;end;h[3]=i();for a=1,b()do e[a-1]=j();end;for h=1,b()do local a=i();if(c(a,1,1)==0)then local e=c(a,2,3);local f=c(a,4,6);local a={g(),g(),nil,nil};if(e==0)then a[3]=g();a[4]=g();elseif(e==1)then a[3]=b();elseif(e==2)then a[3]=b()-(2^16)elseif(e==3)then a[3]=b()-(2^16)a[4]=g();end;if(c(f,1,1)==1)then a[2]=d[a[2]]end if(c(f,2,2)==1)then a[3]=d[a[3]]end if(c(f,3,3)==1)then a[4]=d[a[4]]end k[h]=a;end end;return h;end;local function l(a,k,g)a=(a==true and j())or a;return(function(...)local d=a[1];local e=a[3];local n=a[2];local j=p local b=1;local h=-1;local r={};local p={...};local i=o('#',...)-1;local o={};local c={};for a=0,i do if(a>=e)then r[a-e]=p[a+1];else c[a]=p[a+#{"1 + 1 = 111";}];end;end;local a=i-e+1 local a;local e;while true do a=d[b];e=a[1];if e<=76 then if e<=37 then if e<=18 then if e<=8 then if e<=3 then if e<=1 then if e==0 then local g;local e;c[a[2]]={};b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];else local h;local e;e=a[2]c[e](c[e+1])b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]={};b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=g[a[3]];end;elseif e>2 then c[a[2]][a[3]]=c[a[4]];else local f;local e;c[a[2]]={};b=b+1;a=d[b];c[a[2]]={};b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2];f=c[e];for a=e+1,a[3]do m(f,c[a])end;end;elseif e<=5 then if e==4 then local g;local e;c[a[2]]={};b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];else local g;local e;c[a[2]]={};b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];end;elseif e<=6 then c[a[2]]=a[3];elseif e==7 then local b=a[2]c[b](f(c,b+1,a[3]))else local a=a[2]local d,b=j(c[a](f(c,a+1,h)))h=b+a-1 local b=0;for a=a,h do b=b+1;c[a]=d[b];end;end;elseif e<=13 then if e<=10 then if e>9 then c[a[2]][a[3]]=a[4];else local e;c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=c[a[3]];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][c[a[4]]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];do return end;end;elseif e<=11 then local g;local e;c[a[2]]={};b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];elseif e>12 then local b=a[2];local d=c[b];for a=b+1,a[3]do m(d,c[a])end;else c[a[2]]=c[a[3]][c[a[4]]];end;elseif e<=15 then if e==14 then c[a[2]]=c[a[3]]*c[a[4]];else c[a[2]]={};end;elseif e<=16 then b=a[3];elseif e==17 then if not c[a[2]]then b=b+1;else b=a[3];end;else if c[a[2]]then b=b+1;else b=a[3];end;end;elseif e<=27 then if e<=22 then if e<=20 then if e>19 then local e;c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];b=a[3];else local h;local e;c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))end;elseif e==21 then do return c[a[2]]end else local g;local e;c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];b=a[3];end;elseif e<=24 then if e==23 then c[a[2]]={};b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];else c[a[2]]=a[3];end;elseif e<=25 then c[a[2]][a[3]]=a[4];elseif e>26 then local a=a[2]c[a]=c[a](f(c,a+1,h))else local g;local e;c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];end;elseif e<=32 then if e<=29 then if e==28 then b=a[3];else local g;local e;c[a[2]]={};b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];end;elseif e<=30 then c[a[2]]=(not c[a[3]]);elseif e==31 then local g;local e;c[a[2]][a[3]]=a[4];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];else local a=a[2]c[a]=c[a](f(c,a+1,h))end;elseif e<=34 then if e==33 then local b=a[2]local e={c[b](c[b+1])};local d=0;for a=b,a[4]do d=d+1;c[a]=e[d];end else local b=a[2]c[b]=c[b](f(c,b+1,a[3]))end;elseif e<=35 then c[a[2]]=(not c[a[3]]);elseif e>36 then local e;c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];b=a[3];else local h;local e;c[a[2]]=(a[3]~=0);b=b+1;a=d[b];g[a[3]]=c[a[2]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];end;elseif e<=56 then if e<=46 then if e<=41 then if e<=39 then if e>38 then local g;local e;e=a[2]c[e](c[e+1])b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];else c[a[2]]=l(n[a[3]],nil,g);end;elseif e==40 then local h;local e;c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];c[a[2]]=k[a[3]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];e=a[2]c[e](c[e+1])b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];else local e;c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];b=a[3];end;elseif e<=43 then if e>42 then local b=a[2];local d=c[a[3]];c[b+1]=d;c[b]=d[a[4]];else local b=a[2]local e={c[b](c[b+1])};local d=0;for a=b,a[4]do d=d+1;c[a]=e[d];end end;elseif e<=44 then if c[a[2]]then b=b+1;else b=a[3];end;elseif e==45 then local e;c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=c[a[3]];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];if(c[a[2]]==a[4])then b=b+1;else b=a[3];end;else g[a[3]]=c[a[2]];end;elseif e<=51 then if e<=48 then if e==47 then do return end;else local a=a[2]c[a]=c[a]()end;elseif e<=49 then local h;local e;c[a[2]]={};b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];elseif e==50 then local a=a[2]c[a](c[a+1])else local a=a[2]c[a](c[a+1])end;elseif e<=53 then if e>52 then if(c[a[2]]==a[4])then b=b+1;else b=a[3];end;else local e;c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=c[a[3]];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];do return end;end;elseif e<=54 then local g;local e;c[a[2]]={};b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];elseif e==55 then c[a[2]]=g[a[3]];else c[a[2]]();end;elseif e<=66 then if e<=61 then if e<=58 then if e==57 then if(c[a[2]]==a[4])then b=b+1;else b=a[3];end;else c[a[2]]=c[a[3]]-a[4];end;elseif e<=59 then local g;local e;c[a[2]]={};b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];elseif e>60 then local g;local e;c[a[2]]={};b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];else local b=a[2];local d=c[b];for a=b+1,a[3]do m(d,c[a])end;end;elseif e<=63 then if e==62 then c[a[2]]=g[a[3]];else local a=a[2]local d,b=j(c[a](c[a+1]))h=b+a-1 local b=0;for a=a,h do b=b+1;c[a]=d[b];end;end;elseif e<=64 then local b=a[2]local d,a=j(c[b](f(c,b+1,a[3])))h=a+b-1 local a=0;for b=b,h do a=a+1;c[b]=d[a];end;elseif e>65 then local h;local e;c[a[2]]=g[a[3]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];else local k;local l,m;local i;local e;e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];e=a[2]c[e]=c[e](c[e+1])b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]l,m=j(c[e](f(c,e+1,a[3])))h=m+e-1 k=0;for a=e,h do k=k+1;c[a]=l[k];end;b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,h))b=b+1;a=d[b];e=a[2]c[e]=c[e]()b=b+1;a=d[b];e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];c[a[2]]={};b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];end;elseif e<=71 then if e<=68 then if e>67 then c[a[2]]=(a[3]~=0);else local g;local e;c[a[2]][a[3]]=a[4];b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];end;elseif e<=69 then local b=a[2]c[b](f(c,b+1,a[3]))elseif e==70 then local e;c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];b=a[3];else local e=a[2];local f=a[4];local d=e+2 local e={c[e](c[e+1],c[d])};for a=1,f do c[d+a]=e[a];end;local e=e[1]if e then c[d]=e b=a[3];else b=b+1;end;end;elseif e<=73 then if e==72 then local h=n[a[3]];local f;local e={};f=q({},{__index=function(b,a)local a=e[a];return a[1][a[2]];end,__newindex=function(c,a,b)local a=e[a]a[1][a[2]]=b;end;});for f=1,a[4]do b=b+1;local a=d[b];if a[1]==125 then e[f-1]={c,a[3]};else e[f-1]={k,a[3]};end;o[#o+1]=e;end;c[a[2]]=l(h,f,g);else local k;local n;local i;local l,m;local e;c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]]-a[4];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]l,m=j(c[e](f(c,e+1,a[3])))h=m+e-1 i=0;for a=e,h do i=i+1;c[a]=l[i];end;b=b+1;a=d[b];e=a[2]l,m=j(c[e](f(c,e+1,h)))h=m+e-1 i=0;for a=e,h do i=i+1;c[a]=l[i];end;b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,h))b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];n=a[3];k=c[n]for a=n+1,a[4]do k=k..c[a];end;c[a[2]]=k;b=b+1;a=d[b];e=a[2]c[e](c[e+1])b=b+1;a=d[b];do return end;end;elseif e<=74 then local g;local e;c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];e=a[2]c[e](c[e+1])elseif e>75 then local g;local e;c[a[2]]={};b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];else local g;local e;c[a[2]]={};b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];end;elseif e<=114 then if e<=95 then if e<=85 then if e<=80 then if e<=78 then if e>77 then local e;local i;local l,m;local k;local e;c[a[2]]=g[a[3]];b=b+1;a=d[b];e=a[2];k=c[a[3]];c[e+1]=k;c[e]=k[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];k=c[a[3]];c[e+1]=k;c[e]=k[a[4]];b=b+1;a=d[b];e=a[2]l,m=j(c[e](c[e+1]))h=m+e-1 i=0;for a=e,h do i=i+1;c[a]=l[i];end;b=b+1;a=d[b];e=a[2]l={c[e](f(c,e+1,h))};i=0;for a=e,a[4]do i=i+1;c[a]=l[i];end b=b+1;a=d[b];b=a[3];else c[a[2]]=l(n[a[3]],nil,g);end;elseif e>79 then local d=a[2]local e={c[d](f(c,d+1,h))};local b=0;for a=d,a[4]do b=b+1;c[a]=e[b];end else local g;local e;e=a[2]c[e](c[e+1])b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];end;elseif e<=82 then if e==81 then c[a[2]]={};b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];c[a[2]]=g[a[3]];else local d=a[2]local e={c[d](f(c,d+1,h))};local b=0;for a=d,a[4]do b=b+1;c[a]=e[b];end end;elseif e<=83 then local g;local e;c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=k[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];do return end;elseif e==84 then local g;local e;c[a[2]]={};b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];else local b=a[2];local d=c[a[3]];c[b+1]=d;c[b]=d[a[4]];end;elseif e<=90 then if e<=87 then if e>86 then c[a[2]]=c[a[3]];else local a=a[2]c[a]=c[a]()end;elseif e<=88 then local h;local e;c[a[2]]=(not c[a[3]]);b=b+1;a=d[b];g[a[3]]=c[a[2]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))elseif e==89 then local d=a[3];local b=c[d]for a=d+1,a[4]do b=b..c[a];end;c[a[2]]=b;else c[a[2]]=(a[3]~=0);end;elseif e<=92 then if e==91 then c[a[2]]={};b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];else local e;c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];b=a[3];end;elseif e<=93 then c[a[2]][a[3]]=c[a[4]];elseif e==94 then local h;local e;e=a[2]c[e](c[e+1])b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]={};b=b+1;a=d[b];c[a[2]]=g[a[3]];else local d=a[3];local b=c[d]for a=d+1,a[4]do b=b..c[a];end;c[a[2]]=b;end;elseif e<=104 then if e<=99 then if e<=97 then if e==96 then c[a[2]]=c[a[3]]+a[4];else c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];do return end;end;elseif e>98 then local h;local e;c[a[2]]=g[a[3]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];if c[a[2]]then b=b+1;else b=a[3];end;else local l;local n,m;local i;local e;c[a[2]]=k[a[3]];b=b+1;a=d[b];e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];e=a[2]c[e](c[e+1])b=b+1;a=d[b];c[a[2]]=k[a[3]];b=b+1;a=d[b];e=a[2];i=c[a[3]];c[e+1]=i;c[e]=i[a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2]n,m=j(c[e]())h=m+e-1 l=0;for a=e,h do l=l+1;c[a]=n[l];end;b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,h))b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e](c[e+1])b=b+1;a=d[b];do return end;end;elseif e<=101 then if e==100 then c[a[2]]={};else if not c[a[2]]then b=b+1;else b=a[3];end;end;elseif e<=102 then local g;local e;c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];b=a[3];elseif e>103 then local h;local e;c[a[2]]=g[a[3]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];e=a[2]c[e]=c[e](c[e+1])b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];else do return end;end;elseif e<=109 then if e<=106 then if e>105 then c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];do return end;else local h;local e;c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];b=a[3];end;elseif e<=107 then local g;local e;c[a[2]][a[3]]=a[4];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];elseif e==108 then c[a[2]]=c[a[3]]-a[4];else local a=a[2]c[a](f(c,a+1,h))end;elseif e<=111 then if e>110 then local h;local e;c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][c[a[4]]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][c[a[4]]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];c[a[2]]=k[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][c[a[4]]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][c[a[4]]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];b=a[3];else local g;local e;c[a[2]]={};b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];end;elseif e<=112 then local g;local e;c[a[2]]={};b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];elseif e==113 then c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];do return end;else local g;local e;c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))end;elseif e<=133 then if e<=123 then if e<=118 then if e<=116 then if e>115 then local h;local e;c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]];b=b+1;a=d[b];e=a[2]c[e](c[e+1])b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];if c[a[2]]then b=b+1;else b=a[3];end;else local g;local e;c[a[2]]={};b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];end;elseif e>117 then local b=a[2]local d,a=j(c[b]())h=a+b-1 local a=0;for b=b,h do a=a+1;c[b]=d[a];end;else g[a[3]]=c[a[2]];end;elseif e<=120 then if e==119 then local b=a[2]c[b]=c[b](f(c,b+1,a[3]))else local g;local e;e=a[2]c[e](c[e+1])b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];end;elseif e<=121 then local e;c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]]/c[a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]]+a[4];b=b+1;a=d[b];e=a[2]c[e]=c[e](c[e+1])b=b+1;a=d[b];c[a[2]]=c[a[3]]*c[a[4]];b=b+1;a=d[b];do return c[a[2]]end b=b+1;a=d[b];do return end;elseif e>122 then if(c[a[2]]~=a[4])then b=b+1;else b=a[3];end;else local i;local m,l;local k;local e;c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];e=a[2];k=c[a[3]];c[e+1]=k;c[e]=k[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=(a[3]~=0);b=b+1;a=d[b];e=a[2]m,l=j(c[e](f(c,e+1,a[3])))h=l+e-1 i=0;for a=e,h do i=i+1;c[a]=m[i];end;b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,h))b=b+1;a=d[b];c[a[2]]();b=b+1;a=d[b];do return end;end;elseif e<=128 then if e<=125 then if e>124 then c[a[2]]=c[a[3]];else local h;local e;c[a[2]]=g[a[3]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];do return end;end;elseif e<=126 then local a=a[2]c[a]=c[a](c[a+1])elseif e==127 then local b=a[2]local d,a=j(c[b](f(c,b+1,a[3])))h=a+b-1 local a=0;for b=b,h do a=a+1;c[b]=d[a];end;else c[a[2]]=c[a[3]]/c[a[4]];end;elseif e<=130 then if e>129 then local a=a[2]c[a]=c[a](c[a+1])else if(c[a[2]]~=a[4])then b=b+1;else b=a[3];end;end;elseif e<=131 then c[a[2]]=k[a[3]];elseif e>132 then local e;c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];b=b+1;a=d[b];b=a[3];else c[a[2]]=c[a[3]][a[4]];end;elseif e<=143 then if e<=138 then if e<=135 then if e>134 then local a=a[2]local d,b=j(c[a](c[a+1]))h=b+a-1 local b=0;for a=a,h do b=b+1;c[a]=d[b];end;else c[a[2]]=c[a[3]][a[4]];end;elseif e<=136 then local g;local e;c[a[2]]={};b=b+1;a=d[b];c[a[2]][a[3]]=a[4];b=b+1;a=d[b];e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];g=c[a[3]];c[e+1]=g;c[e]=g[a[4]];elseif e>137 then c[a[2]]();else local h;local e;e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];if c[a[2]]then b=b+1;else b=a[3];end;end;elseif e<=140 then if e==139 then c[a[2]]=c[a[3]]+a[4];else local h=n[a[3]];local f;local e={};f=q({},{__index=function(b,a)local a=e[a];return a[1][a[2]];end,__newindex=function(c,a,b)local a=e[a]a[1][a[2]]=b;end;});for f=1,a[4]do b=b+1;local a=d[b];if a[1]==125 then e[f-1]={c,a[3]};else e[f-1]={k,a[3]};end;o[#o+1]=e;end;c[a[2]]=l(h,f,g);end;elseif e<=141 then local e=a[2];local f=a[4];local d=e+2 local e={c[e](c[e+1],c[d])};for a=1,f do c[d+a]=e[a];end;local e=e[1]if e then c[d]=e b=a[3];else b=b+1;end;elseif e==142 then local a=a[2]c[a](f(c,a+1,h))else local a=a[2]local d,b=j(c[a](f(c,a+1,h)))h=b+a-1 local b=0;for a=a,h do b=b+1;c[a]=d[b];end;end;elseif e<=148 then if e<=145 then if e>144 then c[a[2]]=c[a[3]][c[a[4]]];else local e;local g;local i,l;local k;local e;c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];k=c[a[3]];c[e+1]=k;c[e]=k[a[4]];b=b+1;a=d[b];e=a[2]i,l=j(c[e](c[e+1]))h=l+e-1 g=0;for a=e,h do g=g+1;c[a]=i[g];end;b=b+1;a=d[b];e=a[2]i={c[e](f(c,e+1,h))};g=0;for a=e,a[4]do g=g+1;c[a]=i[g];end b=b+1;a=d[b];b=a[3];end;elseif e<=146 then local h;local e;c[a[2]]=g[a[3]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];if c[a[2]]then b=b+1;else b=a[3];end;elseif e==147 then do return c[a[2]]end else local h;local e;c[a[2]]=g[a[3]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];e=a[2]c[e](c[e+1])b=b+1;a=d[b];do return end;end;elseif e<=150 then if e>149 then c[a[2]]=c[a[3]]*c[a[4]];else local h;local e;e=a[2]c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];b=b+1;a=d[b];e=a[2]c[e]=c[e](c[e+1])b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];e=a[2];h=c[a[3]];c[e+1]=h;c[e]=h[a[4]];end;elseif e<=151 then c[a[2]]=c[a[3]]/c[a[4]];elseif e>152 then local b=a[2]local d,a=j(c[b]())h=a+b-1 local a=0;for b=b,h do a=a+1;c[b]=d[a];end;else local e;c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=g[a[3]];b=b+1;a=d[b];c[a[2]]=c[a[3]][a[4]];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];c[a[2]]=a[3];b=b+1;a=d[b];e=a[2]c[e]=c[e](f(c,e+1,a[3]))b=b+1;a=d[b];c[a[2]][a[3]]=c[a[4]];end;b=b+1;end;end);end;return l(true,{},r())();end)(string.byte,table.insert,setmetatable);
+local Virtual = game:service'VirtualUser'
+	game:service'Players'.LocalPlayer.Idled:connect(function()
+	Virtual:CaptureController()
+	Virtual:ClickButton2(Vector2.new())
+	wait(2)
+end)
+
+if game.CoreGui:FindFirstChild("ScreenGui") then
+	game.CoreGui:FindFirstChild("ScreenGui"):Destroy() 
+end
+local rs = game:GetService("RunService").RenderStepped
+local Remote = game:GetService("ReplicatedStorage").Modules.ServiceLoader.NetworkService.Events.Objects:GetChildren()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/!Zypher%20UI.lua"))()
+
+local main = library:CreateMain({projName = "ScreenGui",Resizable = true,MinSize = UDim2.new(0,400,0,400),MaxSize = UDim2.new(0,750,0,500),})
+
+local Home = main:CreateCategory("Home")
+	local Tittle = Home:CreateSection("Knight Heroes")
+	local H1 = Home:CreateSection("Update logs:")
+		H1:Create(
+			"Textlabel",
+			"+ Void Update Added"
+		)
+	local H2 = Home:CreateSection("Credits")
+		H2:Create(
+			"Textlabel",
+			"Script by Altix#3395"
+		)
+		H2:Create(
+			"Textlabel",
+			"Tested by I'm A Cat#7202"
+		)
+		H2:Create(
+			"Button",
+			"Copy Discord Link (https://discord.gg/KmHZUpXEmQ)",
+			function()
+			setclipboard("https://discord.gg/KmHZUpXEmQ")
+			end,
+			{
+				animated = true,
+			}
+		)
+
+local Function = main:CreateCategory("Function")
+	local Func = Function:CreateSection("Function Stuff")
+		Func:Create(
+			"Toggle",
+			"Auto Click",
+			function(state)
+				shared.toggle = state
+			end,
+			{
+				default = false,
+			}
+		)
+		Func:Create(
+			"Toggle",
+			"Auto Sell",
+			function(state)
+				shared.toggle2 = state
+			end,
+			{
+				default = false,
+			}
+		)
+		Func:Create(
+			"Toggle",
+			"Auto Regen",
+			function(state)
+				shared.toggle3 = state
+			end,
+			{
+				default = false,
+			}
+		)
+		Func:Create(
+			"Toggle",
+			"Auto Collect Rings",
+			function(state)
+				shared.toggle4 = state
+			end,
+			{
+				default = false,
+			}
+		)
+		spawn(function()
+			while wait() do
+				if shared.toggle then
+					Remote[5]:FireServer("SwingSword")
+				end
+				if shared.toggle2 then
+					Remote[5]:FireServer("SellPower")
+				end
+				if shared.toggle3 then
+					Remote[13]:FireServer("Home")
+				end
+				if shared.toggle4 then
+					for i,v in pairs(game:GetService("Workspace").Rings:GetDescendants()) do
+						if v.Name == "Model" then
+							v.CollisionPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+							rs:wait()
+							v.CollisionPart.CFrame = CFrame.new(0,0,0)
+						end
+					end
+				end
+			end
+		end)
+		--[[
+			local AUTOBOSS = Function:CreateSection("Auto Boss Stuff")
+				local BossTable = {}
+				local bossloacation = game.workspace:FindFirstChild("Bosses")
+				for i,v in pairs(bossloacation:GetChildren()) do
+					table.insert(BossTable, v.Name)
+				end
+				AUTOBOSS:Create(
+					"DropDown",
+					"Select Boss", 
+					function(current)
+						print("Selected to:", current)
+						_G.BossSelected = current
+					end,
+					{
+						options = BossTable,
+						-- Optional
+						default = "Select Boss",
+						search = false
+					}
+				)
+				AUTOBOSS:Create(
+					"Toggle",
+					"Auto Farm Boss",
+					function(state)
+						shared.toggleAFB = state
+					end,
+					{
+						default = false,
+					}
+				)
+				spawn(function()
+					while wait() do
+						if _G.BossSelected ~= nil then
+							if shared.toggleAFB then
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Bosses[_G.BossSelected].Model[_G.BossSelected].HumanoidRootPart.CFrame
+								Remote[23]:FireServer("DamageBoss",workspace.Bosses[_G.BossSelected].Model[_G.BossSelected].LowerTorso,_G.BossSelected)
+							end
+						end
+					end
+				end)
+		]]
+
+	local ABS = Function:CreateSection("Auto Buy Stuff")
+		ABS:Create(
+			"Toggle",
+			"Auto Buy Swords",
+			function(state)
+				shared.toggleabss = state
+			end,
+			{
+				default = false,
+			}
+		)
+		spawn(function()
+			while wait() do
+				if shared.toggleabss then
+					Remote[5]:FireServer("BuyAllSwords","Void")
+				end
+			end
+		end)
+local PetModule = main:CreateCategory("PetModule")
+	local BES = PetModule:CreateSection("Buy Egg Stuff")
+		local SelectEggsStrings = {}
+		for i,v in pairs(game:GetService("ReplicatedStorage").Assets.Pets.Eggs:GetChildren()) do
+			table.insert(SelectEggsStrings, v.Name)
+		end
+		BES:Create(
+			"DropDown",
+			"Select An Egg", 
+			function(current)
+				_G.EggSelected = current
+			end,
+			{
+				options = SelectEggsStrings,
+				-- Optional
+				default = "Select An Egg",
+				search = false
+			}
+		)
+		BES:Create(
+			"Toggle",
+			"Auto Open Egg x1",
+			function(state)
+				shared.togglex1 = state
+		end,
+			{
+				default = false,
+			}
+		)
+		BES:Create(
+			"Toggle",
+			"Auto Open Egg x3",
+			function(state)
+				shared.togglex3 = state
+			end,
+			{
+				default = false,
+			}
+		)
+		spawn(function()
+			while wait(2) do
+				if shared.togglex1 then
+					if _G.EggSelected ~= nil then
+						Remote[21]:FireServer(10,_G.EggSelected,"Mono")
+					end
+				end
+				if shared.togglex3 then
+					if _G.EggSelected ~= nil then
+						Remote[21]:FireServer(10,_G.EggSelected,"Triple")
+					end
+				end
+			end
+		end)
+	local OS = PetModule:CreateSection("Other Stuff")
+		OS:Create(
+			"Toggle",
+			"Auto Evolve",
+			function(state)
+				shared.toggleAEV = state
+			end,
+			{
+				default = false,
+			}
+		)
+		spawn(function()
+			while wait(0.5) do
+				if shared.toggleAEV then
+					Remote[3]:FireServer(7)
+				end
+			end
+		end)
+local Teleport = main:CreateCategory("Teleport")
+		local TS = Teleport:CreateSection("Teleport Stuff")
+			TS:Create(
+				"DropDown",
+				"Choose a Location", 
+				function(current)
+					print("Selected to:", current)
+					if current == "Home" then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-170, 143, -26)
+					elseif current == "Mystic" then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-169, 122, -2605)
+					elseif current == "Unknown" then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(31, 92, -6384)
+					elseif current == "Tundra" then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(89, 92, -13964)
+					elseif current == "Thunder" then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-32, 92, -18520)
+					elseif current == "Inferno" then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(24, 92, -29225)
+					elseif current == "Void" then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(411, 92, -38953)
+					elseif current == "Dragon" then
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(352, 119, -51537)
+					end
+				end,
+				{
+					options = {
+						"Home", "Mystic", "Unknown", "Tundra", "Thunder", "Inferno", "Void", "Dragon"
+					},
+					-- Optional
+					default = "Choose a Location",
+					search = false
+				}
+			)
+			TS:Create(
+				"DropDown",
+				"Choose a Player", 
+				function(current)
+					print("Selected to:", current)
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[current].Character.HumanoidRootPart.CFrame
+				end,
+				{
+					playerlist = true,
+					default = "Choose a Player",
+					search = true
+				}
+			)
+
+local PlayerStuff = main:CreateCategory("Local Player")
+	local PS = PlayerStuff:CreateSection("Player Stuff")
+		PS:Create(
+			"Slider",
+			"Speed Hack",
+			function(value)
+				game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+			end,
+			{
+				min = 0,
+				max = 250,
+				-- Optional
+				default = game.Players.LocalPlayer.Character.Humanoid.WalkSpeed,
+				precise = false, -- ex: 0.1, 0.2, 0.3
+				changablevalue = true
+			}
+		)
+		PS:Create(
+			"Slider",
+			"Jump Hack",
+			function(value)
+				game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
+			end,
+			{
+				min = 0,
+				max = 250,
+				-- Optional
+				default = game.Players.LocalPlayer.Character.Humanoid.JumpPower,
+				precise = false, -- ex: 0.1, 0.2, 0.3
+				changablevalue = true
+			}
+		)
+		PS:Create(
+			"Slider",
+			"HipHeight Hack",
+			function(value)
+			game.Players.LocalPlayer.Character.Humanoid.HipHeight = value
+			end,
+			{
+				min = game.Players.LocalPlayer.Character.Humanoid.HipHeight,
+				max = 250,
+				-- Optional
+				default = game.Players.LocalPlayer.Character.Humanoid.HipHeight,
+				precise = true, -- ex: 0.1, 0.2, 0.3
+				changablevalue = true
+			}
+		)
+		PS:Create(
+			"Button",
+			"No Clip (Press N)",
+			function()
+				noclip = false
+				game:GetService('RunService').Stepped:connect(function()
+					if noclip then
+						game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+					end
+				end)
+				local plr = game.Players.LocalPlayer
+				local mouse = plr:GetMouse()
+				mouse.KeyDown:connect(function(key)
+					if key == "n" then
+						noclip = not noclip
+						game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+					end
+				end)
+			end,
+			{
+				animated = true,
+			}
+		)
+		PS:Create(
+			"Button",
+			"Fly (Press F)",
+			function()
+				loadstring(game:HttpGet("https://pastebin.com/raw/c01bpxpF", true))()
+			end,
+			{
+				animated = true,
+			}
+		)
+		PS:Create(
+			"Button",
+			"Ctrl + Click Tp",
+			function()
+				local Plr = game:GetService("Players").LocalPlayer
+				local Mouse = Plr:GetMouse()
+
+				Mouse.Button1Down:connect(function()
+				if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end
+				if not Mouse.Target then return end
+				Plr.Character:MoveTo(Mouse.Hit.p)
+				end)
+			end,
+			{
+				animated = true,
+			}
+		)
+		PS:Create(
+			"Button",
+			"Camera Max/Min Zoom Distance",
+			function()
+				game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = 99999
+				game:GetService("Players").LocalPlayer.CameraMinZoomDistance = 0
+			end,
+			{
+				animated = true,
+			}
+		)
+		PS:Create(
+			"Button",
+			"Copy Location",
+			function()
+				local function RoundNumber(Number, Divider)
+					Divider = Divider or 1
+					return (math.floor((Number/Divider)+0.5)*Divider)
+				end
+				syn.write_clipboard("game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(" .. tostring(Vector3.new(RoundNumber(game.Players.LocalPlayer.Character.Head.Position.X,1),RoundNumber(game.Players.LocalPlayer.Character.Head.Position.Y-1.5,1),RoundNumber(game.Players.LocalPlayer.Character.Head.Position.Z,1))) .. ")")
+			end,
+			{
+				animated = true,
+			}
+		)
+
+local Misc = main:CreateCategory("Misc")
+		local Miscsection = Misc:CreateSection("Misc Stuff")
+			Miscsection:Create(
+				"Button",
+				"Refresh Game",
+				function()
+					local TeleportService = game:GetService("TeleportService")
+					local PlaceId = game.PlaceId
+					local player = game.Players.LocalPlayer
+					if player then
+					TeleportService:Teleport(PlaceId, player)
+					end
+				end,
+				{
+					animated = true,
+				}
+			)
+			Miscsection:Create(
+				"Button",
+				"Use All Codes",
+				function()
+					local codes = { 
+						"RELEASE", "DRAGONS", "1klikes", "VOIDISLAND"
+					}
+					for i,v in pairs(codes) do
+						Remote[10]:FireServer(v)
+					end
+				end,
+				{
+					animated = true,
+				}
+			)
+		local GuiStuff = Misc:CreateSection("Gui Stuff")
+			GuiStuff:Create(
+				"KeyBind",
+				"Hide Gui", 
+				function(bool)
+					print(bool)
+					local Gui = game:GetService("CoreGui")["ScreenGui"].Motherframe
+					if Gui.Visible then
+						Gui.Visible = false
+					else
+						Gui.Visible = true
+					end
+				end,
+				{
+					default = Enum.KeyCode.RightControl
+				}
+			)
+			GuiStuff:Create(
+				"Button",
+				"Destroy Gui",
+				function()
+					game:GetService("CoreGui")["ScreenGui"]:Destroy()
+				end,
+				{
+					animated = true,
+				}
+			)
