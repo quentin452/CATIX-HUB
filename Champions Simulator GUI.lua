@@ -1875,7 +1875,7 @@ game:GetService("ReplicatedStorage").Remotes.Events.JumpSkill:FireServer("purcha
 end
 end
 end)
-ThingsSec:addToggle("Auto Buy Classes", nil, function(bool)
+ThingsSec:addToggle("Auto Buy Classes(not work)", nil, function(bool)
  _G.Classes = bool
 while _G.Classes and wait(1.5)do
 	for i,v in pairs (game:GetService("Players").LocalPlayer.PlayerGui.Hud.Interface.Classes.ShopPanel.Frame:GetChildren()) do
@@ -1958,7 +1958,6 @@ local pboss = game:GetService("Workspace")["Pirate Boss"].LeftLowerLeg
 me.HumanoidRootPart.CFrame = CFrame.new(pboss.Position.X, pboss.Position.Y, pboss.Position.Z)
 end
 end)
-
 
     local PageEgg = venyx:addPage("Eggs", 6252259606)
 local EggsS = PageEgg:addSection("Auto Buy Eggs:")
