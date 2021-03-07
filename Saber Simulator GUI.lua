@@ -474,7 +474,16 @@ local Teleport = main:CreateCategory("Teleport")
 				me.CFrame = CFrame.new(631, 265717, -310) wait(0.35)
 				me.CFrame = CFrame.new(631, 269271, -303) wait(0.35)
 				me.CFrame = CFrame.new(638, 272960, -247) wait(0.35)
-				me.CFrame = CFrame.new(634, 276486, -208)
+				me.CFrame = CFrame.new(634, 276486, -208) wait(0.35)
+				me.CFrame = CFrame.new(637, 279945, -244)wait(0.35)
+				me.CFrame = CFrame.new(622, 283380, -229)wait(0.35)
+				me.CFrame = CFrame.new(632, 286884, -242)wait(0.35)
+				me.CFrame = CFrame.new(621, 290425, -241)wait(0.35)
+				me.CFrame = CFrame.new(628, 293908, -238)wait(0.35)
+				me.CFrame = CFrame.new(634, 297354, -210)wait(0.35)
+				me.CFrame = CFrame.new(625, 300850, -227)wait(0.35)
+				me.CFrame = CFrame.new(634, 304278, -217)wait(0.35)
+				me.CFrame = CFrame.new(608, 307726, -167)
 			end,
 			{
 				animated = true,
