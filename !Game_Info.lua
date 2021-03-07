@@ -24,7 +24,7 @@ _G.Game_Info = {
    [23] = {["Name"] = "Coin Collection Simulator", ["GameId"] = 1764694724, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Coin%20Collection%20Simulator%20GUI.lua"},
    [24] = {["Name"] = "Combo Clickers", ["GameId"] = 1844389066, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Combo%20Clicker%20GUI.lua"},
    [25] = {["Name"] = "Cookie Simulator", ["GameId"] = 1066850450, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Cookie%20Simulator%20GUI.lua"},
-   [26] = {["Name"] = "Cotton Candy Simulator", ["GameId"] = 1185093482, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Cotton%20Candy%20Simulator%20GUI.lua"},
+   [26] = {["Name"] = "Cotton Candy Simulator", ["GameId"] = 1185093482, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Cotton%20Candy%20Simulator%20GUI.lua"}, --GAME DOWN
    [27] = {["Name"] = "Crushing Simulator", ["GameId"] = 1339091154, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Crushing%20Simulator%20GUI.lua"},
    [28] = {["Name"] = "Dr. Seuss Simulator", ["GameId"] = 3788547128, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Dr%20Seuss%20GUI.lua"}, -- GAME DOWN
    [29] = {["Name"] = "Dummy Simulator", ["GameId"] = 1762582843, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Dummy%20SImulator%20GUI.lua"},
