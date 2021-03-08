@@ -237,6 +237,7 @@ _G.Game_Info = {
   [236] = {["Name"] = "Bacon Simulator", ["GameId"] = 2212347682, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Bacon%20Simulator%20GUI.lua"},
   [237] = {["Name"] = "Islands", ["GameId"] = 1659645941, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Islands%20GUI.lua"},
   [238] = {["Name"] = "Katana Legends", ["GameId"] = 2187690596, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Katana%20Legends%20GUI.lua"},
+  [239] = {["Name"] = "Happy Simulator", ["GameId"] = 2390517320, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Happy%20Simulator%20GUI.lua"},
 }
 
 -- Important! Ne pas oublier le "", entre chaque update sinon risque que le hub ne s'affiche pas :/
@@ -245,6 +246,7 @@ _G.Game_Vers = "2.3.3"
 
 _G.Game_Update = {
   "**Update 2.3.3**",
+  "Happy Simulator Added",
   "Katana Legends Added",
   "",
   "**Update 2.3.2**",
