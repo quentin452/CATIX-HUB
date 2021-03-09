@@ -223,7 +223,7 @@ game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("I
 game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("VulcansPrize")
 game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("MagmaMasher")
 game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("RidgeBreaker")
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Dragon Champion)
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Dragon Champion")
 game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Burning Champion")
 game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Neonic Slythe")
 game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Rocket Rammer")
@@ -241,7 +241,6 @@ game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("I
 game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Osiris`Weave")
 game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Patriotic Staff")
 end
-    end
 end)
 AutoTab:CreateToggle("Auto Buy Auras", function(bool)   
         _G.d = bool 
@@ -908,7 +907,7 @@ KILL4:CreateToggle("Kill Builder_Boy Mobs", function(bool)
         while wait(0) and _G.zzzm do
             local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn["Builder_Boy"].RightUpperArm
-me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
+me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1) --NEED FIX
     end
 end)
 KILL4:CreateToggle("Kill Beeism Mobs", function(bool)  
