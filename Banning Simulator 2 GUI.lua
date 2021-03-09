@@ -1,4 +1,3 @@
-local me = game.Players.LocalPlayer.Character
 local X = wait(0.1)
 --https://www.roblox.com/games/4221615296/
 
@@ -757,6 +756,7 @@ end)
 KILL3:CreateToggle("Kill ZephsyJ Mobs", function(bool)   
         _G.zzu = bool 
         while wait(0) and _G.zzu do
+            local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.ZephsyJ.RightUpperArm
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
     end
@@ -764,6 +764,7 @@ end)
 KILL3:CreateToggle("Kill gixin Mobs", function(bool)   
         _G.zzv = bool 
         while wait(0) and _G.zzv do
+            local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.gixin.RightUpperArm
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
     end
@@ -771,6 +772,7 @@ end)
 KILL3:CreateToggle("Kill solter Mobs", function(bool)    
         _G.zzw = bool 
         while wait(0) and _G.zzw do
+            local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.solter.RightUpperArm
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
     end
@@ -778,6 +780,7 @@ end)
 KILL3:CreateToggle("Kill Q_Q Mobs", function(bool) 
         _G.zzx = bool 
         while wait(0) and _G.zzx do
+            local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn["Q_Q"].RightUpperArm
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
     end
@@ -785,6 +788,7 @@ end)
 KILL3:CreateToggle("Kill TypicalType Mobs", function(bool) 
         _G.zzy = bool 
         while wait(0) and _G.zzy do
+            local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.TypicalType.RightUpperArm
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
     end
@@ -792,6 +796,7 @@ end)
 KILL3:CreateToggle("Kill SnakeWorl Mobs", function(bool)    
         _G.zzz = bool 
         while wait(0) and _G.zzz do
+            local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.SnakeWorl.RightUpperArm
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
     end
@@ -799,6 +804,7 @@ end)
 KILL3:CreateToggle("Kill DrMeser Mobs", function(bool)  
         _G.zzza = bool 
         while wait(0) and _G.zzza do
+            local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.DrMeser.RightUpperArm
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
     end
@@ -806,6 +812,7 @@ end)
 KILL3:CreateToggle("Kill Merely Mobs", function(bool) 
         _G.zzzb = bool 
         while wait(0) and _G.zzzb do
+            local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Merely.RightUpperArm
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
     end
@@ -813,6 +820,7 @@ end)
 KILL3:CreateToggle("Kill OrionPlaysRBX Mobs", function(bool)  
         _G.zzzc = bool 
         while wait(0) and _G.zzzc do
+            local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.OrionPlaysRBX.RightUpperArm
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
     end
@@ -823,6 +831,7 @@ end)
 KILL3:CreateToggle("Kill ProboyNINJA123 Mobs", function(bool) 
         _G.zzzd = bool 
         while wait(0) and _G.zzzd do
+            local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.ProboyNINJA123.RightUpperArm
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
     end
@@ -830,6 +839,7 @@ end)
 KILL3:CreateToggle("Kill Zillxionaire Mobs", function(bool) 
         _G.zzze = bool 
         while wait(0) and _G.zzze do
+            local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Zillxionaire.RightUpperArm
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
     end
@@ -837,6 +847,7 @@ end)
 KILL3:CreateToggle("Kill NirobiGames Mobs", function(bool) 
         _G.zzzf = bool 
         while wait(0) and _G.zzzf do
+            local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.NirobiGames.RightUpperArm
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
     end
@@ -847,6 +858,7 @@ end)
 KILL4:CreateToggle("Kill Shedletsky Mobs", function(bool) 
         _G.zzzg = bool 
         while wait(0) and _G.zzzg do
+            local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Shedletsky.RightUpperArm
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
     end
@@ -854,6 +866,7 @@ end)
 KILL4:CreateToggle("Kill Linkmon99 Mobs", function(bool) 
         _G.zzzh = bool 
         while wait(0) and _G.zzzh do
+            local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Linkmon99.RightUpperArm
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
     end
@@ -861,6 +874,7 @@ end)
 KILL4:CreateToggle("Kill DeeterPlays Mobs", function(bool)  
         _G.zzzi = bool 
         while wait(0) and _G.zzzi do
+            local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.DeeterPlays.RightUpperArm
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
     end
@@ -868,6 +882,7 @@ end)
 KILL4:CreateToggle("Kill Alvin_Blox Mobs", function(bool)    
         _G.zzzj = bool 
         while wait(0) and _G.zzzj do
+            local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn["Alvin_Blox"].RightUpperArm
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
     end
@@ -875,6 +890,7 @@ end)
 KILL4:CreateToggle("Kill coefficients Mobs", function(bool)    
         _G.zzzk = bool 
         while wait(0) and _G.zzzk do
+            local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.coefficients.RightUpperArm
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
     end
@@ -882,6 +898,7 @@ end)
 KILL4:CreateToggle("Kill JamiyJamie Mobs", function(bool) 
         _G.zzzl = bool 
         while wait(0) and _G.zzzl do
+            local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.JamiyJamie.RightUpperArm
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
     end
@@ -889,6 +906,7 @@ end)
 KILL4:CreateToggle("Kill Builder_Boy Mobs", function(bool)  
         _G.zzzm = bool 
         while wait(0) and _G.zzzm do
+            local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn["Builder_Boy"].RightUpperArm
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
     end
@@ -896,6 +914,7 @@ end)
 KILL4:CreateToggle("Kill Beeism Mobs", function(bool)  
         _G.zzzn = bool 
         while wait(0) and _G.zzzn do
+            local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Beeism.RightUpperArm
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
     end
@@ -903,6 +922,7 @@ end)
 KILL4:CreateToggle("Kill Sylently Mobs", function(bool) 
         _G.zzzo = bool 
         while wait(0) and _G.zzzo do
+            local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Sylently.RightUpperArm
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
     end
