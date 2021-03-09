@@ -1,3 +1,5 @@
+local me = game.Players.LocalPlayer.Character
+local X = wait(0.1)
 --https://www.roblox.com/games/4221615296/
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/preztel/AzureLibrary/master/uilib.lua", true))()
@@ -14,26 +16,26 @@ local MISC = Library:CreateTab("MISC","things", true)
 local credits = Library:CreateTab("Credits","things", true)
 
 
-credits:CreateButton("Our Discords", function() --you dont need "arg" for a button
+credits:CreateButton("Our Discords", function() 
 	setclipboard("AHAHAHAHAH")
 end)
 
-credits:CreateButton("https://discord.gg/KmHZUpXEmQ", function() --you dont need "arg" for a button
+credits:CreateButton("https://discord.gg/KmHZUpXEmQ", function() 
 	setclipboard("https://discord.gg/KmHZUpXEmQ")
 end)
 
-credits:CreateButton("by Altix#3395", function() --you dont need "arg" for a button
+credits:CreateButton("by Altix#3395", function() 
 	setclipboard("Altix#3395")
 end)
 
-credits:CreateButton("by I'm A Cat#7202", function() --you dont need "arg" for a button
+credits:CreateButton("by I'm A Cat#7202", function() 
 	setclipboard("I'm A Cat#7202")
 end)
 
 
 
 
-MISC:CreateButton("NO CLIP Press(E)", function() --the (arg) is if the checkbox is toggled or not
+MISC:CreateButton("NO CLIP Press(E)", function() 
     _G.NO2 = true 
   noclip = false
 game:GetService('RunService').Stepped:connect(function()
@@ -54,12 +56,12 @@ print('Created by FileExplorer')
 print('Credits to Peyton for the ChangeState part of this script')
 end)
 
-MISC:CreateButton("Inf Jump", function() --the (arg) is if the checkbox is toggled or not
+MISC:CreateButton("Inf Jump", function() 
 game:GetService("UserInputService").JumpRequest:connect(function()
     game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
 end)
 end)
-MISC:CreateButton("Ctrl + Click = TP", function() --the (arg) is if the checkbox is toggled or not
+MISC:CreateButton("Ctrl + Click = TP", function() 
 local Plr = game:GetService("Players").LocalPlayer
 local Mouse = Plr:GetMouse()
 
@@ -69,7 +71,7 @@ if not Mouse.Target then return end
 Plr.Character:MoveTo(Mouse.Hit.p)
 end)
 end)
-MISC:CreateButton("Fly Press (F)", function() --the (arg) is if the checkbox is toggled or not
+MISC:CreateButton("Fly Press (F)", function() 
      repeat wait() 
 	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Head") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
 local mouse = game.Players.LocalPlayer:GetMouse() 
@@ -153,10 +155,10 @@ Fly()
 
           
 end)
-MISC:CreateButton("Infinite Yield", function() --the (arg) is if the checkbox is toggled or not
+MISC:CreateButton("Infinite Yield", function() 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
-MISC:CreateButton("Speed Hack 200 press(R)", function() --the (arg) is if the checkbox is toggled or not
+MISC:CreateButton("Speed Hack 200 press(R)", function() 
 
 
 
@@ -196,9 +198,9 @@ end)
 
 
 
-AutoTab:CreateToggle("Auto Click", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.LULU = true 
+AutoTab:CreateToggle("Auto Click", function(bool) 
+    
+        _G.LULU = bool 
         while wait(0) and _G.LULU do
             if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
             game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
@@ -210,1944 +212,744 @@ end
     end
 end)
 
-AutoTab:CreateToggle("Auto Buy Swords", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.c = true 
+AutoTab:CreateToggle("Auto Buy Swords", function(bool)   
+        _G.c = bool 
         while wait(0) and _G.c do
-      local args = {
-    [1] = "Katana",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Sun Blaze Rod",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Wizard Scythe",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "UFO Scythe",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Death Blade",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Winter Blade",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Omega Tri Blade",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Crystalized Banner",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Bubble Katana",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Bubble Scythe",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Fusion Banner",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Inferno Slammer",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Inferno Crusher",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Oceanic Slammer",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Coral Crusher",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Red Death",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Sword of Satan",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Demonic Shard",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Fiery Great Sword",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Enchanted Hell Sword",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Enchanted Battleaxe",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Technic Longsword",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Templars Holy Blade",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Kings Fall",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Divine Retribution",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Brutus",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Titantruous",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "ItsOver",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "VulcansPrize",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "MagmaMasher",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "RidgeBreaker",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Dragon Champion",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Burning Champion",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Neonic Slythe",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Rocket Rammer",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Japhatus",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "God Slayer",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Pepper Sword",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Technic",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "BangBoom",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Justice!",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Interdimentional",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "StraightFromDepths",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "TitansGrip",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "StarBreaker",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Infurial Titantuous",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Osiris`Weave",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-   local args = {
-    [1] = "Patriotic Staff",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer(unpack(args))
-
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Katana")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Sun Blaze Rod")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Wizard Scythe")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("UFO Scythe")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Death Blade")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Winter Blade")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Omega Tri Blade")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Crystalized Banner")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Bubble Katana")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Bubble Scythe")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Fusion Banner")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Inferno Slammer")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Inferno Crusher")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Oceanic Slammer")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Coral Crusher")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Red Death")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Sword of Satan")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Demonic Shard")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Fiery Great Sword")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Enchanted Hell Sword")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Enchanted Battleaxe")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Technic Longsword")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Templars Holy Blade")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Kings Fall")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Divine Retribution")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Brutus")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Titantruous")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("ItsOver")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("VulcansPrize")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("MagmaMasher")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("RidgeBreaker")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Dragon Champion)
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Burning Champion")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Neonic Slythe")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Rocket Rammer")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Japhatus")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("God Slayer")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Pepper Sword")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Technic")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("BangBoom")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Justice")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Interdimentional")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("StraightFromDepths")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("TitansGrip")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("StarBreaker")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Infurial Titantuous")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Osiris`Weave")
+game:GetService("ReplicatedStorage").RemoteEvents.Weapons.Purchase:FireServer("Patriotic Staff")
 end
-
-    else
-        _G.c = false
     end
 end)
-AutoTab:CreateToggle("Auto Buy Auras", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.d = true 
+AutoTab:CreateToggle("Auto Buy Auras", function(bool)   
+        _G.d = bool 
         while wait(0) and _G.d do
-          local args = {
-    [1] = "Cloudy",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "Electric",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "Spiral",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "Sparkles",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "Sparkles 2.0",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "SmoothFire",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "Cursed",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "Chillfire",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "FireSaiyan",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "PoisonCloud",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "Techno",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "VoidSaiyan",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "FireGodSlayer",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "VoidGuardian",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "Radioactive",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "KingCandidate",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "KingCandidate",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "Glorious",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "Chilled",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "Allseeing Advisor",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "Godly Elemental",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "Hyper Smoke",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "Distorsion",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "ScarySparks",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "SmallSparkles",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "MixedConcoction",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "Powerful Saiku",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "Soothing Snow",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "Universal Saiku God",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "Lightning",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "Unbendable Will",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "Peace",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "ScorchingBrilliance",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "ChillingBrilliance",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "DeathlyBrilliance",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "No Chance",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-wait(0.1)
-        local args = {
-    [1] = "Untouchable",
-}
-
-game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer(unpack(args))  
-end
-
-    else
-        _G.d = false
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("Cloudy")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("Electric")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("Spiral")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("Sparkles")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("Sparkles 2.0")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("SmoothFire")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("Cursed")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("Chillfire")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("FireSaiyan")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("PoisonCloud")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("Techno")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("VoidSaiyan")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("FireGodSlayer")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("VoidGuardian")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("Radioactive")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("KingCandidate")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("Glorious")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("Chilled")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("Allseeing Advisor")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("Godly Elemental")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("Hyper Smoke")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("Distorsion")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("ScarySparks")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("SmallSparkles")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("MixedConcoction") wait(X) 
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("Powerful Saiku")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("Soothing Snow")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("Universal Saiku God")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("Lightning")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("Unbendable Will") wait(X) 
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("Peace")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("ScorchingBrilliance")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("ChillingBrilliance")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("DeathlyBrilliance")  wait(X)
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("No Chance") wait(X) 
+game:GetService("ReplicatedStorage").RemoteEvents.Auras.Purchase:FireServer("Untouchable")  wait(X)
     end
 end)
-eggs:CreateToggle("Auto Buy Commons Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.e = true 
+eggs:CreateToggle("Auto Buy Commons Eggs", function(bool)   
+        _G.e = bool 
         while wait(0) and _G.e do
-local args = {
-    [1] = "Egg1",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-    
-end
-
-    else
-        _G.e = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg1")
     end
 end)
-eggs:CreateToggle("Auto Buy Cyne Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.f = true 
+eggs:CreateToggle("Auto Buy Cyne Eggs", function(bool) 
+        _G.f = bool 
         while wait(0) and _G.f do
-local args = {
-    [1] = "Egg2",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.f = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg2")
     end
 end)
-eggs:CreateToggle("Auto Buy Golem Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.g = true 
+eggs:CreateToggle("Auto Buy Golem Eggs", function(bool) 
+        _G.g = bool 
         while wait(0) and _G.g do
-local args = {
-    [1] = "Egg3",
-}
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg3")
 
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.g = false
     end
 end)
-eggs:CreateToggle("Auto Buy Altar Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.h = true 
+eggs:CreateToggle("Auto Buy Altar Eggs", function(bool) 
+        _G.h = bool 
         while wait(0) and _G.h do
-local args = {
-    [1] = "Egg4",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.h = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg4")
     end
 end)
-eggs:CreateToggle("Auto Buy Sky Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.i = true 
+eggs:CreateToggle("Auto Buy Sky Eggs", function(bool)   
+        _G.i = bool 
         while wait(0) and _G.i do
-local args = {
-    [1] = "Egg5",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.i = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg5")
     end
 end)
-eggs:CreateToggle("Auto Buy Toy Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.j = true 
+eggs:CreateToggle("Auto Buy Toy Eggs", function(bool) 
+        _G.j = bool 
         while wait(0) and _G.j do
-local args = {
-    [1] = "Egg6",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.j = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg6")  
     end
 end)
-eggs:CreateToggle("Auto Buy Inferno Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.k = true 
+eggs:CreateToggle("Auto Buy Inferno Eggs", function(bool) 
+        _G.k = bool 
         while wait(0) and _G.k do
-local args = {
-    [1] = "Egg8",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.k = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg8")
     end
 end)
-eggs:CreateToggle("Auto Buy Crystal Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.l = true 
+eggs:CreateToggle("Auto Buy Crystal Eggs", function(bool) 
+        _G.l = bool 
         while wait(0) and _G.l do
-local args = {
-    [1] = "Egg9",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.l = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg9")
     end
 end)
-
-
-
-eggs:CreateToggle("Auto Buy Atlantis Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.m = true 
+eggs:CreateToggle("Auto Buy Atlantis Eggs", function(bool) 
+        _G.m = bool 
         while wait(0) and _G.m do
-local args = {
-    [1] = "Egg10",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.m = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg10")
     end
 end)
-eggs:CreateToggle("Auto Buy Radioactive Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.n = true 
+eggs:CreateToggle("Auto Buy Radioactive Eggs", function(bool)   
+        _G.n = bool 
         while wait(0) and _G.n do
-local args = {
-    [1] = "Egg11",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.n = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg11")
     end
 end)
-eggs:CreateToggle("Auto Buy Common Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.o = true 
+eggs:CreateToggle("Auto Buy Common Eggs", function(bool) 
+        _G.o = bool 
         while wait(0) and _G.o do
-local args = {
-    [1] = "Egg12",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.o = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg12")
     end
 end)
-eggs:CreateToggle("Auto Buy Uncommon Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.p = true 
+eggs:CreateToggle("Auto Buy Uncommon Eggs", function(bool) 
+        _G.p = bool 
         while wait(0) and _G.p do
-local args = {
-    [1] = "Egg13",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.p = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg13")
     end
 end)
-eggs:CreateToggle("Auto Buy Exiqusite Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.q = true 
+eggs:CreateToggle("Auto Buy Exiqusite Eggs", function(bool) 
+        _G.q = bool 
         while wait(0) and _G.q do
-local args = {
-    [1] = "Egg14",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.q = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg14")
     end
 end)
-eggs:CreateToggle("Auto Buy Hellfire Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.r = true 
+eggs:CreateToggle("Auto Buy Hellfire Eggs", function(bool) 
+        _G.r = bool 
         while wait(0) and _G.r do
-local args = {
-    [1] = "Egg15",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.r = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg15")
     end
 end)
-eggs:CreateToggle("Auto Buy Abyssal Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.s = true 
+eggs:CreateToggle("Auto Buy Abyssal Eggs", function(bool) 
+        _G.s = bool 
         while wait(0) and _G.s do
-local args = {
-    [1] = "Egg16",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.s = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg16")
     end
 end)
-eggs:CreateToggle("Auto Buy Godly Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.t = true 
+eggs:CreateToggle("Auto Buy Godly Eggs", function(bool) 
+        _G.t = bool 
         while wait(0) and _G.t do
-local args = {
-    [1] = "Egg17",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.t = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg17")
     end
 end)
-eggs2:CreateToggle("Auto Buy Ascendant Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.u = true 
+eggs2:CreateToggle("Auto Buy Ascendant Eggs", function(bool)   
+        _G.u = bool 
         while wait(0) and _G.u do
-local args = {
-    [1] = "Egg18",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.u = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg18")
     end
 end)
-eggs2:CreateToggle("Auto Buy Galactic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.v = true 
+eggs2:CreateToggle("Auto Buy Galactic Eggs", function(bool)  
+        _G.v = bool 
         while wait(0) and _G.v do
-local args = {
-    [1] = "Egg19",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.v = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg19")
     end
 end)
-eggs2:CreateToggle("Auto Buy Underworld Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.w = true 
+eggs2:CreateToggle("Auto Buy Underworld Eggs", function(bool) 
+        _G.w = bool 
         while wait(0) and _G.w do
-local args = {
-    [1] = "Egg20",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.w = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg20")
     end
 end)
-eggs2:CreateToggle("Auto Buy Winter Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.x = true 
+eggs2:CreateToggle("Auto Buy Winter Eggs", function(bool) 
+        _G.x = bool 
         while wait(0) and _G.x do
-local args = {
-    [1] = "Egg21",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.x = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg21")
     end
 end)
-eggs2:CreateToggle("Auto Buy Lava Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.y = true 
+eggs2:CreateToggle("Auto Buy Lava Eggs", function(bool) 
+        _G.y = bool 
         while wait(0) and _G.y do
-local args = {
-    [1] = "Egg22",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.y = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg22")
     end
 end)
-eggs2:CreateToggle("Auto Buy Forest Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.z = true 
+eggs2:CreateToggle("Auto Buy Forest Eggs", function(bool)  
+        _G.z = bool 
         while wait(0) and _G.z do
-local args = {
-    [1] = "Egg23",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.z = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg23")
     end
 end)
-eggs2:CreateToggle("Auto Buy Forest Eggs 2", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.za = true 
+eggs2:CreateToggle("Auto Buy Forest Eggs 2", function(bool) 
+        _G.za = bool 
         while wait(0) and _G.za do
-local args = {
-    [1] = "Egg24",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.za = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg24")
     end
 end)
-eggs2:CreateToggle("Auto Buy Neon Eggs ", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zb = true 
+eggs2:CreateToggle("Auto Buy Neon Eggs ", function(bool)  
+        _G.zb = bool 
         while wait(0) and _G.zb do
-local args = {
-    [1] = "Egg25",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.zb = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg25")
     end
 end)
-eggs2:CreateToggle("Auto Buy Fungus Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zc = true 
+eggs2:CreateToggle("Auto Buy Fungus Eggs", function(bool) 
+         _G.zc = bool 
         while wait(0) and _G.zc do
-local args = {
-    [1] = "Egg26",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.zc = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg26")
     end
 end)
-eggs2:CreateToggle("Auto Buy 15K Crystal Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zd = true 
+eggs2:CreateToggle("Auto Buy 15K Crystal Eggs", function(bool)  
+        _G.zd = bool 
         while wait(0) and _G.zd do
-local args = {
-    [1] = "Egg27",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.zd = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg27")
     end
 end)
-eggs2:CreateToggle("Auto Buy 65K Crystal Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.ze = true 
+eggs2:CreateToggle("Auto Buy 65K Crystal Eggs", function(bool)  
+        _G.ze = bool 
         while wait(0) and _G.ze do
-local args = {
-    [1] = "Egg28",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.ze = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg28")
     end
 end)
-eggs2:CreateToggle("Auto Buy Valk Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zf = true 
+eggs2:CreateToggle("Auto Buy Valk Eggs", function(bool)    
+        _G.zf = bool 
         while wait(0) and _G.zf do
-local args = {
-    [1] = "Egg29",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.zf = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg29")
     end
 end)
-eggs2:CreateToggle("Auto Buy Patriotic Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zg = true 
+eggs2:CreateToggle("Auto Buy Patriotic Eggs", function(bool) 
+        _G.zg = bool 
         while wait(0) and _G.zg do
-local args = {
-    [1] = "Egg30",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.zg = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg30")
     end
 end)
-eggs2:CreateToggle("Auto Buy 1B Coins (event) Eggs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zh = true 
+eggs2:CreateToggle("Auto Buy 1B Coins (event) Eggs", function(bool)    
+        _G.zh = bool 
         while wait(0) and _G.zh do
-local args = {
-    [1] = "Egg31",
-}
-
-game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer(unpack(args))
-   
-end
-
-    else
-        _G.zh = false
+game:GetService("ReplicatedStorage").RemoteFunctions.Pets.CheckStats:InvokeServer("Egg31")
     end
 end)
-
-KILL1:CreateButton("go to the right area to be", function() --you dont need "arg" for a button
+KILL1:CreateButton("go to the right area to be", function() 
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(938.70874, -84.2339706, -30471.7207)
 end)
-KILL1:CreateButton("able to auto kill", function() --you dont need "arg" for a button
+KILL1:CreateButton("able to auto kill", function() 
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(938.70874, -84.2339706, -30471.7207)
 end)
-KILL1:CreateButton("Spawn", function() --you dont need "arg" for a button
+KILL1:CreateButton("Spawn", function() 
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(74.4510193, 37.1974258, -50.9291992)
 end)
-KILL1:CreateToggle("Kill New_Item Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zi = true 
+KILL1:CreateToggle("Kill New_Item Mobs", function(bool) 
+        _G.zi = bool 
         while wait(0) and _G.zi do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn["New_Item"].RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zi = false
     end
 end)
-KILL1:CreateToggle("Kill DrTrayBlox Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zj = true 
+KILL1:CreateToggle("Kill DrTrayBlox Mobs", function(bool)    
+        _G.zj = bool 
         while wait(0) and _G.zj do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.DrTrayBlox.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zj = false
     end
 end)
-KILL1:CreateToggle("Kill RealYouTube_AlphaGG Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zk = true 
+KILL1:CreateToggle("Kill RealYouTube_AlphaGG Mobs", function(bool)    
+        _G.zk = bool 
         while wait(0) and _G.zk do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn["RealYouTube_AlphaGG"].RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zk = false
     end
 end)
-KILL1:CreateToggle("Kill DevRolve Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zl = true 
+KILL1:CreateToggle("Kill DevRolve Mobs", function(bool) 
+        _G.zl = bool 
         while wait(0) and _G.zl do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.DevRolve.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zl = false
     end
 end)
-KILL1:CreateToggle("Kill HenryDev Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zm = true 
+KILL1:CreateToggle("Kill HenryDev Mobs", function(bool)  
+        _G.zm = bool 
         while wait(0) and _G.zm do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.HenryDev.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zm = false
     end
 end)
-KILL1:CreateToggle("Kill RussoTalks Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zn = true 
+KILL1:CreateToggle("Kill RussoTalks Mobs", function(bool) 
+        _G.zn = bool 
         while wait(0) and _G.zn do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.RussoTalks.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zn = false
     end
 end)
-KILL1:CreateToggle("Kill OverHash Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zo = true 
+KILL1:CreateToggle("Kill OverHash Mobs", function(bool)  
+        _G.zo = bool 
         while wait(0) and _G.zo do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.OverHash.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zo = false
     end
 end)
-KILL1:CreateToggle("Kill asimo3089 Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zp = true 
+KILL1:CreateToggle("Kill asimo3089 Mobs", function(bool) 
+        _G.zp = bool 
         while wait(0) and _G.zp do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.asimo3089.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zp = false
     end
 end)
-KILL1:CreateToggle("Kill Kelogish Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zq = true 
+KILL1:CreateToggle("Kill Kelogish Mobs", function(bool)   
+        _G.zq = bool 
         while wait(0) and _G.zq do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Kelogish.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zq = false
     end
 end)
-KILL1:CreateToggle("Kill ObscureEntity Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zr = true 
+KILL1:CreateToggle("Kill ObscureEntity Mobs", function(bool)  
+        _G.zr = bool 
         while wait(0) and _G.zr do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.ObscureEntity.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zr = false
     end
 end)
-KILL1:CreateToggle("Kill Not_Nert Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zs = true 
+KILL1:CreateToggle("Kill Not_Nert Mobs", function(bool) 
+        _G.zs = bool 
         while wait(0) and _G.zs do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn["Not_Nert"].RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zs = false
     end
 end)
-KILL1:CreateToggle("Kill Tenrous Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zt = true 
+KILL1:CreateToggle("Kill Tenrous Mobs", function(bool)  
+        _G.zt = bool 
         while wait(0) and _G.zt do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Tenrous.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zt = false
     end
 end)
-KILL1:CreateToggle("Kill DJMonopoli Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zu = true 
+KILL1:CreateToggle("Kill DJMonopoli Mobs", function(bool)  
+        _G.zu = bool 
         while wait(0) and _G.zu do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.DJMonopoli.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zu = false
     end
 end)
-KILL1:CreateButton("Atlantis", function() --you dont need "arg" for a button
+KILL1:CreateButton("Atlantis", function() 
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(43189.8828, 46.2013664, 13112.6943)
 end)
-KILL1:CreateToggle("Kill Proxus Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zv = true 
+KILL1:CreateToggle("Kill Proxus Mobs", function(bool)   
+        _G.zv = bool 
         while wait(0) and _G.zv do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Proxus.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zv = false
     end
 end)
-KILL1:CreateToggle("Kill taymaster Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zw = true 
+KILL1:CreateToggle("Kill taymaster Mobs", function(bool) 
+        _G.zw = bool 
         while wait(0) and _G.zw do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.taymaster.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zw = false
     end
 end)
-KILL1:CreateToggle("Kill SabrinaBrite Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zx = true 
+KILL1:CreateToggle("Kill SabrinaBrite Mobs", function(bool) 
+        _G.zx = bool 
         while wait(0) and _G.zx do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.SabrinaBrite.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zx = false
     end
 end)
-KILL1:CreateToggle("Kill Nikilis Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zy = true 
+KILL1:CreateToggle("Kill Nikilis Mobs", function(bool) 
+        _G.zy = bool 
         while wait(0) and _G.zy do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Nikilis.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zy = false
     end
 end)
-KILL1:CreateToggle("Kill sircfenner Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zz = true 
+KILL1:CreateToggle("Kill sircfenner Mobs", function(bool) 
+        _G.zz = bool 
         while wait(0) and _G.zz do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.sircfenner.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zz = false
     end
 end)
-KILL1:CreateToggle("Kill mayrushart Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zza = true 
+KILL1:CreateToggle("Kill mayrushart Mobs", function(bool)    
+        _G.zza = bool 
         while wait(0) and _G.zza do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.mayrushart.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zza = false
     end
 end)
-KILL1:CreateToggle("Kill coolbulls Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzb = true 
+KILL1:CreateToggle("Kill coolbulls Mobs", function(bool) 
+        _G.zzb = bool 
         while wait(0) and _G.zzb do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.coolbulls.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzb = false
     end
 end)
-KILL2:CreateButton("Nostalgic", function() --you dont need "arg" for a button
+KILL2:CreateButton("Nostalgic", function() 
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-929.631531, -133.740082, 16053.6855)
 end)
-KILL2:CreateToggle("Kill AzireBlox Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzc = true 
+KILL2:CreateToggle("Kill AzireBlox Mobs", function(bool)  
+        _G.zzc = bool 
         while wait(0) and _G.zzc do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.AzireBlox.RightUpperArm
 
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzc = false
     end
 end)
-KILL2:CreateToggle("Kill Defaultio Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzd = true 
+KILL2:CreateToggle("Kill Defaultio Mobs", function(bool) 
+        _G.zzd = bool 
         while wait(0) and _G.zzd do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Defaultio.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzd = false
     end
 end)
-KILL2:CreateToggle("Kill Dued1 Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zze = true 
+KILL2:CreateToggle("Kill Dued1 Mobs", function(bool) 
+        _G.zze = bool 
         while wait(0) and _G.zze do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Dued1.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zze = false
     end
 end)
-KILL2:CreateToggle("Kill Emulsifies Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzf = true 
+KILL2:CreateToggle("Kill Emulsifies Mobs", function(bool) 
+        _G.zzf = bool 
         while wait(0) and _G.zzf do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Emulsifies.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzf = false
     end
 end)
-KILL2:CreateToggle("Kill Emulsifies Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzg = true 
+KILL2:CreateToggle("Kill Emulsifies Mobs", function(bool) 
+        _G.zzg = bool 
         while wait(0) and _G.zzg do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Emulsifies.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzg = false
     end
 end)
-KILL2:CreateToggle("Kill Firebrand1 Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzh = true 
+KILL2:CreateToggle("Kill Firebrand1 Mobs", function(bool)  
+        _G.zzh = bool 
         while wait(0) and _G.zzh do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Firebrand1.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzh = false
     end
 end)
-KILL2:CreateToggle("Kill Nosniy Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzi = true 
+KILL2:CreateToggle("Kill Nosniy Mobs", function(bool) 
+        _G.zzi = bool 
         while wait(0) and _G.zzi do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Nosniy.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzi = false
     end
 end)
-KILL2:CreateToggle("Kill MakeItRainBows Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzj = true 
+KILL2:CreateToggle("Kill MakeItRainBows Mobs", function(bool)  
+        _G.zzj = bool 
         while wait(0) and _G.zzj do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.MakeItRainBows.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzj = false
     end
 end)
-KILL2:CreateToggle("Kill TwentyTwoPilots Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzk = true 
+KILL2:CreateToggle("Kill TwentyTwoPilots Mobs", function(bool)  
+        _G.zzk = bool 
         while wait(0) and _G.zzk do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.TwentyTwoPilots.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzk = false
     end
 end)
-KILL2:CreateToggle("Kill Ultraw Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzl = true 
+KILL2:CreateToggle("Kill Ultraw Mobs", function(bool) 
+        _G.zzl = bool 
         while wait(0) and _G.zzl do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Ultraw.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzl = false
     end
 end)
-KILL2:CreateToggle("Kill liteImpulse Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzm = true 
+KILL2:CreateToggle("Kill liteImpulse Mobs", function(bool) 
+        _G.zzm = bool 
         while wait(0) and _G.zzm do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.liteImpulse.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzm = false
     end
 end)
-KILL2:CreateToggle("Kill litozinnamon Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzn = true 
+KILL2:CreateToggle("Kill litozinnamon Mobs", function(bool)   
+        _G.zzn = bool 
         while wait(0) and _G.zzn do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.litozinnamon.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzn = false
     end
 end)
-KILL2:CreateToggle("Kill KecsPlays_YT Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzo = true 
+KILL2:CreateToggle("Kill KecsPlays_YT Mobs", function(bool) 
+        _G.zzo = bool 
         while wait(0) and _G.zzo do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn["KecsPlays_YT"].RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzo = false
     end
 end)
-KILL2:CreateToggle("Kill Dreadcruiser Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzp = true 
+KILL2:CreateToggle("Kill Dreadcruiser Mobs", function(bool)  
+        _G.zzp = bool 
         while wait(0) and _G.zzp do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Dreadcruiser.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzp = false
     end
 end)
-KILL2:CreateToggle("Kill YT_ItsMatty Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzq = true 
+KILL2:CreateToggle("Kill YT_ItsMatty Mobs", function(bool) 
+        _G.zzq = bool 
         while wait(0) and _G.zzq do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn["YT_ItsMatty"].RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzq = false
     end
 end)
-KILL2:CreateToggle("Kill YT_SnugLife Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzr = true 
+KILL2:CreateToggle("Kill YT_SnugLife Mobs", function(bool)    
+        _G.zzr = bool 
         while wait(0) and _G.zzr do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn["YT_SnugLife"].RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzr = false
     end
 end)
-KILL2:CreateButton("Winter Tundra", function() --you dont need "arg" for a button
+KILL2:CreateButton("Winter Tundra", function() 
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(23627.4004, -447.186157, -131.947144)
 end)
-KILL2:CreateToggle("Kill Stickmasterluke Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzs = true 
+KILL2:CreateToggle("Kill Stickmasterluke Mobs", function(bool)  
+        _G.zzs = bool 
         while wait(0) and _G.zzs do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Stickmasterluke.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzs = false
     end
 end)
-KILL2:CreateToggle("Kill Ragoozer Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzt = true 
+KILL2:CreateToggle("Kill Ragoozer Mobs", function(bool)  
+        _G.zzt = bool 
         while wait(0) and _G.zzt do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Ragoozer.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzt = false
     end
 end)
-KILL3:CreateButton("Mush Kingdom", function() --you dont need "arg" for a button
+KILL3:CreateButton("Mush Kingdom", function() 
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(52707.0039, 174.622406, -11468.4316)
 end)
-KILL3:CreateToggle("Kill ZephsyJ Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzu = true 
+KILL3:CreateToggle("Kill ZephsyJ Mobs", function(bool)   
+        _G.zzu = bool 
         while wait(0) and _G.zzu do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.ZephsyJ.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzu = false
     end
 end)
-KILL3:CreateToggle("Kill gixin Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzv = true 
+KILL3:CreateToggle("Kill gixin Mobs", function(bool)   
+        _G.zzv = bool 
         while wait(0) and _G.zzv do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.gixin.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzv = false
     end
 end)
-KILL3:CreateToggle("Kill solter Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzw = true 
+KILL3:CreateToggle("Kill solter Mobs", function(bool)    
+        _G.zzw = bool 
         while wait(0) and _G.zzw do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.solter.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzw = false
     end
 end)
-KILL3:CreateToggle("Kill Q_Q Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzx = true 
+KILL3:CreateToggle("Kill Q_Q Mobs", function(bool) 
+        _G.zzx = bool 
         while wait(0) and _G.zzx do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn["Q_Q"].RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzx = false
     end
 end)
-KILL3:CreateToggle("Kill TypicalType Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzy = true 
+KILL3:CreateToggle("Kill TypicalType Mobs", function(bool) 
+        _G.zzy = bool 
         while wait(0) and _G.zzy do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.TypicalType.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzy = false
     end
 end)
-KILL3:CreateToggle("Kill SnakeWorl Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzz = true 
+KILL3:CreateToggle("Kill SnakeWorl Mobs", function(bool)    
+        _G.zzz = bool 
         while wait(0) and _G.zzz do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.SnakeWorl.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzz = false
     end
 end)
-KILL3:CreateToggle("Kill DrMeser Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzza = true 
+KILL3:CreateToggle("Kill DrMeser Mobs", function(bool)  
+        _G.zzza = bool 
         while wait(0) and _G.zzza do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.DrMeser.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzza = false
     end
 end)
-KILL3:CreateToggle("Kill Merely Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzzb = true 
+KILL3:CreateToggle("Kill Merely Mobs", function(bool) 
+        _G.zzzb = bool 
         while wait(0) and _G.zzzb do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Merely.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzzb = false
     end
 end)
-KILL3:CreateToggle("Kill OrionPlaysRBX Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzzc = true 
+KILL3:CreateToggle("Kill OrionPlaysRBX Mobs", function(bool)  
+        _G.zzzc = bool 
         while wait(0) and _G.zzzc do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.OrionPlaysRBX.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzzc = false
     end
 end)
-KILL3:CreateButton("Vulkarian Heaven", function() --you dont need "arg" for a button
+KILL3:CreateButton("Vulkarian Heaven", function() 
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-604.873901, 131.681351, -830.78064)
 end)
-KILL3:CreateToggle("Kill ProboyNINJA123 Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzzd = true 
+KILL3:CreateToggle("Kill ProboyNINJA123 Mobs", function(bool) 
+        _G.zzzd = bool 
         while wait(0) and _G.zzzd do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.ProboyNINJA123.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzzd = false
     end
 end)
-KILL3:CreateToggle("Kill Zillxionaire Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzze = true 
+KILL3:CreateToggle("Kill Zillxionaire Mobs", function(bool) 
+        _G.zzze = bool 
         while wait(0) and _G.zzze do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Zillxionaire.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzze = false
     end
 end)
-KILL3:CreateToggle("Kill NirobiGames Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzzf = true 
+KILL3:CreateToggle("Kill NirobiGames Mobs", function(bool) 
+        _G.zzzf = bool 
         while wait(0) and _G.zzzf do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.NirobiGames.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzzf = false
     end
 end)
-KILL4:CreateButton("Bests Zones", function() --you dont need "arg" for a button
+KILL4:CreateButton("Bests Zones", function() 
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(938.70874, -84.2339706, -30471.7207)
 end)
-KILL4:CreateToggle("Kill Shedletsky Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzzg = true 
+KILL4:CreateToggle("Kill Shedletsky Mobs", function(bool) 
+        _G.zzzg = bool 
         while wait(0) and _G.zzzg do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Shedletsky.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzzg = false
     end
 end)
-KILL4:CreateToggle("Kill Linkmon99 Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzzh = true 
+KILL4:CreateToggle("Kill Linkmon99 Mobs", function(bool) 
+        _G.zzzh = bool 
         while wait(0) and _G.zzzh do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Linkmon99.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzzh = false
     end
 end)
-KILL4:CreateToggle("Kill DeeterPlays Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzzi = true 
+KILL4:CreateToggle("Kill DeeterPlays Mobs", function(bool)  
+        _G.zzzi = bool 
         while wait(0) and _G.zzzi do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.DeeterPlays.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzzi = false
     end
 end)
-KILL4:CreateToggle("Kill Alvin_Blox Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzzj = true 
+KILL4:CreateToggle("Kill Alvin_Blox Mobs", function(bool)    
+        _G.zzzj = bool 
         while wait(0) and _G.zzzj do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn["Alvin_Blox"].RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzzj = false
     end
 end)
-KILL4:CreateToggle("Kill coefficients Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzzk = true 
+KILL4:CreateToggle("Kill coefficients Mobs", function(bool)    
+        _G.zzzk = bool 
         while wait(0) and _G.zzzk do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.coefficients.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzzk = false
     end
 end)
-KILL4:CreateToggle("Kill JamiyJamie Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzzl = true 
+KILL4:CreateToggle("Kill JamiyJamie Mobs", function(bool) 
+        _G.zzzl = bool 
         while wait(0) and _G.zzzl do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.JamiyJamie.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzzl = false
     end
 end)
-KILL4:CreateToggle("Kill Builder_Boy Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzzm = true 
+KILL4:CreateToggle("Kill Builder_Boy Mobs", function(bool)  
+        _G.zzzm = bool 
         while wait(0) and _G.zzzm do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn["Builder_Boy"].RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzzm = false
     end
 end)
-KILL4:CreateToggle("Kill Beeism Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzzn = true 
+KILL4:CreateToggle("Kill Beeism Mobs", function(bool)  
+        _G.zzzn = bool 
         while wait(0) and _G.zzzn do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Beeism.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzzn = false
     end
 end)
-KILL4:CreateToggle("Kill Sylently Mobs", function(arg) --the (arg) is if the checkbox is toggled or not
-    if arg then
-        _G.zzzo = true 
+KILL4:CreateToggle("Kill Sylently Mobs", function(bool) 
+        _G.zzzo = bool 
         while wait(0) and _G.zzzo do
-
-   local me = game.Players.LocalPlayer.Character
 local pbosd = game:GetService("Workspace").Zones.npcSpawn.Sylently.RightUpperArm
-
 me.HumanoidRootPart.CFrame = CFrame.new(pbosd.Position.X-0, pbosd.Position.Y+0, pbosd.Position.Z+1)
-end
-
-    else
-        _G.zzzo = false
     end
 end)
-teleports:CreateButton("Spawn", function() --you dont need "arg" for a button
+teleports:CreateButton("Spawn", function() 
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(74.4510193, 37.1974258, -50.9291992)
 end)
-
-teleports:CreateButton("Atlantis", function() --you dont need "arg" for a button
+teleports:CreateButton("Atlantis", function() 
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(43189.8828, 46.2013664, 13112.6943)
 end)
-
-teleports:CreateButton("Nostalgic", function() --you dont need "arg" for a button
+teleports:CreateButton("Nostalgic", function() 
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-929.631531, -133.740082, 16053.6855)
 end)
-teleports:CreateButton("Mush Kingdom", function() --you dont need "arg" for a button
+teleports:CreateButton("Mush Kingdom", function() 
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(52707.0039, 174.622406, -11468.4316)
 end)
-teleports:CreateButton("Vulkarian Heaven", function() --you dont need "arg" for a button
+teleports:CreateButton("Vulkarian Heaven", function() 
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-604.873901, 131.681351, -830.78064)
 end)
-
-teleports:CreateButton("Winter Tundra", function() --you dont need "arg" for a button
+teleports:CreateButton("Winter Tundra", function() 
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(23627.4004, -447.186157, -131.947144)
 end)
-teleports:CreateButton("Bests Zones", function() --you dont need "arg" for a button
+teleports:CreateButton("Bests Zones", function() 
 game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(938.70874, -84.2339706, -30471.7207)
 end)
-
---| Anti KICK |
-local mt = getrawmetatable(game)
-local old = mt.__namecall
-local protect = newcclosure or protect_function
-
-if not protect then
-protect = function(f) return f end
-end
-
-setreadonly(mt, false)
-mt.__namecall = protect(function(self, ...)
-local method = getnamecallmethod()
-if method == "Kick" then
-wait(9e9)
-return
-end
-return old(self, ...)
-end)
-hookfunction(game:GetService("Players").LocalPlayer.Kick,protect(function() wait(9e9)
- end))
-
---| Anti AFK |
-   local vu = game:GetService("VirtualUser")
-game:GetService("Players").LocalPlayer.Idled:connect(function()
-   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-   wait(1)
-   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-end)
-
---| Anti Ban |
-setfflag("DFStringCrashPadUploadToBacktraceToBacktraceBaseUrl", "")
-setfflag("DFIntCrashUploadToBacktracePercentage", "0")
-setfflag("DFStringCrashUploadToBacktraceBlackholeToken", "")
-setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
-
 --| Anti AFK | By Altix#3395
     local Virtual = game:service'VirtualUser'
     game:service'Players'.LocalPlayer.Idled:connect(function()
@@ -2155,22 +957,3 @@ setfflag("DFStringCrashUploadToBacktraceWindowsPlayerToken", "")
         Virtual:ClickButton2(Vector2.new())
         wait(2)
     end)
-
---| Anti Chat Logs |
-local CloneFunction = clonefunction
-local CheckCaller = CloneFunction(checkcaller)
-local HookFunction = CloneFunction(hookfunction)
-local LocalPlayer = game.Players.PlayerAdded:wait()
-
-local PostMessage = require(LocalPlayer:WaitForChild("PlayerScripts", 1/0):WaitForChild("ChatScript", 1/0):WaitForChild("ChatMain", 1/0)).MessagePosted
-getgenv().MessageEvent = Instance.new("BindableEvent")
-
-local OldFunctionHook
-local PostMessageHook = function(self, msg)
-   if not CheckCaller() and self == PostMessage then
-       MessageEvent:Fire(msg)
-       return
-   end
-   return OldFunctionHook(self, msg)
-end
-OldFunctionHook = HookFunction(PostMessage.fire, PostMessageHook)
