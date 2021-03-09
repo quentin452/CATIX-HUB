@@ -49,7 +49,7 @@ MISC:CreateToggle("Speed Hack 100", function(arg)
     if arg then
 _G.Speed = true 
         while wait() and _G.Speed do
-            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100--NEED FIX
         end
     else
         _G.Speed = false
