@@ -32,9 +32,6 @@ credits:CreateButton("by I'm A Cat#7202", function()
 	setclipboard("I'm A Cat#7202")
 end)
 
-
-
-
 MISC:CreateButton("NO CLIP Press(E)", function() 
     _G.NO2 = true 
   noclip = false
@@ -152,21 +149,14 @@ ctrl.r = 0
 end 
 end)
 Fly()
-
-          
 end)
 MISC:CreateButton("Infinite Yield", function() 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 MISC:CreateButton("Speed Hack 200 press(R)", function() 
-
-
-
 local walkspeedplayer = game:GetService("Players").LocalPlayer
 local walkspeedmouse = walkspeedplayer:GetMouse()
-
 local walkspeedenabled = false
-
 function x_walkspeed(key)
 if (key == "r") then
 if walkspeedenabled == false then
@@ -176,7 +166,6 @@ Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
 Humanoid.WalkSpeed = _G.WS;
 end)
 Humanoid.WalkSpeed = _G.WS;
-
 walkspeedenabled = true
 elseif walkspeedenabled == true then
 _G.WS = 20;
@@ -185,30 +174,19 @@ Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
 Humanoid.WalkSpeed = _G.WS;
 end)
 Humanoid.WalkSpeed = _G.WS;
-
 walkspeedenabled = false
 end
 end
 end
-
 walkspeedmouse.KeyDown:connect(x_walkspeed)
-
 end)
 
-
-
-
 AutoTab:CreateToggle("Auto Click", function(bool) 
-    
         _G.LULU = bool 
         while wait(0) and _G.LULU do
             if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
             game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):Activate()
     end
-end
-
-    else
-        _G.LULU = false
     end
 end)
 
