@@ -1848,7 +1848,7 @@ game:GetService("ReplicatedStorage").Remotes.Click:FireServer()end
 end)
 ThingsSec:addToggle("Auto Upgrades", nil, function(bool)
  _G.Upgrades = bool
-    while _G.Upgrades and rs:wait()do
+    while _G.Upgrades and wait(0.5)do
 game:GetService("ReplicatedStorage").Remotes.UpgradeBooster:FireServer()
 game:GetService("ReplicatedStorage").Remotes.UpgradeDoubleClicks:FireServer()
 game:GetService("ReplicatedStorage").Remotes.UpgradeAutoclicker:FireServer()
@@ -1857,13 +1857,13 @@ end
 end)
 ThingsSec:addToggle("Auto Upgrades Serv Multi", nil, function(bool)
  _G.Serv = bool
-    while _G.Serv and rs:wait()do
+    while _G.Serv and wait(0.5)do
 game:GetService("ReplicatedStorage").Remotes.UpgradeServerMulti:FireServer()
 end
 end)
 ThingsSec:addToggle("Auto Rebirths", nil, function(bool)
  _G.Rebirths = bool
-    while _G.Rebirths and rs:wait()do
+    while _G.Rebirths and wait(0.5)do
 game:GetService("ReplicatedStorage").Remotes.Rebirth:FireServer()
 end
 end)
