@@ -1846,20 +1846,6 @@ ThingsSec:addToggle("Auto Click X1(Normal Ping)", nil, function(bool)
     while _G.Aut and rs:wait()do
 game:GetService("ReplicatedStorage").Remotes.Click:FireServer()end
 end)
-ThingsSec:addToggle("Auto Click X5(Raise Ping)", nil, function(bool)
- _G.Au2t = bool
-    while _G.Au2t and rs:wait()do
-for i = 1,5 do
-game:GetService("ReplicatedStorage").Remotes.Click:FireServer()end
-end
-end)
-ThingsSec:addToggle("Auto Click X25(Raise Ping)", nil, function(bool)
- _G.tg = bool
-    while _G.tg and rs:wait()do
-for i = 1,25 do
-game:GetService("ReplicatedStorage").Remotes.Click:FireServer()end
-end
-end)
 ThingsSec:addToggle("Auto Upgrades", nil, function(bool)
  _G.Upgrades = bool
     while _G.Upgrades and rs:wait()do
