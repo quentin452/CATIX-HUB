@@ -1850,6 +1850,9 @@ ThingsSec:addToggle("Auto Upgrades", nil, function(bool)
  _G.Upgrades = bool
     while _G.Upgrades and rs:wait()do
 game:GetService("ReplicatedStorage").Remotes.UpgradeBooster:FireServer()
+game:GetService("ReplicatedStorage").Remotes.UpgradeDoubleClicks:FireServer()
+game:GetService("ReplicatedStorage").Remotes.UpgradeAutoclicker:FireServer()
+game:GetService("ReplicatedStorage").Remotes.UpgradeCooldown:FireServer()
 end
 end)
 ThingsSec:addToggle("Auto Upgrades Serv Multi", nil, function(bool)
