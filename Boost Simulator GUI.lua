@@ -1966,23 +1966,4 @@ loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/quentin452/CATIX
      Local2:addButton("Remote Spy", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/!Remote%20Spy", true))()
      end)
-    local PageEgg = venyx:addPage("Eggs", 6252259606)
-local EggsS = PageEgg:addSection("Auto Buy Eggs:")
-            local   SelectEggsStrings = {}
-            for i,v in pairs(game:GetService("Workspace").Eggs:GetChildren()) do
-                table.insert(SelectEggsStrings, v.Name)
-            end
-            EggsS:addDropdown("Select Egg", SelectEggsStrings,function(value)
-                _G.EggSelected = value
-            end)
-            EggsS:addToggle("Buy Eggs x1", nil, function(value)
-                shared.toggle = value
-            end)
-            spawn(function()
-                while wait() do
-                    if shared.toggle then
-                        game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(_G.EggSelected,"Single")
-                    end
-                end
-            end)
 venyx:SelectPage(venyx.pages[1], true)
