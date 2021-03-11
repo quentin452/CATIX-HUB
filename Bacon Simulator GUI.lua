@@ -1852,10 +1852,14 @@ game:GetService("ReplicatedStorage").Events.EatEvent:FireServer()
     end
 end
 end)
-ThingsSec:addToggle("Auto Sell", nil, function(bool)
+ThingsSec:addToggle("Auto Sell X4,5", nil, function(bool)
  _G.Sell = (bool and true or false)
     while _G.Sell and rs:wait()do
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(44.5920181, 6734.57783, -25.9685326)
+		if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health ~= 0 then
+			local me = game.Players.LocalPlayer.Character
+			local pbosd = game:GetService("Workspace").Triggers.CyberSell
+			me.HumanoidRootPart.CFrame = pbosd.CFrame + Vector3.new(0,3,0)
+			end
 end
 end)
 ThingsSec:addToggle("Auto Tp To ALL Gems", nil, function(bool)
