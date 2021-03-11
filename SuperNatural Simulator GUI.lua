@@ -1853,14 +1853,6 @@ ThingsSec:addToggle("Auto Sell", nil, function(bool)
 game:GetService("ReplicatedStorage").RemoteEvent:FireServer({"SellMuscle"})
 end
 end)
-ThingsSec:addToggle("Auto Buy Heroes", nil, function(bool)
- _G.Heroes = bool
-    while _G.Heroes and wait(1)do
-        for i = 1,250 do
-game:GetService("ReplicatedStorage").RemoteEvent:FireServer({"BuyLevelUp",i})
-end
-end
-end)
 ThingsSec:addToggle("Auto Buy Ranks", nil, function(bool)
  _G.Ranks = bool
     while _G.Ranks and wait(1)do
