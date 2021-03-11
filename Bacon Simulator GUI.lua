@@ -1878,7 +1878,7 @@ end)
 ThingsSec:addToggle("Auto Tp To Best Gems", nil, function(bool)
  _G.Gems2 = (bool and true or false)
     while _G.Gems2 and rs:wait(0)do
-		for i,v in pairs(game:GetService("Workspace").GemsHolder.Candyland.Part1:GetChildren()) do
+		for i,v in pairs(game:GetService("Workspace").GemsHolder.Cyber.Part1:GetChildren()) do
 			if _G.Gems2 then
 				if v.Name == "Gem" then
 					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
