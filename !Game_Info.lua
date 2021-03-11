@@ -242,6 +242,7 @@ _G.Game_Info = {
   [241] = {["Name"] = "Milk Simulator", ["GameId"] = 2052654101, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Milk%20Simulator%20GUI.lua"},
   [242] = {["Name"] = "Boost Simulator", ["GameId"] = 2430195762, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Boost%20Simulator%20GUI.lua"},
   [243] = {["Name"] = "Supernatural Simulator", ["GameId"] = 2311654022, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/SuperNatural%20Simulator%20GUI.lua"},
+  [244] = {["Name"] = "Clap Hands Simulator", ["GameId"] = 1539762377, ["LoadString"] = "https://raw.githubusercontent.com/quentin452/CATIX-HUB/master/Clap%20Hands%20Simulator%20GUI.lua"},
 }
 
 -- Important! Ne pas oublier le "", entre chaque update sinon risque que le hub ne s'affiche pas :/
@@ -251,6 +252,7 @@ _G.Game_Vers = "2.3.5"
 _G.Game_Update = {
   "**Update 2.3.5**",
   "Supernatural Simulator Added",
+  "Clap Hands Simulator Added",
   "", 
   "**Update 2.3.4**",
   "Boost Simulator Added",
