@@ -1899,53 +1899,7 @@ local section3 = Teleports:addSection("Select Players:")
 					end)
 				end
 			end)
-					local section4 = Teleports:addSection("Select Island:")       
-    section4:addDropdown("Dropdown", {
-        "Spawn", "Island 1", "Island 2", "Island 3", "Island 4", "Island 5", "Island 6", "Island 7", "Island 8", "Island 9"
-        , "Zone 1" , "Zone 2" , "Zone 3" , "Zone 4" , "Zone 5" , "Zone 6" , "Zone 7" , "Zone 8" , "Zone 9" , "Zone 10"
-    }, function(text)
-        if text ==       "Spawn" then
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(1.42289257, -3.45246887, -69.1642227)
-        elseif text ==  "Island 1" then
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-28.6498985, 466.442719, -19.1608257)
-        elseif text ==   "Island 2" then
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(55.7326012, 2015.94214, 8.42726803)
-        elseif text == "Island 3" then
-     game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(91.1738815, 3985.87207, 109.788895)
-        elseif text == "Island 4" then
-game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(52.4297562, 6435.06104, -68.940773)
-                          elseif text == "Island 5" then
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(150.262787, 14734.9004, 96.4903259)
-                          elseif text == "Island 6" then
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(21.9193058, 20036.2383, 30.9613304)
-                          elseif text == "Island 7" then
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(16.7487984, 25245.5586, 57.9925842)
-                          elseif text == "Island 8" then
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(28.551075, 31772.7988, -14.377902)
-                          elseif text == "Island 9" then
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-3.69108534, 38124.3359, 20.3873672)
-                          elseif text == "Zone 1" then
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-379.741241, -2.34246922, -12.6514053)
-                          elseif text == "Zone 2" then
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-603.959656, -2.49246907, -17.9326)
-                          elseif text == "Zone 3" then
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-770.2995, -2.49354863, 28.8829021)
-                          elseif text == "Zone 4" then
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1026.29578, -2.49246883, 37.8840752)
-                          elseif text == "Zone 5" then
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1219.38208, -2.49246907, 29.0519485)
-                          elseif text == "Zone 6" then
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1477.94897, -2.46246457, 2.33076143)
-                          elseif text == "Zone 7" then
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1650.38855, -2.46246457, 16.3162117)
-                          elseif text == "Zone 8" then
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-1853.96729, -2.46246457, 20.6461182)
-                          elseif text == "Zone 9" then
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2076.93506, -2.46246457, 3.21100521)
-                          elseif text == "Zone 10" then
-            game.Players.LocalPlayer.character.HumanoidRootPart.CFrame = CFrame.new(-2301.5769, -2.46246433, -16.8842258)
-        end
-    end)
+	
 local Misc = venyx:addPage("Misc", 6252267612)
 local section4 = Misc:addSection("MISC:")
 section4:addButton("Refresh Game", function()
