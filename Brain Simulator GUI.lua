@@ -1799,7 +1799,7 @@ end
 local venyx = library.new("Catix Hub")
 local page = venyx:addPage("Home", 6252243736)
 local rs = game:GetService("RunService").RenderStepped
- venyx:Notify("Ramen Clicker", "Joins Discord's Server ! (By I'm A Cat#7202,Altix#3395)")
+ venyx:Notify("Brain Simulator", "Joins Discord's Server ! (By I'm A Cat#7202,Altix#3395)")
 local section1 = page:addSection("Updates:")
 local section11 = page:addSection("Credits:")
 section1:addButton("+ New Ui Lib", function()
